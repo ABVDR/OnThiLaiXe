@@ -1,0 +1,72 @@
+﻿@model List<CauHoiSaiViewModel>
+
+@{
+    ViewData["Title"] = "Danh sách câu hỏi sai";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="mb-4">Danh sách câu hỏi sai</h2>
+
+            @if (!Model.Any())
+            {
+                <div class="alert alert-info">
+                    Bạn chưa có câu hỏi sai nào được ghi nhận.
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>STT</th>
+                                <th>Câu hỏi</th>
+                                <th>Chủ đề</th>
+                                <th>Số lần sai</th>
+                                <th>Lần sai gần nhất</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                var item = Model[i];
+                                <tr>
+                                    <td>@(i + 1)</td>
+                                    <td>@item.CauHoi.NoiDung</td>
+                                    <td>@item.CauHoi.ChuDe.TenChuDe</td>
+                                    <td>@item.SoLanSai</td>
+                                    <td>@item.LanSaiGanNhat.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td>
+                                        <a href="@Url.Action("ChiTietCauHoi", "BaiTap", new { id = item.CauHoi.Id })" class="btn btn-sm btn-info">
+                                            <i class="fas fa-eye"></i> Xem chi tiết
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-4">
+                    <p><strong>Tổng số câu hỏi sai:</strong> @Model.Count</p>
+                </div>
+            }
+
+            <div class="mt-4">
+                <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Trở về trang chủ
+                </a>
+
+                @if (Model.Any())
+                {
+                    <a href="@Url.Action("OnTapCauHoiSai", "BaiTap")" class="btn btn-primary ms-2">
+                        <i class="fas fa-sync"></i> Ôn tập các câu hỏi sai
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</div>

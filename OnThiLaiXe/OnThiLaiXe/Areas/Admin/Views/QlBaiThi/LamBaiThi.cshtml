@@ -1,0 +1,198 @@
+﻿@model BaiThi
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Khu vực câu hỏi -->
+        <div class="col-md-9">
+            <div class="card shadow-lg">
+               
+                <div class="card-body">
+                    <form id="examForm" asp-controller="BaiThi" asp-action="NopBaiThi" method="post">
+                        <input type="hidden" name="baiThiId" value="@Model.Id" />
+
+                        @for (int i = 0; i < Model.ChiTietBaiThis.Count; i++)
+                        {
+                            var chiTietList = Model.ChiTietBaiThis.ToList();
+                            var chiTiet = chiTietList[i];
+                            <div class="card mb-3 question-card" id="question-@i" style="display: none;">
+                                <div class="card-body">
+                                    <h5 class="question-text"><strong>Câu @(@i + 1):</strong> @chiTiet.CauHoi.NoiDung</h5>
+
+                                    @if (!string.IsNullOrEmpty(chiTiet.CauHoi.MediaUrl))
+                                    {
+                                        <div class="question-image text-center">
+                                            <img src="@chiTiet.CauHoi.MediaUrl" alt="Hình ảnh câu hỏi" class="img-fluid"
+                                                 style="max-width: 500px; border-radius: 8px; margin: 10px auto; display: block;" />
+                                        </div>
+                                    }
+
+
+                                    <div class="options">
+                                        <label class="option-item">
+                                            <input type="radio" name="dapAn_@i" value="A" required onclick="markAnswered(@i)">
+                                            <span>@chiTiet.CauHoi.LuaChonA</span>
+                                        </label>
+                                        <label class="option-item">
+                                            <input type="radio" name="dapAn_@i" value="B" required onclick="markAnswered(@i)">
+                                            <span>@chiTiet.CauHoi.LuaChonB</span>
+                                        </label>
+                                        @if (!string.IsNullOrEmpty(chiTiet.CauHoi.LuaChonC))
+                                        {
+                                            <label class="option-item">
+                                                <input type="radio" name="dapAn_@i" value="C" required onclick="markAnswered(@i)">
+                                                <span>@chiTiet.CauHoi.LuaChonC</span>
+                                            </label>
+                                        }
+                                        @if (!string.IsNullOrEmpty(chiTiet.CauHoi.LuaChonD))
+                                        {
+                                            <label class="option-item">
+                                                <input type="radio" name="dapAn_@i" value="D" required onclick="markAnswered(@i)">
+                                                <span>@chiTiet.CauHoi.LuaChonD</span>
+                                            </label>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        <div class="text-center mt-4">
+                            <button type="button" class="btn btn-outline-secondary px-4 me-3" onclick="prevQuestion()">
+                                <i class="fas fa-arrow-left"></i> Câu Trước
+                            </button>
+                            <button type="button" class="btn btn-outline-primary px-4 ms-3" onclick="nextQuestion()">
+                                Câu Tiếp <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Khu vực danh sách câu hỏi và đồng hồ -->
+        <div class="col-md-3">
+            <div class="card shadow-sm p-3">
+                <h4 class="text-center text-danger" id="timer">15:00</h4>
+                <button class="btn btn-success w-100 mb-2" onclick="submitExam()">Nộp Bài</button>
+                <div class="d-flex flex-wrap justify-content-center">
+                    @for (int i = 0; i < Model.ChiTietBaiThis.Count; i++)
+                    {
+                        <button type="button" class="btn question-btn m-1" id="btn-@i" onclick="showQuestion(@i)">
+                            @(i + 1)
+                        </button>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .question-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .option-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+        .option-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .option-item input[type="radio"] {
+            transform: scale(1.3);
+        }
+
+    .question-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        background-color: white;
+        border: 2px solid red;
+        color: red;
+        font-weight: bold;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .question-btn:hover {
+            background-color: lightgray;
+        }
+
+        .question-btn.active {
+            background-color: lightblue;
+            color: white;
+        }
+</style>
+
+<script>
+    let currentQuestionIndex = 0;
+    const totalQuestions = @Model.ChiTietBaiThis.Count;
+    let timeLeft = 900;
+    let timerInterval = null;
+
+    function showQuestion(index) {
+        document.querySelectorAll(".question-card").forEach(q => q.style.display = "none");
+        document.getElementById(`question-${index}`).style.display = "block";
+        currentQuestionIndex = index;
+    }
+
+    function nextQuestion() {
+        if (currentQuestionIndex < totalQuestions - 1) {
+            showQuestion(currentQuestionIndex + 1);
+        }
+    }
+
+    function prevQuestion() {
+        if (currentQuestionIndex > 0) {
+            showQuestion(currentQuestionIndex - 1);
+        }
+    }
+
+    function markAnswered(index) {
+        document.getElementById(`btn-${index}`).classList.add("btn-success");
+    }
+
+    function submitExam() {
+        document.getElementById("examForm").submit();
+    }
+        function updateTimer() {
+        if (timeLeft > 0) {
+            timeLeft--;
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+            document.getElementById("timer").textContent =
+                minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
+        } else {
+            clearInterval(timerInterval);
+            document.getElementById("timer").textContent = "Hết giờ!";
+            alert("Hết thời gian làm bài!");
+            submitExam(); // Tự động nộp bài khi hết giờ
+        }
+    }
+
+
+    window.onload = function () {
+        showQuestion(0);
+        if (!timerInterval) {
+            timerInterval = setInterval(updateTimer, 1000);
+        }
+    };
+</script>

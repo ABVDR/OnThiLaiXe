@@ -1,0 +1,40 @@
+﻿@model List<OnThiLaiXe.Models.BaiThi>
+
+@{
+    ViewData["Title"] = "Danh Sách Bài Thi";
+}
+
+<h2>Danh Sách Bài Thi</h2>
+
+@if (Model.Any())
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Ngày Thi</th>
+                <th>Số Câu Hỏi</th>
+                <th>Hành Động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var baiThi in Model)
+            {
+                <tr>
+                    <td>@baiThi.Id</td>
+                    <td>@baiThi.NgayThi.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@baiThi.ChiTietBaiThis.Count</td>
+                    <td>
+                        <a asp-controller="BaiThi" asp-action="ChiTietBaiThi" asp-route-id="@baiThi.Id" class="btn btn-primary">Xem Chi Tiết</a>
+                        <a asp-controller="BaiThi" asp-action="XoaBaiThi" asp-route-id="@baiThi.Id" class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn xóa?')">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+}
+else
+{
+    <p>Chưa có bài thi nào.</p>
+}

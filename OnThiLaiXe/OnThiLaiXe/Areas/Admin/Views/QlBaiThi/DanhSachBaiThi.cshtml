@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "DanhSachBaiThi";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@model List<OnThiLaiXe.Models.BaiThi>
+
+@{
+    ViewData["Title"] = "Danh Sách Bài Thi";
+}
+
+<h2>📋 Danh Sách Bài Thi</h2>
+
+@if (Model.Any())
+{
+    <table class="table table-bordered text-center" id="examTable">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Ngày Thi</th>
+                <th>Số Câu Hỏi</th>
+                <th>Hành Động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var baiThi in Model)
+            {
+                <tr>
+                    <td>@baiThi.Id</td>
+                    <td>@baiThi.NgayThi.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@baiThi.ChiTietBaiThis.Count</td>
+                    <td>
+                        <a asp-controller="BaiThi" asp-action="ChiTietBaiThi" asp-route-id="@baiThi.Id" class="btn btn-sm btn-info">
+                            <i class="bi bi-eye"></i> Xem
+                        </a>
+                        <a asp-controller="BaiThi" asp-action="XoaBaiThi" asp-route-id="@baiThi.Id" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc muốn xóa?')">
+                            <i class="bi bi-trash"></i> Xóa
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="d-flex justify-content-center mt-3">
+        <nav>
+            <ul class="pagination" id="pagination"></ul>
+        </nav>
+    </div>
+}
+else
+{
+    <p>Chưa có bài thi nào.</p>
+}
+
+<script>
+    const rowsPerPage = 5;
+    let currentPage = 1;
+    const table = document.getElementById("examTable");
+    const tbody = table.querySelector("tbody");
+    const rows = Array.from(tbody.rows);
+    const totalPages = Math.ceil(rows.length / rowsPerPage);
+    const pagination = document.getElementById("pagination");
+
+    function displayPage(page) {
+        const start = (page - 1) * rowsPerPage;
+        const end = start + rowsPerPage;
+        rows.forEach((row, index) => {
+            row.style.display = index >= start && index < end ? "" : "none";
+        });
+    }
+
+    function updatePagination() {
+        pagination.innerHTML = "";
+        for (let i = 1; i <= totalPages; i++) {
+            const li = document.createElement("li");
+            li.className = `page-item ${i === currentPage ? 'active' : ''}`;
+            const a = document.createElement("a");
+            a.className = "page-link";
+            a.textContent = i;
+            a.href = "#";
+            a.addEventListener("click", function (e) {
+                e.preventDefault();
+                currentPage = i;
+                displayPage(currentPage);
+                updatePagination();
+            });
+            li.appendChild(a);
+            pagination.appendChild(li);
+        }
+    }
+
+    displayPage(currentPage);
+    updatePagination();
+</script>

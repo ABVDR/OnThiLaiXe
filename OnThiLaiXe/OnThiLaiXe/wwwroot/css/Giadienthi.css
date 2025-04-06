@@ -1,0 +1,186 @@
+﻿
+.question-content {
+    background: #F8F9FA;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.question-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.question-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin: 3px 0px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+    .option-item:hover {
+        background-color: #f0f0f0;
+    }
+
+.option-input {
+    margin-right: 10px;
+    transform: scale(1.3); /* Tăng kích thước nút radio */
+}
+
+.option-text {
+    flex-grow: 1;
+}
+
+.option-input:checked + .option-text {
+    font-weight: bold;
+}
+
+.question-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid red;
+    background: white;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .question-btn.btn-success {
+        background-color: #28a745;
+        color: white;
+        border: none;
+    }
+
+.btn-primary i {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.btn-warning {
+    background-color: #ff9800; /* Màu cam tươi */
+    border-color: #e68900;
+}
+
+    .btn-warning:hover {
+        background-color: #e68900;
+        border-color: #c77700;
+    }
+
+.custom-btn-outline {
+    border: 2px solid #28a745; /* Viền xanh lá */
+    color: #28a745; /* Màu chữ */
+    background: transparent;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+    .custom-btn-outline:hover {
+        background: #28a745;
+        color: white;
+    }
+
+.custom-btn-filled {
+    background: #00A550; /* Màu xanh lá tươi */
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 28px;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+    .custom-btn-filled:hover {
+        background: #008F47; /* Đậm hơn khi hover */
+        color: white;
+    }
+
+.custom-btn-outline, .custom-btn-filled {
+    margin: 0 10px; /* Tạo khoảng cách giữa hai nút */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+    .close:hover {
+        color: #e74c3c;
+    }
+
+.modal-content button {
+    background: #28a745;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .modal-content button:hover {
+        background: #218838;
+    }
+

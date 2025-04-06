@@ -1,0 +1,87 @@
+﻿@model List<OnThiLaiXe.Models.LoaiBangLai>
+
+@{
+    ViewData["Title"] = "Danh sách bằng lái xe máy";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Danh sách bằng lái xe máy</h2>
+
+    <!-- Thêm dropdown để lọc -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <label for="loaiBangLaiFilter">Lọc theo loại bằng:</label>
+            <select id="loaiBangLaiFilter" class="form-control">
+                <option value="">Tất cả</option>
+                @foreach (var loai in Model.Select(m => m.TenLoai).Distinct())
+                {
+                    <option value="@loai">@loai</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-warning">
+            @ViewBag.ErrorMessage
+        </div>
+    }
+    else if (Model != null && Model.Any())
+    {
+        <div class="row" id="bangLaiContainer">
+            @foreach (var loaiBangLai in Model)
+            {
+                <div class="col-md-4 mb-4 bangLaiCard" data-tenloai="@loaiBangLai.TenLoai">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="card-title mb-0">@loaiBangLai.TenLoai</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Loại xe:</strong> @loaiBangLai.LoaiXe</p>
+                            <p><strong>Mô tả:</strong> @loaiBangLai.MoTa</p>
+
+                            <div class="d-flex justify-content-between mt-3">
+                                <a href="@Url.Action("OnTap", "BaiThi", new { loaiBangLaiId = loaiBangLai.Id })"
+                                   class="btn btn-success">
+                                    <i class="fas fa-book"></i> Ôn tập
+                                </a>
+                                <a href="@Url.Action("ThiDe", "BaiThi", new { loaiBangLaiId = loaiBangLai.Id })"
+                                   class="btn btn-danger">
+                                    <i class="fas fa-file-alt"></i> Thi đề
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            Không có dữ liệu bằng lái xe máy.
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $('#loaiBangLaiFilter').change(function() {
+                var selectedLoai = $(this).val();
+
+                if (selectedLoai === "") {
+                    // Hiển thị tất cả
+                    $('.bangLaiCard').show();
+                } else {
+                    // Ẩn tất cả trước
+                    $('.bangLaiCard').hide();
+
+                    // Hiển thị chỉ những card phù hợp
+                    $('.bangLaiCard[data-tenloai="' + selectedLoai + '"]').show();
+                }
+            });
+        });
+    </script>
+}

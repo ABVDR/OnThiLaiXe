@@ -1,0 +1,104 @@
+﻿@model OnThiLaiXe.Models.CauHoi
+@{
+    ViewData["Title"] = "Thêm Câu Hỏi";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white text-center">
+            <h3 class="mb-0">Thêm Câu Hỏi</h3>
+        </div>
+        <div class="card-body">
+            <form asp-action="Add" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label asp-for="NoiDung" class="form-label fw-bold">Nội dung câu hỏi</label>
+                    <textarea asp-for="NoiDung" class="form-control" placeholder="Nhập nội dung câu hỏi..."></textarea>
+                    <span asp-validation-for="NoiDung" class="text-danger"></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label asp-for="LuaChonA" class="form-label fw-bold">Lựa chọn A</label>
+                        <input asp-for="LuaChonA" class="form-control" placeholder="Nhập đáp án A" />
+                        <span asp-validation-for="LuaChonA" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="LuaChonB" class="form-label fw-bold">Lựa chọn B</label>
+                        <input asp-for="LuaChonB" class="form-control" placeholder="Nhập đáp án B" />
+                        <span asp-validation-for="LuaChonB" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <label asp-for="LuaChonC" class="form-label fw-bold">Lựa chọn C</label>
+                        <input asp-for="LuaChonC" class="form-control" placeholder="Nhập đáp án C" />
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="LuaChonD" class="form-label fw-bold">Lựa chọn D</label>
+                        <input asp-for="LuaChonD" class="form-control" placeholder="Nhập đáp án D" />
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <label asp-for="DapAnDung" class="form-label fw-bold">Đáp án đúng</label>
+                    <select asp-for="DapAnDung" class="form-control">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                    <span asp-validation-for="DapAnDung" class="text-danger"></span>
+                </div>
+
+                <div class="mt-3">
+                    <label asp-for="GiaiThich" class="form-label fw-bold">Giải thích</label>
+                    <textarea asp-for="GiaiThich" class="form-control" placeholder="Nhập lời giải thích (nếu có)"></textarea>
+                </div>
+
+                <div class="form-check mt-3">
+                    <input type="checkbox" asp-for="DiemLiet" class="form-check-input" />
+                    <label class="form-check-label" asp-for="DiemLiet">Điểm liệt</label>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <label asp-for="ChuDeId" class="form-label fw-bold">Chủ đề</label>
+                        <select asp-for="ChuDeId" asp-items="@ViewBag.ChuDes" class="form-control"></select>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="LoaiBangLaiId" class="form-label fw-bold">Loại bằng lái</label>
+                        <select asp-for="LoaiBangLaiId" asp-items="@ViewBag.LoaiBangLais" class="form-control"></select>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="mb-3">
+                        <label asp-for="LoaiMedia" class="form-label fw-bold">Loại Media</label>
+                        <select asp-for="LoaiMedia" class="form-control">
+                            <option value="">-- Chọn loại Media --</option>
+                            <option value="Image">Hình ảnh</option>
+                            <option value="Video">Video</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="MeoGhiNho" class="form-label fw-bold">Mẹo ghi nhớ</label>
+                        <textarea asp-for="MeoGhiNho" class="form-control" placeholder="Nhập mẹo ghi nhớ (nếu có)"></textarea>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <label asp-for="MediaUrl" class="form-label fw-bold">Hình ảnh / Video</label>
+                    <input type="file" name="imageUrl" class="form-control" />
+                </div>
+
+                <div class="mt-4 text-center">
+                    <button type="submit" class="btn btn-success px-4">
+                        <i class="bi bi-save"></i> Lưu
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

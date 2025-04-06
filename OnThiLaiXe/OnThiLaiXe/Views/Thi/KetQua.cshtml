@@ -1,0 +1,209 @@
+﻿@model OnThiLaiXe.Models.BaiThi
+
+@{
+    ViewData["Title"] = "Kết Quả Bài Thi";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center text-primary">Kết Quả Bài Thi</h2>
+    <p class="text-center">Ngày thi: @Model.NgayThi.ToString("dd/MM/yyyy HH:mm")</p>
+
+    <div class="alert alert-info text-center">
+        <h4>Điểm đạt được: @Model.Diem / @Model.ChiTietBaiThis.Count</h4>
+        <h5 class="@(Model.MacLoiNghiemTrong  ? "text-danger" : "text-success")">
+            @(Model.MacLoiNghiemTrong ? "Không Đạt" : "Đạt")
+        </h5>
+        <p>Số câu điểm liệt sai: @Model.MacLoiNghiemTrong / 3</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    @for (int i = 0; i < Model.ChiTietBaiThis.Count; i++)
+                    {
+                        var chiTiet = Model.ChiTietBaiThis.ElementAt(i); // ✅ Chỉ cần vòng lặp này
+
+                        <div class="question-content" id="question-@(i)">
+                            <div class="mb-4 p-3">
+                                <h5 class="question-title">Câu @((i + 1).ToString()): @chiTiet.CauHoi.NoiDung</h5>
+
+                                @foreach (var option in new[] { ("A", chiTiet.CauHoi.LuaChonA), ("B", chiTiet.CauHoi.LuaChonB), ("C", chiTiet.CauHoi.LuaChonC), ("D", chiTiet.CauHoi.LuaChonD) })
+                                {
+                                    if (!string.IsNullOrEmpty(option.Item2))
+                                    {
+                                        bool isUserAnswer = chiTiet.CauTraLoi.HasValue && option.Item1 == chiTiet.CauTraLoi.ToString();
+                                        bool isCorrectAnswer = option.Item1 == chiTiet.CauHoi.DapAnDung.ToString();
+                                        bool isUnanswered = !chiTiet.CauTraLoi.HasValue; // Kiểm tra nếu không có câu trả lời
+
+                                        <div class="form-check @(isCorrectAnswer ? "text-success" : (isUserAnswer || isUnanswered ? "text-danger" : ""))">
+                                            <input class="form-check-input" type="radio" disabled @(isUserAnswer ? "checked" : "") />
+                                            <label class="form-check-label">
+                                                @option.Item1. @option.Item2
+                                            </label>
+                                        </div>
+                                    }
+                                }
+
+
+                                <div class="mt-2 p-2 bg-warning-subtle">
+                                    <strong>Giải thích:</strong> @chiTiet.CauHoi.GiaiThich
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button type="button" class="btn custom-btn-outline px-4 me-3" onclick="prevQuestion()">
+                    <i class="fas fa-arrow-left"></i> Câu Trước
+                </button>
+                <button type="button" class="btn custom-btn-filled px-4 ms-3" onclick="nextQuestion()">
+                    Câu Tiếp <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-lg p-3">
+                <h4 class="text-center text-danger">Kết Quả</h4>
+                <div class="d-flex flex-wrap">
+                    @for (int i = 0; i < Model.ChiTietBaiThis.Count; i++)
+                    {
+                        var chiTiet = Model.ChiTietBaiThis.ElementAt(i); // ✅ Sử dụng ElementAt() để truy cập phần tử theo chỉ mục
+
+                        var isCorrect = chiTiet.DungSai.HasValue && chiTiet.DungSai.Value;
+                        <button type="button" class="question-box @(isCorrect ? "correct" : "incorrect")" onclick="showQuestion(@i)">
+                            @((i + 1).ToString())
+                        </button>
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a asp-action="Index" class="btn btn-success">Làm Lại</a>
+        <a asp-action="ChonDe" class="btn btn-primary">Chọn Lại Đề Khác</a>
+    </div>
+</div>
+
+<script>
+    let currentQuestion = 0;
+    const totalQuestions = @Model.ChiTietBaiThis.Count;
+
+    function showQuestion(index) {
+        document.getElementById(`question-${currentQuestion}`).classList.remove("active-question");
+        document.getElementById(`question-${index}`).classList.add("active-question");
+        currentQuestion = index;
+    }
+
+    function nextQuestion() {
+        if (currentQuestion < totalQuestions - 1) {
+            showQuestion(currentQuestion + 1);
+        }
+    }
+
+    function prevQuestion() {
+        if (currentQuestion > 0) {
+            showQuestion(currentQuestion - 1);
+        }
+    }
+
+    // Khởi tạo các câu hỏi ban đầu
+    window.onload = function () {
+        document.getElementById("question-0").classList.add("active-question");
+    };
+</script>
+
+<style>
+    .question-content {
+        display: none;
+    }
+
+    .active-question {
+        display: block;
+    }
+
+    .question-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .form-check {
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+
+        .form-check.text-success {
+            border-color: #28a745;
+        }
+
+        .form-check.text-danger {
+            border-color: #dc3545;
+        }
+
+    .btn.custom-btn-outline {
+        border: 2px solid #28a745;
+        color: #28a745;
+        background: transparent;
+        font-weight: bold;
+        border-radius: 8px;
+        padding: 10px 20px;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .btn.custom-btn-outline:hover {
+            background: #28a745;
+            color: white;
+        }
+
+    .btn.custom-btn-filled {
+        background: #00A550;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        padding: 10px 28px;
+        border: none;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+    }
+
+        .btn.custom-btn-filled:hover {
+            background: #008F47;
+        }
+
+    .question-box {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+        text-align: center;
+        border: 1px solid #ccc;
+        background: white;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .question-box.correct {
+            background-color: #28a745;
+            color: white;
+            border: none;
+        }
+
+        .question-box.incorrect {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+        }
+</style>

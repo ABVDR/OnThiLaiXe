@@ -1,0 +1,410 @@
+﻿@model BaiThi
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Khu vực câu hỏi -->
+        <div class="col-md-9">
+            <div class="card shadow-lg">
+                
+                <div class="card-header text-white d-flex justify-content-between align-items-center"
+                     style="background: linear-gradient(135deg, #27ae60, #2ecc71); padding: 20px; font-size: 1.25rem;">
+
+                    <h4 class="mb-0">Bài Thi: @Model.Id</h4>
+                    <div class="timer-container">
+                        <i class="fas fa-clock me-2"></i>
+                        <span id="timer" class="font-weight-bold">15:00</span>
+                        
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <!-- Sửa form thành dạng không submit trực tiếp -->
+                    <div id="examForm">
+                        <input type="hidden" id="baiThiId" value="@Model.Id" />
+
+                        @for (int i = 0; i < Model.ChiTietBaiThis.Count; i++)
+                        {
+                            var chiTietList = Model.ChiTietBaiThis.ToList();
+                            var chiTiet = chiTietList[i];
+                            <div class="card mb-3 question-card" id="question-@i" style="display: none;">
+                                <div class="card-body">
+                                    <h5 class="question-text">
+                                       
+                                        <strong>Câu @(@i + 1):</strong> @chiTiet.CauHoi.NoiDung
+                                    </h5>
+
+                                    @if (!string.IsNullOrEmpty(chiTiet.CauHoi.MediaUrl))
+                                    {
+                                        <div class="question-image text-center">
+                                            <img src="@chiTiet.CauHoi.MediaUrl" alt="Hình ảnh câu hỏi" class="img-fluid"
+                                                 style="max-width: 500px; border-radius: 8px; margin: 10px auto; display: block;" />
+                                        </div>
+                                    }
+
+                                    <div class="options">
+                                        <label class="option-item d-block p-2 border rounded mb-2 hover-highlight">
+                                            <input type="radio" name="dapAn_@i" value="A" onclick="saveAnswer(@i, 'A')">
+                                            <span class="ms-2">A. @chiTiet.CauHoi.LuaChonA</span>
+                                        </label>
+                                        <label class="option-item d-block p-2 border rounded mb-2 hover-highlight">
+                                            <input type="radio" name="dapAn_@i" value="B" onclick="saveAnswer(@i, 'B')">
+                                            <span class="ms-2">B. @chiTiet.CauHoi.LuaChonB</span>
+                                        </label>
+                                        @if (!string.IsNullOrEmpty(chiTiet.CauHoi.LuaChonC))
+                                        {
+                                            <label class="option-item d-block p-2 border rounded mb-2 hover-highlight">
+                                                <input type="radio" name="dapAn_@i" value="C" onclick="saveAnswer(@i, 'C')">
+                                                <span class="ms-2">C. @chiTiet.CauHoi.LuaChonC</span>
+                                            </label>
+                                        }
+                                        @if (!string.IsNullOrEmpty(chiTiet.CauHoi.LuaChonD))
+                                        {
+                                            <label class="option-item d-block p-2 border rounded mb-2 hover-highlight">
+                                                <input type="radio" name="dapAn_@i" value="D" onclick="saveAnswer(@i, 'D')">
+                                                <span class="ms-2">D. @chiTiet.CauHoi.LuaChonD</span>
+                                            </label>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex justify-content-center gap-2">
+                                    <button type="button" class="btn btn-outline-secondary px-3" onclick="prevQuestion()">
+                                        <i class="fas fa-arrow-left"></i> Câu Trước
+                                    </button>
+                                    <button type="button" class="btn btn-outline-success px-3" onclick="nextQuestion()">
+                                        Câu Tiếp <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+
+                            </div>
+                        }
+                        <button class="btn btn-danger" onclick="thoatBaiThi()">
+                            <i class="fas fa-sign-out-alt me-2"></i>Thoát Bài Thi
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Khu vực danh sách câu hỏi và đồng hồ -->
+        <div class="col-md-3">
+            <div class="card shadow-sm mb-3">
+                
+                <div class="card-body">
+                    <h4 class="text-center text-danger mb-3" id="timer-large">15:00</h4>
+                   
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-success" onclick="submitExam()">
+                            <i class="fas fa-paper-plane me-2"></i>Nộp Bài
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0"><i class="fas fa-list-ol me-2"></i>Danh sách câu hỏi</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-center gap-1">
+                        @for (int i = 0; i < Model.ChiTietBaiThis.Count; i++)
+                        {
+                            <button type="button" class="btn btn-outline-secondary question-btn" id="btn-@i" onclick="showQuestion(@i)">
+                                @(i + 1)
+                            </button>
+                        }
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .hover-highlight:hover {
+        background-color: #f8f9fa;
+    }
+
+    .question-btn {
+        width: 40px;
+        height: 40px;
+        padding: 6px;
+        margin: 4px;
+    }
+
+    .timer-blink {
+        animation: blinker 1s linear infinite;
+    }
+
+    .question-text {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+
+    .badge {
+        width: 20px;
+        height: 20px;
+    }
+
+    .card-footer {
+        display: flex;
+        justify-content: center; /* Căn giữa các nút */
+        gap: 10px; /* Tạo khoảng cách nhỏ giữa các nút */
+        padding: 10px 15px; /* Điều chỉnh padding cho phần footer */
+    }
+
+</style>
+<script>
+    let currentQuestion = 0;
+    const totalQuestions = document.querySelectorAll('.question-card').length;
+    const timeLimit = 15 * 60; // 15 phút
+    let timeRemaining = timeLimit;
+    let timer;
+    let userAnswers = {};
+    const TIME_STORAGE_KEY_PREFIX = 'baiThi_time_';
+    let isSubmitting = false;
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const baiThiId = document.getElementById('baiThiId').value;
+        const isReload = performance.navigation.type === 1;
+
+        if (!isReload) {
+            localStorage.removeItem('baiThi_' + baiThiId);
+            localStorage.removeItem(TIME_STORAGE_KEY_PREFIX + baiThiId);
+            localStorage.removeItem('baiThiIdDangLam');
+            userAnswers = {};
+            timeRemaining = timeLimit;
+        }
+
+        localStorage.setItem('baiThiIdDangLam', baiThiId);
+
+        showQuestion(0);
+
+        if (isReload) {
+            loadSavedTime();
+            loadSavedAnswers();
+        } else {
+            timeRemaining = timeLimit;
+            saveTimeToStorage();
+        }
+
+        startTimer();
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowLeft') prevQuestion();
+            else if (e.key === 'ArrowRight') nextQuestion();
+            else if (/^[1-9]$/.test(e.key) && parseInt(e.key) <= totalQuestions) showQuestion(parseInt(e.key) - 1);
+            else if (['a', 'b', 'c', 'd', 'A', 'B', 'C', 'D'].includes(e.key)) {
+                const answer = e.key.toUpperCase();
+                const radioBtn = document.querySelector(`#question-${currentQuestion} input[value="${answer}"]`);
+                if (radioBtn) {
+                    radioBtn.checked = true;
+                    saveAnswer(currentQuestion, answer);
+                }
+            }
+        });
+
+        setInterval(function () {
+            saveAnswersToServer();
+            saveTimeToStorage();
+        }, 10000);
+    });
+
+    function showQuestion(index) {
+        if (index < 0 || index >= totalQuestions) return;
+        document.querySelectorAll('.question-card').forEach(card => card.style.display = 'none');
+        document.getElementById(`question-${index}`).style.display = 'block';
+        currentQuestion = index;
+        updateButtonStates();
+    }
+
+    function nextQuestion() {
+        if (currentQuestion < totalQuestions - 1) showQuestion(currentQuestion + 1);
+    }
+
+    function prevQuestion() {
+        if (currentQuestion > 0) showQuestion(currentQuestion - 1);
+    }
+
+    function saveAnswer(index, value) {
+        const key = `dapAn_${index}`;
+        userAnswers[key] = value;
+        localStorage.setItem('baiThi_' + document.getElementById('baiThiId').value, JSON.stringify(userAnswers));
+        markAnswered(index);
+    }
+
+    function loadSavedAnswers() {
+        const baiThiId = document.getElementById('baiThiId').value;
+        const savedData = localStorage.getItem('baiThi_' + baiThiId);
+        if (savedData) {
+            try {
+                userAnswers = JSON.parse(savedData);
+                Object.keys(userAnswers).forEach(key => {
+                    if (key.startsWith('dapAn_')) {
+                        const index = parseInt(key.split('_')[1]);
+                        const value = userAnswers[key];
+                        const radioBtn = document.querySelector(`input[name="${key}"][value="${value}"]`);
+                        if (radioBtn) {
+                            radioBtn.checked = true;
+                            markAnswered(index);
+                        }
+                    }
+                });
+            } catch (e) {
+                console.error('Lỗi khôi phục đáp án:', e);
+            }
+        }
+    }
+
+    function saveTimeToStorage() {
+        const baiThiId = document.getElementById('baiThiId').value;
+        const timeKey = TIME_STORAGE_KEY_PREFIX + baiThiId;
+        const endTime = Date.now() + (timeRemaining * 1000);
+        localStorage.setItem(timeKey, JSON.stringify({ timeRemaining: timeRemaining, endTime: endTime }));
+    }
+
+    function loadSavedTime() {
+        const baiThiId = document.getElementById('baiThiId').value;
+        const timeKey = TIME_STORAGE_KEY_PREFIX + baiThiId;
+        const savedTime = localStorage.getItem(timeKey);
+        if (savedTime) {
+            try {
+                const timeData = JSON.parse(savedTime);
+                const now = Date.now();
+                if (timeData.endTime > now) {
+                    timeRemaining = Math.ceil((timeData.endTime - now) / 1000);
+                } else {
+                    timeRemaining = 0;
+                    setTimeout(() => submitExam(true), 500);
+                }
+            } catch (e) {
+                console.error("Lỗi parse thời gian:", e);
+                timeRemaining = timeLimit;
+                saveTimeToStorage();
+            }
+        } else {
+            timeRemaining = timeLimit;
+            saveTimeToStorage();
+        }
+    }
+
+    function saveAnswersToServer() {
+        if (Object.keys(userAnswers).length === 0) return;
+        const baiThiId = document.getElementById('baiThiId').value;
+        fetch('/BaiThi/LuuDapAnTamThoi', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                baiThiId: baiThiId,
+                dapAn: userAnswers,
+                timeRemaining: timeRemaining
+            })
+        })
+        .then(response => response.json())
+        .then(data => console.log('Đã lưu:', data))
+        .catch(error => console.error('Lỗi:', error));
+    }
+
+    function markAnswered(index) {
+        const button = document.getElementById(`btn-${index}`);
+        button.classList.remove('btn-outline-secondary', 'btn-danger');
+        button.classList.add('btn-success');
+    }
+
+    function updateButtonStates() {
+        document.querySelectorAll('.question-btn').forEach((btn, idx) => {
+            btn.classList.remove('btn-primary');
+            if (idx === currentQuestion) btn.classList.add('btn-primary');
+        });
+    }
+
+    function startTimer() {
+        if (timeRemaining <= 0) {
+            submitExam(true);
+            return;
+        }
+
+        const endTime = Date.now() + (timeRemaining * 1000);
+        timer = setInterval(function () {
+            const now = Date.now();
+            const remainingMs = endTime - now;
+            timeRemaining = Math.ceil(remainingMs / 1000);
+            if (timeRemaining <= 0) {
+                clearInterval(timer);
+                timeRemaining = 0;
+                submitExam(true);
+            }
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById('timer').textContent = timeString;
+            document.getElementById('timer-large').textContent = timeString;
+        }, 1000);
+    }
+
+    function submitExam(isTimeout = false) {
+        isSubmitting = true;
+        if (!isTimeout && timeRemaining > 0) {
+            const unansweredCount = countUnansweredQuestions();
+            let confirmMessage = 'Bạn chắc chắn muốn nộp bài?';
+            if (unansweredCount > 0) {
+                confirmMessage = `Bạn còn ${unansweredCount} câu chưa trả lời. Vẫn muốn nộp bài?`;
+            }
+            if (!confirm(confirmMessage)) {
+                isSubmitting = false;
+                return;
+            }
+        } else if (isTimeout) {
+            alert('Đã hết thời gian! Bài sẽ được nộp tự động.');
+        }
+
+        markUnansweredQuestions();
+        clearInterval(timer);
+
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = '/BaiThi/NopBaiThi';
+
+        const baiThiId = document.getElementById('baiThiId').value;
+
+        const baiThiIdInput = document.createElement('input');
+        baiThiIdInput.type = 'hidden';
+        baiThiIdInput.name = 'baiThiId';
+        baiThiIdInput.value = baiThiId;
+        form.appendChild(baiThiIdInput);
+
+        const dapAnInput = document.createElement('input');
+        dapAnInput.type = 'hidden';
+        dapAnInput.name = 'dapAnJson';
+        dapAnInput.value = JSON.stringify(userAnswers);
+        form.appendChild(dapAnInput);
+
+        document.body.appendChild(form);
+        form.submit();
+
+        localStorage.removeItem('baiThi_' + baiThiId);
+        localStorage.removeItem(TIME_STORAGE_KEY_PREFIX + baiThiId);
+        localStorage.removeItem('baiThiIdDangLam');
+    }
+
+    function markUnansweredQuestions() {
+        for (let i = 0; i < totalQuestions; i++) {
+            const key = `dapAn_${i}`;
+            const button = document.getElementById(`btn-${i}`);
+            if (!userAnswers[key]) {
+                button.classList.remove('btn-outline-secondary', 'btn-success');
+                button.classList.add('btn-danger');
+            }
+        }
+    }
+
+    function countUnansweredQuestions() {
+        let count = 0;
+        for (let i = 0; i < totalQuestions; i++) {
+            if (!userAnswers[`dapAn_${i}`]) count++;
+        }
+        return count;
+    }
+</script>

@@ -1,0 +1,22 @@
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+
+namespace OnThiLaiXe.Models
+{
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext>
+options) : base(options)
+        {
+        }
+        public DbSet<ChuDe> ChuDes { get; set; }
+        public DbSet<LoaiBangLai> LoaiBangLais { get; set; }
+        public DbSet<CauHoi> CauHois { get; set; }
+        public DbSet<BaiThi> BaiThis { get; set; }
+        public DbSet<ChiTietBaiThi> ChiTietBaiThis { get; set; }
+        public DbSet<CauHoiSai> CauHoiSais { get; set; }
+        public DbSet<CauTrucDeThi> CauTrucDeThis { get; set; } // Thêm DbSet cho CauTrucDeThi
+    }
+
+
+}

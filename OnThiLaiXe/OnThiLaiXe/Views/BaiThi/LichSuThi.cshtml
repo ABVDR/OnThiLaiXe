@@ -1,0 +1,93 @@
+﻿@model List<LichSuThiViewModel>
+
+@{
+    ViewData["Title"] = "Lịch sử thi";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="mb-4">Lịch sử thi</h2>
+
+            @if (!Model.Any())
+            {
+                <div class="alert alert-info">
+                    Bạn chưa có lịch sử thi nào được ghi nhận.
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên bài thi</th>
+                                <th>Ngày thi</th>
+                                <th>Loại bài thi</th>
+                                <th>Kết quả</th>
+                                <th>Số câu đúng</th>
+                                <th>Tổng số câu</th>
+                                <th>% Đúng</th>
+                                <th>Điểm</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                var item = Model[i];
+                                <tr class="@(item.KetQua == "Đạt" ? "table-success" : "table-danger")">
+                                    <td>@(i + 1)</td>
+                                    <td>@item.TenBaiThi</td>
+                                    <td>@item.NgayThi.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td>@item.LoaiBaiThi</td>
+                                    <td>
+                                        <span class="badge @(item.KetQua == "Đạt" ? "bg-success" : "bg-danger")">
+                                            @item.KetQua
+                                        </span>
+                                        @if (item.MacLoiNghiemTrong)
+                                        {
+                                            <span class="badge bg-warning ms-1" data-bs-toggle="tooltip" title="Bài thi có lỗi nghiêm trọng">
+                                                <i class="fas fa-exclamation-triangle"></i> Lỗi nghiêm trọng
+                                            </span>
+                                        }
+                                    </td>
+                                    <td>@item.SoCauDung</td>
+                                    <td>@item.TongSoCau</td>
+                                    <td>@item.PhanTramDung.ToString("0.0")%</td>
+                                    <td>@item.Diem.ToString("0.0")</td>
+                                    <td>
+                                        <a href="@Url.Action("ChiTietBaiThi", "BaiThi", new { id = item.BaiThiId })" class="btn btn-sm btn-info">
+                                            <i class="fas fa-eye"></i> Xem chi tiết
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-4">
+                    <p><strong>Tổng số bài thi:</strong> @Model.Count</p>
+                    <p><strong>Số bài thi đạt:</strong> @Model.Count(x => x.KetQua == "Đạt")</p>
+                    <p><strong>Điểm trung bình:</strong> @Model.Average(x => x.Diem).ToString("0.0")</p>
+                </div>
+            }
+
+            <div class="mt-4">
+                <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Trở về trang chủ
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            $('[data-bs-toggle="tooltip"]').tooltip();
+        });
+    </script>
+}

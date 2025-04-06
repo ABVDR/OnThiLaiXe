@@ -1,0 +1,191 @@
+﻿@model List<KetQuaBaiThi>
+
+@{
+    ViewData["Title"] = "Kết Quả Bài Thi";
+}
+
+<h1 style="margin-top: 50px;"></h1>
+
+<div style="display: flex;">
+    <!-- Kết quả chi tiết -->
+    <div style="flex: 3;">
+        @{
+            int cauSo = 1;
+        }
+
+        @foreach (var item in Model)
+        {
+            bool isCauBoTrong = item.CauTraLoi == '\0';
+
+            <div class="question">
+                <p><strong>Câu @cauSo:</strong> @item.CauHoi.NoiDung</p>
+                @if (!string.IsNullOrEmpty(item.CauHoi.MediaUrl))
+                {
+                    <div class="question-image text-center">
+                        <img src="@item.CauHoi.MediaUrl" alt="Hình ảnh câu hỏi" class="img-fluid"
+                             style="max-width: 500px; border-radius: 8px; margin: 10px auto; display: block;" />
+                    </div>
+                }
+
+                @foreach (var dapAn in new[] { ('A', item.CauHoi.LuaChonA), ('B', item.CauHoi.LuaChonB), ('C', item.CauHoi.LuaChonC), ('D', item.CauHoi.LuaChonD) })
+                {
+                    if (!string.IsNullOrEmpty(dapAn.Item2))
+                    {
+                        var isDapAnDung = dapAn.Item1 == item.CauHoi.DapAnDung;
+                        var isDapAnNguoiDung = dapAn.Item1 == item.CauTraLoi;
+
+                        string cssClass = isDapAnDung ? "correct" : (isDapAnNguoiDung ? "incorrect" : "");
+
+                        <div class="answer-container @cssClass">
+                            <input type="radio" disabled @(isDapAnNguoiDung ? "checked" : "") />
+                            <label>@(dapAn.Item1). @dapAn.Item2</label>
+                        </div>
+                    }
+                }
+
+                <p class="explanation">Giải thích: @(item.CauHoi.GiaiThich ?? "Không có giải thích")</p>
+
+                @if (item.CauHoi.DiemLiet && item.CauTraLoi != item.CauHoi.DapAnDung)
+                {
+                    <p class="warning">⚠️ Bạn đã trả lời sai câu điểm liệt!</p>
+                }
+
+                @if (isCauBoTrong)
+                {
+                    <p class="warning">⚠️ Bạn đã bỏ trống câu này!</p>
+                }
+            </div>
+            cauSo++;
+        }
+    </div>
+
+    <!-- Tóm tắt kết quả -->
+    <div style="flex: 1; margin-left: 20px;">
+        <h3>Kết Quả</h3>
+        <div class="summary-grid">
+            @{
+                int index = 0; int correctCount = 0; int totalQuestions = Model.Count;
+            }
+            @foreach (var item in Model)
+            {
+                var isDapAnNguoiDungSai = item.CauTraLoi == '\0' || item.CauTraLoi != item.CauHoi.DapAnDung;
+                if (!isDapAnNguoiDungSai) { correctCount++; }
+                <div class="summary-item @(isDapAnNguoiDungSai ? "incorrect" : "correct")">@(++index)</div>
+            }
+        </div>
+
+        <!-- Tổng điểm -->
+        <div class="score-card">
+            <span>Tổng điểm:</span>
+            <strong>@correctCount / @totalQuestions</strong>
+        </div>
+
+        <!-- Cảnh báo điểm liệt -->
+        @if (Model.Any(m => m.CauHoi.DiemLiet && m.CauTraLoi != m.CauHoi.DapAnDung))
+        {
+            <div class="warning-card">⚠️ Bạn đã trả lời sai ít nhất một câu điểm liệt!</div>
+        }
+    </div>
+</div>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    .question {
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 12px;
+        border: 1px solid #ddd;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .answer-container {
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+        padding: 5px 10px;
+        border-radius: 8px;
+    }
+
+        .answer-container.correct {
+            border: 2px solid #4CAF50;
+            background-color: #E8F5E9;
+            font-weight: bold;
+        }
+
+        .answer-container.incorrect {
+            border: 2px solid #F44336;
+            background-color: #FFEBEE;
+            font-weight: bold;
+        }
+
+    .explanation {
+        background-color: #FFF8E1;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .summary-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+        .summary-item.correct {
+            background-color: #4CAF50;
+        }
+
+        .summary-item.incorrect {
+            background-color: #F44336;
+        }
+
+    .score-card {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 12px;
+        background-color: #2196F3;
+        color: white;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .warning-card {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 12px;
+        background-color: #FF5722;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .warning {
+        color: #FF5722;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+</style>

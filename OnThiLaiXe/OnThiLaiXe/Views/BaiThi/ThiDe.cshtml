@@ -1,0 +1,56 @@
+﻿@model List<OnThiLaiXe.Models.BaiThi>
+@{
+    ViewData["Title"] = "Danh sách đề thi";
+    var loaiBangLaiId = Context.Request.Query["loaiBangLaiId"].ToString();
+    var loaiBangLai = ViewBag.LoaiBangLai ?? (Model.FirstOrDefault()?.ChiTietBaiThis?.FirstOrDefault()?.CauHoi?.LoaiBangLai);
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Danh sách đề thi @(loaiBangLai?.TenLoai ?? "")</h2>
+
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <a href="@Url.Action(loaiBangLai?.LoaiXe == "Xe máy" ? "LoaiBangLaiXeMay" : "LoaiBangLaiOTo", "BaiThi")" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Quay lại
+            </a>
+        </div>
+    </div>
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="row">
+            @foreach (var baiThi in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="card-title mb-0">Đề thi #@baiThi.Id</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Ngày tạo:</strong> @baiThi.NgayThi.ToString("dd/MM/yyyy HH:mm")</p>
+                            <p><strong>Số câu hỏi:</strong> @baiThi.ChiTietBaiThis.Count</p>
+
+                            <div class="d-flex justify-content-between mt-3">
+                                <a href="@Url.Action("LamBaiThi", "BaiThi", new { id = baiThi.Id })" class="btn btn-success">
+                                    <i class="fas fa-pencil-alt"></i> Làm bài
+                                </a>
+                                <a href="@Url.Action("ChiTietBaiThi", "BaiThi", new { id = baiThi.Id })" class="btn btn-info">
+                                    <i class="fas fa-info-circle"></i> Chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            Không có đề thi nào cho loại bằng lái này.
+            <a href="@Url.Action("ChonDeThi", "BaiThi")" class="btn btn-primary ml-3">
+                <i class="fas fa-plus"></i> Tạo đề thi mới
+            </a>
+        </div>
+    }
+</div>

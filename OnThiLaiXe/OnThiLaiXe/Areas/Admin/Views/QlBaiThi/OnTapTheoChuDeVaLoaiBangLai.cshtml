@@ -1,0 +1,105 @@
+﻿@model List<OnThiLaiXe.Models.ChuDe>
+
+@{
+    ViewData["Title"] = "Ôn Tập Theo Chủ Đề và Loại Bằng Lái";
+    var danhSachLoaiBangLai = ViewBag.DanhSachLoaiBangLai as List<OnThiLaiXe.Models.LoaiBangLai>;
+    var selectedLoaiBangLaiId = ViewBag.SelectedLoaiBangLaiId as int?;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/ontapchude.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Ôn Tập Theo Chủ Đề và Loại Bằng Lái</h2>
+
+        <!-- Dropdown chọn loại bằng lái -->
+        <div class="form-group mb-4 text-center">
+            <label for="loaiBangLai" class="form-label fw-bold">Chọn Loại Bằng Lái:</label>
+            <select id="loaiBangLai" name="loaiBangLaiId" class="form-select d-inline-block w-auto"
+                    onchange="location = this.value;">
+                @foreach (var loai in danhSachLoaiBangLai)
+                {
+                    var url = Url.Action("OnTapTheoChuDeVaLoaiBangLai", "BaiThi", new { loaiBangLaiId = loai.Id });
+                    <option value="@url" selected="@(selectedLoaiBangLaiId == loai.Id ? "selected" : null)">
+                        @loai.TenLoai
+                    </option>
+                }
+            </select>
+        </div>
+
+        <!-- Danh sách các chủ đề -->
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="card option-card">
+                    <span class="badge bg-primary">A1</span>
+                    <img src="~/images/motorcycle.png" class="card-img-top mx-auto" alt="Thi thử ngẫu nhiên">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Thi thử ngẫu nhiên</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card option-card">
+                    <span class="badge bg-info">0/8</span>
+                    <img src="~/images/answer-2.png" class="card-img-top mx-auto" alt="Thi thử đề tạo sẵn">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Thi thử đề tạo sẵn</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card option-card">
+                    <span class="badge bg-success">200</span>
+                    <img src="~/images/quiz-2.png" class="card-img-top mx-auto" alt="Ôn tập toàn bộ câu hỏi">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ôn tập toàn bộ câu hỏi</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card option-card">
+                    <span class="badge bg-warning">20</span>
+                    <img src="~/images/wrong2.png" class="card-img-top mx-auto" alt="Ôn tập câu điểm liệt">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ôn tập câu điểm liệt</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card option-card">
+                    <span class="badge bg-danger">0,50</span>
+                    <img src="~/images/choice.png" class="card-img-top mx-auto" alt="Câu hỏi làm sai">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Câu hỏi làm sai</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card option-card">
+                    <span class="badge bg-warning">6</span>
+                    <img src="~/images/traffic-light2.png" class="card-img-top mx-auto" alt="Biển báo giao thông">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Biển báo giao thông</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

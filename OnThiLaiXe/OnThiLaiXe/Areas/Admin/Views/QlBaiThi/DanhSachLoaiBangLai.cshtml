@@ -1,0 +1,91 @@
+﻿@model List<OnThiLaiXe.Models.LoaiBangLai>
+
+@{
+    ViewData["Title"] = "Danh Sách Loại Bằng Lái";
+}
+
+<div class="container mt-4" style="max-width: 1200px;">
+    <h2 class="text-center fw-bold mb-4" style="color: #2C3E50;"> Danh Sách Ôn Tập Loại Bằng Lái</h2>
+
+    <div class="row g-4">
+        @foreach (var loaiBangLai in Model)
+        {
+            <div class="col-md-4">
+                <a href="@Url.Action("OnTap", "BaiThi", new { loaiBangLaiId = loaiBangLai.Id })" class="category-card">
+                    <div class="category-badge">@loaiBangLai.TenLoai</div>
+                    <div class="category-icon" onclick="toggleColor(this)">
+                        <i class="bi bi-book-half" style="color: #6A5ACD;"></i>
+                    </div>
+                   
+                    <div class="category-description">@loaiBangLai.MoTa</div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    body {
+        background: #FAFAFA;
+        color: #2C3E50;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .category-card {
+        display: block;
+        text-decoration: none;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+    .category-badge {
+        background: #27AE60;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 12px;
+        font-size: 14px;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .category-description {
+        font-size: 16px;
+        color: #555;
+        margin-top: 10px;
+    }
+    .category-icon {
+        font-size: 80px; /* Tăng kích thước icon */
+        margin-bottom: 15px;
+        cursor: pointer; /* Biến con trỏ thành dạng nhấp chuột */
+    }
+
+    .category-badge {
+        background: #27AE60;
+        color: white;
+        padding: 15px 20px; /* Làm cho tên loại bằng lái lớn hơn */
+        border-radius: 12px;
+        font-size: 20px; /* Tăng kích thước chữ */
+        display: inline-block;
+        margin-bottom: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .category-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #2C3E50;
+    }
+</style>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">

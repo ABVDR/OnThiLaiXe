@@ -1,0 +1,59 @@
+﻿@model OnThiLaiXe.Models.CauHoi
+@{
+    ViewData["Title"] = "Chi Tiết Câu Hỏi";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white text-center">
+            <h4>Chi Tiết Câu Hỏi</h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <!-- Cột 1: Hiển thị hình ảnh (nếu có) -->
+                <div class="col-md-4 text-center">
+                    @if (!string.IsNullOrEmpty(Model.MediaUrl))
+                    {
+                        <img src="@Model.MediaUrl" alt="Media" class="img-fluid rounded shadow" style="max-width: 100%;">
+                    }
+                    else
+                    {
+                        <p class="text-muted">Không có hình ảnh / video</p>
+                    }
+                </div>
+
+                <!-- Cột 2: Hiển thị nội dung câu hỏi -->
+                <div class="col-md-8">
+                    <h5 class="fw-bold">Câu hỏi:</h5>
+                    <p class="fs-5">@Model.NoiDung</p>
+
+                    <h5 class="fw-bold">Đáp án:</h5>
+                    <p class="fs-5"><span class="badge bg-success">@Model.DapAnDung</span></p>
+
+                    <h5 class="fw-bold">Chủ đề:</h5>
+                    <p class="fs-5">@Model.ChuDe?.TenChuDe</p>
+
+                    <h5 class="fw-bold">Loại bằng lái:</h5>
+                    <p class="fs-5">@Model.LoaiBangLai?.TenLoai</p>
+
+                    @if (!string.IsNullOrEmpty(Model.GiaiThich))
+                    {
+                        <h5 class="fw-bold">Giải thích:</h5>
+                        <p class="text-muted">@Model.GiaiThich</p>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Nút thao tác -->
+        <div class="card-footer text-center">
+            <a asp-action="Update" asp-route-id="@Model.Id" class="btn btn-warning me-2">
+                <i class="bi bi-pencil-square"></i> Chỉnh sửa
+            </a>
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Quay lại danh sách
+            </a>
+        </div>
+    </div>
+</div>

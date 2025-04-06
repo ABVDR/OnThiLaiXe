@@ -1,0 +1,169 @@
+﻿@model List<OnThiLaiXe.Models.CauHoi>
+
+@{
+    ViewData["Title"] = "Thi Trắc Nghiệm";
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="card shadow-lg">
+                <div class="card-header bg-success text-white text-center">
+                    <h2 class="mb-0">Đề Thi</h2>
+                </div>
+                <div class="card-body">
+                    <form id="examForm" asp-action="NopBai" method="post">
+                        <div id="questionContainer">
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                var cauHoi = Model[i];
+                                <div class="question-content" id="question-@i" style="display: @(i == 0 ? "block" : "none"); width: 100%;">
+                                    <h5 class="question-title">Câu @(i + 1): @cauHoi.NoiDung</h5>
+                                    <div class="question-options">
+                                        @foreach (var option in new[] { ("A", cauHoi.LuaChonA), ("B", cauHoi.LuaChonB), ("C", cauHoi.LuaChonC), ("D", cauHoi.LuaChonD) })
+                                        {
+                                            if (!string.IsNullOrEmpty(option.Item2))
+                                            {
+                                                <label class="option-item">
+                                                    <input class="option-input" type="radio" name="dapAnNguoiDung[@cauHoi.Id]"
+                                                           id="dapAn@(option.Item1)_@cauHoi.Id" value="@option.Item1" onchange="markAnswered(@i)">
+                                                    <span class="option-text">@option.Item1. @option.Item2</span>
+                                                </label>
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+
+                        <div class="text-center mt-4">
+                            <button type="button" class="btn custom-btn-outline px-4 me-3" onclick="prevQuestion()">
+                                <i class="fas fa-arrow-left"></i> Câu Trước
+                            </button>
+                            <button type="button" class="btn custom-btn-filled px-4 ms-3" onclick="nextQuestion()">
+                                Câu Tiếp <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow-sm p-3">
+                <h4 class="text-center text-danger" id="timer">15:00</h4>
+                <button class="btn btn-success w-100 mb-2" onclick="submitExam()">Nộp Bài</button>
+                <div class="d-flex flex-wrap">
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        <button type="button" class="btn question-btn m-1" id="btn-@i" onclick="showQuestion(@i)">
+                            @((i + 1).ToString())
+                        </button>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bảng thông báo hết thời gian -->
+<div id="timeUpModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Thời gian đã hết!</h2>
+        <p>Bài thi sẽ được nộp ngay bây giờ.</p>
+        <button class="btn btn-primary" onclick="submitExam()">Nộp Bài</button>
+    </div>
+</div>
+<script>
+    // Khởi tạo biến
+    const totalTime = 50; // 15 phút = 900 giây
+    let timeLeft = totalTime;
+    let currentQuestion = 0;
+    let timerInterval = null;
+
+    // Hàm hiển thị câu hỏi
+    function showQuestion(index) {
+        document.getElementById(`question-${currentQuestion}`).style.display = "none";
+        document.getElementById(`question-${index}`).style.display = "block";
+        currentQuestion = index;
+    }
+
+    // Câu hỏi tiếp theo
+    function nextQuestion() {
+        if (currentQuestion < @Model.Count - 1) {
+            showQuestion(currentQuestion + 1);
+        }
+    }
+
+    // Câu hỏi trước đó
+    function prevQuestion() {
+        if (currentQuestion > 0) {
+            showQuestion(currentQuestion - 1);
+        }
+    }
+
+    // Đánh dấu câu hỏi đã trả lời
+    function markAnswered(index) {
+        document.getElementById(`btn-${index}`).classList.add("btn-success");
+    }
+
+    // Nộp bài thi
+    function submitExam() {
+        clearInterval(timerInterval);
+
+        // Kiểm tra nếu không có câu trả lời nào
+        const checkedInputs = document.querySelectorAll('input[type="radio"]:checked');
+        if (checkedInputs.length === 0) {
+            // Nếu không có câu trả lời, submit form để chuyển sang trang kết quả
+            document.getElementById("examForm").submit();
+            return;
+        }
+
+        document.getElementById("examForm").submit();
+    }
+
+    // Hiển thị modal khi hết thời gian
+    function showTimeUpModal() {
+        const modal = document.getElementById("timeUpModal");
+        modal.style.display = "flex";
+    }
+
+    // Đóng modal
+    function closeModal() {
+        document.getElementById("timeUpModal").style.display = "none";
+    }
+
+    // Cập nhật đồng hồ đếm ngược
+    function updateTimer() {
+        if (timeLeft > 0) {
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+            document.getElementById("timer").innerText =
+                `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            timeLeft--;
+        } else {
+            clearInterval(timerInterval);
+            showTimeUpModal(); // Hiển thị modal trước khi nộp bài
+
+            // Tự động nộp bài sau 3 giây
+            setTimeout(submitExam, 3000);
+        }
+    }
+
+    // Khởi động bộ đếm khi trang tải
+    window.onload = function () {
+        // Ẩn modal khi trang tải lại
+        document.getElementById("timeUpModal").style.display = "none";
+
+        // Chỉ chạy bộ đếm nếu chưa tồn tại
+        if (!timerInterval) {
+            timerInterval = setInterval(updateTimer, 1000);
+            updateTimer();
+        }
+    };
+</script>

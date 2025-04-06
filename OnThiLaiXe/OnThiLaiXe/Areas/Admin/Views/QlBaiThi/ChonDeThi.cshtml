@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "ChonDeThi";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var danhSachChuDe = ViewBag.DanhSachChuDe as List<OnThiLaiXe.Models.ChuDe>;
+    var danhSachLoaiBangLai = ViewBag.DanhSachLoaiBangLai as List<OnThiLaiXe.Models.LoaiBangLai>;
+}
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center text-primary mb-4">Chọn Đề Thi</h2>
+
+        <form asp-action="TaoDeThi" method="post">
+            <div class="form-group mb-4">
+                <label for="loaiBangLai" class="form-label fw-bold">Chọn Loại Bằng Lái:</label>
+                <select id="loaiBangLai" name="loaiBangLaiId" class="form-select">
+                    @foreach (var loai in danhSachLoaiBangLai)
+                    {
+                        <option value="@loai.Id">@loai.TenLoai</option>
+                    }
+                </select>
+            </div>
+            <div class="card p-3 border-0 shadow-sm">
+                <h4 class="text-center text-success">Chọn Số Lượng Câu Hỏi Theo Chủ Đề</h4>
+                <div class="row mt-3">
+                    @foreach (var chuDe in danhSachChuDe)
+                    {
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">@chuDe.TenChuDe:</label>
+                            <input type="number" name="soLuongMoiChuDe[@chuDe.Id]" class="form-control" min="0" max="10" value="0" />
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary btn-lg px-5 shadow">Tạo Đề Thi</button>
+            </div>
+        </form>
+    </div>
+</div>
+

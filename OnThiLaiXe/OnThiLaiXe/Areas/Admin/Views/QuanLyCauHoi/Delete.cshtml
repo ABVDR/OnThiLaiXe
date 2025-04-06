@@ -1,0 +1,28 @@
+﻿@model OnThiLaiXe.Models.CauHoi
+@{
+    ViewData["Title"] = "Xóa Câu Hỏi";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-danger">
+        <div class="card-header bg-danger text-white text-center">
+            <h4><i class="bi bi-exclamation-triangle"></i> Xác nhận xóa</h4>
+        </div>
+        <div class="card-body text-center">
+            <h5 class="text-danger">Bạn có chắc chắn muốn xóa câu hỏi này?</h5>
+            <p class="fw-bold text-secondary">"<span class="text-primary">@Model.NoiDung</span>"</p>
+            <p class="text-muted">Hành động này không thể hoàn tác!</p>
+
+            <form asp-action="DeleteConfirmed" method="post">
+                <input type="hidden" asp-for="Id" />
+                <button type="submit" class="btn btn-danger px-4">
+                    <i class="bi bi-trash"></i> Xóa
+                </button>
+                <a asp-action="Index" class="btn btn-secondary px-4 ms-2">
+                    <i class="bi bi-arrow-left"></i> Hủy
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

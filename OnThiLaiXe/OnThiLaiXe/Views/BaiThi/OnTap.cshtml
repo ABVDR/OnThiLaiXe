@@ -1,0 +1,152 @@
+﻿@model List<OnThiLaiXe.Models.CauHoi>
+
+@{
+    ViewData["Title"] = "Ôn Tập - " + ViewBag.LoaiBangLai?.TenLoai;
+}
+
+<div class="container mt-4" style="max-width: 900px;">
+    <h2 class="text-center fw-bold mb-4" style="color: #2C3E50;"> Ôn Tập - @ViewBag.LoaiBangLai?.TenLoai</h2>
+
+    @if (Model.Any())
+    {
+        <div class="row g-3">
+            @foreach (var cauHoi in Model)
+            {
+                <div class="col-12">
+                    <div class="question-card" id="cauHoi_@cauHoi.Id">
+                        <h5 class="question-title">Câu @((Model.IndexOf(cauHoi) + 1)): @cauHoi.NoiDung</h5>
+
+                        @if (!string.IsNullOrEmpty(cauHoi.MediaUrl))
+                        {
+                            <div class="text-center my-3">
+                                <img src="@cauHoi.MediaUrl" alt="Hình ảnh câu hỏi" class="question-image" style="max-width: 500px; border-radius: 8px; margin: 10px auto; display: block;" />
+                            </div>
+                        }
+
+                        <div class="options-list">
+                            @foreach (var dapAn in new[] { ('A', cauHoi.LuaChonA), ('B', cauHoi.LuaChonB), ('C', cauHoi.LuaChonC), ('D', cauHoi.LuaChonD) })
+                            {
+                                if (!string.IsNullOrEmpty(dapAn.Item2))
+                                {
+                                    <label class="option-item" id="label_@cauHoi.Id@dapAn.Item1">
+                                        <input type="radio" name="cau_@cauHoi.Id" value="@dapAn.Item1" onchange="kiemTraDapAn(@cauHoi.Id, '@dapAn.Item1', '@cauHoi.DapAnDung', '@cauHoi.GiaiThich')">
+                                        <span>@(dapAn.Item1). @dapAn.Item2</span>
+                                    </label>
+                                }
+                            }
+                        </div>
+
+                        <p id="ketQua_@cauHoi.Id" class="result-message"></p>
+                        <div id="giaiThich_@cauHoi.Id" class="explanation-box" style="display: none;"></div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p class="text-muted text-center">🚫 Không có câu hỏi nào cho loại bằng lái này.</p>
+    }
+</div>
+
+<script>
+    function kiemTraDapAn(cauHoiId, dapAnNguoiDung, dapAnDung, giaiThich) {
+        const ketQuaElement = document.getElementById(`ketQua_${cauHoiId}`);
+        const giaiThichElement = document.getElementById(`giaiThich_${cauHoiId}`);
+        const allLabels = document.querySelectorAll(`#cauHoi_${cauHoiId} .option-item`);
+
+        allLabels.forEach(label => label.classList.remove('correct', 'wrong', 'selected'));
+
+        const userLabel = document.getElementById(`label_${cauHoiId}${dapAnNguoiDung}`);
+        userLabel.classList.add('selected');
+
+        if (dapAnNguoiDung === dapAnDung) {
+            ketQuaElement.innerHTML = " Đúng rồi!";
+            ketQuaElement.className = "result-message success";
+            userLabel.classList.add('correct');
+        } else {
+            ketQuaElement.innerHTML = ` Sai ! Đáp án đúng là: <strong>${dapAnDung}</strong>`;
+            ketQuaElement.className = "result-message error";
+            userLabel.classList.add('wrong');
+
+            const correctLabel = document.getElementById(`label_${cauHoiId}${dapAnDung}`);
+            correctLabel.classList.add('correct');
+        }
+
+        giaiThichElement.innerHTML = `<strong> Giải thích:</strong> ${giaiThich}`;
+        giaiThichElement.style.display = 'block';
+    }
+</script>
+
+<style>
+    body {
+        background: #FAFAFA;
+        color: #2C3E50;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .question-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    .question-title {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .question-image {
+        max-width: 80%;
+        border-radius: 8px;
+    }
+
+    .options-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .option-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 1px solid #CED4DA;
+    }
+
+        .option-item.correct {
+            background: #E8F5E9;
+            border: 2px solid #4CAF50;
+            font-weight: bold;
+        }
+
+        .option-item.wrong {
+            background: #FDECEA;
+            border: 2px solid #E74C3C;
+            font-weight: bold;
+        }
+
+    .result-message {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+        .result-message.success {
+            color: #4CAF50;
+        }
+
+        .result-message.error {
+            color: #E74C3C;
+        }
+
+    .explanation-box {
+        background: #FFF3CD;
+        padding: 12px;
+        border-radius: 8px;
+        margin-top: 12px;
+    }
+</style>

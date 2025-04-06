@@ -1,0 +1,164 @@
+﻿@model IEnumerable<OnThiLaiXe.Models.CauHoi>
+@{
+    ViewData["Title"] = "Danh sách câu hỏi";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    body {
+        background-color: #f9f9f9;
+    }
+
+    .table thead {
+        background-color: #d7ccc8;
+        color: #5d4037;
+        cursor: pointer;
+    }
+
+    .table tbody tr:nth-child(even) {
+        background-color: #f5ebe0;
+    }
+
+    .btn-add {
+        background-color: #a1887f !important;
+        color: white !important;
+    }
+
+    .btn-warning {
+        background-color: #ffcc80 !important;
+        color: black !important;
+    }
+
+    .btn-info {
+        background-color: #90caf9 !important;
+        color: black !important;
+    }
+
+    .btn-danger {
+        background-color: #ef9a9a !important;
+        color: white !important;
+    }
+
+    .action-column {
+        width: 200px;
+    }
+
+    .filter-container {
+        margin-bottom: 15px;
+    }
+
+        .filter-container select {
+            margin-right: 10px;
+        }
+</style>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 style="color: #5d4037;">Danh sách câu hỏi</h2>
+        <a asp-action="Add" class="btn btn-add">Thêm câu hỏi</a>
+    </div>
+
+    <!-- Bộ lọc -->
+    <div class="filter-container d-flex align-items-center">
+        <input type="text" id="searchBox" placeholder="Tìm kiếm..." class="form-control w-25 me-2" />
+
+        <select id="filterChuDe" class="form-select w-25 me-2">
+            <option value="">-- Lọc theo Chủ đề --</option>
+            @foreach (var chuDe in Model.Select(c => c.ChuDe.TenChuDe).Distinct())
+            {
+                <option value="@chuDe">@chuDe</option>
+            }
+        </select>
+
+        <select id="filterLoaiBang" class="form-select w-25">
+            <option value="">-- Lọc theo Loại bằng --</option>
+            @foreach (var loai in Model.Select(c => c.LoaiBangLai.TenLoai).Distinct())
+            {
+                <option value="@loai">@loai</option>
+            }
+        </select>
+    </div>
+
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th>Chủ đề</th>
+                <th>Loại bằng</th>
+                <th id="sortNoiDung">Nội dung </th>
+                <th>Đáp án đúng</th>
+                <th>Điểm liệt</th>
+                <th class="action-column">Hành động</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="chuDe">@item.ChuDe.TenChuDe</td>
+                    <td class="loaiBang">@item.LoaiBangLai.TenLoai</td>
+                    <td class="noiDung">@item.NoiDung</td>
+                    <td class="text-center"><span class="badge bg-success">@item.DapAnDung</span></td>
+                    <td class="text-center">@(item.DiemLiet ? "Có" : "Không")</td>
+                    <td class="action-column">
+                        <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-sm btn-warning">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+                        <a asp-action="Display" asp-route-id="@item.Id" class="btn btn-sm btn-info">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">
+                            <i class="bi bi-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script>
+    const searchBox = document.getElementById("searchBox");
+    const filterChuDe = document.getElementById("filterChuDe");
+    const filterLoaiBang = document.getElementById("filterLoaiBang");
+    const tableBody = document.getElementById("tableBody");
+
+    function filterRows() {
+        const keyword = searchBox.value.toLowerCase();
+        const selectedChuDe = filterChuDe.value;
+        const selectedLoaiBang = filterLoaiBang.value;
+
+        const rows = tableBody.querySelectorAll("tr");
+
+        rows.forEach(row => {
+            const chuDe = row.querySelector(".chuDe").textContent.trim();
+            const loaiBang = row.querySelector(".loaiBang").textContent.trim();
+            const noiDung = row.querySelector(".noiDung").textContent.toLowerCase();
+
+            const matchKeyword = noiDung.includes(keyword);
+            const matchChuDe = !selectedChuDe || chuDe === selectedChuDe;
+            const matchLoai = !selectedLoaiBang || loaiBang === selectedLoaiBang;
+
+            row.style.display = (matchKeyword && matchChuDe && matchLoai) ? "" : "none";
+        });
+    }
+
+    searchBox.addEventListener("keyup", filterRows);
+    filterChuDe.addEventListener("change", filterRows);
+    filterLoaiBang.addEventListener("change", filterRows);
+
+    let sortDirection = false;
+    document.getElementById("sortNoiDung").addEventListener("click", function () {
+        const rows = Array.from(tableBody.rows);
+        rows.sort((a, b) => {
+            const aText = a.querySelector(".noiDung").textContent.trim().toLowerCase();
+            const bText = b.querySelector(".noiDung").textContent.trim().toLowerCase();
+            return sortDirection ? aText.localeCompare(bText) : bText.localeCompare(aText);
+        });
+
+        tableBody.innerHTML = "";
+        rows.forEach(row => tableBody.appendChild(row));
+        sortDirection = !sortDirection;
+        this.innerHTML = `Nội dung ${sortDirection ? '⬆️' : '⬇️'}`;
+    });
+</script>
+

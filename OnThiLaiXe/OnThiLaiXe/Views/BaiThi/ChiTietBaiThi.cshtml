@@ -1,0 +1,9 @@
+﻿@model OnThiLaiXe.Models.BaiThi
+
+<h2>Chi Tiết Bài Thi - @Model.Id</h2>
+
+@foreach (var chiTiet in Model.ChiTietBaiThis)
+{
+    <p><strong>Câu hỏi:</strong> @chiTiet.CauHoi.NoiDung</p>
+    <hr />
+}

@@ -1,0 +1,1983 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\baithi\\danhsachcauhoisai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\baithi\\danhsachcauhoisai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\controllers\\baithicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\controllers\\baithicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\models\\cauhoisai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\models\\cauhoisai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\baithi\\lichsuthi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\baithi\\lichsuthi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\baithi\\danhsachloaibanglai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\baithi\\danhsachloaibanglai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\models\\cautrucdethi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\models\\cautrucdethi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\models\\loaibanglai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\models\\loaibanglai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\models\\ketquabaithi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\models\\ketquabaithi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\models\\chude.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\models\\chude.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\models\\chitietbaithi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\models\\chitietbaithi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\models\\cauhoisaiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\models\\cauhoisaiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\models\\cauhoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\models\\cauhoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\models\\baithi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\models\\baithi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\migrations\\20250406043918_them7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\migrations\\20250406043918_them7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\baithi\\lambaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\baithi\\lambaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\baithi\\baithithu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\baithi\\baithithu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\models\\dapantamthoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\models\\dapantamthoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\models\\lichsuthiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\models\\lichsuthiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\areas\\admin\\views\\quanlycauhoi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\areas\\admin\\views\\quanlycauhoi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\areas\\admin\\controllers\\qlbaithicontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\areas\\admin\\controllers\\qlbaithicontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\areas\\admin\\controllers\\quanlycauhoicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\areas\\admin\\controllers\\quanlycauhoicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\baithi\\ketquabaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\baithi\\ketquabaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\baithi\\loaibanglaioto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\baithi\\loaibanglaioto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\baithi\\loaibanglaixemay.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\baithi\\loaibanglaixemay.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\wwwroot\\assets\\css\\templatemo-seo-dream.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\wwwroot\\assets\\css\\templatemo-seo-dream.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\baithi\\thide.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\baithi\\thide.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\baithi\\danhsachdethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\baithi\\danhsachdethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\baithi\\danhsachbaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\baithi\\danhsachbaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\models\\ketquabaithiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\models\\ketquabaithiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\baithi\\chondethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\baithi\\chondethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\baithi\\ontap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\baithi\\ontap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\areas\\admin\\views\\qlbaithi\\chondethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\areas\\admin\\views\\qlbaithi\\chondethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\areas\\admin\\views\\qlbaithi\\danhsachbaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\areas\\admin\\views\\qlbaithi\\danhsachbaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\areas\\admin\\views\\quanlycauhoi\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\areas\\admin\\views\\quanlycauhoi\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Services\\IGmailSender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\AppData\\Roaming\\Microsoft\\UserSecrets\\0409ff42-740d-4ec4-b967-a719c7f18669\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pdtua\\AppData\\Roaming\\Microsoft\\UserSecrets\\0409ff42-740d-4ec4-b967-a719c7f18669\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Workplace\\Visual_Studio\\ASP.NET\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250319140723_suabaithi1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\_ViewImports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\ScaffoldingReadMe.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\NguyenNgocChau_2280600293.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\_ViewImports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\DanhSachBaiThi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\OnTap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\LamBaiThi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\KetQuaBaiThi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\DanhSachLoaiBangLai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\DanhSachDeThi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\ChiTietBaiThi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Controllers\\BaiThiController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\_LoginPartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\ChonDeThi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\CauHoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\CauHoiSai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Services\\SendGridEmailSender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EFLoaiBangLaiRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\ICauHoiRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EFChuDeRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EFCauHoiRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\ILoaiBangLaiRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\IChuDeRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Migrations\\20250329195332_m.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\_ViewStart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\templatemo-seo-dream.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Home\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\fontawesome.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\owl.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\OnTapTheoChuDeVaLoaiBangLai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\animated.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\BaiThi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ChiTietBaiThi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\KetQuaBaiThi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ChuDe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ErrorViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\KetQuaBaiThiViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\LoaiBangLai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Thi\\KetQua.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Controllers\\ThiController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Thi\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\BaiThiRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\IBaiThiRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\SD.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ApplicationUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EThiA1Random.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\css\\KetQua.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\features-number-03.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\features-number-01.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\logo-icon.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\12.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\contact-bg.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\features-number-02.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\banner-dec-left.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\14.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\_ValidationScriptsPartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\_Layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\Error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\migrations\\20250402092819_them5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\migrations\\20250402092819_them5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\migrations\\20250406065448_them8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\migrations\\20250406065448_them8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\baichinhthuc\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\nguyenngocchau_2280600293\\migrations\\20250406073009_them9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23B0C1BB-70FC-4BA5-B139-49B0A2EE4117}|NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293.csproj|solutionrelative:nguyenngocchau_2280600293\\migrations\\20250406073009_them9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 257,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaiThiController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Controllers\\BaiThiController.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Controllers\\BaiThiController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Controllers\\BaiThiController.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Controllers\\BaiThiController.cs",
+              "ViewState": "AgIAAAgBAAAAAAAAAAASwBQBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T06:26:17.717Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 126,
+              "Title": "20250406073009_them9.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Migrations\\20250406073009_them9.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Migrations\\20250406073009_them9.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Migrations\\20250406073009_them9.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Migrations\\20250406073009_them9.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T07:30:09.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\appsettings.json",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\appsettings.json",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-02T09:28:31.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CauHoiSai.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\CauHoiSai.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Models\\CauHoiSai.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\CauHoiSai.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Models\\CauHoiSai.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAIA6wAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T08:07:00.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DanhSachCauHoiSai.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\DanhSachCauHoiSai.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\BaiThi\\DanhSachCauHoiSai.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\DanhSachCauHoiSai.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\BaiThi\\DanhSachCauHoiSai.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T07:15:32.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T07:23:08.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LichSuThi.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\LichSuThi.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\BaiThi\\LichSuThi.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\LichSuThi.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\BaiThi\\LichSuThi.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T07:15:51.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "KetQuaBaiThi.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\KetQuaBaiThi.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Models\\KetQuaBaiThi.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\KetQuaBaiThi.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Models\\KetQuaBaiThi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T06:31:23.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoaiBangLai.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\LoaiBangLai.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Models\\LoaiBangLai.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\LoaiBangLai.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Models\\LoaiBangLai.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T08:35:13.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DanhSachLoaiBangLai.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\DanhSachLoaiBangLai.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\BaiThi\\DanhSachLoaiBangLai.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\DanhSachLoaiBangLai.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\BaiThi\\DanhSachLoaiBangLai.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T08:21:43.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CauTrucDeThi.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\CauTrucDeThi.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Models\\CauTrucDeThi.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\CauTrucDeThi.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Models\\CauTrucDeThi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T06:46:34.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CauHoi.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\CauHoi.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Models\\CauHoi.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\CauHoi.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Models\\CauHoi.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAUwCkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T06:27:03.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAAAQwD0AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T21:29:59.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 125,
+              "Title": "20250406065448_them8.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Migrations\\20250406065448_them8.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Migrations\\20250406065448_them8.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Migrations\\20250406065448_them8.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Migrations\\20250406065448_them8.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T06:54:48.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Models\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwBEAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T04:38:15.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CauHoiSaiViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\CauHoiSaiViewModel.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Models\\CauHoiSaiViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\CauHoiSaiViewModel.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Models\\CauHoiSaiViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T04:34:39.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ChiTietBaiThi.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\ChiTietBaiThi.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Models\\ChiTietBaiThi.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\ChiTietBaiThi.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Models\\ChiTietBaiThi.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAzwA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T06:26:54.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ChuDe.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\ChuDe.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Models\\ChuDe.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\ChuDe.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Models\\ChuDe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T08:07:17.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BaiThi.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\BaiThi.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Models\\BaiThi.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\BaiThi.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Models\\BaiThi.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAADwvxgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T07:59:56.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAACsCAAAAAAAAAAAswDcCAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T05:21:52.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "20250406043918_them7.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Migrations\\20250406043918_them7.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Migrations\\20250406043918_them7.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Migrations\\20250406043918_them7.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Migrations\\20250406043918_them7.cs",
+              "ViewState": "AgIAANgAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T04:39:18.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "LamBaiThi.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\LamBaiThi.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\BaiThi\\LamBaiThi.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\LamBaiThi.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\BaiThi\\LamBaiThi.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0BAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T21:53:39.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BaiThiThu.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\BaiThiThu.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\BaiThi\\BaiThiThu.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\BaiThiThu.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\BaiThi\\BaiThiThu.cshtml",
+              "ViewState": "AgIAAOwAAAAAAAAAAAAswAMBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T04:52:00.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DapAnTamThoi.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\DapAnTamThoi.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Models\\DapAnTamThoi.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\DapAnTamThoi.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Models\\DapAnTamThoi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T06:39:34.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LichSuThiViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\LichSuThiViewModel.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Models\\LichSuThiViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\LichSuThiViewModel.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Models\\LichSuThiViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T04:34:56.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\QuanLyCauHoi\\Index.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\QuanLyCauHoi\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\QuanLyCauHoi\\Index.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\QuanLyCauHoi\\Index.cshtml",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAAAKMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-04T02:28:05.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "KetQuaBaiThi.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\KetQuaBaiThi.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\BaiThi\\KetQuaBaiThi.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\KetQuaBaiThi.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\BaiThi\\KetQuaBaiThi.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T06:27:38.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T21:33:10.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAIwFQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T21:51:28.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "QuanLyCauHoiController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T21:56:06.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "QlbaiThiController .cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T21:56:37.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAEUAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T21:58:53.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "LoaiBangLaiXeMay.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\LoaiBangLaiXeMay.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\BaiThi\\LoaiBangLaiXeMay.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\LoaiBangLaiXeMay.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\BaiThi\\LoaiBangLaiXeMay.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T09:27:05.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "LoaiBangLaiOTo.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\LoaiBangLaiOTo.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\BaiThi\\LoaiBangLaiOTo.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\LoaiBangLaiOTo.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\BaiThi\\LoaiBangLaiOTo.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-03T12:36:32.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "templatemo-seo-dream.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\wwwroot\\assets\\css\\templatemo-seo-dream.css",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\wwwroot\\assets\\css\\templatemo-seo-dream.css",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\wwwroot\\assets\\css\\templatemo-seo-dream.css",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\wwwroot\\assets\\css\\templatemo-seo-dream.css",
+              "ViewState": "AgIAAJ0BAAAAAAAAAAAQwE0BAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-29T21:39:49.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ThiDe.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\ThiDe.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\BaiThi\\ThiDe.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\ThiDe.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\BaiThi\\ThiDe.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-03T12:37:05.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "DanhSachDeThi.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\DanhSachDeThi.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\BaiThi\\DanhSachDeThi.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\DanhSachDeThi.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\BaiThi\\DanhSachDeThi.cshtml",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAqwGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T21:47:03.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "DanhSachBaiThi.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\DanhSachBaiThi.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\BaiThi\\DanhSachBaiThi.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\DanhSachBaiThi.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\BaiThi\\DanhSachBaiThi.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T08:21:40.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "KetQuaBaiThiViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\KetQuaBaiThiViewModel.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Models\\KetQuaBaiThiViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Models\\KetQuaBaiThiViewModel.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Models\\KetQuaBaiThiViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T07:49:34.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 124,
+              "Title": "20250402092819_them5.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Migrations\\20250402092819_them5.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Migrations\\20250402092819_them5.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Migrations\\20250402092819_them5.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Migrations\\20250402092819_them5.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T09:28:19.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ChonDeThi.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\ChonDeThi.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\BaiThi\\ChonDeThi.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\ChonDeThi.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\BaiThi\\ChonDeThi.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T08:21:30.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "OnTap.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\OnTap.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\BaiThi\\OnTap.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\BaiThi\\OnTap.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\BaiThi\\OnTap.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T08:28:46.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T21:57:04.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T22:18:36.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Program.cs",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Program.cs",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Program.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAGEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T21:51:51.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ChonDeThi.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T22:37:14.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "DanhSachBaiThi.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T22:37:20.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T21:57:48.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "NguyenNgocChau_2280600293\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\NguyenNgocChau_2280600293\\appsettings.Development.json",
+              "RelativeToolTip": "NguyenNgocChau_2280600293\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-29T21:51:48.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "IGmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Services\\IGmailSender.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Services\\IGmailSender.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Services\\IGmailSender.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Services\\IGmailSender.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T18:48:53.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T21:25:30.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\ScaffoldingReadMe.txt",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\ScaffoldingReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-03-16T13:33:01.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "NguyenNgocChau_2280600293.csproj",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\NguyenNgocChau_2280600293.csproj",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\NguyenNgocChau_2280600293.csproj",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\NguyenNgocChau_2280600293.csproj",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\NguyenNgocChau_2280600293.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-27T14:52:21.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Program.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Program.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAuwEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T13:25:38.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\appsettings.json",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-16T13:26:00.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA6wBYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T21:41:34.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "DanhSachBaiThi.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T20:23:57.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Index.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Index.cshtml",
+              "ViewState": "AgIAACUAAAAAAAAAAEBVwDsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-24T16:21:30.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "QuanLyCauHoiController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAEBVwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T16:04:16.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "ChonDeThi.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T20:22:47.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "QlbaiThiController .cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAABRwAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T20:19:43.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T19:45:58.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "DanhSachBaiThi.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\DanhSachBaiThi.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\DanhSachBaiThi.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\DanhSachBaiThi.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\DanhSachBaiThi.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAIwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T12:29:17.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "OnTap.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\OnTap.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\OnTap.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\OnTap.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\OnTap.cshtml",
+              "ViewState": "AgIAAAQAAAAAAAAAAEBVwBYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T14:31:37.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "LamBaiThi.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\LamBaiThi.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\LamBaiThi.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\LamBaiThi.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\LamBaiThi.cshtml",
+              "ViewState": "AgIAAJYAAAAAAAAAAIBJwIEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T12:45:52.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "KetQuaBaiThi.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\KetQuaBaiThi.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\KetQuaBaiThi.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\KetQuaBaiThi.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\KetQuaBaiThi.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAIBJwFAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T15:31:46.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "DanhSachLoaiBangLai.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\DanhSachLoaiBangLai.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\DanhSachLoaiBangLai.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\DanhSachLoaiBangLai.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\DanhSachLoaiBangLai.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T14:34:00.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "DanhSachDeThi.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\DanhSachDeThi.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\DanhSachDeThi.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\DanhSachDeThi.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\DanhSachDeThi.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T12:47:20.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "ChiTietBaiThi.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\ChiTietBaiThi.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\ChiTietBaiThi.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\ChiTietBaiThi.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\ChiTietBaiThi.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T10:01:54.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "BaiThiController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Controllers\\BaiThiController.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Controllers\\BaiThiController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Controllers\\BaiThiController.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Controllers\\BaiThiController.cs",
+              "ViewState": "AgIAANgAAAAAAAAAAADwv+wAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:58:32.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAB2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-16T14:03:46.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "ChonDeThi.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\ChonDeThi.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\ChonDeThi.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\ChonDeThi.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\ChonDeThi.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAIwBsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T10:01:30.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\AppData\\Roaming\\Microsoft\\UserSecrets\\0409ff42-740d-4ec4-b967-a719c7f18669\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\0409ff42-740d-4ec4-b967-a719c7f18669\\secrets.json",
+              "ToolTip": "C:\\Users\\Admin\\AppData\\Roaming\\Microsoft\\UserSecrets\\0409ff42-740d-4ec4-b967-a719c7f18669\\secrets.json",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\0409ff42-740d-4ec4-b967-a719c7f18669\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-29T19:02:13.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "CauHoi.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\CauHoi.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\CauHoi.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\CauHoi.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\CauHoi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T21:48:30.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "CauHoiSai.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\CauHoiSai.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\CauHoiSai.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\CauHoiSai.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\CauHoiSai.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T12:49:31.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "SendGridEmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Services\\SendGridEmailSender.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Services\\SendGridEmailSender.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Services\\SendGridEmailSender.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Services\\SendGridEmailSender.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAApwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T18:49:24.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "EFLoaiBangLaiRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EFLoaiBangLaiRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EFLoaiBangLaiRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EFLoaiBangLaiRepository.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EFLoaiBangLaiRepository.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAcwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T22:06:36.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "ICauHoiRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\ICauHoiRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\ICauHoiRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\ICauHoiRepository.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\ICauHoiRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T13:18:49.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "EFChuDeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EFChuDeRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EFChuDeRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EFChuDeRepository.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EFChuDeRepository.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAiwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T13:06:23.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\pdtua\\AppData\\Roaming\\Microsoft\\UserSecrets\\0409ff42-740d-4ec4-b967-a719c7f18669\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\pdtua\\AppData\\Roaming\\Microsoft\\UserSecrets\\0409ff42-740d-4ec4-b967-a719c7f18669\\secrets.json",
+              "ToolTip": "C:\\Users\\pdtua\\AppData\\Roaming\\Microsoft\\UserSecrets\\0409ff42-740d-4ec4-b967-a719c7f18669\\secrets.json",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\pdtua\\AppData\\Roaming\\Microsoft\\UserSecrets\\0409ff42-740d-4ec4-b967-a719c7f18669\\secrets.json",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-18T06:35:26.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "EFCauHoiRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EFCauHoiRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EFCauHoiRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EFCauHoiRepository.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EFCauHoiRepository.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAiwCgAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T13:20:14.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "ILoaiBangLaiRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\ILoaiBangLaiRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\ILoaiBangLaiRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\ILoaiBangLaiRepository.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\ILoaiBangLaiRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T22:05:09.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "IChuDeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\IChuDeRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\IChuDeRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\IChuDeRepository.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\IChuDeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T13:04:36.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T19:53:11.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "20250329195332_m.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Migrations\\20250329195332_m.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Migrations\\20250329195332_m.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Migrations\\20250329195332_m.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Migrations\\20250329195332_m.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T19:53:32.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T07:24:05.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAAGoBAAAAAAAAAAArwHoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T15:53:48.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwBYAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-24T15:53:49.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "templatemo-seo-dream.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\templatemo-seo-dream.css",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\templatemo-seo-dream.css",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\templatemo-seo-dream.css",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\templatemo-seo-dream.css",
+              "ViewState": "AgIAACQBAAAAAAAAAAAEwDsBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-24T14:57:53.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAowLYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-24T14:55:10.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "fontawesome.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\fontawesome.css",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\fontawesome.css",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\fontawesome.css",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\fontawesome.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-29T17:39:38.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "owl.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\owl.css",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\owl.css",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\owl.css",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\owl.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-29T17:39:39.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "OnTapTheoChuDeVaLoaiBangLai.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\OnTapTheoChuDeVaLoaiBangLai.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\OnTapTheoChuDeVaLoaiBangLai.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\OnTapTheoChuDeVaLoaiBangLai.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\BaiThi\\OnTapTheoChuDeVaLoaiBangLai.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T17:21:53.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "animated.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\animated.css",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\animated.css",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\animated.css",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\css\\animated.css",
+              "ViewState": "AgIAAAMAAAAAAAAAACBjwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-24T19:16:59.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "BaiThi.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\BaiThi.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\BaiThi.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\BaiThi.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\BaiThi.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T14:06:14.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "ChiTietBaiThi.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ChiTietBaiThi.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ChiTietBaiThi.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ChiTietBaiThi.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ChiTietBaiThi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T21:49:30.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "KetQuaBaiThi.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\KetQuaBaiThi.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\KetQuaBaiThi.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\KetQuaBaiThi.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\KetQuaBaiThi.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T21:49:48.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
+              "Title": "ChuDe.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ChuDe.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ChuDe.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ChuDe.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ChuDe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T21:47:59.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 96,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T21:45:29.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 97,
+              "Title": "KetQuaBaiThiViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\KetQuaBaiThiViewModel.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\KetQuaBaiThiViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\KetQuaBaiThiViewModel.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\KetQuaBaiThiViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:07:49.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 98,
+              "Title": "LoaiBangLai.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\LoaiBangLai.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\LoaiBangLai.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\LoaiBangLai.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\LoaiBangLai.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T21:48:15.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 99,
+              "Title": "KetQua.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Thi\\KetQua.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Thi\\KetQua.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Thi\\KetQua.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Thi\\KetQua.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T07:30:47.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 100,
+              "Title": "ThiController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Controllers\\ThiController.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Controllers\\ThiController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Controllers\\ThiController.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Controllers\\ThiController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAgwHsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T07:29:55.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 101,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Thi\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Thi\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Thi\\Index.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Thi\\Index.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAGBnwAwAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T09:23:10.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 102,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T13:00:06.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 103,
+              "Title": "BaiThiRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\BaiThiRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\BaiThiRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\BaiThiRepository.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\BaiThiRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T07:28:52.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 104,
+              "Title": "IBaiThiRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\IBaiThiRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\IBaiThiRepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\IBaiThiRepository.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\IBaiThiRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T01:57:17.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 105,
+              "Title": "SD.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\SD.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\SD.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\SD.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\SD.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T15:42:31.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 106,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T21:40:03.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 107,
+              "Title": "EThiA1Random.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EThiA1Random.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EThiA1Random.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EThiA1Random.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Repositories\\EThiA1Random.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:39:31.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 108,
+              "Title": "KetQua.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\css\\KetQua.css",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\css\\KetQua.css",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\css\\KetQua.css",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\css\\KetQua.css",
+              "ViewState": "AgIAABYAAAAAAAAAAAAswCIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-26T05:21:13.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 109,
+              "Title": "features-number-03.png - PNG [106x68, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\features-number-03.png",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\features-number-03.png",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\features-number-03.png - PNG [106x68, 32 bit, PNG]",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\features-number-03.png - PNG [106x68, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-24T19:16:46.473Z",
+              "EditorCaption": " - PNG [106x68, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 110,
+              "Title": "features-number-01.png - PNG [110x70, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\features-number-01.png",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\features-number-01.png",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\features-number-01.png - PNG [110x70, 32 bit, PNG]",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\features-number-01.png - PNG [110x70, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-24T19:16:47.224Z",
+              "EditorCaption": " - PNG [110x70, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 111,
+              "Title": "logo-icon.png - PNG [30x30, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\logo-icon.png",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\logo-icon.png",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\logo-icon.png - PNG [30x30, 32 bit, PNG]",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\logo-icon.png - PNG [30x30, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-24T19:16:48.37Z",
+              "EditorCaption": " - PNG [30x30, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 112,
+              "Title": "12.jpg - Bitmap [736x552, 24 bit, JPG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\12.jpg",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\12.jpg",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\12.jpg - Bitmap [736x552, 24 bit, JPG]",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\12.jpg - Bitmap [736x552, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-24T19:16:50.028Z",
+              "EditorCaption": " - Bitmap [736x552, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 113,
+              "Title": "contact-bg.jpg - Bitmap [1600x847, 24 bit, JPG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\contact-bg.jpg",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\contact-bg.jpg",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\contact-bg.jpg - Bitmap [1600x847, 24 bit, JPG]",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\contact-bg.jpg - Bitmap [1600x847, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-24T19:16:43.847Z",
+              "EditorCaption": " - Bitmap [1600x847, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 114,
+              "Title": "features-number-02.png - PNG [102x69, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\features-number-02.png",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\features-number-02.png",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\features-number-02.png - PNG [102x69, 32 bit, PNG]",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\features-number-02.png - PNG [102x69, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-24T19:16:42.826Z",
+              "EditorCaption": " - PNG [102x69, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 115,
+              "Title": "banner-dec-left.png - PNG [212x653, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\banner-dec-left.png",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\banner-dec-left.png",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\banner-dec-left.png - PNG [212x653, 32 bit, PNG]",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\banner-dec-left.png - PNG [212x653, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-24T19:16:41.907Z",
+              "EditorCaption": " - PNG [212x653, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 116,
+              "Title": "14.jpg - Bitmap [474x356, 24 bit, JPG]",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\14.jpg",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\14.jpg",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\14.jpg - Bitmap [474x356, 24 bit, JPG]",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\wwwroot\\assets\\images\\14.jpg - Bitmap [474x356, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-24T19:16:40.499Z",
+              "EditorCaption": " - Bitmap [474x356, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 117,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-24T16:51:47.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 118,
+              "Title": "Logout.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T16:50:17.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 119,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-24T16:50:19.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 120,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\appsettings.Development.json",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-18T06:27:43.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 121,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-16T14:06:41.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 122,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-24T14:53:37.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 123,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "..\\..\\..\\bainop\\OnThiLaiXe (1)\\NguyenNgocChau_2280600293\\OnThiLaiXe\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-17T21:43:47.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "20250319140723_suabaithi1.cs",
+              "DocumentMoniker": "D:\\Workplace\\Visual_Studio\\ASP.NET\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250319140723_suabaithi1.cs",
+              "ToolTip": "D:\\Workplace\\Visual_Studio\\ASP.NET\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250319140723_suabaithi1.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T14:07:23.701Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
