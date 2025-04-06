@@ -12,7 +12,7 @@ using OnThiLaiXe.Models;
 namespace OnThiLaiXe.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250406073009_them9")]
+    [Migration("20250406090754_them9")]
     partial class them9
     {
         /// <inheritdoc />
@@ -365,8 +365,8 @@ namespace OnThiLaiXe.Migrations
                     b.Property<DateTime>("NgaySai")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

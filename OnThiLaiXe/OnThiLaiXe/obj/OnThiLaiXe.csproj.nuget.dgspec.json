@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\OneDrive\\Máy tính\\baichinhthuc\\NguyenNgocChau_2280600293\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj": {}
+    "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (3)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\OneDrive\\Máy tính\\baichinhthuc\\NguyenNgocChau_2280600293\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj": {
+    "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (3)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\baichinhthuc\\NguyenNgocChau_2280600293\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (3)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
         "projectName": "OnThiLaiXe",
-        "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\baichinhthuc\\NguyenNgocChau_2280600293\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+        "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (3)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\baichinhthuc\\NguyenNgocChau_2280600293\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (3)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

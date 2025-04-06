@@ -362,8 +362,8 @@ namespace OnThiLaiXe.Migrations
                     b.Property<DateTime>("NgaySai")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
