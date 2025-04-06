@@ -254,6 +254,9 @@ namespace OnThiLaiXe.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("LoaiBangLaiId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("MacLoiNghiemTrong")
                         .HasColumnType("bit");
 
@@ -280,6 +283,8 @@ namespace OnThiLaiXe.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("LoaiBangLaiId");
 
                     b.ToTable("BaiThis");
                 });
@@ -528,6 +533,17 @@ namespace OnThiLaiXe.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("OnThiLaiXe.Models.BaiThi", b =>
+                {
+                    b.HasOne("OnThiLaiXe.Models.LoaiBangLai", "LoaiBangLai")
+                        .WithMany()
+                        .HasForeignKey("LoaiBangLaiId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("LoaiBangLai");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.CauHoi", b =>

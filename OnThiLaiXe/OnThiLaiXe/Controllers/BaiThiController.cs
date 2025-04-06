@@ -61,134 +61,122 @@ namespace OnThiLaiXe.Controllers
         [HttpPost]
         public IActionResult NopBaiThi(int baiThiId, string dapAnJson)
         {
-            
-            
-                Console.WriteLine($"Nộp bài với ID: {baiThiId}");
+            Console.WriteLine($"Nộp bài với ID: {baiThiId}");
 
-                if (baiThiId == 0)
-                {
-                    return BadRequest("baiThiId không hợp lệ.");
-                }
+            if (baiThiId == 0)
+                return BadRequest("baiThiId không hợp lệ.");
 
-                var baiThi = _context.BaiThis
-                    .Include(bt => bt.ChiTietBaiThis)
+            var baiThi = _context.BaiThis
+                .Include(bt => bt.ChiTietBaiThis)
                     .ThenInclude(ct => ct.CauHoi)
-                    .FirstOrDefault(bt => bt.Id == baiThiId);
+                .FirstOrDefault(bt => bt.Id == baiThiId);
 
-                if (baiThi == null)
+            if (baiThi == null)
+                return NotFound("Không tìm thấy bài thi.");
+
+            // Kiểm tra nếu người dùng đăng nhập
+            bool isLoggedIn = User.Identity != null && User.Identity.IsAuthenticated;
+            string currentUserId = isLoggedIn ? User.FindFirstValue(ClaimTypes.NameIdentifier) : null;
+
+            // Parse JSON đáp án
+            Dictionary<string, string> dapAnDict = new();
+            try
+            {
+                if (!string.IsNullOrEmpty(dapAnJson))
+                    dapAnDict = JsonSerializer.Deserialize<Dictionary<string, string>>(dapAnJson);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi parse JSON: {ex.Message}");
+            }
+
+            var chiTietList = baiThi.ChiTietBaiThis.ToList();
+            int correctCount = 0;
+            int wrongCount = 0;
+            int unansweredCount = 0;
+            bool saiDiemLiet = false;
+
+            // Xử lý từng câu trả lời
+            for (int i = 0; i < chiTietList.Count; i++)
+            {
+                string key = $"dapAn_{i}";
+                var chiTiet = chiTietList[i];
+
+                if (dapAnDict.ContainsKey(key) && !string.IsNullOrEmpty(dapAnDict[key]))
                 {
-                    return NotFound("Không tìm thấy bài thi.");
-                }
+                    char dapAn = dapAnDict[key][0];
+                    chiTiet.CauTraLoi = dapAn;
+                    chiTiet.DungSai = dapAn == chiTiet.CauHoi.DapAnDung;
 
-                // Kiểm tra nếu người dùng đang đăng nhập
-                bool isLoggedIn = User.Identity != null && User.Identity.IsAuthenticated;
-                string currentUserId = isLoggedIn ? User.FindFirstValue(ClaimTypes.NameIdentifier) : null;
-
-                // Parse JSON dap an
-                Dictionary<string, string> dapAnDict = new Dictionary<string, string>();
-                try
-                {
-                    if (!string.IsNullOrEmpty(dapAnJson))
-                    {
-                        dapAnDict = JsonSerializer.Deserialize<Dictionary<string, string>>(dapAnJson);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Lỗi parse JSON: {ex.Message}");
-                    // Tiếp tục với dictionary trống
-                }
-
-                var chiTietList = baiThi.ChiTietBaiThis.ToList();
-                int correctCount = 0;
-                int wrongCount = 0;
-                int unansweredCount = 0;
-                bool saiDiemLiet = false;
-
-                // Xử lý từng câu trả lời
-                for (int i = 0; i < chiTietList.Count; i++)
-                {
-                    string key = $"dapAn_{i}";
-                    var chiTiet = chiTietList[i];
-
-                    if (dapAnDict.ContainsKey(key) && !string.IsNullOrEmpty(dapAnDict[key]))
-                    {
-                        char dapAn = dapAnDict[key][0];
-                        chiTiet.CauTraLoi = dapAn;
-                        chiTiet.DungSai = dapAn == chiTiet.CauHoi.DapAnDung;
-
-                        if (chiTiet.DungSai == true)
-                        {
-                            correctCount++;
-                        }
-                        else
-                        {
-                            wrongCount++;
-                            // Nếu trả lời sai và người dùng đã đăng nhập thì lưu vào bảng CauHoiSai
-                            SaveCauHoiSai(isLoggedIn, currentUserId, chiTiet.CauHoi.Id);
-                        }
-
-                        if (chiTiet.CauHoi.DiemLiet && dapAn != chiTiet.CauHoi.DapAnDung)
-                        {
-                            saiDiemLiet = true;
-                        }
-                    }
+                    if (chiTiet.DungSai == true)
+                        correctCount++;
                     else
                     {
-                        chiTiet.CauTraLoi = '\0';
-                        chiTiet.DungSai = false;
-                        unansweredCount++;
-
-                        if (chiTiet.CauHoi.DiemLiet)
-                        {
-                            saiDiemLiet = true;
-                        }
-
-                        // Lưu câu hỏi chưa trả lời
-                        SaveCauHoiSai(isLoggedIn, currentUserId, chiTiet.CauHoi.Id);
+                        wrongCount++;
+                        if (isLoggedIn)
+                            SaveCauHoiSai(true, currentUserId, chiTiet.CauHoi.Id);
                     }
+
+                    if (chiTiet.CauHoi.DiemLiet && dapAn != chiTiet.CauHoi.DapAnDung)
+                        saiDiemLiet = true;
                 }
-
-                // Tính điểm và cập nhật kết quả bài thi
-                double diemMoiCau = 10.0 / chiTietList.Count;
-                int tongDiem = saiDiemLiet ? 0 : (int)Math.Round(correctCount * diemMoiCau);
-
-                baiThi.Diem = tongDiem;
-                baiThi.MacLoiNghiemTrong = saiDiemLiet;
-                baiThi.SoCauDung = correctCount;
-                baiThi.SoCauSai = wrongCount;
-                baiThi.SoCauChuaTraLoi = unansweredCount;
-                baiThi.PhanTramDung = chiTietList.Count > 0 ? (double)correctCount / chiTietList.Count * 100 : 0;
-                baiThi.KetQua = tongDiem >= 8 && !saiDiemLiet ? "Đạt" : "Không đạt";
-                baiThi.DaHoanThanh = true;
-
-                _context.SaveChanges();
-
-                // Chuẩn bị dữ liệu cho view kết quả
-                var ketQuaList = chiTietList.Select(ct => new KetQuaBaiThi
+                else
                 {
-                    BaiThiId = baiThiId,
-                    CauHoiId = ct.CauHoi.Id,
-                    CauHoi = ct.CauHoi,
-                    CauTraLoi = ct.CauTraLoi ?? '\0',
-                    DungSai = ct.DungSai ?? false
-                }).ToList();
+                    chiTiet.CauTraLoi = '\0';
+                    chiTiet.DungSai = false;
+                    unansweredCount++;
 
-                // Thêm thông tin tổng hợp kết quả
-                ViewBag.TongSoCau = chiTietList.Count;
-                ViewBag.SoCauDung = correctCount;
-                ViewBag.SoCauSai = wrongCount;
-                ViewBag.SoCauChuaTraLoi = unansweredCount;
-                ViewBag.PhanTramDung = chiTietList.Count > 0 ? (double)correctCount / chiTietList.Count * 100 : 0;
-                ViewBag.MacLoiNghiemTrong = saiDiemLiet;
-                ViewBag.Diem = tongDiem;
-                ViewBag.KetQua = tongDiem >= 8 && !saiDiemLiet ? "Đạt" : "Không đạt";
-                ViewBag.BaiThiId = baiThiId;
+                    if (chiTiet.CauHoi.DiemLiet)
+                        saiDiemLiet = true;
 
-                return View("KetQuaBaiThi", ketQuaList);
-            
-            
+                    if (isLoggedIn)
+                        SaveCauHoiSai(true, currentUserId, chiTiet.CauHoi.Id);
+                }
+            }
+
+            // 🔽 Lấy loại bằng để kiểm tra điều kiện đậu
+            var loaiBang = baiThi.ChiTietBaiThis.FirstOrDefault()?.CauHoi?.LoaiBangLai;
+            int diemToiThieu = loaiBang?.DiemToiThieu ?? 21;
+
+            // 🔽 Mỗi câu đúng = 1 điểm, không tính điểm nếu sai câu điểm liệt
+            int tongDiem = correctCount;
+
+            baiThi.Diem = tongDiem;
+            baiThi.MacLoiNghiemTrong = saiDiemLiet;
+            baiThi.SoCauDung = correctCount;
+            baiThi.SoCauSai = wrongCount;
+            baiThi.SoCauChuaTraLoi = unansweredCount;
+            baiThi.PhanTramDung = chiTietList.Count > 0 ? (double)correctCount / chiTietList.Count * 100 : 0;
+            baiThi.KetQua = (tongDiem >= diemToiThieu && !saiDiemLiet) ? "Đạt" : "Không đạt";
+            baiThi.DaHoanThanh = true;
+
+            _context.SaveChanges();
+
+            // Chuẩn bị dữ liệu hiển thị kết quả
+            var ketQuaList = chiTietList.Select(ct => new KetQuaBaiThi
+            {
+                BaiThiId = baiThiId,
+                CauHoiId = ct.CauHoi.Id,
+                CauHoi = ct.CauHoi,
+                CauTraLoi = ct.CauTraLoi ?? '\0',
+                DungSai = ct.DungSai ?? false
+            }).ToList();
+
+            // Truyền thông tin tổng hợp sang View
+            ViewBag.TongSoCau = chiTietList.Count;
+            ViewBag.SoCauDung = correctCount;
+            ViewBag.SoCauSai = wrongCount;
+            ViewBag.SoCauChuaTraLoi = unansweredCount;
+            ViewBag.PhanTramDung = baiThi.PhanTramDung;
+            ViewBag.MacLoiNghiemTrong = saiDiemLiet;
+            ViewBag.Diem = tongDiem;
+            ViewBag.KetQua = baiThi.KetQua;
+            ViewBag.BaiThiId = baiThiId;
+            ViewBag.DiemToiThieu = diemToiThieu;
+
+            return View("KetQuaBaiThi", ketQuaList);
         }
+
         private void SaveCauHoiSai(bool isLoggedIn, string currentUserId, int cauHoiId)
         {
             if (!isLoggedIn || string.IsNullOrEmpty(currentUserId)) return;
@@ -429,6 +417,7 @@ namespace OnThiLaiXe.Controllers
             var baiThi = _context.BaiThis
                 .Include(bt => bt.ChiTietBaiThis)
                 .ThenInclude(ct => ct.CauHoi)
+                  .ThenInclude(c => c.LoaiBangLai)
                 .FirstOrDefault(bt => bt.Id == id);
 
             if (baiThi == null)
