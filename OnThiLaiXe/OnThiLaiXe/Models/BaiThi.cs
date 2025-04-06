@@ -21,6 +21,7 @@
 
         // Navigation properties
         public virtual ICollection<ChiTietBaiThi> ChiTietBaiThis { get; set; }
+           // ← navigation property
 
     }
 }
