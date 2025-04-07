@@ -1,5 +1,6 @@
 ﻿using System.Security.Claims;
 using System.Text.Json;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OnThiLaiXe.Models;
@@ -7,6 +8,7 @@ using OnThiLaiXe.Repositories;
 
 namespace OnThiLaiXe.Controllers
 {
+    [Authorize]
     public class BaiThiController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -18,44 +20,8 @@ namespace OnThiLaiXe.Controllers
             _cauHoiRepo = cauHoiRepo;
         }
 
-        // FEATURE 3: Làm bài ôn tập theo chủ đề
-        public IActionResult OnTapTheoChuDe(int chuDeId, int loaiBangLaiId)
-        {
-            var cauHoiList = _context.CauHois
-                .Where(c => c.ChuDeId == chuDeId && c.LoaiBangLaiId == loaiBangLaiId)
-                .OrderBy(r => Guid.NewGuid())
-                .ToList();
-
-            if (!cauHoiList.Any())
-            {
-                TempData["Error"] = "Không có câu hỏi nào cho chủ đề và loại bằng lái này.";
-                return RedirectToAction("OnTapTheoChuDeVaLoaiBangLai", new { loaiBangLaiId = loaiBangLaiId });
-            }
-
-            ViewBag.ChuDe = _context.ChuDes.FirstOrDefault(c => c.Id == chuDeId);
-            ViewBag.LoaiBangLai = _context.LoaiBangLais.FirstOrDefault(l => l.Id == loaiBangLaiId);
-            return View(cauHoiList);
-        }
-
-        // FEATURE 3: Lọc câu hỏi theo loại (biển báo, sa hình, ...)
-        public IActionResult OnTapTheoLoai(string loaiCauHoi, int loaiBangLaiId)
-        {
-            // Lấy danh sách câu hỏi theo loại và loại bằng lái
-            var cauHoiList = _context.CauHois
-                .Where(c => c.LoaiCauHoi == loaiCauHoi && c.LoaiBangLaiId == loaiBangLaiId)
-                .OrderBy(r => Guid.NewGuid())
-                .ToList();
-
-            if (!cauHoiList.Any())
-            {
-                TempData["Error"] = $"Không có câu hỏi loại '{loaiCauHoi}' cho loại bằng lái này.";
-                return RedirectToAction("OnTapTheoChuDeVaLoaiBangLai", new { loaiBangLaiId = loaiBangLaiId });
-            }
-
-            ViewBag.LoaiCauHoi = loaiCauHoi;
-            ViewBag.LoaiBangLai = _context.LoaiBangLais.FirstOrDefault(l => l.Id == loaiBangLaiId);
-            return View("OnTapTheoLoai", cauHoiList);
-        }
+    
+      
 
         // FEATURE 4: Xem kết quả bài thi (Đã nâng cấp phương thức NopBaiThi)
         [HttpPost]
@@ -261,10 +227,7 @@ namespace OnThiLaiXe.Controllers
 
                 return View(cauHoiSaiList);
             }
-           
-        
 
-        // FEATURE 6: Xem lịch sử thi
         public IActionResult LichSuThi()
         {
             if (!User.Identity.IsAuthenticated)
@@ -307,75 +270,47 @@ namespace OnThiLaiXe.Controllers
                 return View(lichSuThiList);
             
         }
-            
-        
-
-        // Các phương thức hiện có của bạn
-        [HttpPost]
-        public IActionResult TaoDeThi(int loaiBangLaiId, Dictionary<int, int> soLuongMoiChuDe)
+        // Action để luyện lại câu sai cho người dùng đã đăng nhập
+        public IActionResult LuyenLaiCauSai()
         {
-            if (soLuongMoiChuDe == null || !soLuongMoiChuDe.Any())
+            if (!User.Identity.IsAuthenticated)
             {
-                TempData["Error"] = "Số lượng câu hỏi theo chủ đề không hợp lệ.";
-                return RedirectToAction("ChonDeThi");
+                return RedirectToAction("Login", "Account");
             }
 
-            if (!_context.LoaiBangLais.Any(lb => lb.Id == loaiBangLaiId))
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(currentUserId))
             {
-                TempData["Error"] = "Loại bằng lái không hợp lệ.";
-                return RedirectToAction("ChonDeThi");
+                return RedirectToAction("Login", "Account");
             }
 
-            var danhSachCauHoi = new List<CauHoi>();
-
-            foreach (var chuDe in soLuongMoiChuDe)
+            int userId;
+            if (int.TryParse(currentUserId, out userId))
             {
-                int chuDeId = chuDe.Key;
-                int soLuong = chuDe.Value;
-
-                // Lấy câu hỏi theo chủ đề và loại bằng lái
-                var cauHoiTheoChuDe = _context.CauHois
-                    .Where(c => c.LoaiBangLaiId == loaiBangLaiId && c.ChuDeId == chuDeId)
-                    .OrderBy(r => Guid.NewGuid()) // Lấy ngẫu nhiên
-                    .Take(soLuong)
-                    .ToList();
-
-                danhSachCauHoi.AddRange(cauHoiTheoChuDe);
+                // OK
+            }
+            else if (Guid.TryParse(currentUserId, out var userGuid))
+            {
+                userId = userGuid.GetHashCode() & int.MaxValue;
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
             }
 
-            if (danhSachCauHoi.Count == 0)
-            {
-                TempData["Error"] = "Không đủ câu hỏi để tạo đề thi.";
-                return RedirectToAction("ChonDeThi");
-            }
+            var cauHoiIds = _context.CauHoiSais
+                .Where(c => c.UserId == userId)
+                .OrderByDescending(c => c.NgaySai)
+                .Select(c => c.CauHoiId)
+                .Distinct()
+                .Take(20)
+                .ToList();
 
-            try
-            {
-                var deThi = new BaiThi
-                {
-                    NgayThi = DateTime.Now,
-                    TenBaiThi = $"Đề thi chính thức - {DateTime.Now:dd/MM/yyyy HH:mm}",
-                    LoaiBaiThi = "Đề thi chính thức",
-                    ChiTietBaiThis = danhSachCauHoi.Select(c => new ChiTietBaiThi { CauHoiId = c.Id }).ToList()
-                };
+            var cauHois = _context.CauHois
+                .Where(c => cauHoiIds.Contains(c.Id))
+                .ToList();
 
-                // Nếu người dùng đăng nhập, lưu thông tin người dùng
-                if (User.Identity.IsAuthenticated)
-                {
-                    var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                    deThi.UserId = int.Parse(currentUserId);
-                }
-
-                _context.BaiThis.Add(deThi);
-                _context.SaveChanges();
-
-                return RedirectToAction("ChiTietBaiThi", new { id = deThi.Id });
-            }
-            catch (Exception ex)
-            {
-                TempData["Error"] = "Đã xảy ra lỗi khi tạo đề thi: " + ex.Message;
-                return RedirectToAction("ChonDeThi");
-            }
+            return View("LuyenLaiCauSai", cauHois);
         }
 
         public IActionResult ChonDeThi()
@@ -450,26 +385,7 @@ namespace OnThiLaiXe.Controllers
             }
         }
 
-        // Action để luyện lại câu sai cho người dùng đã đăng nhập
-        public IActionResult LuyenLaiCauSai()
-        {
-            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (string.IsNullOrEmpty(currentUserId)) return RedirectToAction("Login", "Account");
-
-            var cauHoiIds = _context.CauHoiSais
-                .Where(c => c.UserId == int.Parse(currentUserId))
-                .OrderByDescending(c => c.NgaySai)
-                .Select(c => c.CauHoiId)
-                .Distinct()
-                .Take(20)
-                .ToList();
-
-            var cauHois = _context.CauHois
-                .Where(c => cauHoiIds.Contains(c.Id))
-                .ToList();
-
-            return View("LamLaiCauSai", cauHois);
-        }
+        
 
         public IActionResult DanhSachDeThi(string loaiXe)
         {
@@ -549,43 +465,7 @@ namespace OnThiLaiXe.Controllers
             var danhSachLoaiBangLai = _context.LoaiBangLais.ToList();
             return View(danhSachLoaiBangLai); // Truyền model thay vì ViewBag
         }
+     
 
-        [HttpPost]
-        public IActionResult XoaBaiThi(int id)
-        {
-            var baiThi = _context.BaiThis
-                .Include(bt => bt.ChiTietBaiThis)
-                .FirstOrDefault(bt => bt.Id == id);
-
-            if (baiThi == null)
-            {
-                return NotFound();
-            }
-
-            _context.BaiThis.Remove(baiThi);
-            _context.SaveChanges();
-
-            return RedirectToAction("DanhSachBaiThi");
-        }
-
-        public IActionResult OnTapTheoChuDeVaLoaiBangLai(int? loaiBangLaiId)
-        {
-            var danhSachChuDe = _context.ChuDes.ToList();
-            var danhSachLoaiBangLai = _context.LoaiBangLais.ToList();
-
-            // Thêm thông tin về các loại câu hỏi (biển báo, sa hình, ...)
-            var loaiCauHoiList = _context.CauHois
-                .Where(c => loaiBangLaiId == null || c.LoaiBangLaiId == loaiBangLaiId)
-                .Select(c => c.LoaiCauHoi)
-                .Distinct()
-                .Where(l => !string.IsNullOrEmpty(l))
-                .ToList();
-
-            ViewBag.DanhSachLoaiBangLai = danhSachLoaiBangLai;
-            ViewBag.SelectedLoaiBangLaiId = loaiBangLaiId;
-            ViewBag.LoaiCauHoiList = loaiCauHoiList;
-
-            return View(danhSachChuDe);
-        }
     }
 }
