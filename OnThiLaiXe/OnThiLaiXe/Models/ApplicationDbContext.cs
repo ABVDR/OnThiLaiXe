@@ -9,6 +9,7 @@ namespace OnThiLaiXe.Models
 options) : base(options)
         {
         }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<ChuDe> ChuDes { get; set; }
         public DbSet<LoaiBangLai> LoaiBangLais { get; set; }
         public DbSet<CauHoi> CauHois { get; set; }
@@ -16,6 +17,7 @@ options) : base(options)
         public DbSet<ChiTietBaiThi> ChiTietBaiThis { get; set; }
         public DbSet<CauHoiSai> CauHoiSais { get; set; }
         public DbSet<CauTrucDeThi> CauTrucDeThis { get; set; } // Thêm DbSet cho CauTrucDeThi
+        public DbSet<BaiSaHinh> BaiSaHinhs { get; set; }
     }
 
 

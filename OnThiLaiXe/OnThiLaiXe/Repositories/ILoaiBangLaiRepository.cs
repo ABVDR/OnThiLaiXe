@@ -9,6 +9,6 @@ namespace OnThiLaiXe.Repositories
         Task AddAsync(LoaiBangLai loaibanglai);
         Task UpdateAsync(LoaiBangLai loaibanglai);
         Task DeleteAsync(int id);
-
+        Task<IEnumerable<LoaiBangLai>> GetAllWithBaiHocAsync();
     }
 }

@@ -101,12 +101,23 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a asp-area="Admin" asp-controller="UserManager" asp-action="Index">
+                                <i class="fas fa-question"></i>
+                                <p>Quản Lý Người Dùng</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a asp-controller="Home" asp-action="Index" asp-area="">
                                 <i class="fas fa-home"></i>
                                 <p>Trang Chủ</p>
                             </a>
                         </li>
-
+                        <li class="nav-item">
+                            <a asp-controller="BaiSaHinh" asp-action="Index" asp-area="Admin">
+                                <i class="fas fa-home"></i>
+                                <p>Quản lý bài sa hình</p>
+                            </a>
+                        </li>
                         
                     </ul>
                 </div>
@@ -295,6 +306,7 @@
     </div>
     <!--   Core JS Files   -->
     <script src="~/assets_admin/assets/js/core/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="~/assets_admin/assets/js/core/popper.min.js"></script>
     <script src="~/assets_admin/assets/js/core/bootstrap.min.js"></script>
 
@@ -329,6 +341,7 @@
     <!-- Kaiadmin DEMO methods, don't include it in your project! -->
     <script src="~/assets_admin/assets/js/setting-demo.js"></script>
     <script src="~/assets_admin/assets/js/demo.js"></script>
+    @RenderSection("Scripts", required: false)
     <script>
         $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
           type: "line",
@@ -355,6 +368,26 @@
           lineWidth: "2",
           lineColor: "#ffa534",
           fillColor: "rgba(255, 165, 52, .14)",
+        });
+    </script>
+    @inject IConfiguration Configuration
+    <script src="https://cdn.tiny.cloud/1/@Configuration["TinyMCE:ApiKey"]/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+          selector: 'textarea.tinymce-enabled',
+          plugins: [
+            // Core editing features
+            'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount',
+            'checklist', 'mediaembed', 'casechange', 'formatpainter', 'pageembed', 'a11ychecker', 'tinymcespellchecker', 'permanentpen', 'powerpaste', 'advtable', 'advcode', 'editimage', 'advtemplate', 'ai', 'mentions', 'tinycomments', 'tableofcontents', 'footnotes', 'mergetags', 'autocorrect', 'typography', 'inlinecss', 'markdown','importword', 'exportword', 'exportpdf'
+          ],
+          toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+          tinycomments_mode: 'embedded',
+          tinycomments_author: 'Author name',
+          mergetags_list: [
+            { value: 'First.Name', title: 'First Name' },
+            { value: 'Email', title: 'Email' },
+          ],
+          ai_request: (request, respondWith) => respondWith.string(() => Promise.reject('See docs to implement AI Assistant')),
         });
     </script>
 </body>

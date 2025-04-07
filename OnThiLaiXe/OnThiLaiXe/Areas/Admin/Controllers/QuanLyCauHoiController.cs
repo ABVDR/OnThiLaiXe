@@ -173,5 +173,20 @@ namespace OnThiLaiXe.Areas.Admin.Controllers
             await _cauHoiRepository.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
         }
+        [HttpGet("CauHoi/GetAutocompleteData")]
+        public async Task<IActionResult> GetAutocompleteData(string term)
+        {
+            if(string.IsNullOrEmpty(term))
+            {
+                return Json(new List<object>());
+            }
+            var cauhois = await _cauHoiRepository.SearchCauHoiAsync(term);
+            var result = cauhois.Select(c => new
+            {
+                label = c.NoiDung,
+                value = c.Id,
+            });
+            return Json(result);
+        }
     }
 }

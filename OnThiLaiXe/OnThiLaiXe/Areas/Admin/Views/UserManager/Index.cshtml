@@ -1,0 +1,59 @@
+﻿@model IEnumerable<OnThiLaiXe.Models.ApplicationUser>
+@{
+    ViewData["Title"] = "User Manager";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var userRoles = ViewBag.UserRoles as Dictionary<string, List<string>>;
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-striped table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Roles</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>
+                    <form method="post" asp-action="UpdateRoleUser" onsubmit="return confirmRoleChange(this);">
+                        <input type="hidden" name="id" value="@user.Id" />
+                        <div class="input-group">
+                            <select name="role" class="form-control" onchange="markRoleChanged(this);">
+                                @foreach (var role in ViewBag.Roles as SelectList)
+                                {
+                                    <option value="@role.Value" selected="@(userRoles[user.Id].Contains(role.Value))">@role.Text</option>
+                                }
+                            </select>
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-primary" disabled>Update Role</button>
+                            </div>
+                        </div>
+                    </form>
+                </td>
+                <td></td> <!-- Nút delete đã bị loại bỏ -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        function markRoleChanged(selectElement) {
+            var form = selectElement.closest('form');
+            form.querySelector('button[type="submit"]').disabled = false;
+        }
+
+        function confirmRoleChange(form) {
+            var role = form.querySelector('select[name="role"]').value;
+            return confirm('Are you sure you want to change the role to ' + role + '?');
+        }
+    </script>
+}

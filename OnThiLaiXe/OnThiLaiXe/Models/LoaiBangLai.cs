@@ -16,5 +16,6 @@ namespace OnThiLaiXe.Models
         public int DiemToiThieu { get; set; }
         //
         public ICollection<CauHoi> CauHois { get; set; }
+        public ICollection<BaiSaHinh> BaiSaHinhs { get; set; }
     }
 }

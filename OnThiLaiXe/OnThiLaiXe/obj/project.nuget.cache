@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "D2SdrZM7ZfM=",
+  "dgSpecHash": "DvJ17I8Twc8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (5)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (6)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\elfinder.netcore\\1.5.0\\elfinder.netcore.1.5.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\hangfire\\1.8.18\\hangfire.1.8.18.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\hangfire.aspnetcore\\1.8.18\\hangfire.aspnetcore.1.8.18.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\hangfire.core\\1.8.18\\hangfire.core.1.8.18.nupkg.sha512",
@@ -146,6 +147,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\pagedlist\\1.17.0\\pagedlist.1.17.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\pagedlist.mvc\\4.5.0\\pagedlist.mvc.4.5.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\sendgrid\\9.29.3\\sendgrid.9.29.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\sixlabors.imagesharp\\3.1.7\\sixlabors.imagesharp.3.1.7.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.10\\sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\sqlitepclraw.core\\2.1.10\\sqlitepclraw.core.2.1.10.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.10\\sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512",

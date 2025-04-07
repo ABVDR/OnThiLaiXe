@@ -33,8 +33,8 @@ namespace OnThiLaiXe.Models
         public string? LoaiMedia { get; set; }
 
         public string? MeoGhiNho { get; set; }
-        //them vao  
-        public string LoaiCauHoi { get; set; }
+        ////them vao  
+        //public string LoaiCauHoi { get; set; }
         public int ChuDeId { get; set; }
         public ChuDe? ChuDe { get; set; }
 

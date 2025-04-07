@@ -6,37 +6,61 @@
 
 <style>
     body {
-        background-color: #f9f9f9;
+        background-color: #f8f9fa;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+        margin-top: 30px;
     }
 
     .table thead {
-        background-color: #d7ccc8;
+        background-color: #f4e1d2;
         color: #5d4037;
         cursor: pointer;
     }
 
     .table tbody tr:nth-child(even) {
-        background-color: #f5ebe0;
+        background-color: #f7f1e1;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f1e5d8;
     }
 
     .btn-add {
-        background-color: #a1887f !important;
-        color: white !important;
+        background-color: #8e7d6a;
+        color: white;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-add:hover {
+            background-color: #6d5b42;
+        }
+
+    .btn-warning, .btn-info, .btn-danger {
+        padding: 8px 15px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .btn-warning {
-        background-color: #ffcc80 !important;
-        color: black !important;
+        background-color: #ffb74d;
+        color: black;
     }
 
     .btn-info {
-        background-color: #90caf9 !important;
-        color: black !important;
+        background-color: #64b5f6;
+        color: black;
     }
 
     .btn-danger {
-        background-color: #ef9a9a !important;
-        color: white !important;
+        background-color: #ef5350;
+        color: white;
     }
 
     .action-column {
@@ -44,39 +68,89 @@
     }
 
     .filter-container {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
+        .filter-container input,
         .filter-container select {
-            margin-right: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
         }
+
+    #sortNoiDung {
+        cursor: pointer;
+        font-weight: bold;
+        color: #5d4037;
+    }
+
+        #sortNoiDung:hover {
+            color: #ff9800;
+        }
+
+    .autocomplete-items {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1050;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-top: none;
+        max-height: 250px;
+        overflow-y: auto;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    }
+
+        .autocomplete-items div {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+            transition: background 0.2s;
+        }
+
+            .autocomplete-items div:hover {
+                background-color: #f1f1f1;
+            }
 </style>
 
-<div class="container mt-4">
+<div class="container">
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2 style="color: #5d4037;">Danh sách câu hỏi</h2>
+        <h2 class="text-primary fw-bold">Danh sách câu hỏi</h2>
         <a asp-action="Add" class="btn btn-add">Thêm câu hỏi</a>
     </div>
 
     <!-- Bộ lọc -->
-    <div class="filter-container d-flex align-items-center">
-        <input type="text" id="searchBox" placeholder="Tìm kiếm..." class="form-control w-25 me-2" />
-
-        <select id="filterChuDe" class="form-select w-25 me-2">
-            <option value="">-- Lọc theo Chủ đề --</option>
-            @foreach (var chuDe in Model.Select(c => c.ChuDe.TenChuDe).Distinct())
-            {
-                <option value="@chuDe">@chuDe</option>
-            }
-        </select>
-
-        <select id="filterLoaiBang" class="form-select w-25">
-            <option value="">-- Lọc theo Loại bằng --</option>
-            @foreach (var loai in Model.Select(c => c.LoaiBangLai.TenLoai).Distinct())
-            {
-                <option value="@loai">@loai</option>
-            }
-        </select>
+    <div class="filter-container row g-3 position-relative">
+        <div class="col-md-4 col-sm-12 position-relative">
+            <input type="text" id="SearchCauHoi" placeholder="Tìm kiếm câu hỏi..." class="form-control" autocomplete="off" />
+            <div id="autocomplete-list" class="autocomplete-items"></div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <select id="filterChuDe" class="form-select">
+                <option value="">-- Lọc theo Chủ đề --</option>
+                @foreach (var chuDe in Model.Select(c => c.ChuDe.TenChuDe).Distinct())
+                {
+                    <option value="@chuDe">@chuDe</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <select id="filterLoaiBang" class="form-select">
+                <option value="">-- Lọc theo Loại bằng --</option>
+                @foreach (var loai in Model.Select(c => c.LoaiBangLai.TenLoai).Distinct())
+                {
+                    <option value="@loai">@loai</option>
+                }
+            </select>
+        </div>
     </div>
 
     <table class="table table-bordered text-center">
@@ -84,7 +158,7 @@
             <tr>
                 <th>Chủ đề</th>
                 <th>Loại bằng</th>
-                <th id="sortNoiDung">Nội dung </th>
+                <th id="sortNoiDung">Nội dung</th>
                 <th>Đáp án đúng</th>
                 <th>Điểm liệt</th>
                 <th class="action-column">Hành động</th>
@@ -97,8 +171,8 @@
                     <td class="chuDe">@item.ChuDe.TenChuDe</td>
                     <td class="loaiBang">@item.LoaiBangLai.TenLoai</td>
                     <td class="noiDung">@item.NoiDung</td>
-                    <td class="text-center"><span class="badge bg-success">@item.DapAnDung</span></td>
-                    <td class="text-center">@(item.DiemLiet ? "Có" : "Không")</td>
+                    <td><span class="badge bg-success">@item.DapAnDung</span></td>
+                    <td>@(item.DiemLiet ? "Có" : "Không")</td>
                     <td class="action-column">
                         <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-sm btn-warning">
                             <i class="bi bi-pencil-square"></i>
@@ -116,49 +190,86 @@
     </table>
 </div>
 
-<script>
-    const searchBox = document.getElementById("searchBox");
-    const filterChuDe = document.getElementById("filterChuDe");
-    const filterLoaiBang = document.getElementById("filterLoaiBang");
-    const tableBody = document.getElementById("tableBody");
+@section Scripts {
+    <script>
+        const searchBox = document.getElementById("SearchCauHoi");
+        const filterChuDe = document.getElementById("filterChuDe");
+        const filterLoaiBang = document.getElementById("filterLoaiBang");
+        const tableBody = document.getElementById("tableBody");
+        const autoCompleteBox = document.getElementById("autocomplete-list");
 
-    function filterRows() {
-        const keyword = searchBox.value.toLowerCase();
-        const selectedChuDe = filterChuDe.value;
-        const selectedLoaiBang = filterLoaiBang.value;
+        function filterRows() {
+            const keyword = searchBox.value.toLowerCase();
+            const selectedChuDe = filterChuDe.value;
+            const selectedLoaiBang = filterLoaiBang.value;
 
-        const rows = tableBody.querySelectorAll("tr");
+            const rows = tableBody.querySelectorAll("tr");
 
-        rows.forEach(row => {
-            const chuDe = row.querySelector(".chuDe").textContent.trim();
-            const loaiBang = row.querySelector(".loaiBang").textContent.trim();
-            const noiDung = row.querySelector(".noiDung").textContent.toLowerCase();
+            rows.forEach(row => {
+                const chuDe = row.querySelector(".chuDe").textContent.trim();
+                const loaiBang = row.querySelector(".loaiBang").textContent.trim();
+                const noiDung = row.querySelector(".noiDung").textContent.toLowerCase();
 
-            const matchKeyword = noiDung.includes(keyword);
-            const matchChuDe = !selectedChuDe || chuDe === selectedChuDe;
-            const matchLoai = !selectedLoaiBang || loaiBang === selectedLoaiBang;
+                const matchKeyword = noiDung.includes(keyword);
+                const matchChuDe = !selectedChuDe || chuDe === selectedChuDe;
+                const matchLoai = !selectedLoaiBang || loaiBang === selectedLoaiBang;
 
-            row.style.display = (matchKeyword && matchChuDe && matchLoai) ? "" : "none";
+                row.style.display = (matchKeyword && matchChuDe && matchLoai) ? "" : "none";
+            });
+        }
+
+        searchBox.addEventListener("keyup", filterRows);
+        filterChuDe.addEventListener("change", filterRows);
+        filterLoaiBang.addEventListener("change", filterRows);
+
+        // Autocomplete
+        let suggestions = [];
+        document.querySelectorAll("#tableBody .noiDung").forEach(item => {
+            const text = item.textContent.trim();
+            if (!suggestions.includes(text)) {
+                suggestions.push(text);
+            }
         });
-    }
 
-    searchBox.addEventListener("keyup", filterRows);
-    filterChuDe.addEventListener("change", filterRows);
-    filterLoaiBang.addEventListener("change", filterRows);
+        searchBox.addEventListener("input", function () {
+            const val = this.value.toLowerCase();
+            autoCompleteBox.innerHTML = "";
 
-    let sortDirection = false;
-    document.getElementById("sortNoiDung").addEventListener("click", function () {
-        const rows = Array.from(tableBody.rows);
-        rows.sort((a, b) => {
-            const aText = a.querySelector(".noiDung").textContent.trim().toLowerCase();
-            const bText = b.querySelector(".noiDung").textContent.trim().toLowerCase();
-            return sortDirection ? aText.localeCompare(bText) : bText.localeCompare(aText);
+            if (!val) return;
+
+            const matches = suggestions.filter(item => item.toLowerCase().includes(val));
+            matches.forEach(match => {
+                const div = document.createElement("div");
+                div.innerHTML = match.replace(new RegExp(val, "gi"), (text) => `<strong>${text}</strong>`);
+                div.addEventListener("click", function () {
+                    searchBox.value = match;
+                    autoCompleteBox.innerHTML = "";
+                    filterRows();
+                });
+                autoCompleteBox.appendChild(div);
+            });
         });
 
-        tableBody.innerHTML = "";
-        rows.forEach(row => tableBody.appendChild(row));
-        sortDirection = !sortDirection;
-        this.innerHTML = `Nội dung ${sortDirection ? '⬆️' : '⬇️'}`;
-    });
-</script>
+        document.addEventListener("click", function (e) {
+            if (!searchBox.contains(e.target)) {
+                autoCompleteBox.innerHTML = "";
+            }
+        });
 
+        // Sort nội dung
+        let sortDirection = false;
+        document.getElementById("sortNoiDung").addEventListener("click", function () {
+            const rows = Array.from(tableBody.rows);
+            rows.sort((a, b) => {
+                const aText = a.querySelector(".noiDung").textContent.trim().toLowerCase();
+                const bText = b.querySelector(".noiDung").textContent.trim().toLowerCase();
+                return sortDirection ? aText.localeCompare(bText) : bText.localeCompare(aText);
+            });
+
+            tableBody.innerHTML = "";
+            rows.forEach(row => tableBody.appendChild(row));
+            sortDirection = !sortDirection;
+            this.innerHTML = `Nội dung ${sortDirection ? '⬆️' : '⬇️'}`;
+        });
+    </script>
+}

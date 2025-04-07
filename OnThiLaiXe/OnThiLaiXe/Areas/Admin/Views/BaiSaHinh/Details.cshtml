@@ -1,0 +1,28 @@
+﻿@model OnThiLaiXe.Models.BaiSaHinh
+@{
+    ViewData["Title"] = "Thêm Câu Hỏi";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .container {
+        margin-top: 30px;
+    }
+</style>
+<div class="container">
+    <h2>Chi tiết bài sa hình</h2>
+
+    <div>
+        <dl class="row">
+            <dt class="col-sm-2">Tên bài</dt>
+            <dd class="col-sm-10">@Model.TenBai</dd>
+            <dt class="col-sm-2">Thứ tự</dt>
+            <dd class="col-sm-10">@Model.Order</dd>
+            <dt class="col-sm-2">Nội dung</dt>
+            <div class="col-sm-10">@Html.Raw(Model.NoiDung)</div>
+            <dt class="col-sm-2">Loại bằng lái</dt>
+            <dd class="col-sm-10">@Model.LoaiBangLai?.TenLoai</dd>
+        </dl>
+    </div>
+    <a asp-action="Index" asp-route-loaiBangLaiId="@Model.LoaiBangLaiId" class="btn btn-secondary">Quay lại</a>
+</div>
