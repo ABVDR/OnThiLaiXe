@@ -47,6 +47,22 @@
           }
         }
       },
+      "elFinder.NetCore/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "SixLabors.ImageSharp": "3.1.7",
+          "System.Text.Json": "9.0.3"
+        },
+        "compile": {
+          "lib/net9.0/elFinder.NetCore.dll": {}
+        },
+        "runtime": {
+          "lib/net9.0/elFinder.NetCore.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Hangfire/1.8.18": {
         "type": "package",
         "dependencies": {
@@ -2619,6 +2635,22 @@
           }
         }
       },
+      "SixLabors.ImageSharp/3.1.7": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.10": {
         "type": "package",
         "dependencies": {
@@ -3417,6 +3449,18 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "elFinder.NetCore/1.5.0": {
+      "sha512": "M+KxlUuQHZguVwRcoqQBcWDOnKWX1BaazIgIKTLQeGY5l2lYy7oesdm/u/7PkpWLEupvLYtQ+hZ5XcAPoPrJvg==",
+      "type": "package",
+      "path": "elfinder.netcore/1.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "elfinder.netcore.1.5.0.nupkg.sha512",
+        "elfinder.netcore.nuspec",
+        "lib/net9.0/elFinder.NetCore.dll"
       ]
     },
     "Hangfire/1.8.18": {
@@ -7563,6 +7607,22 @@
         "sendgrid.nuspec"
       ]
     },
+    "SixLabors.ImageSharp/3.1.7": {
+      "sha512": "9fIOOAsyLFid6qKypM2Iy0Z3Q9yoanV8VoYAHtI2sYGMNKzhvRTjgFDHonIiVe+ANtxIxM6SuqUzj0r91nItpA==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/3.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/SixLabors.ImageSharp.props",
+        "lib/net6.0/SixLabors.ImageSharp.dll",
+        "lib/net6.0/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.128.png",
+        "sixlabors.imagesharp.3.1.7.nupkg.sha512",
+        "sixlabors.imagesharp.nuspec"
+      ]
+    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.10": {
       "sha512": "UxWuisvZ3uVcVOLJQv7urM/JiQH+v3TmaJc1BLKl5Dxfm/nTzTUrqswCqg/INiYLi61AXnHo1M1JPmPqqLnAdg==",
       "type": "package",
@@ -8917,7 +8977,8 @@
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.3",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 9.0.0",
       "PagedList.Mvc >= 4.5.0",
-      "SendGrid >= 9.29.3"
+      "SendGrid >= 9.29.3",
+      "elFinder.NetCore >= 1.5.0"
     ]
   },
   "packageFolders": {
@@ -8927,11 +8988,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (5)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (6)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
       "projectName": "OnThiLaiXe",
-      "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (5)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+      "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (6)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (5)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (6)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -9022,6 +9083,10 @@
           "SendGrid": {
             "target": "Package",
             "version": "[9.29.3, )"
+          },
+          "elFinder.NetCore": {
+            "target": "Package",
+            "version": "[1.5.0, )"
           }
         },
         "imports": [

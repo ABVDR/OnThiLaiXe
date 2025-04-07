@@ -1,0 +1,53 @@
+﻿@model IEnumerable<BaiSaHinh>
+@{
+    ViewData["Title"] = "Danh sách và chi tiết";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách bài học - @ViewBag.TenLoaiBangLai</h2>
+<div class="row">
+    <!-- Danh sách bài học -->
+    <div class="col-md-3">
+        <div class="list-group shadow-sm">
+            @foreach (var bai in Model)
+            {
+                <a href="#" class="list-group-item list-group-item-action baiHocLink @(bai == Model.First() ? "active" : "")"
+                   data-id="@bai.Id">Bài @bai.Order: @bai.TenBai</a>
+            }
+        </div>
+    </div>
+
+    <!-- Nội dung bài học -->
+    <div class="col-md-9">
+        <div id="noiDungBaiHoc" class="card shadow-sm p-4">
+            <h3 class="text-primary text-center" id="tieuDeBaiHoc"></h3>
+            <div id="noiDung" class="mt-3 alert alert-light border"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var firstBaiHocId = $(".baiHocLink").first().data("id");
+        if (firstBaiHocId) {
+            loadBaiHoc(firstBaiHocId);
+        }
+
+        $(".baiHocLink").click(function (e) {
+            e.preventDefault();
+            $(".baiHocLink").removeClass("active");
+            $(this).addClass("active");
+
+            var baiHocId = $(this).data("id");
+            loadBaiHoc(baiHocId);
+        });
+
+        function loadBaiHoc(baiHocId) {
+            $.get("/BaiSaHinh/GetNoiDungBaiHoc/" + baiHocId, function (data) {
+                $("#tieuDeBaiHoc").text(data.tenBai);
+                $("#noiDung").html(data.noiDung);
+            });
+        }
+    });
+</script>

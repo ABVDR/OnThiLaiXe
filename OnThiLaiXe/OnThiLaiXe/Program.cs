@@ -2,11 +2,12 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.DotNet.Scaffolding.Shared;
 using Microsoft.EntityFrameworkCore;
 using OnThiLaiXe.Models;
 using OnThiLaiXe.Repositories;
 using OnThiLaiXe.Services;
-
+using Microsoft.AspNetCore.StaticFiles;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -33,12 +34,14 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
         options.SignInScheme = IdentityConstants.ExternalScheme; //de gg hd chung voi identity
     });
-
+builder.Services.AddMemoryCache();
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ICauHoiRepository, EFCauHoiRepository>();
 builder.Services.AddScoped<IChuDeRepository, EFChuDeRepository>();
 builder.Services.AddScoped<ILoaiBangLaiRepository, EFLoaiBangLaiRepository>();
 builder.Services.AddTransient<IGmailSender, SendGridEmailSender>();
+builder.Services.AddScoped<IUserRepository, EFUserRepository>();
+builder.Services.AddScoped<IBaiSaHinhRepository, EFBaiSaHinhRepository>();
 builder.Services.AddHangfire(configuration => configuration
         .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
         .UseSimpleAssemblyNameTypeSerializer()
@@ -70,8 +73,18 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
-app.UseStaticFiles();
-
+//app.UseStaticFiles();
+var provider = new FileExtensionContentTypeProvider();
+provider.Mappings[".mp4"] = "video/mp4";
+app.UseStaticFiles(new StaticFileOptions
+{
+    ContentTypeProvider = provider,
+    ServeUnknownFileTypes = false,
+    OnPrepareResponse = ctx =>
+    {
+        ctx.Context.Response.Headers.Append("Accept-Ranges", "bytes"); // Cho phép video streaming
+    }
+});
 app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>

@@ -10,6 +10,7 @@ namespace OnThiLaiXe.Repositories
         Task UpdateAsync(CauHoi cauhoi);
         Task DeleteAsync(int id);
         List<CauHoi> LayCauHoiTheoChuDe(int chuDeId, int soLuong);
+        Task<IEnumerable<CauHoi>> SearchCauHoiAsync(string term);
 
     }
 }

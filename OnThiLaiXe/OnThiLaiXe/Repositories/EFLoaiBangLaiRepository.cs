@@ -38,5 +38,11 @@ namespace OnThiLaiXe.Repositories
             _context.LoaiBangLais.Update(loaibanglai);
             await _context.SaveChangesAsync();
         }
+        public async Task<IEnumerable<LoaiBangLai>> GetAllWithBaiHocAsync()
+        {
+            return await _context.LoaiBangLais
+                .Where(loai => _context.BaiSaHinhs.Any(bai => bai.LoaiBangLaiId == loai.Id))
+                .ToListAsync();
+        }
     }
 }

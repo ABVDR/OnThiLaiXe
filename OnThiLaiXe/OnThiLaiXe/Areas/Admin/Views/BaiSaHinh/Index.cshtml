@@ -1,0 +1,54 @@
+﻿@model IEnumerable<OnThiLaiXe.Models.BaiSaHinh>
+@{
+    ViewData["Title"] = "Danh sach";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .container {
+        margin-top: 30px;
+    }
+</style>
+
+<div class="container">
+    <form asp-action="Index" method="get" class="mb-3">
+        <div class="form-group">
+            <label>Lọc theo loại bằng lái:</label>
+            <select name="loaiBangLaiId" class="form-control d-inline w-auto" onchange="this.form.submit()">
+                <option value="">Tất cả</option>
+                @foreach (var loai in ViewBag.LoaiBangLais)
+                {
+                    <option value="@loai.Id" selected="@(loai.Id == ViewBag.SelectedLoaiBangLaiId)">@loai.TenLoai</option>
+                }
+            </select>
+        </div>
+    </form>
+
+    <a asp-action="Create" class="btn btn-primary mb-3">Thêm bài sa hình</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tên bài</th>
+                <th>Loại bằng lái</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var bai in Model)
+            {
+                <tr>
+                    <td>Bài @bai.Order: @bai.TenBai</td>
+                    <td>@bai.LoaiBangLai?.TenLoai</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@bai.Id" class="btn btn-sm btn-info">Chi tiết</a>
+                        <a asp-action="Edit" asp-route-id="@bai.Id" class="btn btn-sm btn-warning">Sửa</a>
+                        <form asp-action="Delete" asp-route-id="@bai.Id" method="post" class="d-inline">
+                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc muốn xóa?')">Xóa</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

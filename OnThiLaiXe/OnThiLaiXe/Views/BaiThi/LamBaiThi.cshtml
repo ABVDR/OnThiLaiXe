@@ -159,8 +159,7 @@
 <script>
     let currentQuestion = 0;
     const totalQuestions = document.querySelectorAll('.question-card').length;
-    const timeLimit = @(Model.ChiTietBaiThis?.FirstOrDefault()?.CauHoi?.LoaiBangLai?.ThoiGianThi ?? 0) * 60;
-
+    const timeLimit = 15 * 60; // 15 phút
     let timeRemaining = timeLimit;
     let timer;
     let userAnswers = {};

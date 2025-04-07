@@ -1,0 +1,260 @@
+﻿@model OnThiLaiXe.Models.BaiThi
+@{
+    ViewData["Title"] = "Bài thi thử";
+    var chiTietList = Model.ChiTietBaiThis.ToList();
+}
+
+<div class="container mt-4">
+    <h2>@ViewData["Title"]</h2>
+
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h4>@Model.TenBaiThi</h4>
+            <div>
+                <span class="badge bg-primary">Số câu hỏi: @Model.ChiTietBaiThis.Count</span>
+                <span class="badge bg-info">Thời gian: 20 phút</span>
+            </div>
+        </div>
+        <div class="card-body">
+            <form id="formBaiThi">
+                <input type="hidden" id="baiThiId" value="@Model.Id" />
+
+                <div id="timingInfo" class="alert alert-warning mb-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>Thời gian còn lại: <span id="countdown">20:00</span></span>
+                        <span id="questionIndicator">Câu: 1/@Model.ChiTietBaiThis.Count</span>
+                    </div>
+                    <div class="progress mt-2">
+                        <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div id="questionContainer">
+                    @for (int i = 0; i < Model.ChiTietBaiThis.Count; i++)
+                    {
+                        var chiTiet = chiTietList[i];
+                        var cauHoi = chiTiet.CauHoi;
+
+                        <div class="question-item @(i == 0 ? "" : "d-none")" data-question-index="@i">
+                            <div class="question-item @(i == 0 ? "" : "d-none")" data-question-index="@i">
+                                <div class="card mb-3">
+                                    <div class="card-header @(cauHoi.DiemLiet ? "bg-danger text-white" : "")">
+                                        @if (cauHoi.DiemLiet)
+                                        {
+                                            <span class="badge bg-danger me-2">Điểm liệt</span>
+                                        }
+                                        <span class="fw-bold">Câu @(i + 1): </span>@cauHoi.NoiDung
+                                    </div>
+                                    <div class="card-body">
+                                        @if (!string.IsNullOrEmpty(cauHoi.MediaUrl))
+                                        {
+                                            <div class="text-center mb-3">
+                                                <img src="@Url.Content($"~/images/cauhoi/{cauHoi.MediaUrl}")" class="img-fluid" alt="Hình minh họa" style="max-height: 300px;">
+                                            </div>
+                                        }
+
+                                        <div class="question-options">
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="@($"dapAn_{i}")" id="@($"dapAn_{i}_A")" value="A">
+                                                <label class="form-check-label" for="@($"dapAn_{i}_A")">
+                                                    A. @cauHoi.LuaChonA
+                                                </label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="@($"dapAn_{i}")" id="@($"dapAn_{i}_B")" value="B">
+                                                <label class="form-check-label" for="@($"dapAn_{i}_B")">
+                                                    B. @cauHoi.LuaChonB
+                                                </label>
+                                            </div>
+                                            @if (!string.IsNullOrEmpty(cauHoi.LuaChonC))
+                                            {
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="@($"dapAn_{i}")" id="@($"dapAn_{i}_C")" value="C">
+                                                    <label class="form-check-label" for="@($"dapAn_{i}_C")">
+                                                        C. @cauHoi.LuaChonC
+                                                    </label>
+                                                </div>
+                                            }
+                                            @if (!string.IsNullOrEmpty(cauHoi.LuaChonD))
+                                            {
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="@($"dapAn_{i}")" id="@($"dapAn_{i}_D")" value="D">
+                                                    <label class="form-check-label" for="@($"dapAn_{i}_D")">
+                                                        D. @cauHoi.LuaChonD
+                                                    </label>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+                </div>
+
+                <div class="navigation-buttons d-flex justify-content-between mt-3">
+                    <button type="button" id="prevQuestion" class="btn btn-secondary" disabled>Câu trước</button>
+                    <div class="d-flex">
+                        <button type="button" id="markQuestion" class="btn btn-warning me-2">Đánh dấu câu này</button>
+                        <button type="button" id="nextQuestion" class="btn btn-primary">Câu tiếp theo</button>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <div id="question-navigator" class="d-flex flex-wrap">
+                        @for (int i = 0; i < Model.ChiTietBaiThis.Count; i++)
+                        {
+                            <button type="button" class="btn btn-outline-secondary question-nav-btn m-1"
+                                    data-index="@i" style="width: 40px; height: 40px;">
+                                @(i + 1)
+                            </button>
+                        }
+                    </div>
+                    <button type="button" id="submitExam" class="btn btn-danger">Nộp bài</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            let currentQuestionIndex = 0;
+            const totalQuestions = @Model.ChiTietBaiThis.Count;
+            let answered = Array(totalQuestions).fill(false);
+            let marked = Array(totalQuestions).fill(false);
+            let timeLeft = 20 * 60; // 20 minutes in seconds
+            let dapAnObj = {};
+
+            // Update navigation buttons and progress
+            function updateNavigation() {
+                $('#prevQuestion').prop('disabled', currentQuestionIndex === 0);
+                $('#nextQuestion').prop('disabled', currentQuestionIndex === totalQuestions - 1);
+                $('#questionIndicator').text(`Câu: ${currentQuestionIndex + 1}/${totalQuestions}`);
+
+                // Update progress bar
+                const progress = (currentQuestionIndex + 1) / totalQuestions * 100;
+                $('#progressBar').css('width', `${progress}%`).attr('aria-valuenow', progress);
+
+                // Update question navigator buttons
+                $('.question-nav-btn').removeClass('btn-primary btn-warning btn-success').addClass('btn-outline-secondary');
+                $('.question-nav-btn').each(function() {
+                    const index = $(this).data('index');
+                    if (index === currentQuestionIndex) {
+                        $(this).removeClass('btn-outline-secondary').addClass('btn-primary');
+                    } else if (marked[index]) {
+                        $(this).removeClass('btn-outline-secondary').addClass('btn-warning');
+                    } else if (answered[index]) {
+                        $(this).removeClass('btn-outline-secondary').addClass('btn-success');
+                    }
+                });
+            }
+
+            // Show a specific question
+            function showQuestion(index) {
+                $('.question-item').addClass('d-none');
+                $(`.question-item[data-question-index="${index}"]`).removeClass('d-none');
+                currentQuestionIndex = index;
+                updateNavigation();
+            }
+
+            // Event for previous button
+            $('#prevQuestion').click(function() {
+                if (currentQuestionIndex > 0) {
+                    showQuestion(currentQuestionIndex - 1);
+                }
+            });
+
+            // Event for next button
+            $('#nextQuestion').click(function() {
+                if (currentQuestionIndex < totalQuestions - 1) {
+                    showQuestion(currentQuestionIndex + 1);
+                }
+            });
+
+            // Event for navigation buttons
+            $('.question-nav-btn').click(function() {
+                const index = $(this).data('index');
+                showQuestion(index);
+            });
+
+            // Event for mark button
+            $('#markQuestion').click(function() {
+                marked[currentQuestionIndex] = !marked[currentQuestionIndex];
+                updateNavigation();
+            });
+
+            // Event for radio buttons (answers)
+            $(document).on('change', 'input[type=radio]', function() {
+                const name = $(this).attr('name');
+                const index = parseInt(name.split('_')[1]);
+                answered[index] = true;
+
+                // Save answer
+                dapAnObj[name] = $(this).val();
+
+                // Save temporarily to server
+                $.ajax({
+                    url: '@Url.Action("LuuDapAnTamThoi")',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        BaiThiId: $('#baiThiId').val(),
+                        DapAn: dapAnObj
+                    })
+                });
+
+                updateNavigation();
+            });
+
+            // Timer function
+            function updateTimer() {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                $('#countdown').text(`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`);
+
+                if (timeLeft <= 300) { // 5 minutes left
+                    $('#timingInfo').removeClass('alert-warning').addClass('alert-danger');
+                }
+
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    submitExam();
+                }
+
+                timeLeft--;
+            }
+
+            // Submit exam function
+            function submitExam() {
+                const confirmed = confirm('Bạn có chắc chắn muốn nộp bài?');
+                if (!confirmed) return;
+
+                const formData = {
+                    baiThiId: $('#baiThiId').val(),
+                    dapAnJson: JSON.stringify(dapAnObj)
+                };
+
+                $.post('@Url.Action("NopBaiThi")', formData, function(response) {
+                    // Redirect to result page or replace content with result
+                    document.open();
+                    document.write(response);
+                    document.close();
+                });
+            }
+
+            // Submit button event
+            $('#submitExam').click(submitExam);
+
+            // Initialize
+            updateNavigation();
+            showQuestion(0);
+
+            // Start timer
+            updateTimer();
+            const timerInterval = setInterval(updateTimer, 1000);
+        });
+    </script>
+}

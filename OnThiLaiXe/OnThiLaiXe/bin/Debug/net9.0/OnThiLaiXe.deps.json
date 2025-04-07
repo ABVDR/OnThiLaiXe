@@ -19,7 +19,8 @@
           "Microsoft.EntityFrameworkCore.Tools": "9.0.3",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0",
           "PagedList.Mvc": "4.5.0",
-          "SendGrid": "9.29.3"
+          "SendGrid": "9.29.3",
+          "elFinder.NetCore": "1.5.0"
         },
         "runtime": {
           "OnThiLaiXe.dll": {}
@@ -57,6 +58,18 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.11.4.0",
             "fileVersion": "1.1100.424.31005"
+          }
+        }
+      },
+      "elFinder.NetCore/1.5.0": {
+        "dependencies": {
+          "SixLabors.ImageSharp": "3.1.7",
+          "System.Text.Json": "9.0.3"
+        },
+        "runtime": {
+          "lib/net9.0/elFinder.NetCore.dll": {
+            "assemblyVersion": "1.5.0.0",
+            "fileVersion": "1.5.0.0"
           }
         }
       },
@@ -2123,6 +2136,14 @@
           }
         }
       },
+      "SixLabors.ImageSharp/3.1.7": {
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.1.7.0"
+          }
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.10": {
         "dependencies": {
           "SQLitePCLRaw.lib.e_sqlite3": "2.1.10",
@@ -2520,6 +2541,13 @@
       "sha512": "sha512-Sf4BoE6Q3jTgFkgBkx7qztYOFELBCo+wQgpYDwal/qJ1unBH73ywPztIJKXBXORRzAeNijsuxhk94h0TIMvfYg==",
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
+    },
+    "elFinder.NetCore/1.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-M+KxlUuQHZguVwRcoqQBcWDOnKWX1BaazIgIKTLQeGY5l2lYy7oesdm/u/7PkpWLEupvLYtQ+hZ5XcAPoPrJvg==",
+      "path": "elfinder.netcore/1.5.0",
+      "hashPath": "elfinder.netcore.1.5.0.nupkg.sha512"
     },
     "Hangfire/1.8.18": {
       "type": "package",
@@ -3500,6 +3528,13 @@
       "sha512": "sha512-nb/zHePecN9U4/Bmct+O+lpgK994JklbCCNMIgGPOone/DngjQoMCHeTvkl+m0Nglvm0dqMEshmvB4fO8eF3dA==",
       "path": "sendgrid/9.29.3",
       "hashPath": "sendgrid.9.29.3.nupkg.sha512"
+    },
+    "SixLabors.ImageSharp/3.1.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9fIOOAsyLFid6qKypM2Iy0Z3Q9yoanV8VoYAHtI2sYGMNKzhvRTjgFDHonIiVe+ANtxIxM6SuqUzj0r91nItpA==",
+      "path": "sixlabors.imagesharp/3.1.7",
+      "hashPath": "sixlabors.imagesharp.3.1.7.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.10": {
       "type": "package",

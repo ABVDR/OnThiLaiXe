@@ -46,5 +46,14 @@ namespace OnThiLaiXe.Repositories
                            .Take(soLuong)
                            .ToList();
         }
+        public async Task<IEnumerable<CauHoi>> SearchCauHoiAsync(string term)
+        {
+            var query = _context.CauHois.Include(p=>p.LoaiBangLai).Include(p=>p.ChuDe).AsQueryable();
+            if (!string.IsNullOrEmpty(term))
+            {
+                query = query.Where(p => EF.Functions.Like(p.NoiDung, $"%{term}%"));
+            }
+            return await query.Take(10).ToListAsync();
+        }
     }
 }

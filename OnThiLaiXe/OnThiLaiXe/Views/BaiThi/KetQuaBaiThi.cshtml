@@ -1,34 +1,24 @@
 ﻿@model List<KetQuaBaiThi>
+
 @{
     ViewData["Title"] = "Kết Quả Bài Thi";
-    var soDiem = Model.Count(m => m.CauTraLoi == m.CauHoi.DapAnDung);
-    var tongSo = Model.Count;
-    var biLiet = Model.Any(m => m.CauHoi.DiemLiet && m.CauTraLoi != m.CauHoi.DapAnDung);
-    var diemDat = ViewBag.DiemToiThieu as int? ?? 21;
-
-    var cauLietSai = Model
-        .Where(m => m.CauHoi.DiemLiet && m.CauTraLoi != m.CauHoi.DapAnDung)
-        .Select((m, index) => index + 1)
-        .ToList();
-
-    int cauSo = 1;
-    int correctCount = 0;
 }
 
-<h1 class="mb-4 mt-5">Kết Quả Bài Thi</h1>
+<h1 style="margin-top: 50px;"></h1>
 
 <div style="display: flex;">
     <!-- Kết quả chi tiết -->
     <div style="flex: 3;">
+        @{
+            int cauSo = 1;
+        }
+
         @foreach (var item in Model)
         {
             bool isCauBoTrong = item.CauTraLoi == '\0';
-            bool isCauDung = item.CauTraLoi == item.CauHoi.DapAnDung;
-            if (isCauDung) { correctCount++; }
 
             <div class="question">
                 <p><strong>Câu @cauSo:</strong> @item.CauHoi.NoiDung</p>
-
                 @if (!string.IsNullOrEmpty(item.CauHoi.MediaUrl))
                 {
                     <div class="question-image text-center">
@@ -57,9 +47,7 @@
 
                 @if (item.CauHoi.DiemLiet && item.CauTraLoi != item.CauHoi.DapAnDung)
                 {
-                    <div class="alert alert-danger mt-2 fw-bold">
-                        🚫 Câu điểm liệt – bạn đã trả lời sai!
-                    </div>
+                    <p class="warning">⚠️ Bạn đã trả lời sai câu điểm liệt!</p>
                 }
 
                 @if (isCauBoTrong)
@@ -73,54 +61,39 @@
 
     <!-- Tóm tắt kết quả -->
     <div style="flex: 1; margin-left: 20px;">
-        <h3 class="mb-3">Tóm Tắt</h3>
-
+        <h3>Kết Quả</h3>
         <div class="summary-grid">
             @{
-                int index = 0;
+                int index = 0; int correctCount = 0; int totalQuestions = Model.Count;
             }
             @foreach (var item in Model)
             {
                 var isDapAnNguoiDungSai = item.CauTraLoi == '\0' || item.CauTraLoi != item.CauHoi.DapAnDung;
+                if (!isDapAnNguoiDungSai) { correctCount++; }
                 <div class="summary-item @(isDapAnNguoiDungSai ? "incorrect" : "correct")">@(++index)</div>
             }
         </div>
 
         <!-- Tổng điểm -->
-        <div class="score-card mt-3">
+        <div class="score-card">
             <span>Tổng điểm:</span>
-            <strong>@correctCount / @tongSo</strong>
-        </div>
-
-        <!-- Kết quả: Đậu / Rớt -->
-        <div class="score-card mt-3">
-            <span>Kết quả:</span>
-            @if (biLiet)
-            {
-                <strong class="text-danger">RỚT (Sai câu điểm liệt)</strong>
-            }
-            else if (correctCount >= diemDat)
-            {
-                <strong class="text-success">ĐẬU</strong>
-            }
-            else
-            {
-                <strong class="text-warning">RỚT (Không đủ điểm)</strong>
-            }
+            <strong>@correctCount / @totalQuestions</strong>
         </div>
 
         <!-- Cảnh báo điểm liệt -->
-        @if (cauLietSai.Any())
+        @if (Model.Any(m => m.CauHoi.DiemLiet && m.CauTraLoi != m.CauHoi.DapAnDung))
         {
-            <div class="warning-card mt-3">
-                ⚠️ Bạn đã trả lời sai các câu điểm liệt: @string.Join(", ", cauLietSai)<br />
-                => Bài thi bị loại.
-            </div>
+            <div class="warning-card">⚠️ Bạn đã trả lời sai ít nhất một câu điểm liệt!</div>
         }
     </div>
 </div>
 
 <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
     .question {
         margin-bottom: 20px;
         padding: 15px;
@@ -187,6 +160,7 @@
         }
 
     .score-card {
+        margin-top: 20px;
         padding: 15px;
         border-radius: 12px;
         background-color: #2196F3;
@@ -199,6 +173,7 @@
     }
 
     .warning-card {
+        margin-top: 20px;
         padding: 15px;
         border-radius: 12px;
         background-color: #FF5722;

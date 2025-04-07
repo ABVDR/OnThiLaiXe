@@ -1,0 +1,34 @@
+﻿@model OnThiLaiXe.Models.BaiSaHinh
+@{
+    ViewData["Title"] = "Thêm Câu Hỏi";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .container {
+        margin-top: 30px;
+    }
+</style>
+<div class="container">
+    <h2>Sửa bài sa hình</h2>
+
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="TenBai">Tên bài</label>
+            <input asp-for="TenBai" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Order">Thứ tự</label>
+            <input asp-for="Order" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="NoiDung">Nội dung</label>
+            <textarea asp-for="NoiDung" class="form-control tinymce-enabled"></textarea>
+        </div>
+        <div class="form-group">
+            <label asp-for="LoaiBangLaiId">Loại bằng lái</label>
+            <select asp-for="LoaiBangLaiId" class="form-control" asp-items="@(new SelectList(ViewBag.LoaiBangLais, "Id", "TenLoai"))"></select>
+        </div>
+        <button type="submit" class="btn btn-primary">Lưu</button>
+    </form>
+</div>

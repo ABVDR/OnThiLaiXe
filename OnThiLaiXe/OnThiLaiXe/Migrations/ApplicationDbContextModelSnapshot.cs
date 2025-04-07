@@ -232,6 +232,35 @@ namespace OnThiLaiXe.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("OnThiLaiXe.Models.BaiSaHinh", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("LoaiBangLaiId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NoiDung")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TenBai")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LoaiBangLaiId");
+
+                    b.ToTable("BaiSaHinhs");
+                });
+
             modelBuilder.Entity("OnThiLaiXe.Models.BaiThi", b =>
                 {
                     b.Property<int>("Id")
@@ -253,9 +282,6 @@ namespace OnThiLaiXe.Migrations
                     b.Property<string>("LoaiBaiThi")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("LoaiBangLaiId")
-                        .HasColumnType("int");
 
                     b.Property<bool>("MacLoiNghiemTrong")
                         .HasColumnType("bit");
@@ -284,8 +310,6 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("LoaiBangLaiId");
-
                     b.ToTable("BaiThis");
                 });
 
@@ -312,10 +336,6 @@ namespace OnThiLaiXe.Migrations
 
                     b.Property<int>("LoaiBangLaiId")
                         .HasColumnType("int");
-
-                    b.Property<string>("LoaiCauHoi")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LoaiMedia")
                         .HasColumnType("nvarchar(max)");
@@ -535,10 +555,10 @@ namespace OnThiLaiXe.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("OnThiLaiXe.Models.BaiThi", b =>
+            modelBuilder.Entity("OnThiLaiXe.Models.BaiSaHinh", b =>
                 {
                     b.HasOne("OnThiLaiXe.Models.LoaiBangLai", "LoaiBangLai")
-                        .WithMany()
+                        .WithMany("BaiSaHinhs")
                         .HasForeignKey("LoaiBangLaiId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -631,6 +651,8 @@ namespace OnThiLaiXe.Migrations
 
             modelBuilder.Entity("OnThiLaiXe.Models.LoaiBangLai", b =>
                 {
+                    b.Navigation("BaiSaHinhs");
+
                     b.Navigation("CauHois");
                 });
 #pragma warning restore 612, 618
