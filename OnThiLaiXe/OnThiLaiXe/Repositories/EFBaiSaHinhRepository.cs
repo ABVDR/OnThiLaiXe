@@ -14,10 +14,19 @@ namespace OnThiLaiXe.Repositories
 
         public async Task<IEnumerable<BaiSaHinh>> GetAllBaiSaHinhAsync()
         {
-            return await _context.BaiSaHinhs
-                .Include(b => b.LoaiBangLai)
-                .OrderBy(b => b.Order)
-                .ToListAsync();
+                return await _context.BaiSaHinhs
+            .OrderBy(b => b.Order)
+            .Select(b => new BaiSaHinh
+            {
+                Id = b.Id,
+                TenBai = b.TenBai,
+                Order = b.Order,
+                LoaiBangLai = new LoaiBangLai
+                {
+                    TenLoai = b.LoaiBangLai.TenLoai
+                }
+            })
+            .ToListAsync();
         }
 
         public async Task<BaiSaHinh> GetBaiSaHinhByIdAsync(int id)
@@ -113,11 +122,20 @@ namespace OnThiLaiXe.Repositories
 
         public async Task<IEnumerable<BaiSaHinh>> GetBaiSaHinhByLoaiBangLaiIdAsync(int loaiBangLaiId)
         {
-            return await _context.BaiSaHinhs
-                .Include(b => b.LoaiBangLai)
-                .Where(b => b.LoaiBangLaiId == loaiBangLaiId)
-                .OrderBy(b => b.Order)
-                .ToListAsync();
+                return await _context.BaiSaHinhs
+            .Where(b => b.LoaiBangLaiId == loaiBangLaiId)
+            .OrderBy(b => b.Order)
+            .Select(b => new BaiSaHinh
+            {
+                Id = b.Id,
+                TenBai = b.TenBai,
+                Order = b.Order,
+                LoaiBangLai = new LoaiBangLai
+                {
+                    TenLoai = b.LoaiBangLai.TenLoai
+                }
+            })
+            .ToListAsync();
         }
     }
 }

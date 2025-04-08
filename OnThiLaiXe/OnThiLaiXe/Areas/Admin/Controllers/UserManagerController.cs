@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
 using OnThiLaiXe.Models;
 using OnThiLaiXe.Repositories;
 
@@ -16,11 +18,13 @@ namespace OnThiLaiXe.Areas.Admin.Controllers
         public readonly IUserRepository _userRepository;
         public readonly RoleManager<IdentityRole> _roleRepository;
         private readonly UserManager<ApplicationUser> _userManager;
-        public UserManagerController(IUserRepository userRepository, RoleManager<IdentityRole> roleManager, UserManager<ApplicationUser> userManager)
+        private readonly IConfiguration _configuration;
+        public UserManagerController(IUserRepository userRepository, RoleManager<IdentityRole> roleManager, UserManager<ApplicationUser> userManager, IConfiguration configuration)
         {
             _userRepository = userRepository;
             _roleRepository = roleManager;
             _userManager = userManager;
+            _configuration = configuration;
         }
         public async Task<IActionResult> Index()
         {
@@ -74,6 +78,63 @@ namespace OnThiLaiXe.Areas.Admin.Controllers
             }
             return RedirectToAction(nameof(Index));
         }
+        public async Task<IActionResult> Details(string id)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                return NotFound();
+            }
 
+            var user = await _userRepository.GetUserByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            var userRoles = await _userManager.GetRolesAsync(user);
+            ViewBag.UserRoles = userRoles.ToList(); // Truyền danh sách vai trò của người dùng
+            return View(user);
+        }
+        public async Task<IActionResult> ExportToExcel()
+        {
+            var users = await _userRepository.GetAllSysnc(User);
+            var stream = new MemoryStream();
+            string password = _configuration["ExcelPassword:Password"];
+            // Thiết lập License cho EPPlus 8.0.1
+            ExcelPackage.License.SetNonCommercialPersonal("Webonlaixe");
+            using (var package = new ExcelPackage(stream))
+            {
+                var worksheet = package.Workbook.Worksheets.Add("Users");
+
+                // Tiêu đề cột
+                worksheet.Cells[1, 1].Value = "Họ Tên Người Dùng";
+                worksheet.Cells[1, 2].Value = "Ngày Tạo";
+
+                // Định dạng tiêu đề
+                using (var range = worksheet.Cells[1, 1, 1, 2])
+                {
+                    range.Style.Font.Bold = true;
+                    range.Style.Fill.PatternType = ExcelFillStyle.Solid;
+                    range.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.FromArgb(0, 120, 215));
+                    range.Style.Font.Color.SetColor(System.Drawing.Color.White);
+                }
+                // Dữ liệu
+                int row = 2;
+                foreach (var user in users)
+                {
+                    worksheet.Cells[row, 1].Value = user.FullName;
+                    worksheet.Cells[row, 2].Value = user.NgayTao.ToString("dd/MM/yyyy HH:mm:ss");
+                    row++;
+                }
+                worksheet.Cells.AutoFitColumns();
+
+                package.Encryption.IsEncrypted = true;
+                package.Encryption.Password = password;
+                package.Save();
+            }
+            stream.Position = 0;
+            string excelName = $"Danh sách người dùng-{DateTime.Now:yyyyMMddHHmmss}.xlsx";
+            return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", excelName);
+        }
     }
 }
