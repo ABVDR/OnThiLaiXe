@@ -1,0 +1,34 @@
+﻿@{
+    Layout = null; // Không dùng layout để tránh xung đột
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>elFinder File Manager</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="/lib/elfinder/css/elfinder.full.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="/lib/elfinder/js/elfinder.min.js"></script>
+</head>
+<body>
+    <div id="elfinder"></div>
+    <script>
+        $(document).ready(function () {
+            var elf = $('#elfinder').elfinder({
+                url: '/admin/elfinder/connector',
+                lang: 'en',
+                getFileCallback: function (file) {
+                    console.log("File URL:", file.url);
+                    window.parent.postMessage({
+                        mceAction: 'fileSelected',
+                        url: file.url,
+                        name: file.name
+                    }, '*');
+                }
+            }).elfinder('instance');
+        });
+    </script>
+</body>
+</html>

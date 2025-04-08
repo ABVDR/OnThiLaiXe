@@ -73,18 +73,18 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
-//app.UseStaticFiles();
-var provider = new FileExtensionContentTypeProvider();
-provider.Mappings[".mp4"] = "video/mp4";
-app.UseStaticFiles(new StaticFileOptions
-{
-    ContentTypeProvider = provider,
-    ServeUnknownFileTypes = false,
-    OnPrepareResponse = ctx =>
-    {
-        ctx.Context.Response.Headers.Append("Accept-Ranges", "bytes"); // Cho phép video streaming
-    }
-});
+app.UseStaticFiles();
+//var provider = new FileExtensionContentTypeProvider();
+//provider.Mappings[".mp4"] = "video/mp4";
+//app.UseStaticFiles(new StaticFileOptions
+//{
+//    ContentTypeProvider = provider,
+//    ServeUnknownFileTypes = false,
+//    OnPrepareResponse = ctx =>
+//    {
+//        ctx.Context.Response.Headers.Append("Accept-Ranges", "bytes"); // Cho phép video streaming
+//    }
+//});
 app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>

@@ -2,7 +2,8 @@
 @{
     ViewData["Title"] = "Thêm Câu Hỏi";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
-}<style>
+}
+<style>
     .container {
         margin-top: 30px;
     }
@@ -10,24 +11,66 @@
 
 <div class="container">
     <h2>Thêm bài sa hình</h2>
-<form asp-action="Create" method="post">
-    <div class="form-group">
-        <label asp-for="TenBai">Tên bài</label>
-        <input asp-for="TenBai" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label asp-for="Order">Thứ tự</label>
-        <input asp-for="Order" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label asp-for="NoiDung">Nội dung</label>
+    <form asp-action="Create" method="post">
+        <div class="form-group">
+            <label asp-for="TenBai">Tên bài</label>
+            <input asp-for="TenBai" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Order">Thứ tự</label>
+            <input asp-for="Order" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="NoiDung">Nội dung</label>
             <textarea asp-for="NoiDung" class="form-control tinymce-enabled"></textarea>
-    </div>
-    <div class="form-group">
-        <label asp-for="LoaiBangLaiId">Loại bằng lái</label>
-        <select asp-for="LoaiBangLaiId" class="form-control" asp-items="@(new SelectList(ViewBag.LoaiBangLais, "Id", "TenLoai"))"></select>
-    </div>
-    <button type="submit" class="btn btn-primary">Thêm</button>
-</form>
-
+        </div>
+        <div class="form-group">
+            <label asp-for="LoaiBangLaiId">Loại bằng lái</label>
+            <select asp-for="LoaiBangLaiId" class="form-control" asp-items="@(new SelectList(ViewBag.LoaiBangLais, "Id", "TenLoai"))"></select>
+        </div>
+        <button type="submit" class="btn btn-primary">Thêm</button>
+    </form>
 </div>
+
+@section Scripts {
+    @inject IConfiguration Configuration
+    <script src="https://cdn.tiny.cloud/1/@Configuration["TinyMCE:ApiKey"]/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="/lib/elfinder/js/elfinder.min.js"></script>
+    <link rel="stylesheet" href="/lib/elfinder/css/elfinder.full.css" />
+    <script>
+        tinymce.init({
+            selector: 'textarea.tinymce-enabled',
+            plugins: [
+                'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount',
+                'checklist', 'mediaembed', 'casechange', 'formatpainter', 'pageembed', 'a11ychecker', 'tinymcespellchecker', 'permanentpen', 'powerpaste', 'advtable', 'advcode', 'editimage', 'advtemplate', 'ai', 'mentions', 'tinycomments', 'tableofcontents', 'footnotes', 'mergetags', 'autocorrect', 'typography', 'inlinecss', 'markdown', 'importword', 'exportword', 'exportpdf'
+            ],
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+            mergetags_list: [
+                { value: 'First.Name', title: 'First Name' },
+                { value: 'Email', title: 'Email' }
+            ],
+            ai_request: (request, respondWith) => respondWith.string(() => Promise.reject('See docs to implement AI Assistant')),
+            relative_urls: false,
+            convert_urls: false,
+            remove_script_host: false,
+            file_picker_types: 'file image media',
+            file_picker_callback: function (callback, value, meta) {
+                tinymce.activeEditor.windowManager.openUrl({
+                    title: 'elFinder File Manager',
+                    url: '/admin/elfinder/file-manager', // Thay bằng action mới
+                    width: 900,
+                    height: 450,
+                    onMessage: function (api, data) {
+                        if (data.mceAction === 'fileSelected') {
+                            console.log("URL sent to TinyMCE:", data.url);
+                            callback(data.url, { title: data.name });
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+}
+}
