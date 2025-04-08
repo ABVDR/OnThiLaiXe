@@ -1,0 +1,124 @@
+﻿@using System.Security.Claims
+@model IEnumerable<OnThiLaiXe.Models.Share>
+
+@{
+    ViewData["Title"] = "Câu Hỏi & Chia Sẻ";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-3">@ViewData["Title"]</h2>
+    <p class="text-muted">Câu hỏi về ôn thi gplx, lý thuyết, mô phỏng và các chủ đề khác được chia sẻ tại đây.</p>
+
+    <form asp-action="CreateShare" method="post" enctype="multipart/form-data" class="mb-5">
+        <div class="form-group mb-3">
+            <textarea id="editor" name="Content"></textarea>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <select name="Topic" class="form-select w-25">
+                <option value="">Chủ đề</option>
+                @foreach (var chuDe in ViewBag.ChuDeList as List<string>)
+                {
+                    <option value="@chuDe">@chuDe</option>
+                }
+            </select>
+            <button type="submit" class="btn btn-success">Chia Sẻ</button>
+        </div>
+    </form>
+
+    @if (Model.Any())
+    {
+        <div class="mb-3 d-flex justify-content-between align-items-center">
+            <div>
+                <strong>Sắp xếp:</strong>
+                <a asp-action="Share" asp-route-sortOrder="newest" class="btn btn-link @(ViewBag.CurrentSort == null || ViewBag.CurrentSort == "newest" ? "active" : "")">Mới nhất</a>
+                <a asp-action="Share" asp-route-sortOrder="oldest" class="btn btn-link @(ViewBag.CurrentSort == "oldest" ? "active" : "")">Cũ nhất</a>
+            </div>
+
+            <!-- Tìm kiếm với input và nút -->
+            <form method="get" asp-action="Share" class="input-group w-25">
+                <input type="text" id="searchBox" name="searchString" class="form-control" placeholder="Tìm kiếm..."
+                       value="@ViewBag.SearchString" />
+                <button type="submit" class="btn btn-outline-secondary">Tìm</button>
+            </form>
+        </div>
+    }
+
+    @foreach (var share in Model)
+    {
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="mb-2">
+                    <div class="fw-bold">Người dùng: @share.UserName</div>
+                    <small class="text-muted">@share.Topic - @share.CreatedAt.ToString("dd/MM/yyyy HH:mm")</small>
+                </div>
+                <div class="share-content mb-2">
+                    @Html.Raw(share.Content)
+                </div>
+                @if (share.UserId == User.FindFirstValue(ClaimTypes.NameIdentifier))
+                {
+                    <form asp-action="DeleteShare" method="post" class="d-inline">
+                        <input type="hidden" name="id" value="@share.Id" />
+                        <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                    </form>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+<!-- CKEditor -->
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'), {
+            ckfinder: {
+                uploadUrl: '/BaiThi/UploadImage'
+            },
+            mediaEmbed: {
+                previewsInData: true
+            }
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    const searchBox = document.getElementById('searchBox');
+    let debounceTimer;
+
+    searchBox.addEventListener('input', function () {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+            this.form.submit();
+        }, 500); // thời gian đợi sau khi ngừng gõ: 500ms
+    });
+</script>
+
+<style>
+    .ck-editor__editable_inline {
+        min-height: 200px;
+    }
+
+    .card {
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .btn-danger {
+        background-color: #f44336;
+        border-color: #f44336;
+    }
+
+        .btn-danger:hover {
+            background-color: #d32f2f;
+            border-color: #d32f2f;
+        }
+
+    .share-content iframe {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .btn-link.active {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+</style>

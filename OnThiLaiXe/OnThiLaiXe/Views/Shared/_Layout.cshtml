@@ -47,17 +47,20 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" asp-controller="Home" asp-action="Index">Trang Chủ</a>
+                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Trang Chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="BaiThi" asp-action="DanhSachDeThi">Đề Thi</a>
+                            <a class="nav-link" asp-area="" asp-controller="BaiThi" asp-action="DanhSachDeThi">Đề Thi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="BaiThi" asp-action="OnTap">Ôn Tập</a>
+                            <a class="nav-link" asp-area="" asp-controller="BaiThi" asp-action="OnTap">Ôn Tập</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="BaiSaHinh" asp-action="Index">Ôn sa hình</a>
+                            <a class="nav-link" asp-area="" asp-controller="BaiSaHinh" asp-action="Index">Ôn sa hình</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="BaiThi" asp-action="Share">Chia sẻ</a>
+                        <li class="nav-item">
                         <li class="nav-item">
                             <partial name="_LoginPartial" />
                         </li>
