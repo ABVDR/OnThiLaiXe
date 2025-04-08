@@ -370,7 +370,7 @@
           fillColor: "rgba(255, 165, 52, .14)",
         });
     </script>
-    @inject IConfiguration Configuration
+    @* @inject IConfiguration Configuration
     <script src="https://cdn.tiny.cloud/1/@Configuration["TinyMCE:ApiKey"]/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
         tinymce.init({
@@ -389,6 +389,6 @@
           ],
           ai_request: (request, respondWith) => respondWith.string(() => Promise.reject('See docs to implement AI Assistant')),
         });
-    </script>
+    </script> *@
 </body>
 </html>
