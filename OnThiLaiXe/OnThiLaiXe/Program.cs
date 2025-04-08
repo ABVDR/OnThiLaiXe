@@ -8,8 +8,9 @@ using OnThiLaiXe.Models;
 using OnThiLaiXe.Repositories;
 using OnThiLaiXe.Services;
 using Microsoft.AspNetCore.StaticFiles;
+using OfficeOpenXml;
 var builder = WebApplication.CreateBuilder(args);
-
+ExcelPackage.License.SetNonCommercialPersonal("Webonlaixe");
 // Add services to the container.
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 

@@ -1,0 +1,97 @@
+﻿@model OnThiLaiXe.Models.ApplicationUser
+
+@{
+    ViewData["Title"] = "User Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var userRoles = ViewBag.UserRoles as List<string>;
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4" style="color: #007bff;">@ViewData["Title"]</h2>
+
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Details of @(Model.FullName ?? "Unnamed User")</h4>
+        </div>
+        <div class="card-body bg-light">
+            <dl class="row mb-0">
+                <dt class="col-sm-3 fw-bold text-muted">Full Name</dt>
+                <dd class="col-sm-9">@Model.FullName</dd>
+
+                <dt class="col-sm-3 fw-bold text-muted">Email</dt>
+                <dd class="col-sm-9">@Model.Email</dd>
+
+                <dt class="col-sm-3 fw-bold text-muted">Phone Number</dt>
+                <dd class="col-sm-9">@Model.PhoneNumber</dd>
+
+                <dt class="col-sm-3 fw-bold text-muted">Address</dt>
+                <dd class="col-sm-9">@Model.Address</dd>
+
+                <dt class="col-sm-3 fw-bold text-muted">Age</dt>
+                <dd class="col-sm-9">@Model.Age</dd>
+
+                <dt class="col-sm-3 fw-bold text-muted">Roles</dt>
+                <dd class="col-sm-9">
+                    @if (userRoles != null && userRoles.Any())
+                    {
+                        <ul class="list-unstyled">
+                            @foreach (var role in userRoles)
+                            {
+                                <li><span class="badge bg-success me-1">@role</span></li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <span class="text-muted">No roles assigned</span>
+                    }
+                </dd>
+
+                <dt class="col-sm-3 fw-bold text-muted">Account Created</dt>
+                <dd class="col-sm-9">@Model.NgayTao.ToString("dd/MM/yyyy HH:mm:ss")</dd>
+            </dl>
+        </div>
+        <div class="card-footer text-end bg-white border-0">
+            <a asp-action="Index" class="btn btn-outline-primary">
+                <i class="bi bi-arrow-left"></i> Back to List
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .card-header {
+        padding: 1.5rem;
+    }
+
+    .card-body {
+        padding: 2rem;
+    }
+
+    .fw-bold {
+        font-weight: 600;
+    }
+
+    .text-muted {
+        color: #6c757d !important;
+    }
+
+    .badge {
+        font-size: 0.9rem;
+        padding: 0.5em 0.75em;
+    }
+
+    dl.row dt, dl.row dd {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+        dl.row dt:last-child, dl.row dd:last-child {
+            border-bottom: none;
+        }
+</style>
