@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\Lê Ngọc Tuấn\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "D:\\Lê Ngọc Tuấn\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
         "packagesPath": "C:\\Users\\lengo\\.nuget\\packages\\",
         "outputPath": "D:\\Lê Ngọc Tuấn\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
+=======
+    "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+        "projectName": "OnThiLaiXe",
+        "projectPath": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+        "packagesPath": "C:\\Users\\pdtua\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
+>>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

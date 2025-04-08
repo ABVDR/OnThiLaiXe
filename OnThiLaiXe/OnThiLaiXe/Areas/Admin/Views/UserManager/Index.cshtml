@@ -13,7 +13,6 @@
             <th>Name</th>
             <th>Email</th>
             <th>Roles</th>
-            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -26,19 +25,20 @@
                     <form method="post" asp-action="UpdateRoleUser" onsubmit="return confirmRoleChange(this);">
                         <input type="hidden" name="id" value="@user.Id" />
                         <div class="input-group">
-                            <select name="role" class="form-control" onchange="markRoleChanged(this);">
+                            <select name="role" class="form-select" onchange="markRoleChanged(this);">
                                 @foreach (var role in ViewBag.Roles as SelectList)
                                 {
                                     <option value="@role.Value" selected="@(userRoles[user.Id].Contains(role.Value))">@role.Text</option>
                                 }
                             </select>
-                            <div class="input-group-append">
-                                <button type="submit" class="btn btn-primary" disabled>Update Role</button>
+                            <div class="input-group-append ms-2">
+                                <button type="submit" class="btn btn-secondary btn-sm update-btn">
+                                    <i class="bi bi-arrow-repeat"></i> Update Role
+                                </button>
                             </div>
                         </div>
                     </form>
                 </td>
-                <td></td> <!-- Nút delete đã bị loại bỏ -->
             </tr>
         }
     </tbody>
@@ -47,8 +47,12 @@
 @section Scripts {
     <script>
         function markRoleChanged(selectElement) {
-            var form = selectElement.closest('form');
-            form.querySelector('button[type="submit"]').disabled = false;
+            const form = selectElement.closest('form');
+            const button = form.querySelector('.update-btn');
+
+            // Đổi class để làm nút nổi bật
+            button.classList.remove('btn-secondary');
+            button.classList.add('btn-success');
         }
 
         function confirmRoleChange(form) {
