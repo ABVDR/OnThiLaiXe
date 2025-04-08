@@ -5,6 +5,7 @@ using OnThiLaiXe.Repositories;
 
 namespace OnThiLaiXe.Controllers
 {
+    [AllowAnonymous]
     public class BaiSaHinhController : Controller
     {
         private readonly IBaiSaHinhRepository _baiSaHinhRepository;

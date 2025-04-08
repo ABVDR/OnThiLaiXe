@@ -5,6 +5,7 @@ using OnThiLaiXe.Models;
 
 namespace OnThiLaiXe.Controllers
 {
+
     public class ThiController : Controller
     {
         private readonly ApplicationDbContext _context;
