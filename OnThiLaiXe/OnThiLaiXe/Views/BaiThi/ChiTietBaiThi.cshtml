@@ -1,9 +1,43 @@
 ﻿@model OnThiLaiXe.Models.BaiThi
 
-<h2>Chi Tiết Bài Thi - @Model.Id</h2>
-
-@foreach (var chiTiet in Model.ChiTietBaiThis)
-{
-    <p><strong>Câu hỏi:</strong> @chiTiet.CauHoi.NoiDung</p>
-    <hr />
+@{
+    var loaiBangLaiId = Model.ChiTietBaiThis?.FirstOrDefault()?.CauHoi?.LoaiBangLaiId ?? 1;
 }
+
+<div class="container py-4">
+    <!-- Nút quay lại -->
+    <div class="mb-4">
+        <a href="@Url.Action("ThiDe", "BaiThi", new { loaiBangLaiId = loaiBangLaiId })"
+           class="btn btn-outline-secondary rounded-pill shadow-sm">
+            <i class="fas fa-arrow-left me-2"></i> Quay lại 
+        </a>
+    </div>
+
+    <!-- Tiêu đề -->
+    <div class="text-center mb-4">
+        <h2 class="fw-bold fs-3 text-dark">
+            <i class="fas fa-file-alt text-primary me-2"></i>Chi tiết bài thi #@Model.Id
+        </h2>
+    </div>
+
+    @if (Model.ChiTietBaiThis != null && Model.ChiTietBaiThis.Any())
+    {
+        <div class="list-group">
+            @foreach (var (chiTiet, index) in Model.ChiTietBaiThis.Select((value, i) => (value, i)))
+            {
+                <div class="list-group-item py-3 px-4 mb-2 border rounded shadow-sm">
+                    <div class="d-flex">
+                        <strong class="me-2">Câu @(index + 1):</strong>
+                        <span>@chiTiet.CauHoi.NoiDung</span>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info text-center">
+            Không có câu hỏi nào trong bài thi này.
+        </div>
+    }
+</div>

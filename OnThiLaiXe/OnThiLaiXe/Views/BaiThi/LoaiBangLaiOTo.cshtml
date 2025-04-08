@@ -1,33 +1,94 @@
 ﻿@model List<OnThiLaiXe.Models.LoaiBangLai>
 
 @{
-    ViewData["Title"] = "Danh sách bằng lái ô tô";
+    ViewData["Title"] = "Danh sách bằng lái oto";
 }
 
-<div class="container mt-4">
-    <h2 class="mb-4">Danh sách bằng lái ô tô</h2>
+<div class="container mt-5">
+    <h2 class="mb-4 text-center fw-bold display-6" style="background: linear-gradient(to right, #007bff, #00c6ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        <i class="fas fa-car me-2"></i> Danh sách bằng lái ô tô <i class="fas fa-car me-2"></i>
+    </h2>
 
-    @if (Model != null && Model.Any())
+    <!-- Dropdown lọc loại bằng lái ở giữa -->
+    <div class="row justify-content-center" style="margin-top: 50px; margin-bottom:100px">
+        <div class="col-md-4">
+            <label for="loaiBangLaiFilter" class="form-label">Lọc theo loại bằng:</label>
+            <select id="loaiBangLaiFilter" class="form-select text-center">
+                @foreach (var loai in Model.Select(m => m.TenLoai).Distinct())
+                {
+                    <option value="@loai" selected="@(loai == "A1" ? "selected" : null)">@loai</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    @if (ViewBag.ErrorMessage != null)
     {
-        <div class="row">
+        <div class="alert alert-warning text-center">
+            @ViewBag.ErrorMessage
+        </div>
+    }
+    else if (Model != null && Model.Any())
+    {
+
+        <div class="row justify-content-center" id="bangLaiContainer">
             @foreach (var loaiBangLai in Model)
             {
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-header bg-info text-white">
-                            <h5 class="card-title mb-0">@loaiBangLai.TenLoai</h5>
+                <div class="col-md-10 mb-12 bangLaiCard" data-tenloai="@loaiBangLai.TenLoai">
+                    <div class="row">
+                        <!-- Khung Thi thử đề tạo sẵn -->
+                        <div class="col-lg-6 col-md-12 mb-4">
+                            <a href="@Url.Action("ThiDe", "BaiThi", new { loaiBangLaiId = loaiBangLai.Id })" class="text-decoration-none">
+                                <div class="card border-0 shadow-sm rounded-4 p-4 h-100 custom-card-hover" style="position: relative; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                    <div class="text-center p-4">
+                                        <div class="d-inline-block mb-3">
+                                            <div class="d-flex flex-wrap justify-content-center" style="width: 100px; margin: 0 auto;">
+                                                <div class="bg-danger text-white p-2 m-1 rounded" style="width: 40px; height: 40px;">A</div>
+                                                <div class="bg-warning text-white p-2 m-1 rounded" style="width: 40px; height: 40px;">C</div>
+                                                <div class="bg-primary text-white p-2 m-1 rounded" style="width: 40px; height: 40px;">B</div>
+                                                <div class="bg-success text-white p-2 m-1 rounded" style="width: 40px; height: 40px;">
+                                                    <i class="fas fa-check"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h4 class="fw-bold text-dark mb-0">Thi thử đề tạo sẵn</h4>
+                                    </div>
+                                    <div class="position-absolute top-0 start-0 m-3">
+                                        <div class="selectedLoai bg-success text-white fw-bold px-3 py-2 rounded-pill d-inline-block">
+                                            A1
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="card-body">
-                            <p><strong>Loại xe:</strong> @loaiBangLai.LoaiXe</p>
-                            <p><strong>Mô tả:</strong> @loaiBangLai.MoTa</p>
-                            <div class="d-flex justify-content-between mt-3">
-                                <a href="@Url.Action("OnTap", "BaiThi", new { loaiBangLaiId = loaiBangLai.Id })" class="btn btn-success">
-                                    <i class="fas fa-book"></i> Ôn tập
-                                </a>
-                                <a href="@Url.Action("ThiDe", "BaiThi", new { loaiBangLaiId = loaiBangLai.Id })" class="btn btn-danger">
-                                    <i class="fas fa-file-alt"></i> Thi đề
-                                </a>
-                            </div>
+
+
+                        <!-- Khung Ôn tập toàn bộ câu hỏi -->
+                        <div class="col-lg-6 col-md-12 mb-4">
+                            <a href="@Url.Action("OnTap", "BaiThi", new { loaiBangLaiId = loaiBangLai.Id })" class="text-decoration-none">
+                                <div class="card border-0 shadow-sm rounded-4 p-4 h-100 custom-card-hover" style="position: relative; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                    <div class="text-center p-4">
+                                        <div class="d-inline-block mb-3">
+                                            <div style="width: 65px; height: 65px; margin: 0 auto;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 24 24" fill="none" stroke="indigo" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <h4 class="fw-bold text-dark mb-0">Ôn tập toàn bộ câu hỏi</h4>
+                                    </div>
+                                    <div class="position-absolute top-0 start-0 m-3">
+                                        <div class="selectedLoai bg-success text-white fw-bold px-3 py-2 rounded-pill d-inline-block">
+                                            A1
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -36,8 +97,57 @@
     }
     else
     {
-        <div class="alert alert-info">
-            Không có dữ liệu bằng lái ô tô.
+        <div class="alert alert-info text-center">
+            Không có dữ liệu bằng lái xe máy.
         </div>
     }
 </div>
+
+<style>
+    /* Hiệu ứng đổ bóng nhẹ mặc định */
+    .custom-card-hover {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* bóng nhẹ lúc chưa hover */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        /* Khi rê chuột: nổi bật hơn */
+        .custom-card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* bóng rõ hơn khi hover */
+            z-index: 2;
+        }
+</style>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            var defaultLoai = $('#loaiBangLaiFilter').val();
+            filterLoai(defaultLoai);
+            updateSelectedLoaiText(defaultLoai);
+
+            $('#loaiBangLaiFilter').change(function () {
+                var selectedLoai = $(this).val();
+                filterLoai(selectedLoai);
+                updateSelectedLoaiText(selectedLoai);
+            });
+
+            function filterLoai(loai) {
+                if (loai === "") {
+                    $('.bangLaiCard').show();
+                } else {
+                    $('.bangLaiCard').hide();
+                    $('.bangLaiCard[data-tenloai="' + loai + '"]').show();
+                }
+            }
+
+            function updateSelectedLoaiText(loai) {
+                $('.bangLaiCard').each(function () {
+                    var card = $(this);
+                    if (card.is(':visible')) {
+                        card.find('.selectedLoai').text(loai);
+                    }
+                });
+            }
+        });
+    </script>
+}
