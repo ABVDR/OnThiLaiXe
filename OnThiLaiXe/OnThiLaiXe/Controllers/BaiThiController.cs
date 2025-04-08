@@ -2,6 +2,7 @@
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 using OnThiLaiXe.Models;
 using OnThiLaiXe.Repositories;
 
@@ -16,6 +17,7 @@ namespace OnThiLaiXe.Controllers
         {
             _context = context;
             _cauHoiRepo = cauHoiRepo;
+            
         }
 
         // FEATURE 3: Làm bài ôn tập theo chủ đề
@@ -61,133 +63,133 @@ namespace OnThiLaiXe.Controllers
         [HttpPost]
         public IActionResult NopBaiThi(int baiThiId, string dapAnJson)
         {
-            
-            
-                Console.WriteLine($"Nộp bài với ID: {baiThiId}");
 
-                if (baiThiId == 0)
+
+            Console.WriteLine($"Nộp bài với ID: {baiThiId}");
+
+            if (baiThiId == 0)
+            {
+                return BadRequest("baiThiId không hợp lệ.");
+            }
+
+            var baiThi = _context.BaiThis
+                .Include(bt => bt.ChiTietBaiThis)
+                .ThenInclude(ct => ct.CauHoi)
+                .FirstOrDefault(bt => bt.Id == baiThiId);
+
+            if (baiThi == null)
+            {
+                return NotFound("Không tìm thấy bài thi.");
+            }
+
+            // Kiểm tra nếu người dùng đang đăng nhập
+            bool isLoggedIn = User.Identity != null && User.Identity.IsAuthenticated;
+            string currentUserId = isLoggedIn ? User.FindFirstValue(ClaimTypes.NameIdentifier) : null;
+
+            // Parse JSON dap an
+            Dictionary<string, string> dapAnDict = new Dictionary<string, string>();
+            try
+            {
+                if (!string.IsNullOrEmpty(dapAnJson))
                 {
-                    return BadRequest("baiThiId không hợp lệ.");
+                    dapAnDict = JsonSerializer.Deserialize<Dictionary<string, string>>(dapAnJson);
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi parse JSON: {ex.Message}");
+                // Tiếp tục với dictionary trống
+            }
 
-                var baiThi = _context.BaiThis
-                    .Include(bt => bt.ChiTietBaiThis)
-                    .ThenInclude(ct => ct.CauHoi)
-                    .FirstOrDefault(bt => bt.Id == baiThiId);
+            var chiTietList = baiThi.ChiTietBaiThis.ToList();
+            int correctCount = 0;
+            int wrongCount = 0;
+            int unansweredCount = 0;
+            bool saiDiemLiet = false;
 
-                if (baiThi == null)
+            // Xử lý từng câu trả lời
+            for (int i = 0; i < chiTietList.Count; i++)
+            {
+                string key = $"dapAn_{i}";
+                var chiTiet = chiTietList[i];
+
+                if (dapAnDict.ContainsKey(key) && !string.IsNullOrEmpty(dapAnDict[key]))
                 {
-                    return NotFound("Không tìm thấy bài thi.");
-                }
+                    char dapAn = dapAnDict[key][0];
+                    chiTiet.CauTraLoi = dapAn;
+                    chiTiet.DungSai = dapAn == chiTiet.CauHoi.DapAnDung;
 
-                // Kiểm tra nếu người dùng đang đăng nhập
-                bool isLoggedIn = User.Identity != null && User.Identity.IsAuthenticated;
-                string currentUserId = isLoggedIn ? User.FindFirstValue(ClaimTypes.NameIdentifier) : null;
-
-                // Parse JSON dap an
-                Dictionary<string, string> dapAnDict = new Dictionary<string, string>();
-                try
-                {
-                    if (!string.IsNullOrEmpty(dapAnJson))
+                    if (chiTiet.DungSai == true)
                     {
-                        dapAnDict = JsonSerializer.Deserialize<Dictionary<string, string>>(dapAnJson);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Lỗi parse JSON: {ex.Message}");
-                    // Tiếp tục với dictionary trống
-                }
-
-                var chiTietList = baiThi.ChiTietBaiThis.ToList();
-                int correctCount = 0;
-                int wrongCount = 0;
-                int unansweredCount = 0;
-                bool saiDiemLiet = false;
-
-                // Xử lý từng câu trả lời
-                for (int i = 0; i < chiTietList.Count; i++)
-                {
-                    string key = $"dapAn_{i}";
-                    var chiTiet = chiTietList[i];
-
-                    if (dapAnDict.ContainsKey(key) && !string.IsNullOrEmpty(dapAnDict[key]))
-                    {
-                        char dapAn = dapAnDict[key][0];
-                        chiTiet.CauTraLoi = dapAn;
-                        chiTiet.DungSai = dapAn == chiTiet.CauHoi.DapAnDung;
-
-                        if (chiTiet.DungSai == true)
-                        {
-                            correctCount++;
-                        }
-                        else
-                        {
-                            wrongCount++;
-                            // Nếu trả lời sai và người dùng đã đăng nhập thì lưu vào bảng CauHoiSai
-                            SaveCauHoiSai(isLoggedIn, currentUserId, chiTiet.CauHoi.Id);
-                        }
-
-                        if (chiTiet.CauHoi.DiemLiet && dapAn != chiTiet.CauHoi.DapAnDung)
-                        {
-                            saiDiemLiet = true;
-                        }
+                        correctCount++;
                     }
                     else
                     {
-                        chiTiet.CauTraLoi = '\0';
-                        chiTiet.DungSai = false;
-                        unansweredCount++;
-
-                        if (chiTiet.CauHoi.DiemLiet)
-                        {
-                            saiDiemLiet = true;
-                        }
-
-                        // Lưu câu hỏi chưa trả lời
+                        wrongCount++;
+                        // Nếu trả lời sai và người dùng đã đăng nhập thì lưu vào bảng CauHoiSai
                         SaveCauHoiSai(isLoggedIn, currentUserId, chiTiet.CauHoi.Id);
                     }
+
+                    if (chiTiet.CauHoi.DiemLiet && dapAn != chiTiet.CauHoi.DapAnDung)
+                    {
+                        saiDiemLiet = true;
+                    }
                 }
-
-                // Tính điểm và cập nhật kết quả bài thi
-                double diemMoiCau = 10.0 / chiTietList.Count;
-                int tongDiem = saiDiemLiet ? 0 : (int)Math.Round(correctCount * diemMoiCau);
-
-                baiThi.Diem = tongDiem;
-                baiThi.MacLoiNghiemTrong = saiDiemLiet;
-                baiThi.SoCauDung = correctCount;
-                baiThi.SoCauSai = wrongCount;
-                baiThi.SoCauChuaTraLoi = unansweredCount;
-                baiThi.PhanTramDung = chiTietList.Count > 0 ? (double)correctCount / chiTietList.Count * 100 : 0;
-                baiThi.KetQua = tongDiem >= 8 && !saiDiemLiet ? "Đạt" : "Không đạt";
-                baiThi.DaHoanThanh = true;
-
-                _context.SaveChanges();
-
-                // Chuẩn bị dữ liệu cho view kết quả
-                var ketQuaList = chiTietList.Select(ct => new KetQuaBaiThi
+                else
                 {
-                    BaiThiId = baiThiId,
-                    CauHoiId = ct.CauHoi.Id,
-                    CauHoi = ct.CauHoi,
-                    CauTraLoi = ct.CauTraLoi ?? '\0',
-                    DungSai = ct.DungSai ?? false
-                }).ToList();
+                    chiTiet.CauTraLoi = '\0';
+                    chiTiet.DungSai = false;
+                    unansweredCount++;
 
-                // Thêm thông tin tổng hợp kết quả
-                ViewBag.TongSoCau = chiTietList.Count;
-                ViewBag.SoCauDung = correctCount;
-                ViewBag.SoCauSai = wrongCount;
-                ViewBag.SoCauChuaTraLoi = unansweredCount;
-                ViewBag.PhanTramDung = chiTietList.Count > 0 ? (double)correctCount / chiTietList.Count * 100 : 0;
-                ViewBag.MacLoiNghiemTrong = saiDiemLiet;
-                ViewBag.Diem = tongDiem;
-                ViewBag.KetQua = tongDiem >= 8 && !saiDiemLiet ? "Đạt" : "Không đạt";
-                ViewBag.BaiThiId = baiThiId;
+                    if (chiTiet.CauHoi.DiemLiet)
+                    {
+                        saiDiemLiet = true;
+                    }
 
-                return View("KetQuaBaiThi", ketQuaList);
-            
-            
+                    // Lưu câu hỏi chưa trả lời
+                    SaveCauHoiSai(isLoggedIn, currentUserId, chiTiet.CauHoi.Id);
+                }
+            }
+
+            // Tính điểm và cập nhật kết quả bài thi
+            double diemMoiCau = 10.0 / chiTietList.Count;
+            int tongDiem = saiDiemLiet ? 0 : (int)Math.Round(correctCount * diemMoiCau);
+
+            baiThi.Diem = tongDiem;
+            baiThi.MacLoiNghiemTrong = saiDiemLiet;
+            baiThi.SoCauDung = correctCount;
+            baiThi.SoCauSai = wrongCount;
+            baiThi.SoCauChuaTraLoi = unansweredCount;
+            baiThi.PhanTramDung = chiTietList.Count > 0 ? (double)correctCount / chiTietList.Count * 100 : 0;
+            baiThi.KetQua = tongDiem >= 8 && !saiDiemLiet ? "Đạt" : "Không đạt";
+            baiThi.DaHoanThanh = true;
+
+            _context.SaveChanges();
+
+            // Chuẩn bị dữ liệu cho view kết quả
+            var ketQuaList = chiTietList.Select(ct => new KetQuaBaiThi
+            {
+                BaiThiId = baiThiId,
+                CauHoiId = ct.CauHoi.Id,
+                CauHoi = ct.CauHoi,
+                CauTraLoi = ct.CauTraLoi ?? '\0',
+                DungSai = ct.DungSai ?? false
+            }).ToList();
+
+            // Thêm thông tin tổng hợp kết quả
+            ViewBag.TongSoCau = chiTietList.Count;
+            ViewBag.SoCauDung = correctCount;
+            ViewBag.SoCauSai = wrongCount;
+            ViewBag.SoCauChuaTraLoi = unansweredCount;
+            ViewBag.PhanTramDung = chiTietList.Count > 0 ? (double)correctCount / chiTietList.Count * 100 : 0;
+            ViewBag.MacLoiNghiemTrong = saiDiemLiet;
+            ViewBag.Diem = tongDiem;
+            ViewBag.KetQua = tongDiem >= 8 && !saiDiemLiet ? "Đạt" : "Không đạt";
+            ViewBag.BaiThiId = baiThiId;
+
+            return View("KetQuaBaiThi", ketQuaList);
+
+
         }
         private void SaveCauHoiSai(bool isLoggedIn, string currentUserId, int cauHoiId)
         {
@@ -233,48 +235,48 @@ namespace OnThiLaiXe.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
-            
-                var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                if (string.IsNullOrEmpty(currentUserId))
-                {
-                    return RedirectToAction("Login", "Account");
-                }
 
-                int userId;
-                // Thử chuyển đổi trực tiếp thành int
-                if (int.TryParse(currentUserId, out userId))
-                {
-                    // Tiếp tục với userId đã parse
-                }
-                // Nếu thất bại, thử parse thành Guid rồi chuyển thành int
-                else if (Guid.TryParse(currentUserId, out var userGuid))
-                {
-                    userId = userGuid.GetHashCode() & int.MaxValue;
-                }
-                else
-                {
-                    // Nếu không phải int hoặc Guid, chuyển hướng về trang login
-                    return RedirectToAction("Login", "Account");
-                }
-
-                var cauHoiSaiList = _context.CauHoiSais
-                    .Where(c => c.UserId == userId)
-                    .Include(c => c.CauHoi)
-                    .ThenInclude(ch => ch.ChuDe)
-                    .GroupBy(c => c.CauHoiId)
-                    .Select(g => new CauHoiSaiViewModel
-                    {
-                        CauHoi = g.First().CauHoi,
-                        SoLanSai = g.Count(),
-                        LanSaiGanNhat = g.Max(c => c.NgaySai)
-                    })
-                    .OrderByDescending(c => c.LanSaiGanNhat)
-                    .ToList();
-
-                return View(cauHoiSaiList);
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(currentUserId))
+            {
+                return RedirectToAction("Login", "Account");
             }
-           
-        
+
+            int userId;
+            // Thử chuyển đổi trực tiếp thành int
+            if (int.TryParse(currentUserId, out userId))
+            {
+                // Tiếp tục với userId đã parse
+            }
+            // Nếu thất bại, thử parse thành Guid rồi chuyển thành int
+            else if (Guid.TryParse(currentUserId, out var userGuid))
+            {
+                userId = userGuid.GetHashCode() & int.MaxValue;
+            }
+            else
+            {
+                // Nếu không phải int hoặc Guid, chuyển hướng về trang login
+                return RedirectToAction("Login", "Account");
+            }
+
+            var cauHoiSaiList = _context.CauHoiSais
+                .Where(c => c.UserId == userId)
+                .Include(c => c.CauHoi)
+                .ThenInclude(ch => ch.ChuDe)
+                .GroupBy(c => c.CauHoiId)
+                .Select(g => new CauHoiSaiViewModel
+                {
+                    CauHoi = g.First().CauHoi,
+                    SoLanSai = g.Count(),
+                    LanSaiGanNhat = g.Max(c => c.NgaySai)
+                })
+                .OrderByDescending(c => c.LanSaiGanNhat)
+                .ToList();
+
+            return View(cauHoiSaiList);
+        }
+
+
 
         // FEATURE 6: Xem lịch sử thi
         public IActionResult LichSuThi()
@@ -284,43 +286,43 @@ namespace OnThiLaiXe.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
-           
-                var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                if (string.IsNullOrEmpty(currentUserId))
+
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(currentUserId))
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            int userId;
+            if (!int.TryParse(currentUserId, out userId) && Guid.TryParse(currentUserId, out var userGuid))
+            {
+                userId = userGuid.GetHashCode() & int.MaxValue;
+            }
+
+            var lichSuThiList = _context.BaiThis
+                .Where(bt => bt.UserId == userId && bt.DaHoanThanh)
+                .Include(bt => bt.ChiTietBaiThis)
+                .OrderByDescending(bt => bt.NgayThi)
+                .Select(bt => new LichSuThiViewModel
                 {
-                    return RedirectToAction("Login", "Account");
-                }
+                    BaiThiId = bt.Id,
+                    TenBaiThi = bt.TenBaiThi,
+                    NgayThi = bt.NgayThi,
+                    LoaiBaiThi = bt.LoaiBaiThi,
+                    TongSoCau = bt.ChiTietBaiThis.Count,
+                    SoCauDung = bt.SoCauDung,
+                    PhanTramDung = bt.PhanTramDung,
+                    Diem = bt.Diem ?? 0,
+                    KetQua = bt.KetQua,
+                    MacLoiNghiemTrong = bt.MacLoiNghiemTrong
+                })
+                .ToList();
 
-                int userId;
-                if (!int.TryParse(currentUserId, out userId) && Guid.TryParse(currentUserId, out var userGuid))
-                {
-                    userId = userGuid.GetHashCode() & int.MaxValue;
-                }
+            return View(lichSuThiList);
 
-                var lichSuThiList = _context.BaiThis
-                    .Where(bt => bt.UserId == userId && bt.DaHoanThanh)
-                    .Include(bt => bt.ChiTietBaiThis)
-                    .OrderByDescending(bt => bt.NgayThi)
-                    .Select(bt => new LichSuThiViewModel
-                    {
-                        BaiThiId = bt.Id,
-                        TenBaiThi = bt.TenBaiThi,
-                        NgayThi = bt.NgayThi,
-                        LoaiBaiThi = bt.LoaiBaiThi,
-                        TongSoCau = bt.ChiTietBaiThis.Count,
-                        SoCauDung = bt.SoCauDung,
-                        PhanTramDung = bt.PhanTramDung,
-                        Diem = bt.Diem ?? 0,
-                        KetQua = bt.KetQua,
-                        MacLoiNghiemTrong = bt.MacLoiNghiemTrong
-                    })
-                    .ToList();
-
-                return View(lichSuThiList);
-            
         }
-            
-        
+
+
 
         // Các phương thức hiện có của bạn
         [HttpPost]
@@ -598,5 +600,103 @@ namespace OnThiLaiXe.Controllers
 
         //    return View(danhSachChuDe);
         //}
+        // Hiển thị danh sách chia sẻ của tất cả người dùng
+        // Hiển thị danh sách chia sẻ của tất cả người dùng
+        [HttpGet]
+        public async Task<IActionResult> Share(string? sortOrder, string? searchString)
+        {
+            var sharesQuery = _context.Shares.AsQueryable();
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                sharesQuery = sharesQuery.Where(s =>
+                    s.Content.Contains(searchString) ||
+                    (s.Topic != null && s.Topic.Contains(searchString)));
+            }
+            ViewBag.CurrentSort = sortOrder;
+            sharesQuery = sortOrder == "oldest"
+                ? sharesQuery.OrderBy(s => s.CreatedAt)
+                : sharesQuery.OrderByDescending(s => s.CreatedAt);
+
+            var shares = await sharesQuery.ToListAsync();
+            ViewBag.ChuDeList = new List<string> { "GPLX", "Lý Thuyết", "Mô Phỏng", "Khác" };
+            ViewBag.SearchString = searchString;
+
+            return View(shares);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateShare(string Content, string? Topic)
+        {
+            if (string.IsNullOrEmpty(Content))
+            {
+                TempData["Error"] = "Nội dung không được để trống.";
+                return RedirectToAction(nameof(Share));
+            }
+
+            if (!User.Identity.IsAuthenticated)
+            {
+                TempData["Error"] = "Bạn cần đăng nhập để chia sẻ.";
+                return RedirectToAction("Login", "Account");
+            }
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var email = User.Identity.Name;
+            var userName = email.Split('@')[0];
+
+            var share = new Share
+            {
+                Content = Content,
+                Topic = Topic,
+                UserId = userId,
+                UserName = userName,
+                CreatedAt = DateTime.Now
+            };
+
+            _context.Add(share);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Share));
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteShare(int id)
+        {
+            var share = await _context.Shares.FindAsync(id);
+            if (share == null)
+            {
+                return NotFound();
+            }
+
+            _context.Shares.Remove(share);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Share));
+        }
+        [HttpPost]
+        public async Task<IActionResult> UploadImage(IFormFile upload)
+        {
+            if (upload != null && upload.Length > 0)
+            {
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(upload.FileName);
+                var filePath = Path.Combine(uploadsFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await upload.CopyToAsync(stream);
+                }
+                var imageUrl = Url.Content("~/uploads/" + fileName);
+                return Json(new { uploaded = true, url = imageUrl });
+            }
+
+            return BadRequest("No file uploaded.");
+        }
     }
 }
