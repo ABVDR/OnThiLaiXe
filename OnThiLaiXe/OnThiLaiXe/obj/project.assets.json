@@ -8982,31 +8982,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lengo\\.nuget\\packages\\": {},
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "D:\\Lê Ngọc Tuấn\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+      "projectUniqueName": "D:\\Đồ án web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
       "projectName": "OnThiLaiXe",
-      "projectPath": "D:\\Lê Ngọc Tuấn\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
-      "packagesPath": "C:\\Users\\lengo\\.nuget\\packages\\",
-      "outputPath": "D:\\Lê Ngọc Tuấn\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
-      "projectName": "OnThiLaiXe",
-      "projectPath": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
-      "packagesPath": "C:\\Users\\pdtua\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+      "projectPath": "D:\\Đồ án web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "D:\\Đồ án web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\lengo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9015,7 +9007,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9034,7 +9025,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net9.0": {
@@ -9116,7 +9107,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

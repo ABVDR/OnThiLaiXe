@@ -1,390 +1,219 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "WorkspaceRootPath": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\",
+  "WorkspaceRootPath": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baithi\\luyenlaicausai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baithi\\luyenlaicausai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\controllers\\baithicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\controllers\\baithicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\models\\ketqualuyentapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\models\\ketqualuyentapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\models\\lichsuthi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\models\\lichsuthi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baithi\\danhsachdethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baithi\\danhsachdethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\controllers\\baisahinhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\controllers\\baisahinhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250408103505_Shares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OnThiLaiXe\\Migrations\\20250408103505_Shares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baithi\\lichsuthi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baithi\\lichsuthi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baithi\\share.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baithi\\share.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\qlbaithicontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\controllers\\qlbaithicontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\baisahinhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\controllers\\baisahinhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\elfindercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\controllers\\elfindercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\elfinder\\filemanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\elfinder\\filemanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\baisahinh\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\baisahinh\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\baisahinh\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\baisahinh\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\baisahinh\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\baisahinh\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\qlbaithi\\danhsachdethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\qlbaithi\\danhsachdethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\qlbaithi\\chondethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\qlbaithi\\chondethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\qlbaithi\\chitietbaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\qlbaithi\\chitietbaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\qlbaithi\\danhsachbaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-=======
-  "WorkspaceRootPath": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\controllers\\baithicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\controllers\\baithicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\controllers\\baithicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\controllers\\baisahinhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\controllers\\baisahinhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\controllers\\thicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\controllers\\thicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\models\\share.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\models\\share.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\views\\usermanager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\usermanager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\elfindercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\controllers\\elfindercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baithi\\luyenlaicausai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baithi\\luyenlaicausai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\views\\elfinder\\filemanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\elfinder\\filemanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\models\\ketqualuyentapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\models\\ketqualuyentapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\views\\baisahinh\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\baisahinh\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\views\\baisahinh\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\baisahinh\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\qlbaithicontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\controllers\\qlbaithicontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\views\\baisahinh\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\baisahinh\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\views\\qlbaithi\\danhsachdethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\qlbaithi\\danhsachdethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\models\\lichsuthi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\models\\lichsuthi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\baisahinhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baithi\\danhsachdethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baithi\\danhsachdethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\controllers\\baisahinhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\controllers\\baisahinhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baithi\\lichsuthi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baithi\\lichsuthi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\qlbaithicontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\controllers\\qlbaithicontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\baisahinhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\controllers\\baisahinhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\views\\qlbaithi\\chondethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\elfindercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\controllers\\elfindercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\elfinder\\filemanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\elfinder\\filemanager.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\baisahinh\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\baisahinh\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\baisahinh\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\baisahinh\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\baisahinh\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\baisahinh\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\qlbaithi\\danhsachdethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\qlbaithi\\danhsachdethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\qlbaithi\\chondethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\qlbaithi\\chondethi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\views\\qlbaithi\\chitietbaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\qlbaithi\\chitietbaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\qlbaithi\\chitietbaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\views\\qlbaithi\\danhsachbaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\qlbaithi\\danhsachbaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\qlbaithi\\danhsachbaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pdtua\\AppData\\Roaming\\Microsoft\\UserSecrets\\0409ff42-740d-4ec4-b967-a719c7f18669\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\baisahinh\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\baisahinh\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\baisahinh\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\models\\baisahinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\models\\baisahinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\models\\baisahinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\migrations\\20250406182634_updatebaisahinh.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\migrations\\20250406182634_updatebaisahinh.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\migrations\\20250406182634_updatebaisahinh.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baisahinh\\danhsachvachitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baisahinh\\danhsachvachitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baisahinh\\danhsachvachitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baisahinh\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-=======
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\views\\baisahinh\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\baisahinh\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\models\\baisahinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\models\\baisahinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\migrations\\20250406182634_updatebaisahinh.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\migrations\\20250406182634_updatebaisahinh.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\views\\baisahinh\\danhsachvachitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baisahinh\\danhsachvachitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\views\\baisahinh\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baisahinh\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baisahinh\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\quanlycauhoicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\quanlycauhoicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\controllers\\quanlycauhoicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\repositories\\efbaisahinhrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\repositories\\efbaisahinhrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\repositories\\efbaisahinhrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\controllers\\thicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\controllers\\thicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\controllers\\thicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\repositories\\efcauhoirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\repositories\\efcauhoirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\repositories\\efcauhoirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\repositories\\icauhoirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\repositories\\icauhoirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\repositories\\icauhoirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\repositories\\iloaibanglairepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\repositories\\iloaibanglairepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\repositories\\iloaibanglairepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\repositories\\ibaisahinhrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\repositories\\ibaisahinhrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\repositories\\ibaisahinhrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\quanlycauhoi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\quanlycauhoi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\quanlycauhoi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\usermanager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\usermanager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\usermanager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\models\\loaibanglai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\models\\loaibanglai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\models\\loaibanglai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\quanlycauhoi\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\views\\quanlycauhoi\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\quanlycauhoi\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\usermanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\usermanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\controllers\\usermanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\repositories\\efuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\repositories\\efuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\repositories\\efuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\models\\cauhoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\models\\cauhoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\models\\cauhoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\wwwroot\\js\\autocomplete.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\wwwroot\\js\\autocomplete.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\wwwroot\\js\\autocomplete.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\migrations\\20250406090754_them9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\migrations\\20250406090754_them9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\migrations\\20250406090754_them9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\migrations\\20250406065448_them8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-=======
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\quanlycauhoicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\controllers\\quanlycauhoicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\repositories\\efbaisahinhrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\repositories\\efbaisahinhrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\repositories\\efcauhoirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\repositories\\efcauhoirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\repositories\\icauhoirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\repositories\\icauhoirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\repositories\\iloaibanglairepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\repositories\\iloaibanglairepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\repositories\\ibaisahinhrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\repositories\\ibaisahinhrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\models\\loaibanglai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\models\\loaibanglai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\views\\quanlycauhoi\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\views\\quanlycauhoi\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\usermanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\controllers\\usermanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\repositories\\efuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\repositories\\efuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\models\\cauhoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\models\\cauhoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\wwwroot\\js\\autocomplete.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\wwwroot\\js\\autocomplete.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\migrations\\20250406090754_them9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\migrations\\20250406090754_them9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\migrations\\20250406065448_them8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\migrations\\20250406065448_them8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\migrations\\20250406065448_them8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -394,31 +223,19 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\OnThiLaiXe\\NguyenNgocChau_2280600293\\Models\\BaiThi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\migrations\\20250406182634_updatebaisahinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\migrations\\20250406182634_updatebaisahinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\migrations\\20250406182634_updatebaisahinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\migrations\\20250406180558_addbaisahinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\migrations\\20250406180558_addbaisahinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\migrations\\20250406180558_addbaisahinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\migrations\\20250406132239_xoaloaicauhoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-=======
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\migrations\\20250406182634_updatebaisahinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\migrations\\20250406182634_updatebaisahinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\migrations\\20250406180558_addbaisahinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\migrations\\20250406180558_addbaisahinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\new48\\onthilaixe\\onthilaixe\\migrations\\20250406132239_xoaloaicauhoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\migrations\\20250406132239_xoaloaicauhoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\migrations\\20250406132239_xoaloaicauhoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\l\u00EA ng\u1ECDc tu\u1EA5n\\onthilaixe\\onthilaixe\\onthilaixe\\migrations\\20250408062305_lichsuthi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|d:\\\u0111\u1ED3 \u00E1n web\\onthilaixe\\onthilaixe\\onthilaixe\\migrations\\20250408062305_lichsuthi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\migrations\\20250408062305_lichsuthi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -429,649 +246,415 @@
       "DocumentGroups": [
         {
           "DockedWidth": 318,
-<<<<<<< HEAD
-          "SelectedChildIndex": 10,
-=======
           "SelectedChildIndex": 11,
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-<<<<<<< HEAD
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "KetQuaLuyenTapViewModel.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\KetQuaLuyenTapViewModel.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\KetQuaLuyenTapViewModel.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\KetQuaLuyenTapViewModel.cs",
-              "RelativeToolTip": "OnThiLaiXe\\Models\\KetQuaLuyenTapViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T07:49:52.708Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\appsettings.json",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\appsettings.json",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\appsettings.json",
-              "RelativeToolTip": "OnThiLaiXe\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-06T09:06:57.45Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAkwF0AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T08:33:25.504Z"
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BaiThiController.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\BaiThiController.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Controllers\\BaiThiController.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\BaiThiController.cs",
-              "RelativeToolTip": "OnThiLaiXe\\Controllers\\BaiThiController.cs",
-              "ViewState": "AgIAAPwBAAAAAAAAAAAYwBwCAAAfAAAAAAAAAA==",
+              "Title": "20250408103505_Shares.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250408103505_Shares.cs",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Migrations\\20250408103505_Shares.cs",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250408103505_Shares.cs",
+              "RelativeToolTip": "OnThiLaiXe\\Migrations\\20250408103505_Shares.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T13:21:00.958Z"
+              "WhenOpened": "2025-04-08T10:35:05.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Share.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\Share.cshtml",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\Share.cshtml",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\Share.cshtml",
+              "RelativeToolTip": "OnThiLaiXe\\Views\\BaiThi\\Share.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAwHsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T10:33:54.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Share.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\Share.cs",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\Share.cs",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\Share.cs",
+              "RelativeToolTip": "OnThiLaiXe\\Models\\Share.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T10:32:01.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "KetQuaLuyenTapViewModel.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\KetQuaLuyenTapViewModel.cs",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\KetQuaLuyenTapViewModel.cs",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\KetQuaLuyenTapViewModel.cs",
+              "RelativeToolTip": "OnThiLaiXe\\Models\\KetQuaLuyenTapViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T10:30:25.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\appsettings.json",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\appsettings.json",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\appsettings.json",
+              "RelativeToolTip": "OnThiLaiXe\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-08T10:30:25.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAkwD4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T10:30:25.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BaiThiController.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\BaiThiController.cs",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Controllers\\BaiThiController.cs",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\BaiThiController.cs",
+              "RelativeToolTip": "OnThiLaiXe\\Controllers\\BaiThiController.cs",
+              "ViewState": "AgIAAAcDAAAAAAAAAAAQwBYDAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T10:30:25.913Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\ApplicationDbContext.cs",
               "RelativeToolTip": "OnThiLaiXe\\Models\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAIwA8AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA4wBUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T10:32:10.578Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Program.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Program.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Program.cs",
-              "RelativeToolTip": "OnThiLaiXe\\Program.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAgwGcAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T10:30:51.892Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LuyenLaiCauSai.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\LuyenLaiCauSai.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\LuyenLaiCauSai.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\LuyenLaiCauSai.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Views\\BaiThi\\LuyenLaiCauSai.cshtml",
-              "ViewState": "AgIAAPgAAAAAAAAAAAAkwBEBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-08T07:24:20.809Z",
+              "WhenOpened": "2025-04-08T10:30:25.929Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAQwIABAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T10:28:41.081Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "QlbaiThiController .cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAYwBEAAACAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T10:38:58.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ElFinderController.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\ElFinderController.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\ElFinderController.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\ElFinderController.cs",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Controllers\\ElFinderController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T16:22:27.478Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LichSuThi.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\LichSuThi.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\LichSuThi.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\LichSuThi.cs",
-              "RelativeToolTip": "OnThiLaiXe\\Models\\LichSuThi.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T06:20:26.951Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DanhSachDeThi.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\DanhSachDeThi.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\DanhSachDeThi.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\DanhSachDeThi.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Views\\BaiThi\\DanhSachDeThi.cshtml",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAkwF0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-08T07:21:52.123Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BaiSaHinhController.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\BaiSaHinhController.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Controllers\\BaiSaHinhController.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\BaiSaHinhController.cs",
-              "RelativeToolTip": "OnThiLaiXe\\Controllers\\BaiSaHinhController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAuwDEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T19:06:14.646Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "20250408062305_lichsuthi.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250408062305_lichsuthi.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Migrations\\20250408062305_lichsuthi.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250408062305_lichsuthi.cs",
-              "RelativeToolTip": "OnThiLaiXe\\Migrations\\20250408062305_lichsuthi.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T06:23:06.047Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LichSuThi.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\LichSuThi.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\LichSuThi.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\LichSuThi.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Views\\BaiThi\\LichSuThi.cshtml",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAgwG4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-08T06:26:52.308Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "elfinder.full.css",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css",
-=======
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "OnThiLaiXe\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T05:56:16.096Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAH4CAAAAAAAAAAAAwIsCAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T10:28:41.081Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Create.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Create.cshtml",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Create.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Create.cshtml",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAmwBgAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T10:22:08.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\UserManager\\Index.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\UserManager\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\UserManager\\Index.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\UserManager\\Index.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T10:34:25.906Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BaiSaHinhController.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\BaiSaHinhController.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Controllers\\BaiSaHinhController.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\BaiSaHinhController.cs",
-              "RelativeToolTip": "OnThiLaiXe\\Controllers\\BaiSaHinhController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T19:06:14.646Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ThiController.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\ThiController.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Controllers\\ThiController.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\ThiController.cs",
-              "RelativeToolTip": "OnThiLaiXe\\Controllers\\ThiController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T05:48:38.855Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BaiThiController.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\BaiThiController.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Controllers\\BaiThiController.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\BaiThiController.cs",
-              "RelativeToolTip": "OnThiLaiXe\\Controllers\\BaiThiController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T13:21:00.958Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAQwIEAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T05:52:03.175Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Details.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Details.cshtml",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Details.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Details.cshtml",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T10:23:33.304Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FileManager.cshtml",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\ElFinder\\FileManager.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\ElFinder\\FileManager.cshtml",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\ElFinder\\FileManager.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\ElFinder\\FileManager.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABUAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T17:15:43.037Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\appsettings.json",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\appsettings.json",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\appsettings.json",
-              "RelativeToolTip": "OnThiLaiXe\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-06T09:06:57.45Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Edit.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Edit.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Edit.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T10:24:13.86Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T13:58:02.606Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "QlbaiThiController .cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAwwD0AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T10:38:58.328Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "ElFinderController.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\ElFinderController.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\ElFinderController.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\ElFinderController.cs",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Controllers\\ElFinderController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Program.cs",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Program.cs",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Program.cs",
+              "RelativeToolTip": "OnThiLaiXe\\Program.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAgwGcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T16:22:27.478Z"
+              "WhenOpened": "2025-04-08T10:30:25.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LuyenLaiCauSai.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\LuyenLaiCauSai.cshtml",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\LuyenLaiCauSai.cshtml",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\LuyenLaiCauSai.cshtml",
+              "RelativeToolTip": "OnThiLaiXe\\Views\\BaiThi\\LuyenLaiCauSai.cshtml",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAIwBEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T10:30:25.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAQwIABAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T10:30:25.929Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "elfinder.full.css",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
-              "RelativeToolTip": "OnThiLaiXe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-04-07T17:20:27.026Z"
+              "Title": "QlbaiThiController .cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
+              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAYwBEAAACAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T10:30:25.929Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 13,
-              "Title": "BaiSaHinhController.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\BaiSaHinhController.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\BaiSaHinhController.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\BaiSaHinhController.cs",
-=======
               "DocumentIndex": 17,
+              "Title": "ElFinderController.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\ElFinderController.cs",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\ElFinderController.cs",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\ElFinderController.cs",
+              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Controllers\\ElFinderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T10:30:25.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LichSuThi.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\LichSuThi.cs",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\LichSuThi.cs",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\LichSuThi.cs",
+              "RelativeToolTip": "OnThiLaiXe\\Models\\LichSuThi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T10:30:25.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "DanhSachDeThi.cshtml",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachDeThi.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachDeThi.cshtml",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachDeThi.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachDeThi.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\DanhSachDeThi.cshtml",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\DanhSachDeThi.cshtml",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\DanhSachDeThi.cshtml",
+              "RelativeToolTip": "OnThiLaiXe\\Views\\BaiThi\\DanhSachDeThi.cshtml",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAkwF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T15:03:38.583Z"
+              "WhenOpened": "2025-04-08T10:30:25.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BaiSaHinhController.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\BaiSaHinhController.cs",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Controllers\\BaiSaHinhController.cs",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\BaiSaHinhController.cs",
+              "RelativeToolTip": "OnThiLaiXe\\Controllers\\BaiSaHinhController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAuwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T10:30:25.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "20250408062305_lichsuthi.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250408062305_lichsuthi.cs",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Migrations\\20250408062305_lichsuthi.cs",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250408062305_lichsuthi.cs",
+              "RelativeToolTip": "OnThiLaiXe\\Migrations\\20250408062305_lichsuthi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T10:30:25.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LichSuThi.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\LichSuThi.cshtml",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\LichSuThi.cshtml",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\LichSuThi.cshtml",
+              "RelativeToolTip": "OnThiLaiXe\\Views\\BaiThi\\LichSuThi.cshtml",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAgwG4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T10:30:25.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "elfinder.full.css",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css",
+              "RelativeToolTip": "OnThiLaiXe\\wwwroot\\lib\\elfinder\\css\\elfinder.full.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-08T10:30:25.96Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Program.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Program.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Program.cs",
-              "RelativeToolTip": "OnThiLaiXe\\Program.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAlwFAAAAAlAAAAAAAAAA==",
+              "Title": "BaiSaHinhController.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\BaiSaHinhController.cs",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\BaiSaHinhController.cs",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\BaiSaHinhController.cs",
+              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Controllers\\BaiSaHinhController.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAwGMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T10:30:51.892Z"
+              "WhenOpened": "2025-04-08T10:30:25.96Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "ChonDeThi.cshtml",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T15:04:30.389Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "BaiSaHinhController.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\BaiSaHinhController.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\BaiSaHinhController.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\BaiSaHinhController.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Controllers\\BaiSaHinhController.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAwGMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T17:51:12.063Z"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 16,
               "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Edit.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Edit.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Edit.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Edit.cshtml",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Edit.cshtml",
               "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Edit.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T10:24:13.86Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "FileManager.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\ElFinder\\FileManager.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\ElFinder\\FileManager.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\ElFinder\\FileManager.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\ElFinder\\FileManager.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABUAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T17:15:43.037Z"
+              "WhenOpened": "2025-04-08T10:30:25.96Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
+              "Title": "FileManager.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\ElFinder\\FileManager.cshtml",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\ElFinder\\FileManager.cshtml",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\ElFinder\\FileManager.cshtml",
+              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\ElFinder\\FileManager.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T10:30:25.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Details.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Details.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Details.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Details.cshtml",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Details.cshtml",
               "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Details.cshtml",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwBgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T10:23:33.304Z"
+              "WhenOpened": "2025-04-08T10:30:25.976Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Create.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Create.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Create.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Create.cshtml",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Create.cshtml",
               "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Create.cshtml",
               "ViewState": "AgIAAA0AAAAAAAAAAAAmwBgAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T10:22:08.328Z"
+              "WhenOpened": "2025-04-08T10:30:25.976Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "DanhSachDeThi.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachDeThi.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachDeThi.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachDeThi.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachDeThi.cshtml",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachDeThi.cshtml",
               "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachDeThi.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T15:03:38.583Z"
+              "WhenOpened": "2025-04-08T10:30:25.976Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "ChonDeThi.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
               "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChonDeThi.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T15:04:30.389Z"
+              "WhenOpened": "2025-04-08T10:30:25.991Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "ChiTietBaiThi.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChiTietBaiThi.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChiTietBaiThi.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChiTietBaiThi.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChiTietBaiThi.cshtml",
-=======
-              "DocumentIndex": 20,
-              "Title": "ChiTietBaiThi.cshtml",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChiTietBaiThi.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChiTietBaiThi.cshtml",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChiTietBaiThi.cshtml",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChiTietBaiThi.cshtml",
               "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\ChiTietBaiThi.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T15:04:25.911Z"
+              "WhenOpened": "2025-04-08T10:30:25.991Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "DanhSachBaiThi.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
-=======
-              "DocumentIndex": 21,
-              "Title": "DanhSachBaiThi.cshtml",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
               "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\QlBaiThi\\DanhSachBaiThi.cshtml",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T15:03:31.414Z"
+              "WhenOpened": "2025-04-08T10:30:25.991Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "BaiSaHinh.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\BaiSaHinh.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\BaiSaHinh.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\BaiSaHinh.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\BaiSaHinh.cs",
-=======
-              "DocumentIndex": 24,
-              "Title": "BaiSaHinh.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Models\\BaiSaHinh.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\BaiSaHinh.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Models\\BaiSaHinh.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\BaiSaHinh.cs",
               "RelativeToolTip": "OnThiLaiXe\\Models\\BaiSaHinh.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T17:50:27.498Z"
+              "WhenOpened": "2025-04-08T10:30:25.991Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Properties\\launchSettings.json",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Properties\\launchSettings.json",
-=======
-              "DocumentIndex": 26,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Properties\\launchSettings.json",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Properties\\launchSettings.json",
               "RelativeToolTip": "OnThiLaiXe\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-07T09:00:02.177Z"
+              "WhenOpened": "2025-04-08T10:30:26.007Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Index.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Index.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Index.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Index.cshtml",
-=======
-              "DocumentIndex": 23,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Index.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Index.cshtml",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Index.cshtml",
               "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Index.cshtml",
               "ViewState": "AgIAAB4AAAAAAAAAAIBJwAYAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T10:22:43.897Z"
+              "WhenOpened": "2025-04-08T10:30:26.007Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 24,
-=======
-              "DocumentIndex": 22,
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "DocumentIndex": 27,
               "Title": "secrets.json",
               "DocumentMoniker": "C:\\Users\\pdtua\\AppData\\Roaming\\Microsoft\\UserSecrets\\0409ff42-740d-4ec4-b967-a719c7f18669\\secrets.json",
               "ToolTip": "C:\\Users\\pdtua\\AppData\\Roaming\\Microsoft\\UserSecrets\\0409ff42-740d-4ec4-b967-a719c7f18669\\secrets.json",
@@ -1081,83 +664,43 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "20250406182634_updatebaisahinh.Designer.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.Designer.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.Designer.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.Designer.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.Designer.cs",
-=======
-              "DocumentIndex": 25,
-              "Title": "20250406182634_updatebaisahinh.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.Designer.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.Designer.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.Designer.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.Designer.cs",
               "RelativeToolTip": "OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.Designer.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAlwA8AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T09:15:17.95Z"
+              "WhenOpened": "2025-04-08T10:30:26.007Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "DanhSachVaChiTiet.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiSaHinh\\DanhSachVaChiTiet.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiSaHinh\\DanhSachVaChiTiet.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiSaHinh\\DanhSachVaChiTiet.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiSaHinh\\DanhSachVaChiTiet.cshtml",
-=======
-              "DocumentIndex": 27,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAGgAAAAAAAAAAIAwwIEAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T08:33:25.504Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "DanhSachVaChiTiet.cshtml",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiSaHinh\\DanhSachVaChiTiet.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiSaHinh\\DanhSachVaChiTiet.cshtml",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiSaHinh\\DanhSachVaChiTiet.cshtml",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiSaHinh\\DanhSachVaChiTiet.cshtml",
               "RelativeToolTip": "OnThiLaiXe\\Views\\BaiSaHinh\\DanhSachVaChiTiet.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T07:47:16.325Z"
+              "WhenOpened": "2025-04-08T10:30:26.023Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiSaHinh\\Index.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiSaHinh\\Index.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiSaHinh\\Index.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiSaHinh\\Index.cshtml",
-=======
-              "DocumentIndex": 29,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiSaHinh\\Index.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiSaHinh\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiSaHinh\\Index.cshtml",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiSaHinh\\Index.cshtml",
               "RelativeToolTip": "OnThiLaiXe\\Views\\BaiSaHinh\\Index.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAIBJwAUAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T19:17:30.004Z"
+              "WhenOpened": "2025-04-08T10:30:26.023Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 31,
-=======
-              "DocumentIndex": 30,
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "DocumentIndex": 34,
               "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
@@ -1167,431 +710,271 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "QuanLyCauHoiController.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
-=======
-              "DocumentIndex": 31,
-              "Title": "QuanLyCauHoiController.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
               "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Controllers\\QuanLyCauHoiController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T10:38:59.463Z"
+              "WhenOpened": "2025-04-08T10:30:26.038Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "EFBaiSaHinhRepository.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFBaiSaHinhRepository.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFBaiSaHinhRepository.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\EFBaiSaHinhRepository.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFBaiSaHinhRepository.cs",
-=======
-              "DocumentIndex": 32,
-              "Title": "EFBaiSaHinhRepository.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFBaiSaHinhRepository.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\EFBaiSaHinhRepository.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFBaiSaHinhRepository.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFBaiSaHinhRepository.cs",
               "RelativeToolTip": "OnThiLaiXe\\Repositories\\EFBaiSaHinhRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T17:56:15.024Z"
+              "WhenOpened": "2025-04-08T10:30:26.038Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "ThiController.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\ThiController.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\ThiController.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Controllers\\ThiController.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\ThiController.cs",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\ThiController.cs",
               "RelativeToolTip": "OnThiLaiXe\\Controllers\\ThiController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T05:48:38.855Z"
+              "WhenOpened": "2025-04-08T10:30:26.038Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "EFCauHoiRepository.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFCauHoiRepository.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFCauHoiRepository.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\EFCauHoiRepository.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFCauHoiRepository.cs",
-=======
-              "DocumentIndex": 33,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Models\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Models\\ApplicationDbContext.cs",
-              "RelativeToolTip": "OnThiLaiXe\\Models\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T10:32:10.578Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "EFCauHoiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFCauHoiRepository.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\EFCauHoiRepository.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFCauHoiRepository.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFCauHoiRepository.cs",
               "RelativeToolTip": "OnThiLaiXe\\Repositories\\EFCauHoiRepository.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAkwDgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T10:57:49.158Z"
+              "WhenOpened": "2025-04-08T10:30:26.038Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "ICauHoiRepository.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\ICauHoiRepository.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\ICauHoiRepository.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\ICauHoiRepository.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\ICauHoiRepository.cs",
-=======
-              "DocumentIndex": 35,
-              "Title": "ICauHoiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\ICauHoiRepository.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\ICauHoiRepository.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\ICauHoiRepository.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\ICauHoiRepository.cs",
               "RelativeToolTip": "OnThiLaiXe\\Repositories\\ICauHoiRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBJwAwAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T11:04:08.842Z"
+              "WhenOpened": "2025-04-08T10:30:26.054Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "ILoaiBangLaiRepository.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\ILoaiBangLaiRepository.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\ILoaiBangLaiRepository.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\ILoaiBangLaiRepository.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\ILoaiBangLaiRepository.cs",
-=======
-              "DocumentIndex": 36,
-              "Title": "ILoaiBangLaiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\ILoaiBangLaiRepository.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\ILoaiBangLaiRepository.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\ILoaiBangLaiRepository.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\ILoaiBangLaiRepository.cs",
               "RelativeToolTip": "OnThiLaiXe\\Repositories\\ILoaiBangLaiRepository.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAzwAsAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T19:09:43.248Z"
+              "WhenOpened": "2025-04-08T10:30:26.054Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "IBaiSaHinhRepository.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\IBaiSaHinhRepository.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\IBaiSaHinhRepository.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\IBaiSaHinhRepository.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\IBaiSaHinhRepository.cs",
-=======
-              "DocumentIndex": 37,
-              "Title": "IBaiSaHinhRepository.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\IBaiSaHinhRepository.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\IBaiSaHinhRepository.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\IBaiSaHinhRepository.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\IBaiSaHinhRepository.cs",
               "RelativeToolTip": "OnThiLaiXe\\Repositories\\IBaiSaHinhRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBJwAkAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T17:55:50.434Z"
+              "WhenOpened": "2025-04-08T10:30:26.054Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Index.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Index.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Index.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Index.cshtml",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Index.cshtml",
               "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Index.cshtml",
               "ViewState": "AgIAAE4AAAAAAAAAAIBZwA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T10:39:35.757Z"
+              "WhenOpened": "2025-04-08T10:30:26.069Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\UserManager\\Index.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\UserManager\\Index.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\UserManager\\Index.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\UserManager\\Index.cshtml",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\UserManager\\Index.cshtml",
               "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\UserManager\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T10:34:25.906Z"
+              "WhenOpened": "2025-04-08T10:30:26.069Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 56,
               "Title": "20250406182634_updatebaisahinh.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.cs",
-=======
-              "DocumentIndex": 49,
-              "Title": "20250406182634_updatebaisahinh.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.cs",
               "RelativeToolTip": "OnThiLaiXe\\Migrations\\20250406182634_updatebaisahinh.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T18:26:34.314Z"
+              "WhenOpened": "2025-04-08T10:30:26.069Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "LoaiBangLai.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\LoaiBangLai.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\LoaiBangLai.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\LoaiBangLai.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\LoaiBangLai.cs",
-=======
-              "DocumentIndex": 38,
-              "Title": "LoaiBangLai.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Models\\LoaiBangLai.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\LoaiBangLai.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Models\\LoaiBangLai.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\LoaiBangLai.cs",
               "RelativeToolTip": "OnThiLaiXe\\Models\\LoaiBangLai.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwBAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T17:45:54.684Z"
+              "WhenOpened": "2025-04-08T10:30:26.069Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 54,
+              "DocumentIndex": 57,
               "Title": "20250406180558_addbaisahinh.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406180558_addbaisahinh.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406180558_addbaisahinh.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Migrations\\20250406180558_addbaisahinh.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406180558_addbaisahinh.cs",
-=======
-              "DocumentIndex": 50,
-              "Title": "20250406180558_addbaisahinh.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406180558_addbaisahinh.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Migrations\\20250406180558_addbaisahinh.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406180558_addbaisahinh.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406180558_addbaisahinh.cs",
               "RelativeToolTip": "OnThiLaiXe\\Migrations\\20250406180558_addbaisahinh.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T18:05:58.509Z"
+              "WhenOpened": "2025-04-08T10:30:26.085Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "Add.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
-=======
-              "DocumentIndex": 39,
-              "Title": "Add.cshtml",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
               "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Views\\QuanLyCauHoi\\Add.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T12:29:33.571Z"
+              "WhenOpened": "2025-04-08T10:30:26.085Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "UserManagerController.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\UserManagerController.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\UserManagerController.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\UserManagerController.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\UserManagerController.cs",
-=======
-              "DocumentIndex": 40,
-              "Title": "UserManagerController.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\UserManagerController.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\UserManagerController.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\UserManagerController.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\UserManagerController.cs",
               "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Controllers\\UserManagerController.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAiwEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T10:34:33.841Z"
+              "WhenOpened": "2025-04-08T10:30:26.085Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "EFUserRepository.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFUserRepository.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFUserRepository.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\EFUserRepository.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFUserRepository.cs",
-=======
-              "DocumentIndex": 42,
-              "Title": "EFUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFUserRepository.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\EFUserRepository.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFUserRepository.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFUserRepository.cs",
               "RelativeToolTip": "OnThiLaiXe\\Repositories\\EFUserRepository.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAYwB0AAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T10:31:54.788Z"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 44,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\IUserRepository.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\IUserRepository.cs",
-=======
-              "DocumentIndex": 41,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\IUserRepository.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
-              "RelativeToolTip": "OnThiLaiXe\\Repositories\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T14:01:07.384Z"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 46,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAIBZwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T13:58:02.606Z"
+              "WhenOpened": "2025-04-08T10:30:26.085Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 47,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\IUserRepository.cs",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "OnThiLaiXe\\Repositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T10:30:26.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "OnThiLaiXe\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBZwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T10:30:26.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
               "Title": "CauHoi.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\CauHoi.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\CauHoi.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\CauHoi.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\CauHoi.cs",
-=======
-              "DocumentIndex": 43,
-              "Title": "CauHoi.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Models\\CauHoi.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\CauHoi.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Models\\CauHoi.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Models\\CauHoi.cs",
               "RelativeToolTip": "OnThiLaiXe\\Models\\CauHoi.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAADwvyQAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T12:32:43.828Z"
+              "WhenOpened": "2025-04-08T10:30:26.101Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 55,
+              "DocumentIndex": 58,
               "Title": "20250406132239_xoaloaicauhoi.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406132239_xoaloaicauhoi.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406132239_xoaloaicauhoi.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Migrations\\20250406132239_xoaloaicauhoi.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406132239_xoaloaicauhoi.cs",
-=======
-              "DocumentIndex": 51,
-              "Title": "20250406132239_xoaloaicauhoi.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406132239_xoaloaicauhoi.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Migrations\\20250406132239_xoaloaicauhoi.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406132239_xoaloaicauhoi.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406132239_xoaloaicauhoi.cs",
               "RelativeToolTip": "OnThiLaiXe\\Migrations\\20250406132239_xoaloaicauhoi.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBZwAwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T13:22:40.665Z"
+              "WhenOpened": "2025-04-08T10:30:26.101Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "AutoComplete.js",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\js\\AutoComplete.js",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\js\\AutoComplete.js",
               "RelativeDocumentMoniker": "OnThiLaiXe\\wwwroot\\js\\AutoComplete.js",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\js\\AutoComplete.js",
-=======
-              "DocumentIndex": 44,
-              "Title": "AutoComplete.js",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\js\\AutoComplete.js",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\wwwroot\\js\\AutoComplete.js",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\js\\AutoComplete.js",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\js\\AutoComplete.js",
               "RelativeToolTip": "OnThiLaiXe\\wwwroot\\js\\AutoComplete.js",
               "ViewState": "AgIAAAwAAAAAAAAAAIBZwBsAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-04-06T11:28:48.243Z"
+              "WhenOpened": "2025-04-08T10:30:26.101Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "20250406090754_them9.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406090754_them9.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406090754_them9.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Migrations\\20250406090754_them9.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406090754_them9.cs",
-=======
-              "DocumentIndex": 45,
-              "Title": "20250406090754_them9.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406090754_them9.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Migrations\\20250406090754_them9.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406090754_them9.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406090754_them9.cs",
               "RelativeToolTip": "OnThiLaiXe\\Migrations\\20250406090754_them9.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T09:07:54.731Z"
+              "WhenOpened": "2025-04-08T10:30:26.116Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 50,
+              "DocumentIndex": 53,
               "Title": "20250406065448_them8.cs",
-              "DocumentMoniker": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406065448_them8.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406065448_them8.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Migrations\\20250406065448_them8.cs",
-              "ToolTip": "D:\\L\u00EA Ng\u1ECDc Tu\u1EA5n\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406065448_them8.cs",
-=======
-              "DocumentIndex": 46,
-              "Title": "20250406065448_them8.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406065448_them8.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Migrations\\20250406065448_them8.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\new48\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406065448_them8.cs",
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "ToolTip": "D:\\\u0110\u1ED3 \u00E1n web\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250406065448_them8.cs",
               "RelativeToolTip": "OnThiLaiXe\\Migrations\\20250406065448_them8.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T09:06:54.649Z"
+              "WhenOpened": "2025-04-08T10:30:26.116Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 52,
-=======
-              "DocumentIndex": 48,
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "DocumentIndex": 55,
               "Title": "BaiThi.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\OnThiLaiXe\\NguyenNgocChau_2280600293\\Models\\BaiThi.cs",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\OnThiLaiXe\\NguyenNgocChau_2280600293\\Models\\BaiThi.cs",
@@ -1600,11 +983,7 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 51,
-=======
-              "DocumentIndex": 47,
->>>>>>> 9febd2d6afa8f5aa89fe08dfc106f3c4cd0a0dec
+              "DocumentIndex": 54,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\OnThiLaiXe\\NguyenNgocChau_2280600293\\Program.cs",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\baichinhthuc\\NguyenNgocChau_2280600293\\OnThiLaiXe\\NguyenNgocChau_2280600293\\Program.cs",
@@ -1619,7 +998,7 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         }

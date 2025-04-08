@@ -693,5 +693,101 @@ namespace OnThiLaiXe.Controllers
 
         //    return View(danhSachChuDe);
         //}
+        [HttpGet]
+        public async Task<IActionResult> Share(string? sortOrder, string? searchString)
+        {
+            var sharesQuery = _context.Shares.AsQueryable();
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                sharesQuery = sharesQuery.Where(s =>
+                    s.Content.Contains(searchString) ||
+                    (s.Topic != null && s.Topic.Contains(searchString)));
+            }
+            ViewBag.CurrentSort = sortOrder;
+            sharesQuery = sortOrder == "oldest"
+                ? sharesQuery.OrderBy(s => s.CreatedAt)
+                : sharesQuery.OrderByDescending(s => s.CreatedAt);
+
+            var shares = await sharesQuery.ToListAsync();
+            ViewBag.ChuDeList = new List<string> { "GPLX", "Lý Thuyết", "Mô Phỏng", "Khác" };
+            ViewBag.SearchString = searchString;
+
+            return View(shares);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateShare(string Content, string? Topic)
+        {
+            if (string.IsNullOrEmpty(Content))
+            {
+                TempData["Error"] = "Nội dung không được để trống.";
+                return RedirectToAction(nameof(Share));
+            }
+
+            if (!User.Identity.IsAuthenticated)
+            {
+                TempData["Error"] = "Bạn cần đăng nhập để chia sẻ.";
+                return RedirectToAction("Login", "Account");
+            }
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var email = User.Identity.Name;
+            var userName = email.Split('@')[0];
+
+            var share = new Share
+            {
+                Content = Content,
+                Topic = Topic,
+                UserId = userId,
+                UserName = userName,
+                CreatedAt = DateTime.Now
+            };
+
+            _context.Add(share);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Share));
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteShare(int id)
+        {
+            var share = await _context.Shares.FindAsync(id);
+            if (share == null)
+            {
+                return NotFound();
+            }
+
+            _context.Shares.Remove(share);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Share));
+        }
+        [HttpPost]
+        public async Task<IActionResult> UploadImage(IFormFile upload)
+        {
+            if (upload != null && upload.Length > 0)
+            {
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(upload.FileName);
+                var filePath = Path.Combine(uploadsFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await upload.CopyToAsync(stream);
+                }
+                var imageUrl = Url.Content("~/uploads/" + fileName);
+                return Json(new { uploaded = true, url = imageUrl });
+            }
+
+            return BadRequest("No file uploaded.");
+        }
     }
 }
