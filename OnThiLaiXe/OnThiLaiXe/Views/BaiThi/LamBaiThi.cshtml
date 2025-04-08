@@ -5,7 +5,7 @@
         <!-- Khu vực câu hỏi -->
         <div class="col-md-9">
             <div class="card shadow-lg">
-                
+
                 <div class="card-header text-white d-flex justify-content-between align-items-center"
                      style="background: linear-gradient(135deg, #27ae60, #2ecc71); padding: 20px; font-size: 1.25rem;">
 
@@ -13,7 +13,7 @@
                     <div class="timer-container">
                         <i class="fas fa-clock me-2"></i>
                         <span id="timer" class="font-weight-bold">15:00</span>
-                        
+
                     </div>
                 </div>
 
@@ -29,7 +29,7 @@
                             <div class="card mb-3 question-card" id="question-@i" style="display: none;">
                                 <div class="card-body">
                                     <h5 class="question-text">
-                                       
+
                                         <strong>Câu @(@i + 1):</strong> @chiTiet.CauHoi.NoiDung
                                     </h5>
 
@@ -88,10 +88,10 @@
         <!-- Khu vực danh sách câu hỏi và đồng hồ -->
         <div class="col-md-3">
             <div class="card shadow-sm mb-3">
-                
+
                 <div class="card-body">
                     <h4 class="text-center text-danger mb-3" id="timer-large">15:00</h4>
-                   
+
                     <div class="d-grid gap-2">
                         <button class="btn btn-success" onclick="submitExam()">
                             <i class="fas fa-paper-plane me-2"></i>Nộp Bài
@@ -113,7 +113,7 @@
                             </button>
                         }
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -141,7 +141,7 @@
         font-weight: bold;
         margin-bottom: 20px;
     }
-    
+
 
     .badge {
         width: 20px;
@@ -159,7 +159,8 @@
 <script>
     let currentQuestion = 0;
     const totalQuestions = document.querySelectorAll('.question-card').length;
-    const timeLimit = 15 * 60; // 15 phút
+    const timeLimit = @(Model.ChiTietBaiThis?.FirstOrDefault()?.CauHoi?.LoaiBangLai?.ThoiGianThi ?? 0) * 60;
+
     let timeRemaining = timeLimit;
     let timer;
     let userAnswers = {};

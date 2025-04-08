@@ -36,6 +36,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     });
 builder.Services.AddMemoryCache();
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IBaiThiRepository, BaiThiRepository>();
 builder.Services.AddScoped<ICauHoiRepository, EFCauHoiRepository>();
 builder.Services.AddScoped<IChuDeRepository, EFChuDeRepository>();
 builder.Services.AddScoped<ILoaiBangLaiRepository, EFLoaiBangLaiRepository>();

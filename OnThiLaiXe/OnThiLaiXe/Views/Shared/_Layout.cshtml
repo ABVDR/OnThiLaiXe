@@ -50,7 +50,10 @@
                             <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Trang Chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="BaiThi" asp-action="DanhSachDeThi">Đề Thi</a>
+                            <a class="nav-link" asp-area="" asp-controller="BaiThi" asp-action="LoaiBangLaiXeMay">Xe máy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="BaiThi" asp-action="LoaiBangLaiOTo">Oto</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="BaiThi" asp-action="OnTap">Ôn Tập</a>
@@ -97,31 +100,7 @@
                         }
 
 
-                        <!-- Dropdown Menu -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="bangLaiDropdown" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                Bằng lái
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="bangLaiDropdown">
-                                <li>
-                                    <a class="dropdown-item" href="@Url.Action("LoaiBangLaiXeMay", "BaiThi")">
-                                        <i class="fas fa-motorcycle"></i> Bằng lái xe máy
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="@Url.Action("LoaiBangLaiOTo", "BaiThi")">
-                                        <i class="fas fa-car"></i> Bằng lái ô tô
-                                    </a>
-                                </li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li>
-                                    <a class="dropdown-item" href="@Url.Action("DanhSachLoaiBangLai", "BaiThi")">
-                                        <i class="fas fa-list"></i> Tất cả loại bằng lái
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+                        
 
                         <li class="nav-item">
                             <a class="nav-link text-danger fw-bold" asp-area="Admin" asp-controller="QuanLyCauHoi" asp-action="Index">Trang Chủ Admin</a>
