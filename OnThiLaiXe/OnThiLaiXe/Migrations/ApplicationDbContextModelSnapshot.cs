@@ -473,6 +473,55 @@ namespace OnThiLaiXe.Migrations
                     b.ToTable("ChuDes");
                 });
 
+            modelBuilder.Entity("OnThiLaiXe.Models.LichSuThi", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BaiThiId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Diem")
+                        .HasColumnType("int");
+
+                    b.Property<string>("KetQua")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LoaiBaiThi")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("MacLoiNghiemTrong")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("NgayThi")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double>("PhanTramDung")
+                        .HasColumnType("float");
+
+                    b.Property<int>("SoCauDung")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TenBaiThi")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TongSoCau")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LichSuThis");
+                });
+
             modelBuilder.Entity("OnThiLaiXe.Models.LoaiBangLai", b =>
                 {
                     b.Property<int>("Id")

@@ -13,18 +13,37 @@ namespace OnThiLaiXe.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly ICauHoiRepository _cauHoiRepo;
+        private readonly ILogger<QlbaiThiController> _logger;
 
-        public QlbaiThiController(ApplicationDbContext context, ICauHoiRepository cauHoiRepo)
+        public QlbaiThiController(ApplicationDbContext context, ICauHoiRepository cauHoiRepo, ILogger<QlbaiThiController> logger)
         {
             _context = context;
             _cauHoiRepo = cauHoiRepo;
+            _logger = logger;
         }
         [HttpPost]
-        public IActionResult TaoDeThi(int loaiBangLaiId, Dictionary<int, int> soLuongMoiChuDe)
+        public async Task<IActionResult> TaoDeThi(int loaiBangLaiId, IFormCollection form)
         {
+            // Parse số lượng câu hỏi theo từng chủ đề từ form
+            var soLuongMoiChuDe = new Dictionary<int, int>();
+
+            foreach (var key in form.Keys)
+            {
+                if (key.StartsWith("soLuongMoiChuDe["))
+                {
+                    var chuDeIdStr = key.Replace("soLuongMoiChuDe[", "").Replace("]", "");
+                    if (int.TryParse(chuDeIdStr, out int chuDeId) &&
+                        int.TryParse(form[key], out int soLuong) &&
+                        soLuong > 0)
+                    {
+                        soLuongMoiChuDe[chuDeId] = soLuong;
+                    }
+                }
+            }
+
             if (soLuongMoiChuDe == null || !soLuongMoiChuDe.Any())
             {
-                TempData["Error"] = "Số lượng câu hỏi theo chủ đề không hợp lệ.";
+                TempData["Error"] = "Vui lòng chọn ít nhất một chủ đề với số lượng câu hỏi hợp lệ.";
                 return RedirectToAction("ChonDeThi");
             }
 
@@ -41,17 +60,22 @@ namespace OnThiLaiXe.Controllers
                 int chuDeId = chuDe.Key;
                 int soLuong = chuDe.Value;
 
-                // Lấy câu hỏi theo chủ đề và loại bằng lái
                 var cauHoiTheoChuDe = _context.CauHois
                     .Where(c => c.LoaiBangLaiId == loaiBangLaiId && c.ChuDeId == chuDeId)
-                    .OrderBy(r => Guid.NewGuid()) // Lấy ngẫu nhiên
+                    .OrderBy(c => Guid.NewGuid())
                     .Take(soLuong)
                     .ToList();
+
+                if (cauHoiTheoChuDe.Count < soLuong)
+                {
+                    TempData["Error"] = $"Không đủ câu hỏi cho chủ đề ID {chuDeId}. Yêu cầu: {soLuong}, Có: {cauHoiTheoChuDe.Count}.";
+                    return RedirectToAction("ChonDeThi");
+                }
 
                 danhSachCauHoi.AddRange(cauHoiTheoChuDe);
             }
 
-            if (danhSachCauHoi.Count == 0)
+            if (!danhSachCauHoi.Any())
             {
                 TempData["Error"] = "Không đủ câu hỏi để tạo đề thi.";
                 return RedirectToAction("ChonDeThi");
@@ -62,17 +86,40 @@ namespace OnThiLaiXe.Controllers
                 var deThi = new BaiThi
                 {
                     NgayThi = DateTime.Now,
-                    ChiTietBaiThis = danhSachCauHoi.Select(c => new ChiTietBaiThi { CauHoiId = c.Id }).ToList()
+                    TenBaiThi = "Đề thi ngẫu nhiên",
+                    LoaiBaiThi = "Thử nghiệm",
+                    DaHoanThanh = false,
+                    Diem = 0,
+                    KetQua = "",
+                    MacLoiNghiemTrong = false,
+                    SoCauDung = 0,
+                    SoCauSai = 0,
+                    SoCauChuaTraLoi = danhSachCauHoi.Count,
+                    PhanTramDung = 0.0,
+                    ChiTietBaiThis = new List<ChiTietBaiThi>() // Đảm bảo không null
                 };
 
                 _context.BaiThis.Add(deThi);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
 
+                var chiTietList = danhSachCauHoi.Select(c => new ChiTietBaiThi
+                {
+                    BaiThiId = deThi.Id,
+                    CauHoiId = c.Id,
+                    CauTraLoi = null,
+                    DungSai = null
+                }).ToList();
+
+                _context.ChiTietBaiThis.AddRange(chiTietList);
+                await _context.SaveChangesAsync();
+
+                TempData["Success"] = "Tạo đề thi thành công.";
                 return RedirectToAction("ChiTietBaiThi", new { id = deThi.Id });
             }
             catch (Exception ex)
             {
-                TempData["Error"] = "Đã xảy ra lỗi khi tạo đề thi: " + ex.Message;
+                _logger.LogError(ex, "Lỗi khi tạo đề thi: {Message}", ex.InnerException?.Message ?? ex.Message);
+                TempData["Error"] = "Đã xảy ra lỗi khi tạo đề thi: " + (ex.InnerException?.Message ?? ex.Message);
                 return RedirectToAction("ChonDeThi");
             }
         }

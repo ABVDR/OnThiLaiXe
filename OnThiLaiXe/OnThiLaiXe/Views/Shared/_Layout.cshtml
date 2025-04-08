@@ -61,7 +61,37 @@
                         <li class="nav-item">
                             <partial name="_LoginPartial" />
                         </li>
-                       
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Cá Nhân
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="BaiThi" asp-action="LichSuThi">
+                                            <i class="fas fa-history"></i> Lịch Sử Thi
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="BaiThi" asp-action="DanhSachCauHoiSai">
+                                            <i class="fas fa-exclamation-circle"></i> Câu Hỏi Sai
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="BaiThi" asp-action="LuyenLaiCauSai">
+                                            <i class="fas fa-sync"></i> Luyện Tập Câu Sai
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="Account" asp-action="Profile">
+                                            <i class="fas fa-user"></i> Thông Tin Cá Nhân
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        }
 
 
                         <!-- Dropdown Menu -->

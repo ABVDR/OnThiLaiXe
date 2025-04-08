@@ -9426,8 +9426,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6ycc8lf5gd</Fingerprint>
-      <Integrity>jnhyLxrDLNVNQ+RoV6gRTZblzGv8wZzqFF2XKpp+GTM=</Integrity>
+      <Fingerprint>ueb0o2h08c</Fingerprint>
+      <Integrity>xqlEOTGHHrt/W4n5JikznKWF7Ma5B6jOfirCMj5Dm7U=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\css\elfinder.full.css'))</OriginalItemSpec>
@@ -9444,8 +9444,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>frhxoczg72</Fingerprint>
-      <Integrity>1S9/9kGxx9PALYVZzX1zqm4ynBZTjcA1UuGNuojt0fI=</Integrity>
+      <Fingerprint>gno1gpyqgc</Fingerprint>
+      <Integrity>DOc3B4gtc045hoRAxjJmfdiUGPCUlYK+RoP4HHZblck=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\css\elfinder.full.min.css'))</OriginalItemSpec>
@@ -9462,8 +9462,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>zrcpx88o3v</Fingerprint>
-      <Integrity>721COeH8Q/VxCdTmwXqIrGFohgV9DtRQP5O5nQuEVV4=</Integrity>
+      <Fingerprint>dktqrhnche</Fingerprint>
+      <Integrity>LWe6kmaQL/cHY72i0xqYjrvkx3s9DAR+qhus9xyoihE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\css\elfinder.min.css'))</OriginalItemSpec>
@@ -9480,8 +9480,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ywkev9pbs7</Fingerprint>
-      <Integrity>ngue4ntKClSYDK+CpCqjo76OyQiTkI07jm1wsYvwl5w=</Integrity>
+      <Fingerprint>099vsrr0r3</Fingerprint>
+      <Integrity>bCfvdR2cpB/nzb5dl5Apj7OujFNSQFCi8z3LFYrOPNU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\css\theme.css'))</OriginalItemSpec>
@@ -10020,8 +10020,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8j8kahtuzm</Fingerprint>
-      <Integrity>zBlh2dPRdh7KREpB/J5yj8aSf5fOoCWAHcSU2bI1o2M=</Integrity>
+      <Fingerprint>3tp7ll8gai</Fingerprint>
+      <Integrity>mVjijRvVzi+si+NJr9bs3OGfLGB3mNXyU6+RtvzIxQk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\img\tui-icon-a.svg'))</OriginalItemSpec>
@@ -10038,8 +10038,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>p6dml6lmjm</Fingerprint>
-      <Integrity>Qck6dwH0ygkRmo9LlURIXM0zrwWimrs8ncDBAFSCUfg=</Integrity>
+      <Fingerprint>mij9t1xver</Fingerprint>
+      <Integrity>8oPy+lIrcmij01NaUxSpsPUo6bDTTY5nsiIf8ikQYgk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\img\tui-icon-b.svg'))</OriginalItemSpec>
@@ -10056,8 +10056,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>l4ghbxp0ya</Fingerprint>
-      <Integrity>5Qp4GoBo+BhQA/Z2B8o34l5vpXK9tWOmdkoh6PgeArg=</Integrity>
+      <Fingerprint>0pr91k20n9</Fingerprint>
+      <Integrity>jHoRRnTDIW7aoPeDSAiYcfzpB4azfwcPmzVx4Q4m9h0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\img\tui-icon-c.svg'))</OriginalItemSpec>
@@ -10074,8 +10074,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>2rpchqkbv6</Fingerprint>
-      <Integrity>opndEATh5MeNAipbcGlUckamgByDVGVjLYWsigEZQGo=</Integrity>
+      <Fingerprint>kndhm36tg2</Fingerprint>
+      <Integrity>YMEvkLeVshtiRKJVv4NKou4I/xieTkTjlHVVV/YfLgU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\img\tui-icon-d.svg'))</OriginalItemSpec>
@@ -10470,8 +10470,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>h59cz0e2y0</Fingerprint>
-      <Integrity>VRwL4RGsIWRjWfc7rLRC6tZWKy2tiL5IZXezdoPUgRA=</Integrity>
+      <Fingerprint>8h1gbhpcli</Fingerprint>
+      <Integrity>fMpaUyCs9/gHu5UGP344oQ+4kG728i6+fr2P+QiPNwI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\elfinder.full.js'))</OriginalItemSpec>
@@ -10506,8 +10506,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>mksmbjtk7x</Fingerprint>
-      <Integrity>2t4OtkcZg7XM5uWDALPznzPXG4GRPUq0q8/iY7yQ/nw=</Integrity>
+      <Fingerprint>kye2hswxyb</Fingerprint>
+      <Integrity>PJk19MqdVKd/ZX7h11gOnxWmXnvlIVWC+F8CQlTPmN8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\elfinder.min.js'))</OriginalItemSpec>
@@ -10524,8 +10524,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4omj1sg6zv</Fingerprint>
-      <Integrity>fPXYmAQn7IWW2MCe1tRA+z2jc3NqW6twvWpQweMyELM=</Integrity>
+      <Fingerprint>xt9uluezrv</Fingerprint>
+      <Integrity>u2U0HiAL//OVKXHbXGIaIZbj8hWcLzM/FBpGJ/+jlVk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\extras\editors.default.js'))</OriginalItemSpec>
@@ -10542,8 +10542,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>e4imm30r4p</Fingerprint>
-      <Integrity>wngjqzAR+hqJ8F4+znR24gO6I+Zy/d79k9Qj/qvjqbY=</Integrity>
+      <Fingerprint>2buwsg7yk4</Fingerprint>
+      <Integrity>ktJ+/+Bn+N7B/U9m2ApObaiO8xx7ww5s73zfWp6NxYc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\extras\editors.default.min.js'))</OriginalItemSpec>
@@ -10560,8 +10560,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>viesa4b3ix</Fingerprint>
-      <Integrity>eX16h9GnWMzj8pTI1SphPk4Wk0SGaBWFb7pzsIoV9vA=</Integrity>
+      <Fingerprint>437sm3w0lz</Fingerprint>
+      <Integrity>4NRqnDhTlxkRF/kdgylg7C95UQ/RvmczQtgkNu8X8Iw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\extras\quicklook.googledocs.js'))</OriginalItemSpec>
@@ -10596,8 +10596,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>q5dxcu7odq</Fingerprint>
-      <Integrity>3vQuGu8OkddL7a2y+iJlxhLAi3fI1kX7WmlHlk62kCw=</Integrity>
+      <Fingerprint>az4m8cls8s</Fingerprint>
+      <Integrity>tsp/bk04OOUnxz7KVXGxJSIVl93rxhuaXFXgYdxKXpg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.ar.js'))</OriginalItemSpec>
@@ -10632,8 +10632,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>homkjb9la2</Fingerprint>
-      <Integrity>0X5fYYoXyC4NJPw8uOjH4p74aM62bJwb0CF+aWbNaSk=</Integrity>
+      <Fingerprint>xtkrh48csm</Fingerprint>
+      <Integrity>y5zWLnGFVG2JyMygMFZleRFb3WTd+8CQCO1YMhg/gkY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.bg.js'))</OriginalItemSpec>
@@ -10668,8 +10668,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>230cjvls43</Fingerprint>
-      <Integrity>bqp088sG1KBOWyzI2gttFP3eZIrHiWIVcIV8aRZiqNo=</Integrity>
+      <Fingerprint>tegcvr1yc1</Fingerprint>
+      <Integrity>68ZpMnqDRVjnC5JACbfJXeonaJLJHLFzX9kQzrBvgKk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.ca.js'))</OriginalItemSpec>
@@ -10704,8 +10704,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>rk0pg9nnaa</Fingerprint>
-      <Integrity>K9MftupJgqIgmoi10yYBt6of1PXjRgMEmcGtGEfKF1g=</Integrity>
+      <Fingerprint>67ni6ijtgu</Fingerprint>
+      <Integrity>Dvx1RQoUa+a4vjvIUJK2p6C2GDxCr1JOoOmRlgD1NJs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.cs.js'))</OriginalItemSpec>
@@ -10740,8 +10740,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>hmxz9ez2rv</Fingerprint>
-      <Integrity>BxrY2ra5FMn2Ulv5Bu9XEDMaxK+rQ8eUdAz0YrWLPP4=</Integrity>
+      <Fingerprint>0lp8j3ozrb</Fingerprint>
+      <Integrity>fK1/p29clN/VibQ11lVby0ZQSyGwddpUNnQE6bs9BC0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.da.js'))</OriginalItemSpec>
@@ -10776,8 +10776,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>na2s17yfs3</Fingerprint>
-      <Integrity>YQgqLA75qd6Bv1a3G7FnzTl/G1R+pxgpPJVpUZlWefQ=</Integrity>
+      <Fingerprint>3mg189l52z</Fingerprint>
+      <Integrity>pZngU9luY3Lt1JqpjZinPEdE+3sQ/HSiIw6yrflNEPE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.de.js'))</OriginalItemSpec>
@@ -10812,8 +10812,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dc0vl8vf15</Fingerprint>
-      <Integrity>g+cMSOJOT1zJbtVxleUI6JIMV73L2UVy79FfM4+kbgM=</Integrity>
+      <Fingerprint>lppwbzebzo</Fingerprint>
+      <Integrity>KUF4grYVQ+oHrIKS6dTGjn/n/AbUIL4lZCGYbTdzkoM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.el.js'))</OriginalItemSpec>
@@ -10848,8 +10848,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4u1s88g9ui</Fingerprint>
-      <Integrity>tJ8CyiCunLzsKZ5gwWw1RCdjl9L19B2G3AHcbWTc/Lw=</Integrity>
+      <Fingerprint>g05z01gvq5</Fingerprint>
+      <Integrity>4JeDotK5hATH1xAIgm46wVW0I7x940ax2ntO8RnT2IE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.es.js'))</OriginalItemSpec>
@@ -10884,8 +10884,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nfc0xqglqo</Fingerprint>
-      <Integrity>8+eYjOjLVF00dqKOf9TnoMHlEjqjzVEg73rq3njXb+8=</Integrity>
+      <Fingerprint>yv49yb48q3</Fingerprint>
+      <Integrity>AtEIdMZeEPnsiUkZfYXnO0Vk5UkZ5EOzPFi1G0T/NyA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.fa.js'))</OriginalItemSpec>
@@ -10920,8 +10920,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>w676km91y4</Fingerprint>
-      <Integrity>6OVmcb9IduAvkmm1U8QCXthlI+6+2k2n0PD2lY8P3oY=</Integrity>
+      <Fingerprint>giu86irjmd</Fingerprint>
+      <Integrity>iPXQVaF6HBTne6bhQwj1CDVbLhSAVodMooMA9UuPRSk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.fallback.js'))</OriginalItemSpec>
@@ -10956,8 +10956,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>457kqwtop0</Fingerprint>
-      <Integrity>2PRuDxWp8aXT4eMcaTwxYGE0mDtKwnu6Ttq1doDiEXs=</Integrity>
+      <Fingerprint>hsvojjqjbm</Fingerprint>
+      <Integrity>8TXM0wbp1vY9yGUi8RXXOiOMpcvqKrJgfILCvVrh+2A=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.fo.js'))</OriginalItemSpec>
@@ -10992,8 +10992,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>d8hssxq3t1</Fingerprint>
-      <Integrity>w5lrhueSMxuH+Cf8zqR0NKMwl1XH/qFsqDj1V2a90OA=</Integrity>
+      <Fingerprint>rtb4p8echm</Fingerprint>
+      <Integrity>ITLg1Vhlev6hNXhLVBMiDDycFcmCq5kHU48njv1DYQY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.fr.js'))</OriginalItemSpec>
@@ -11028,8 +11028,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>aeiyi5udji</Fingerprint>
-      <Integrity>ojcjhO5sCYAxfpetBB3qpAE5q+xuaU5m1Gn1zyAgJq0=</Integrity>
+      <Fingerprint>qjxtxpbzrk</Fingerprint>
+      <Integrity>FoSQYKLhRgc+hH3ikvJZv7ZKJfLJ0IC232gkHNPuzsU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.fr_ca.js'))</OriginalItemSpec>
@@ -11064,8 +11064,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5dm1e0ravq</Fingerprint>
-      <Integrity>eSVkJqGYin0JB8AEynMuiPAfhXtzW8A9zIT2Rsn9QrQ=</Integrity>
+      <Fingerprint>sp1fm53smm</Fingerprint>
+      <Integrity>cPBNLxIu60gJmFAMD/aSh6q5CXjW7GlSnYWqBSusCoU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.he.js'))</OriginalItemSpec>
@@ -11100,8 +11100,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ab5jo6w0ma</Fingerprint>
-      <Integrity>Wm5LFI/cHMqQqGEHmdYySZXtd1OOEUKFiqbXm7wS/LM=</Integrity>
+      <Fingerprint>nj0slbqz6y</Fingerprint>
+      <Integrity>w5K7XFOoESBpB//3UCMXRNe6QEeCttBCH5RvCzNq65U=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.hr.js'))</OriginalItemSpec>
@@ -11136,8 +11136,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>o6o27hvekn</Fingerprint>
-      <Integrity>8KGUDYN1e0RksJGWEYajM0KQc5uAuRsdoDuYrpmv2do=</Integrity>
+      <Fingerprint>bva5sk9300</Fingerprint>
+      <Integrity>R4LI5MGVp8IjpXHDDk0oa9fkmrS3wR6p2EFGzSrlZVM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.hu.js'))</OriginalItemSpec>
@@ -11172,8 +11172,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>c2hardqfr8</Fingerprint>
-      <Integrity>HNzR+OWzsNC1bVVi3ODsnnSVLIqn4HtiwiOu8nO4D6A=</Integrity>
+      <Fingerprint>r6xsuermwa</Fingerprint>
+      <Integrity>/WJ9K2F51WSLDysHZupqyNr8RDmlZmOlLynDi5YjbwI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.id.js'))</OriginalItemSpec>
@@ -11208,8 +11208,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>2t177p1sga</Fingerprint>
-      <Integrity>5n+4cw0VYK8KAVabDMn1Dn1y9MTlwUmc2dxSZ7Ln6Is=</Integrity>
+      <Fingerprint>p3uu6ittsx</Fingerprint>
+      <Integrity>5VExZRQExF8t1E5+MAVdrxg1ut+QDEExY0dmD3VzNjE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.it.js'))</OriginalItemSpec>
@@ -11244,8 +11244,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>itvihro4mv</Fingerprint>
-      <Integrity>ahErlhfVuFn9CUaDY3BkNG9qXDhZm3DwHKS0u1KRm1M=</Integrity>
+      <Fingerprint>qntr2tcim1</Fingerprint>
+      <Integrity>5uSadOgj0QJoTI5t9rzhLiWkCc/AIVKYqW9oZr6XChw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.ja.js'))</OriginalItemSpec>
@@ -11280,8 +11280,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5tae6gcrvu</Fingerprint>
-      <Integrity>x0ulxoy0lTnDJ4sNFh+3qOQVcOI9WxqQhrhyYpTPCns=</Integrity>
+      <Fingerprint>f10twr4019</Fingerprint>
+      <Integrity>ja72kf+ALe7/6g9oziWf8KnrKZIhH6vhr+wvuC8Gm04=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.ko.js'))</OriginalItemSpec>
@@ -11316,8 +11316,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ez5qnkwm50</Fingerprint>
-      <Integrity>ymf1+q0zcchjiumLC1WAWfGAi56vc0Lvk4DcuAypA+8=</Integrity>
+      <Fingerprint>nicjphldoh</Fingerprint>
+      <Integrity>H/OUgAUl6rQuH60Ms/e2K2TXXoDrptX2dJBj76yRQK8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.lang.js'))</OriginalItemSpec>
@@ -11352,8 +11352,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>k054iyzm7n</Fingerprint>
-      <Integrity>nEMqkNbBO6aSM+fqgNOD8kmghCs5GjeHJOJyUvblBtU=</Integrity>
+      <Fingerprint>5f486e3rh8</Fingerprint>
+      <Integrity>YXYDhfax1uA7b4STem8tGCh89jAG5Py/Xt+uN78Q2+U=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.nl.js'))</OriginalItemSpec>
@@ -11388,8 +11388,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7a343k85jk</Fingerprint>
-      <Integrity>YaPoCl2wLJu2S5IK9ia2mXPNsJA/ncsh97s5GfDSnKM=</Integrity>
+      <Fingerprint>00gix72ygm</Fingerprint>
+      <Integrity>gAFARZtmSyv2R7PEeOMTb34M1tthhyrKdZvV5OUQIEk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.no.js'))</OriginalItemSpec>
@@ -11424,8 +11424,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fuo5s3ak4v</Fingerprint>
-      <Integrity>+crK/eg+gRCHyN+ba2vLFSXHB+ouqJTGDJ59+ZleDnk=</Integrity>
+      <Fingerprint>wxxzf8qmki</Fingerprint>
+      <Integrity>lEX8PGrHvuETHrV1Pt463wGAcDR1j7Li5Ji4apINyBk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.pl.js'))</OriginalItemSpec>
@@ -11460,8 +11460,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3wbafw99mh</Fingerprint>
-      <Integrity>sxkevsXYgHA5xBoacI4qGACyqaRkQMAIrYkVBUCYW0w=</Integrity>
+      <Fingerprint>vsmty3vigx</Fingerprint>
+      <Integrity>r9YjMf+0B+wIczfQS/KEhSoAB8/BVy1eqhlZX/njOMo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.pt_br.js'))</OriginalItemSpec>
@@ -11496,8 +11496,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9dveiho2bp</Fingerprint>
-      <Integrity>TcwhkypLgZVQeh0B/vh+epRoqw/nmhdJswoSUnmmdeM=</Integrity>
+      <Fingerprint>5tezlhoppg</Fingerprint>
+      <Integrity>uQ4vzxqGem1hdAUxm8Ak+Z4rN0jmtasK79BqUL2NSss=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.ro.js'))</OriginalItemSpec>
@@ -11532,8 +11532,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>g78a1nm0dm</Fingerprint>
-      <Integrity>9PrpB6lUAh64dvti9lJa9z+RMPcNJevuEnzFpLtDl38=</Integrity>
+      <Fingerprint>7n28tfzgw3</Fingerprint>
+      <Integrity>nTfUjThIzUGczaRDidNr5tTvgbPvZXSZWhFuTU73Ljw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.ru.js'))</OriginalItemSpec>
@@ -11568,8 +11568,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dezmo3sccu</Fingerprint>
-      <Integrity>tSCcSs9jZzIOzNAcv0qBqSVJJ0MTXPecwaKy8WSKerk=</Integrity>
+      <Fingerprint>vm834tktjg</Fingerprint>
+      <Integrity>iRk1BabvUJraq3g4Fk9fCUdLtsmnHe9w9ZhgvzZs//k=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.si.js'))</OriginalItemSpec>
@@ -11604,8 +11604,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>e7skua9q3b</Fingerprint>
-      <Integrity>Nt5cx0TIscqrbfRUfv/K21/4Es/yWzz9RK72kyYzZIc=</Integrity>
+      <Fingerprint>pqta7y7lxb</Fingerprint>
+      <Integrity>EZRGTz0Ty+JRurKRiQOMNQIcsaD2bY8cczrsSdtb1hU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.sk.js'))</OriginalItemSpec>
@@ -11640,8 +11640,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3s92zqmipp</Fingerprint>
-      <Integrity>AykAEafZ1NAFeVcGSsJQ9LHoUU+E5xarqqfKI5xBPYg=</Integrity>
+      <Fingerprint>xqfaostg7u</Fingerprint>
+      <Integrity>OUbQ2mo1TNB1LUWAU5SO8P4cKZ3MMRxFy+uLkjuuyGM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.sl.js'))</OriginalItemSpec>
@@ -11676,8 +11676,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ixn54rw3je</Fingerprint>
-      <Integrity>mme+zHNry/vkPGCDSdR544QTzeEQnp3L/atoUAlAxb0=</Integrity>
+      <Fingerprint>4p1jfa6srh</Fingerprint>
+      <Integrity>WMYQKelZ5NIIq002dA+7/ittNE4BaDZRiiWhfCchWIU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.sr.js'))</OriginalItemSpec>
@@ -11712,8 +11712,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>lmyp4hknj9</Fingerprint>
-      <Integrity>cxzmtygXnoifYb5CwhYTRI5rDsyEOD3E6UU6ovnTuuo=</Integrity>
+      <Fingerprint>8311ir7bhn</Fingerprint>
+      <Integrity>xIkwUjJkYGVHSwdVHRoWoJylpUE2ff7qnFKRgfUWCXE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.sv.js'))</OriginalItemSpec>
@@ -11748,8 +11748,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>e1qbshuus5</Fingerprint>
-      <Integrity>bseVcdTq+uTcniiwic8KLb3t20W+/q8j9R5BOjPiUW8=</Integrity>
+      <Fingerprint>wp1eqy0bog</Fingerprint>
+      <Integrity>zB0t9M1qE9iz9cD10TkEMRSrThQRLdmwABwJCZpf8PU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.tr.js'))</OriginalItemSpec>
@@ -11784,8 +11784,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5iy60u714s</Fingerprint>
-      <Integrity>0yMwKqGWM7So2bY9V7PxxDF8rahQ+DEyA4oLvnrLjps=</Integrity>
+      <Fingerprint>6ngjkzwdwk</Fingerprint>
+      <Integrity>/uQhsk8BWp6lDRWBnN1NZZ7+XW6Wehd9GSVs/aNTSVs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.ug_cn.js'))</OriginalItemSpec>
@@ -11820,8 +11820,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>uwdutopuyb</Fingerprint>
-      <Integrity>7k4ecIi89kVJEtFZBodin3szAxFXF7BnpvWTVA6HMlc=</Integrity>
+      <Fingerprint>3ww5p1y0x5</Fingerprint>
+      <Integrity>w7I0IlTc1bQ+vjV48r2WbzJkFBwhOWdJn7c30jGzu7Y=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.uk.js'))</OriginalItemSpec>
@@ -11856,8 +11856,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5dhzyja6ok</Fingerprint>
-      <Integrity>Vw/hYTESqrO8yxmsXjZ9U3CDmepQonE46IegYJrlE5o=</Integrity>
+      <Fingerprint>7kg2pybw9y</Fingerprint>
+      <Integrity>qQ6FvBQ7W9Se8SFUlRRjIoUKtuEQepY4P+5vl9sj0NQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.vi.js'))</OriginalItemSpec>
@@ -11892,8 +11892,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4ors8owpac</Fingerprint>
-      <Integrity>FCMBgV3/9bl82YbXQPiBXsYN++yKXILS1SC3fyWoWbY=</Integrity>
+      <Fingerprint>htmpuk2oe7</Fingerprint>
+      <Integrity>O/KpGesl2HbyzZvwdcUfz486B+rUlRgQmdnIZZer9Q8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.zh_cn.js'))</OriginalItemSpec>
@@ -11928,8 +11928,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>errlgxv9st</Fingerprint>
-      <Integrity>NhyETOMOUuK6FYuDO3fEEi63DPWJ2f+lQVjsoOIfKhk=</Integrity>
+      <Fingerprint>kebjvjwedi</Fingerprint>
+      <Integrity>fOtgHJCkA957x2HsmAHxlPJNYUKsXfNZQ76B2EN4+Vs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\elfinder.zh_tw.js'))</OriginalItemSpec>
@@ -11964,8 +11964,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>omk9l16gsj</Fingerprint>
-      <Integrity>sAmidF5HCPAhlZNX00ZtX3ZaXDSd3nGz0LpVCwU+ECY=</Integrity>
+      <Fingerprint>elya2n6y6z</Fingerprint>
+      <Integrity>oqsQrhIi8Wc36/hWS8EtwXvDilIIHjBCcwWMvAZddkE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\help\cs.html.js'))</OriginalItemSpec>
@@ -11982,8 +11982,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qmmnhm70s2</Fingerprint>
-      <Integrity>UgtMzPkcRO4n0JArsjBRpar5fSnOrpXC3cb0lF5rGRA=</Integrity>
+      <Fingerprint>n0k55ryzy6</Fingerprint>
+      <Integrity>l0XgYuF9Y/cbEQyerxOCmP1Bekwp9UaYcLSnGfxvK1g=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\help\de.html.js'))</OriginalItemSpec>
@@ -12000,8 +12000,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dfx7yghmlf</Fingerprint>
-      <Integrity>+dahy2i16XdV8xd+Ma07X57Z+LQD85G3yIO0RcNzD3I=</Integrity>
+      <Fingerprint>4edix9g9sg</Fingerprint>
+      <Integrity>TNk3FNL0+OpERNNPGauOQGRRgzTgLKN9j9GDrjgcers=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\help\en.html.js'))</OriginalItemSpec>
@@ -12018,8 +12018,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>it0lpsjoa7</Fingerprint>
-      <Integrity>mi+8eTXlf4X1yUA0+G7nB8LV3SI6yufStp1KfAsWwho=</Integrity>
+      <Fingerprint>6n22ddy14w</Fingerprint>
+      <Integrity>HqXknwxwxe75N3P6js3dN4H5V1++DgvMxP5sFe+RsqU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\help\es.html.js'))</OriginalItemSpec>
@@ -12036,8 +12036,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>i4ukp0zgfi</Fingerprint>
-      <Integrity>gr55QapuyRBHXAlRHr92U5YXSCdVgmXY/oYqGNOwKhU=</Integrity>
+      <Fingerprint>5o137amg2m</Fingerprint>
+      <Integrity>y6Vmx2cI3F+SxV4SYvPfxFGdj4J9Gzh0NScuYtyHV+k=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\help\ja.html.js'))</OriginalItemSpec>
@@ -12054,8 +12054,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>id3l9hd3d5</Fingerprint>
-      <Integrity>ViEqiNyS5sQbukN9IgzmREPxG+F+s238Lalq1jE75oY=</Integrity>
+      <Fingerprint>viknh9vqe4</Fingerprint>
+      <Integrity>p6wXgOibhp4mvOuoAtuZNQMvr0T8j+JAY4AG/kt7qkQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\help\ko.html.js'))</OriginalItemSpec>
@@ -12072,8 +12072,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0ukxr6573e</Fingerprint>
-      <Integrity>SDUqDavpQRq7Yq2uVsxGFWBrZ/iqs4+kHoyXBV8UliU=</Integrity>
+      <Fingerprint>rgxmufo6pp</Fingerprint>
+      <Integrity>FTOz0qXd/cvP9BoFloy/eZ9imN8iB2C6zv9AfsLBBWo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\help\pl.html.js'))</OriginalItemSpec>
@@ -12090,8 +12090,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fxvgwiuhph</Fingerprint>
-      <Integrity>XTINcy0h6biN0pMMSiguxV2v+mzNTNu/vBgO1zVD96E=</Integrity>
+      <Fingerprint>6f46o47v2u</Fingerprint>
+      <Integrity>4jNzqJEsStV0dD28YQLv7uTcCvQVjmXWMXzlIXPSBdM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\help\ru.html.js'))</OriginalItemSpec>
@@ -12108,8 +12108,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ufw9yjrum9</Fingerprint>
-      <Integrity>hjV7RL93G0+bwjtPZn2DlP1ZgxTWszVf47NQTiEHkK8=</Integrity>
+      <Fingerprint>cxbues2i60</Fingerprint>
+      <Integrity>IApleqmY5tuFJF7bE+lxOTzlHsK5P1U73Vasez7+M7M=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\help\sk.html.js'))</OriginalItemSpec>
@@ -12126,8 +12126,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>byyh9cwx6g</Fingerprint>
-      <Integrity>M2SBZ5EhyANpiPydUOZizyxFbSMOjPoZhW4uvpM094o=</Integrity>
+      <Fingerprint>omakli75pl</Fingerprint>
+      <Integrity>0N8Fxm1JqoI8T8hkNqv2twd5u3JLLhXnEhi8T4TMsDU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\i18n\help\tr.html.js'))</OriginalItemSpec>
@@ -12144,8 +12144,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3c5pqbdbb3</Fingerprint>
-      <Integrity>vSIXlU+EAH6g4ZaoJjqrERQJVv2sdXakEeW+7qpNfRA=</Integrity>
+      <Fingerprint>sb0lppkehu</Fingerprint>
+      <Integrity>6HHHHPlkZTk1ArPMoT7unKTUqEhddcyzc62dna4pPoo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\proxy\elfindersupportver1.js'))</OriginalItemSpec>
@@ -12180,8 +12180,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3p1v05un52</Fingerprint>
-      <Integrity>V+5jeAGlMIwIir09rOozunwmAGJi1zCMEcDLrOONo/8=</Integrity>
+      <Fingerprint>zg2d4idzvx</Fingerprint>
+      <Integrity>PRaXXUHfnSnUrL4PJLQXAhDBEGH684gmX9qIBMDeh88=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\worker\calcfilehash.js'))</OriginalItemSpec>
@@ -12216,8 +12216,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6fklokji73</Fingerprint>
-      <Integrity>ovIswCBTvPYLSa7hcKQRbEuRCcICYleia+3pzUPpfpY=</Integrity>
+      <Fingerprint>gyzgixg0uf</Fingerprint>
+      <Integrity>CJATjpjGSZ9+OMsX46tqZmeDd+APUsSVPExBw7/HlmU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\worker\quicklook.tiff.js'))</OriginalItemSpec>
@@ -12252,8 +12252,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qf4bwanu0f</Fingerprint>
-      <Integrity>ypxHdvt7nArBJ4KNtINmglxrnpx2LvOPE6vMI0Kxn2M=</Integrity>
+      <Fingerprint>d53rfuqklk</Fingerprint>
+      <Integrity>sY9cFpT2UBppNN9EfryOBPg+lbmHU84uvp17X222mt8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\elfinder\js\worker\quicklook.unzip.js'))</OriginalItemSpec>

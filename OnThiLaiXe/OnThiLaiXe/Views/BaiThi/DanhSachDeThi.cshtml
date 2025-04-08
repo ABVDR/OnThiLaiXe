@@ -1,5 +1,4 @@
 ﻿@model List<BaiThi>
-
 @using Microsoft.AspNetCore.Http
 @inject IHttpContextAccessor HttpContextAccessor
 
@@ -7,9 +6,9 @@
     var user = HttpContextAccessor.HttpContext.User;
     var isAuthenticated = user.Identity.IsAuthenticated;
 
-    // Nhóm bài thi theo loại bằng lái
+    // Nhóm bài thi theo loại bằng lái, dùng loại bằng của câu hỏi đầu tiên (nếu có)
     var baiThiTheoLoai = Model
-        .Where(bt => bt.ChiTietBaiThis != null && bt.ChiTietBaiThis.Any(ct => ct.CauHoi.LoaiBangLai != null))
+        .Where(bt => bt.ChiTietBaiThis != null && bt.ChiTietBaiThis.Any(ct => ct.CauHoi?.LoaiBangLai != null))
         .GroupBy(bt => bt.ChiTietBaiThis
                         .Select(ct => ct.CauHoi.LoaiBangLai.TenLoai)
                         .FirstOrDefault() ?? "Không xác định")
@@ -17,7 +16,6 @@
 }
 
 <div class="container mt-4">
-   
     @if (baiThiTheoLoai.Any())
     {
         @foreach (var group in baiThiTheoLoai)
@@ -25,10 +23,10 @@
             <div class="loai-bang-group">
                 <h3 class="text-success fw-bold"><i class="fas fa-id-card"></i> @group.Key</h3>
                 <div class="row mt-2">
-                    @foreach (var baiThi in group)
+                    @foreach (var baiThi in group.OrderByDescending(b => b.Id)) // hoặc OrderBy(b => b.Id)
                     {
                         <div class="col-md-4 col-lg-3 mb-3">
-                            <div class="card custom-card shadow">
+                            <div class="card custom-card shadow" title="Bài thi số @baiThi.Id">
                                 <div class="card-body text-center">
                                     <h5 class="card-title custom-title">
                                         <span class="text-green">★</span> ĐỀ SỐ @baiThi.Id
@@ -52,12 +50,10 @@
 </div>
 
 <style>
-    /* Khoảng cách giữa các nhóm loại bằng */
     .loai-bang-group {
         margin-top: 40px;
     }
 
-    /* Thiết kế card */
     .custom-card {
         border-radius: 12px;
         padding: 15px;
@@ -67,6 +63,7 @@
         align-items: center;
         transition: transform 0.2s ease-in-out, box-shadow 0.2s;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+        cursor: pointer;
     }
 
         .custom-card:hover {
@@ -74,7 +71,6 @@
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
         }
 
-    /* Đổi màu tiêu đề đề thi */
     .custom-title {
         font-weight: bold;
         color: #20c997;
@@ -85,7 +81,6 @@
         font-weight: bold;
     }
 
-    /* Nút màu xanh #20c997 */
     .custom-btn {
         background-color: #20c997;
         border: none;
