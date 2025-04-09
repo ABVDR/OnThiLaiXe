@@ -5,79 +5,113 @@
     ViewData["Title"] = "Đăng nhập";
 }
 
-<h1>@ViewData["Title"]</h1>
-<div class="row">
-    <div class="col-md-4">
-        <section>
-            <form id="account" method="post">
-                <h2>Use a local account to log in.</h2>
-                <hr />
-                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-                <div class="form-floating mb-3">
-                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                    <label asp-for="Input.Email" class="form-label">Email</label>
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
-                </div>
-                <div class="form-floating mb-3">
-                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
-                    <label asp-for="Input.Password" class="form-label">Password</label>
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
-                </div>
-                <div class="checkbox mb-3">
-                    <label asp-for="Input.RememberMe" class="form-label">
-                        <input class="form-check-input" asp-for="Input.RememberMe" />
-                        @Html.DisplayNameFor(m => m.Input.RememberMe)
-                    </label>
-                </div>
-                <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
-                </div>
-                <div>
-                    <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
-                    </p>
-                    <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
-                    </p>
-                    <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
-                    </p>
-                </div>
-            </form>
-        </section>
-    </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h3>Use another service to log in.</h3>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
-                            about setting up this ASP.NET application to support logging in via external services</a>.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins!)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
-            }
-        </section>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f9fafb;
+    }
+</style>
+
+<div class="min-h-screen flex items-center justify-center px-4">
+    <div class="w-full max-w-xl bg-white p-10 rounded-2xl shadow-xl">
+        <!-- Logo: icon xe hơi -->
+        
+
+        <!-- Heading -->
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-1">Chào mừng trở lại</h2>
+        <p class="text-center text-sm text-gray-500 mb-6">Vui lòng đăng nhập để tiếp tục</p>
+
+        <!-- Form -->
+        <form method="post" class="space-y-5">
+            <div asp-validation-summary="ModelOnly" class="text-red-500 text-sm text-center"></div>
+
+            <div>
+                <label asp-for="Input.Email" class="block mb-1 text-sm font-medium text-gray-700">Email</label>
+                <input asp-for="Input.Email" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-blue-500 focus:ring-2 focus:outline-none" placeholder="you@example.com" />
+                <span asp-validation-for="Input.Email" class="text-red-500 text-sm"></span>
+            </div>
+
+            <div class="relative">
+                <label asp-for="Input.Password" class="block mb-1 text-sm font-medium text-gray-700">Mật khẩu</label>
+                <input asp-for="Input.Password" type="password" id="passwordInput"
+                       class="w-full px-4 py-3 pr-12 border border-gray-300 rounded-xl focus:ring-blue-500 focus:ring-2 focus:outline-none"
+                       placeholder="••••••••" />
+                <button type="button" id="togglePassword" tabindex="-1"
+                        class="absolute top-9 right-4 text-gray-500 hover:text-gray-700">
+                    <svg id="eyeClosed" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M13.875 18.825A10.05 10.05 0 0112 19c-5.523 0-10-4.477-10-10 0-1.134.187-2.222.525-3.24m2.018-2.977A9.987 9.987 0 0112 3c5.523 0 10 4.477 10 10 0 1.418-.295 2.769-.825 4.002M15 12a3 3 0 11-6 0 3 3 0 016 0zm6 6l-6-6M9 9L3 3" />
+                    </svg>
+                    <svg id="eyeOpen" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                </button>
+                <span asp-validation-for="Input.Password" class="text-red-500 text-sm"></span>
+            </div>
+
+            <div class="flex items-center justify-between text-sm">
+                <label class="flex items-center gap-2">
+                    <input asp-for="Input.RememberMe" class="rounded" />
+                    <span>Ghi nhớ đăng nhập</span>
+                </label>
+                <a asp-page="./ForgotPassword" class="text-blue-500 hover:underline">Quên mật khẩu?</a>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold transition">
+                Đăng nhập
+            </button>
+
+            <div class="text-center text-sm text-gray-600">
+                Chưa có tài khoản?
+                <a asp-page="./Register" class="text-blue-500 hover:underline">Đăng ký ngay</a>
+            </div>
+        </form>
+
+        <!-- External Login -->
+        @if ((Model.ExternalLogins?.Count ?? 0) > 0)
+        {
+            <div class="mt-8">
+                <div class="text-center text-gray-500 mb-3 text-sm">Hoặc đăng nhập bằng</div>
+                <form asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="flex flex-col gap-3">
+                    @foreach (var provider in Model.ExternalLogins!)
+                    {
+                        var icon = provider.Name.ToLower() switch
+                        {
+                            "google" => @"
+                <svg class='w-5 h-5' viewBox='0 0 48 48'><path fill='#FFC107' d='M43.6 20.5H42V20H24v8h11.3C34.3 32.7 29.8 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l6-6C34.5 5.3 29.5 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21c11.3 0 20.7-8.2 20.7-21 0-1.4-.1-2.5-.3-3.5z'/><path fill='#FF3D00' d='M6.3 14.7l6.6 4.8C14.5 15.6 18.9 13 24 13c3.1 0 5.9 1.2 8 3.1l6-6C34.5 5.3 29.5 3 24 3 16.3 3 9.6 7.2 6.3 14.7z'/><path fill='#4CAF50' d='M24 45c5.5 0 10.5-1.8 14.4-4.9l-6.6-5.4C29.5 36.7 26.9 38 24 38c-5.8 0-10.7-3.9-12.4-9.2l-6.6 5.1C8.8 41.8 15.9 45 24 45z'/><path fill='#1976D2' d='M43.6 20.5H42V20H24v8h11.3c-1.1 3.1-3.2 5.6-6.2 7.3l.1.1 6.6 5.4c-1.9 1.3-4.3 2.4-7 2.8C38.6 39.1 43.6 30.5 43.6 20.5z'/></svg>",
+                            "facebook" => @"<svg class='w-5 h-5 text-blue-600' fill='currentColor' viewBox='0 0 24 24'><path d='M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 5 3.66 9.12 8.44 9.88v-6.99h-2.54V12h2.54V9.82c0-2.5 1.5-3.89 3.78-3.89 1.1 0 2.25.2 2.25.2v2.47h-1.27c-1.25 0-1.64.77-1.64 1.56V12h2.8l-.45 2.89h-2.35v6.99C18.34 21.12 22 17 22 12z'/></svg>",
+                            _ => @"<svg class='w-5 h-5 text-gray-600' fill='currentColor' viewBox='0 0 24 24'><path d='M12 0C5.4 0 0 5.3 0 11.8c0 5.2 3.4 9.7 8.1 11.3.6.1.8-.2.8-.6v-2.2c-3.3.7-4-1.5-4-1.5-.6-1.4-1.5-1.8-1.5-1.8-1.2-.8.1-.8.1-.8 1.4.1 2.2 1.4 2.2 1.4 1.2 2.1 3.2 1.5 4 .9.1-.9.5-1.5.9-1.8-2.7-.3-5.5-1.3-5.5-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2.9-.2 1.9-.4 2.9-.4 1 0 2 .1 2.9.4 2.1-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.1 0 4.4-2.8 5.4-5.5 5.7.5.4.9 1.2.9 2.4v3.6c0 .4.2.7.8.6 4.7-1.6 8.1-6.1 8.1-11.3C24 5.3 18.6 0 12 0z'/></svg>"
+                        };
+                        <button type="submit" name="provider" value="@provider.Name"
+                                class="w-full flex items-center justify-center gap-2 border border-gray-300 rounded-xl py-2 hover:bg-gray-100 transition">
+                            @Html.Raw(icon)
+                            <span>Đăng nhập với @provider.DisplayName</span>
+                        </button>
+                    }
+                </form>
+            </div>
+        }
     </div>
 </div>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script>
+        const passwordInput = document.getElementById('passwordInput');
+        const togglePassword = document.getElementById('togglePassword');
+        const eyeOpen = document.getElementById('eyeOpen');
+        const eyeClosed = document.getElementById('eyeClosed');
+
+        togglePassword.addEventListener('click', () => {
+            const isPassword = passwordInput.type === 'password';
+            passwordInput.type = isPassword ? 'text' : 'password';
+            eyeOpen.classList.toggle('hidden', !isPassword);
+            eyeClosed.classList.toggle('hidden', isPassword);
+        });
+    </script>
 }
