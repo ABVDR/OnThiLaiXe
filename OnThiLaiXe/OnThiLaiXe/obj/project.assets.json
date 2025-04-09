@@ -9480,11 +9480,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pdtua\\Desktop\\las2\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+      "projectUniqueName": "C:\\Users\\pdtua\\Desktop\\last3\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
       "projectName": "OnThiLaiXe",
-      "projectPath": "C:\\Users\\pdtua\\Desktop\\las2\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+      "projectPath": "C:\\Users\\pdtua\\Desktop\\last3\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
       "packagesPath": "C:\\Users\\pdtua\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pdtua\\Desktop\\las2\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
+      "outputPath": "C:\\Users\\pdtua\\Desktop\\last3\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -88,7 +88,7 @@ app.UseStaticFiles();
 //    }
 //});
 app.UseAuthorization();
-
+app.UseHangfireDashboard();
 app.UseEndpoints(endpoints =>
 {
     // Route dành cho khu vực Admin

@@ -98,19 +98,15 @@ namespace OnThiLaiXe.Areas.Admin.Controllers
         public async Task<IActionResult> ExportToExcel()
         {
             var users = await _userRepository.GetAllSysnc(User);
-            var stream = new MemoryStream();
+            var stream = new MemoryStream();//R
             string password = _configuration["ExcelPassword:Password"];
-            // Thiết lập License cho EPPlus 8.0.1
             ExcelPackage.License.SetNonCommercialPersonal("Webonlaixe");
             using (var package = new ExcelPackage(stream))
             {
                 var worksheet = package.Workbook.Worksheets.Add("Users");
-
-                // Tiêu đề cột
                 worksheet.Cells[1, 1].Value = "Họ Tên Người Dùng";
                 worksheet.Cells[1, 2].Value = "Ngày Tạo";
 
-                // Định dạng tiêu đề
                 using (var range = worksheet.Cells[1, 1, 1, 2])
                 {
                     range.Style.Font.Bold = true;
