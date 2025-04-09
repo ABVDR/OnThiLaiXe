@@ -24,7 +24,8 @@ jq(document).ready(function () {
         minLength: 3,
         select: function (event, ui) {
             jq("#SearchCauHoi").val(ui.item.label);
-            window.location.href = "/Admin/QuanLyCauHoi/Display/" + ui.item.id;
+            filterRows();
+            jq("#SearchCauHoi").blur();
             return false;
         }
     });
