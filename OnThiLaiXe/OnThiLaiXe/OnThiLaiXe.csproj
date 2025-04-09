@@ -48,7 +48,6 @@
     <Folder Include="Areas\Customer\Views\" />
     <Folder Include="Migrations\" />
     <Folder Include="wwwroot\files\" />
-    <Folder Include="wwwroot\uploads\" />
   </ItemGroup>
 
   <ItemGroup>

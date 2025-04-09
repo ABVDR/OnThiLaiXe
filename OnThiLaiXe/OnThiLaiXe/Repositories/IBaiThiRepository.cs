@@ -7,7 +7,8 @@ namespace OnThiLaiXe.Repositories
         BaiThi GetBaiThiById(int baiThiId, bool includeChiTiet = true);
         List<KetQuaBaiThi> NopBaiThi(int baiThiId, string dapAnJson, string currentUserId, bool isLoggedIn);
         List<CauHoiSaiViewModel> GetDanhSachCauHoiSai(int userId);
-
+        List<CauHoi> GetCauHoiTheoChuDe(int loaiBangLaiId, int chuDeId);
+        string GetTenChuDeById(int chuDeId);
         List<CauHoi> GetCauHoiLuyenLaiCauSai(int userId, int maxQuestions = 20);
         List<ChuDe> GetDanhSachChuDe();
         List<LoaiBangLai> GetDanhSachLoaiBangLai();
