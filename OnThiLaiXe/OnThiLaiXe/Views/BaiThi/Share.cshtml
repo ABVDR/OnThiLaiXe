@@ -3,30 +3,11 @@
 
 @{
     ViewData["Title"] = "Câu Hỏi & Chia Sẻ";
-    var allReplies = ViewBag.AllReplies as List<OnThiLaiXe.Models.ShareReply>;
 }
 
 <div class="container mt-4">
     <h2 class="mb-3">@ViewData["Title"]</h2>
     <p class="text-muted">Câu hỏi về ôn thi gplx, lý thuyết, mô phỏng và các chủ đề khác được chia sẻ tại đây.</p>
-
-    @if (TempData["RequireLogin"] != null)
-    {
-        <div id="requireLoginAlert" class="alert alert-warning" role="alert">
-            @TempData["RequireLogin"]
-        </div>
-        <script>
-            setTimeout(() => {
-                window.location.href = '/Identity/Account/Login?ReturnUrl=/BaiThi/Share';
-            }, 2000);
-        </script>
-    }
-    @if (TempData["Error"] != null)
-    {
-        <div class="alert alert-danger" role="alert">
-            @TempData["Error"]
-        </div>
-    }
 
     <form asp-action="CreateShare" method="post" enctype="multipart/form-data" class="mb-5">
         <div class="form-group mb-3">
@@ -49,18 +30,14 @@
         <div class="mb-3 d-flex justify-content-between align-items-center">
             <div>
                 <strong>Sắp xếp:</strong>
-                <a asp-action="Share" asp-route-sortOrder="newest"
-                   class="btn btn-link @(ViewBag.CurrentSort == null || ViewBag.CurrentSort == "newest" ? "active" : "")">
-                    Mới nhất
-                </a>
-                <a asp-action="Share" asp-route-sortOrder="oldest"
-                   class="btn btn-link @(ViewBag.CurrentSort == "oldest" ? "active" : "")">
-                    Cũ nhất
-                </a>
+                <a asp-action="Share" asp-route-sortOrder="newest" class="btn btn-link @(ViewBag.CurrentSort == null || ViewBag.CurrentSort == "newest" ? "active" : "")">Mới nhất</a>
+                <a asp-action="Share" asp-route-sortOrder="oldest" class="btn btn-link @(ViewBag.CurrentSort == "oldest" ? "active" : "")">Cũ nhất</a>
             </div>
+
+            <!-- Tìm kiếm với input và nút -->
             <form method="get" asp-action="Share" class="input-group w-25">
-                <input type="text" id="searchBox" name="searchString" class="form-control"
-                       placeholder="Tìm kiếm..." value="@ViewBag.SearchString" />
+                <input type="text" id="searchBox" name="searchString" class="form-control" placeholder="Tìm kiếm..."
+                       value="@ViewBag.SearchString" />
                 <button type="submit" class="btn btn-outline-secondary">Tìm</button>
             </form>
         </div>
@@ -74,179 +51,44 @@
                     <div class="fw-bold">Người dùng: @share.UserName</div>
                     <small class="text-muted">@share.Topic - @share.CreatedAt.ToString("dd/MM/yyyy HH:mm")</small>
                 </div>
-
                 <div class="share-content mb-2">
                     @Html.Raw(share.Content)
                 </div>
-
-                @* Nút Xóa Share *@
                 @if (share.UserId == User.FindFirstValue(ClaimTypes.NameIdentifier))
                 {
                     <form asp-action="DeleteShare" method="post" class="d-inline">
-                        @Html.AntiForgeryToken()
                         <input type="hidden" name="id" value="@share.Id" />
-                        <button type="submit" class="btn btn-danger btn-sm">
-                            <i class="bi bi-trash3"></i> Xóa
-                        </button>
+                        <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
                     </form>
                 }
-
-                @* Replies cấp 1 *@
-                @if (allReplies != null)
-                {
-                    var replies = allReplies
-                    .Where(r => r.ShareId == share.Id && r.ParentReplyId == null)
-                    .OrderBy(r => r.CreatedAt)
-                    .ToList();
-
-                    foreach (var reply in replies)
-                    {
-                        <div class="ms-4 border-start ps-3 mb-2">
-                            <div class="d-flex align-items-center">
-                                <strong>@reply.UserName</strong>
-                                <small class="text-muted ms-2">@reply.CreatedAt.ToString("dd/MM/yyyy HH:mm")</small>
-
-                                @* Nút Xóa Reply cấp 1 *@
-                                @if (reply.UserId == User.FindFirstValue(ClaimTypes.NameIdentifier))
-                                {
-                                    <form asp-action="DeleteReply" method="post" class="ms-auto">
-                                        @Html.AntiForgeryToken()
-                                        <input type="hidden" name="id" value="@reply.Id" />
-                                        <button type="submit" class="btn btn-sm btn-danger">
-                                            <i class="bi bi-trash3"></i> Xóa
-                                        </button>
-                                    </form>
-                                }
-                            </div>
-
-                            <div>@Html.Raw(reply.Content)</div>
-
-                            <button type="button" class="btn btn-sm btn-link toggle-reply-form" data-reply-id="@reply.Id">
-                                <i class="bi bi-reply"></i> Trả lời
-                            </button>
-
-                            <div class="reply-form d-none mt-2" id="reply-form-@reply.Id">
-                                <form asp-action="CreateReply" method="post">
-                                    @Html.AntiForgeryToken()
-                                    <input type="hidden" name="shareId" value="@share.Id" />
-                                    <input type="hidden" name="parentReplyId" value="@reply.Id" />
-                                    <textarea name="content" class="form-control ckeditor mb-2"></textarea>
-                                    <button type="submit" class="btn btn-sm btn-primary">
-                                        <i class="bi bi-send"></i> Gửi
-                                    </button>
-                                </form>
-                            </div>
-
-                            @* Replies lồng sâu hơn *@
-                            @{
-                                var childReplies = allReplies
-                                .Where(r => r.ParentReplyId == reply.Id)
-                                .OrderBy(r => r.CreatedAt)
-                                .ToList();
-                            }
-                            @foreach (var child in childReplies)
-                            {
-                                <div class="ms-4 border-start ps-3 mt-2 bg-light rounded p-2">
-                                    <div class="d-flex align-items-center">
-                                        <strong>@child.UserName</strong>
-                                        <small class="text-muted ms-2">@child.CreatedAt.ToString("dd/MM/yyyy HH:mm")</small>
-
-                                        @* Nút Xóa Reply con *@
-                                        @if (child.UserId == User.FindFirstValue(ClaimTypes.NameIdentifier))
-                                        {
-                                            <form asp-action="DeleteReply" method="post" class="ms-auto">
-                                                @Html.AntiForgeryToken()
-                                                <input type="hidden" name="id" value="@child.Id" />
-                                                <button type="submit" class="btn btn-sm btn-danger">
-                                                    <i class="bi bi-trash3"></i> Xóa
-                                                </button>
-                                            </form>
-                                        }
-                                    </div>
-                                    <div>@Html.Raw(child.Content)</div>
-                                </div>
-                            }
-                        </div>
-                    }
-                }
-
-                @* Nút bật/tắt form trả lời Share chính *@
-                <button type="button"
-                        class="btn btn-sm btn-outline-primary toggle-share-reply-form mt-2"
-                        data-share-id="@share.Id">
-                    <i class="bi bi-reply"></i> Trả lời chia sẻ
-                </button>
-
-                @* Form trả lời Share chính *@
-                <div class="reply-form d-none mt-2" id="share-reply-form-@share.Id">
-                    <form asp-action="CreateReply" method="post">
-                        @Html.AntiForgeryToken()
-                        <input type="hidden" name="shareId" value="@share.Id" />
-                        <textarea name="content" class="form-control ckeditor mb-2"></textarea>
-                        <button type="submit" class="btn btn-sm btn-outline-primary">
-                            <i class="bi bi-send"></i> Gửi
-                        </button>
-                    </form>
-                </div>
             </div>
         </div>
     }
 </div>
 
+<!-- CKEditor -->
 <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
 <script>
-    // Khởi tạo CKEditor cho textarea #editor
-    if (document.getElementById('editor')) {
-        ClassicEditor
-            .create(document.getElementById('editor'), {
-                ckfinder: { uploadUrl: '/BaiThi/UploadImage' },
-                mediaEmbed: { previewsInData: true }
-            })
-            .catch(console.error);
-    }
-
-    // Hàm khởi tạo CKEditor cho tất cả textarea.ckeditor
-    function initCKEditors() {
-        document.querySelectorAll('.ckeditor').forEach(textarea => {
-            if (!textarea.classList.contains('ck-editor-initialized')) {
-                ClassicEditor
-                    .create(textarea, {
-                        ckfinder: { uploadUrl: '/BaiThi/UploadImage' },
-                        mediaEmbed: { previewsInData: true }
-                    })
-                    .then(() => textarea.classList.add('ck-editor-initialized'))
-                    .catch(console.error);
+    ClassicEditor
+        .create(document.querySelector('#editor'), {
+            ckfinder: {
+                uploadUrl: '/BaiThi/UploadImage'
+            },
+            mediaEmbed: {
+                previewsInData: true
             }
+        })
+        .catch(error => {
+            console.error(error);
         });
-    }
-    initCKEditors();
-
-    // Toggle form trả lời con
-    document.querySelectorAll('.toggle-reply-form').forEach(btn =>
-        btn.addEventListener('click', () => {
-            const id = btn.getAttribute('data-reply-id');
-            const form = document.getElementById(`reply-form-${id}`);
-            form.classList.toggle('d-none');
-            initCKEditors();
-        })
-    );
-
-    // Toggle form trả lời Share chính
-    document.querySelectorAll('.toggle-share-reply-form').forEach(btn =>
-        btn.addEventListener('click', () => {
-            const id = btn.getAttribute('data-share-id');
-            const form = document.getElementById(`share-reply-form-${id}`);
-            form.classList.toggle('d-none');
-            initCKEditors();
-        })
-    );
-
-    // Debounce cho ô tìm kiếm
     const searchBox = document.getElementById('searchBox');
     let debounceTimer;
-    searchBox?.addEventListener('input', function () {
+
+    searchBox.addEventListener('input', function () {
         clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(() => this.form.submit(), 500);
+        debounceTimer = setTimeout(() => {
+            this.form.submit();
+        }, 500); // thời gian đợi sau khi ngừng gõ: 500ms
     });
 </script>
 
@@ -278,24 +120,5 @@
     .btn-link.active {
         font-weight: bold;
         text-decoration: underline;
-    }
-
-    #requireLoginAlert {
-        animation: slideDown 0.4s ease;
-    }
-
-    keyframes slideDown {
-        from
-
-    {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
     }
 </style>

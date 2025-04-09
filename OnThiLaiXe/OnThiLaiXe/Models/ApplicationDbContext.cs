@@ -20,7 +20,6 @@ options) : base(options)
         public DbSet<BaiSaHinh> BaiSaHinhs { get; set; }
         public DbSet<LichSuThi> LichSuThis { get; set; }
         public DbSet<Share> Shares { get; set; }
-        public DbSet<ShareReply> ShareReplies { get; set; }
     }
 
 

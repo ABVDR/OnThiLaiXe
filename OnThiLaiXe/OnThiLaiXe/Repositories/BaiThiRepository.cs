@@ -185,7 +185,13 @@ namespace OnThiLaiXe.Repositories
                 .ToList();
         }
 
-      
+        public string GetTenChuDeById(int chuDeId)
+        {
+            return _context.ChuDes
+                .Where(cd => cd.Id == chuDeId)
+                .Select(cd => cd.TenChuDe)
+                .FirstOrDefault() ?? "Không rõ chủ đề";
+        }
         public List<CauHoi> GetCauHoiLuyenLaiCauSai(int userId, int maxQuestions = 20)
         {
             var cauHoiIds = _context.CauHoiSais
@@ -276,6 +282,15 @@ namespace OnThiLaiXe.Repositories
         {
             return _context.LoaiBangLais.FirstOrDefault(l => l.Id == loaiBangLaiId);
         }
+        public List<CauHoi> GetCauHoiTheoChuDe(int loaiBangLaiId, int chuDeId)
+        {
+            return _context.CauHois
+                .Where(c => c.LoaiBangLaiId == loaiBangLaiId && c.ChuDeId == chuDeId)
+                .OrderBy(c => c.NoiDung) // hoặc sắp xếp theo gì đó nếu cần
+                .ToList();
+        }
+
+
 
         public bool LuuDapAnTamThoi(DapAnTamThoi request)
         {

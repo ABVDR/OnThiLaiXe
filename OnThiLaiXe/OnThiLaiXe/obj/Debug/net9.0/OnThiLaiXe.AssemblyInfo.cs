@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnThiLaiXe")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1cb6ecca5316ee84df74fc2f0bf57906877579df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e62ff7f913d6765d4235bc2c4d92edb69306a581")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnThiLaiXe")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnThiLaiXe")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
