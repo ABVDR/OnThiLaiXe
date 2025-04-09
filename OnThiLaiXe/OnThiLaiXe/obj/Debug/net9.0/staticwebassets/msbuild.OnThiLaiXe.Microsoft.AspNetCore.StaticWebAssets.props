@@ -8688,8 +8688,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>m6c7vtvwkl</Fingerprint>
-      <Integrity>ksN4XUydWU24WrM/Cs+vN0pLmU1y4mP5cQagmxBsEx0=</Integrity>
+      <Fingerprint>sy3oepckcp</Fingerprint>
+      <Integrity>7EMcQWrdxELvDghYmYuOR42QLOHJGO2OllwE/EOFI7g=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\AutoComplete.js'))</OriginalItemSpec>
