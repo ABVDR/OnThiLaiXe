@@ -3585,3 +3585,14 @@ C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (9)\OnThiLaiXe\OnThiLaiXe\O
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (9)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\OnThiLaiXe.pdb
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (9)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\OnThiLaiXe.genruntimeconfig.cache
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (9)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\ref\OnThiLaiXe.dll
+D:\Đồ án web\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\bin\Debug\net9.0\EPPlus.dll
+D:\Đồ án web\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\bin\Debug\net9.0\EPPlus.Interfaces.dll
+D:\Đồ án web\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+D:\Đồ án web\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Đồ án web\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
+D:\Đồ án web\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Đồ án web\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Đồ án web\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\bin\Debug\net9.0\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Đồ án web\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\bin\Debug\net9.0\System.Security.Cryptography.Pkcs.dll
+D:\Đồ án web\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\bin\Debug\net9.0\System.Security.Cryptography.Xml.dll
+D:\Đồ án web\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll

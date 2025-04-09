@@ -463,49 +463,65 @@ namespace OnThiLaiXe.Controllers
         }
 
 
-
-
-
-
-
-
         [HttpGet]
         public async Task<IActionResult> Share(string? sortOrder, string? searchString)
         {
             var sharesQuery = _context.Shares.AsQueryable();
+
+
             if (!string.IsNullOrEmpty(searchString))
             {
-                sharesQuery = sharesQuery.Where(s =>
+
+                var matchingShares = _context.Shares.Where(s =>
                     s.Content.Contains(searchString) ||
                     (s.Topic != null && s.Topic.Contains(searchString)));
+
+
+                var matchingReplyShareIds = _context.ShareReplies
+                    .Where(r => r.Content.Contains(searchString))
+                    .Select(r => r.ShareId)
+                    .Distinct();
+                sharesQuery = matchingShares
+                          .Union(_context.Shares.Where(s => matchingReplyShareIds.Contains(s.Id)));
             }
+
+
             ViewBag.CurrentSort = sortOrder;
             sharesQuery = sortOrder == "oldest"
                 ? sharesQuery.OrderBy(s => s.CreatedAt)
                 : sharesQuery.OrderByDescending(s => s.CreatedAt);
 
             var shares = await sharesQuery.ToListAsync();
+
+
+            var replies = await _context.ShareReplies.ToListAsync();
+            ViewBag.AllReplies = replies;
             ViewBag.ChuDeList = new List<string> { "GPLX", "Lý Thuyết", "Mô Phỏng", "Khác" };
             ViewBag.SearchString = searchString;
 
             return View(shares);
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateShare(string Content, string? Topic)
         {
+
+            if (!User.Identity.IsAuthenticated)
+            {
+                TempData["RequireLogin"] = "Bạn cần đăng nhập để chia sẻ.";
+                return RedirectToAction(nameof(Share));
+            }
             if (string.IsNullOrEmpty(Content))
             {
                 TempData["Error"] = "Nội dung không được để trống.";
                 return RedirectToAction(nameof(Share));
             }
 
-            if (!User.Identity.IsAuthenticated)
+            if (string.IsNullOrEmpty(Topic))
             {
-                TempData["Error"] = "Bạn cần đăng nhập để chia sẻ.";
-                return RedirectToAction("Login", "Account");
+                TempData["Error"] = "Vui lòng chọn chủ đề trước khi chia sẻ.";
+                return RedirectToAction(nameof(Share));
             }
 
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -525,7 +541,6 @@ namespace OnThiLaiXe.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Share));
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -564,6 +579,55 @@ namespace OnThiLaiXe.Controllers
             }
 
             return BadRequest("No file uploaded.");
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateReply(int shareId, string content, int? parentReplyId)
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                TempData["RequireLogin"] = "Bạn cần đăng nhập để trả lời.";
+                return RedirectToAction(nameof(Share));
+            }
+
+            if (string.IsNullOrWhiteSpace(content))
+            {
+                TempData["Error"] = "Nội dung trả lời không được để trống.";
+                return RedirectToAction(nameof(Share));
+            }
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var email = User.Identity.Name;
+            var userName = email.Split('@')[0];
+
+            var reply = new ShareReply
+            {
+                ShareId = shareId,
+                Content = content,
+                ParentReplyId = parentReplyId,
+                CreatedAt = DateTime.Now,
+                UserId = userId,
+                UserName = userName
+            };
+
+            _context.ShareReplies.Add(reply);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Share));
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteReply(int id)
+        {
+            var reply = await _context.ShareReplies.FindAsync(id);
+            if (reply == null)
+            {
+                return NotFound();
+            }
+            _context.ShareReplies.Remove(reply);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Share));
+
         }
     }
 }
