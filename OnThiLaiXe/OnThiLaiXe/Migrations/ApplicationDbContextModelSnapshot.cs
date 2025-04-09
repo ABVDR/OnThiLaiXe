@@ -258,7 +258,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasIndex("LoaiBangLaiId");
 
-                    b.ToTable("BaiSaHinhs");
+                    b.ToTable("BaiSaHinhs", (string)null);
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.BaiThi", b =>
@@ -310,7 +310,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BaiThis");
+                    b.ToTable("BaiThis", (string)null);
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.CauHoi", b =>
@@ -370,7 +370,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasIndex("LoaiBangLaiId");
 
-                    b.ToTable("CauHois");
+                    b.ToTable("CauHois", (string)null);
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.CauHoiSai", b =>
@@ -394,7 +394,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasIndex("CauHoiId");
 
-                    b.ToTable("CauHoiSais");
+                    b.ToTable("CauHoiSais", (string)null);
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.CauTrucDeThi", b =>
@@ -420,7 +420,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasIndex("LoaiBangLaiId");
 
-                    b.ToTable("CauTrucDeThis");
+                    b.ToTable("CauTrucDeThis", (string)null);
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.ChiTietBaiThi", b =>
@@ -449,7 +449,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasIndex("CauHoiId");
 
-                    b.ToTable("ChiTietBaiThis");
+                    b.ToTable("ChiTietBaiThis", (string)null);
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.ChuDe", b =>
@@ -470,7 +470,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ChuDes");
+                    b.ToTable("ChuDes", (string)null);
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.LichSuThi", b =>
@@ -519,7 +519,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("LichSuThis");
+                    b.ToTable("LichSuThis", (string)null);
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.LoaiBangLai", b =>
@@ -550,7 +550,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("LoaiBangLais");
+                    b.ToTable("LoaiBangLais", (string)null);
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.Share", b =>
@@ -581,7 +581,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Shares");
+                    b.ToTable("Shares", (string)null);
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.ShareReply", b =>
@@ -616,7 +616,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasIndex("ShareId");
 
-                    b.ToTable("ShareReplies");
+                    b.ToTable("ShareReplies", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

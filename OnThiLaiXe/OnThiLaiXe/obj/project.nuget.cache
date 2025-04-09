@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s45Tqo6DZdY=",
+  "dgSpecHash": "SGr6jnfCZkg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pdtua\\Desktop\\las2\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+  "projectFilePath": "C:\\Users\\pdtua\\Desktop\\last3\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pdtua\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\pdtua\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

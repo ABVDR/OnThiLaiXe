@@ -130,7 +130,7 @@
     <!-- Bộ lọc -->
     <div class="filter-container row g-3 position-relative">
         <div class="col-md-4 col-sm-12 position-relative">
-            <input type="text" id="SearchCauHoi" placeholder="Tìm kiếm câu hỏi..." class="form-control" autocomplete="off" />
+            <input type="text" id="SearchCauHoi" placeholder="Tìm kiếm câu hỏi..." class="form-control" autocomplete="on" />
             <div id="autocomplete-list" class="autocomplete-items"></div>
         </div>
         <div class="col-md-4 col-sm-12">
@@ -192,6 +192,10 @@
 </div>
 
 @section Scripts {
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="/JS/AutoComplete.js"></script>
     <script>
         const searchBox = document.getElementById("SearchCauHoi");
         const filterChuDe = document.getElementById("filterChuDe");
@@ -218,44 +222,9 @@
                 row.style.display = (matchKeyword && matchChuDe && matchLoai) ? "" : "none";
             });
         }
-
         searchBox.addEventListener("keyup", filterRows);
         filterChuDe.addEventListener("change", filterRows);
         filterLoaiBang.addEventListener("change", filterRows);
-
-        // Autocomplete
-        let suggestions = [];
-        document.querySelectorAll("#tableBody .noiDung").forEach(item => {
-            const text = item.textContent.trim();
-            if (!suggestions.includes(text)) {
-                suggestions.push(text);
-            }
-        });
-
-        searchBox.addEventListener("input", function () {
-            const val = this.value.toLowerCase();
-            autoCompleteBox.innerHTML = "";
-
-            if (!val) return;
-
-            const matches = suggestions.filter(item => item.toLowerCase().includes(val));
-            matches.forEach(match => {
-                const div = document.createElement("div");
-                div.innerHTML = match.replace(new RegExp(val, "gi"), (text) => `<strong>${text}</strong>`);
-                div.addEventListener("click", function () {
-                    searchBox.value = match;
-                    autoCompleteBox.innerHTML = "";
-                    filterRows();
-                });
-                autoCompleteBox.appendChild(div);
-            });
-        });
-
-        document.addEventListener("click", function (e) {
-            if (!searchBox.contains(e.target)) {
-                autoCompleteBox.innerHTML = "";
-            }
-        });
 
         // Sort nội dung
         let sortDirection = false;

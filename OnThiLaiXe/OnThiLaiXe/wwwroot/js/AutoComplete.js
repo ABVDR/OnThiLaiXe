@@ -21,10 +21,10 @@ jq(document).ready(function () {
                 }
             });
         },
-        minLength: 2,
+        minLength: 3,
         select: function (event, ui) {
             jq("#SearchCauHoi").val(ui.item.label);
-            window.location.href = "/QuanLyCauHoi/Display/" + ui.item.id;
+            window.location.href = "/Admin/QuanLyCauHoi/Display/" + ui.item.id;
             return false;
         }
     });
