@@ -584,6 +584,41 @@ namespace OnThiLaiXe.Migrations
                     b.ToTable("Shares");
                 });
 
+            modelBuilder.Entity("OnThiLaiXe.Models.ShareReply", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("ParentReplyId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ShareId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ShareId");
+
+                    b.ToTable("ShareReplies");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -712,6 +747,17 @@ namespace OnThiLaiXe.Migrations
                     b.Navigation("BaiThi");
 
                     b.Navigation("CauHoi");
+                });
+
+            modelBuilder.Entity("OnThiLaiXe.Models.ShareReply", b =>
+                {
+                    b.HasOne("OnThiLaiXe.Models.Share", "Share")
+                        .WithMany()
+                        .HasForeignKey("ShareId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Share");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.BaiThi", b =>
