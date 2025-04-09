@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pdtua\\Desktop\\new_9_4_4_43\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj": {}
+    "C:\\Users\\pdtua\\Desktop\\las\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pdtua\\Desktop\\new_9_4_4_43\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj": {
+    "C:\\Users\\pdtua\\Desktop\\las\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pdtua\\Desktop\\new_9_4_4_43\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+        "projectUniqueName": "C:\\Users\\pdtua\\Desktop\\las\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
         "projectName": "OnThiLaiXe",
-        "projectPath": "C:\\Users\\pdtua\\Desktop\\new_9_4_4_43\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+        "projectPath": "C:\\Users\\pdtua\\Desktop\\las\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
         "packagesPath": "C:\\Users\\pdtua\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pdtua\\Desktop\\new_9_4_4_43\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
+        "outputPath": "C:\\Users\\pdtua\\Desktop\\las\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

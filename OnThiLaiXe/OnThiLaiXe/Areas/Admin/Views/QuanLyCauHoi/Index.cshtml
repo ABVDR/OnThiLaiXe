@@ -174,15 +174,16 @@
                     <td><span class="badge bg-success">@item.DapAnDung</span></td>
                     <td>@(item.DiemLiet ? "Có" : "Không")</td>
                     <td class="action-column">
-                        <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-sm btn-warning">
+                        <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-sm btn-warning" title="Sửa">
                             <i class="bi bi-pencil-square"></i>
                         </a>
-                        <a asp-action="Display" asp-route-id="@item.Id" class="btn btn-sm btn-info">
+                        <a asp-action="Display" asp-route-id="@item.Id" class="btn btn-sm btn-info" title="Xem">
                             <i class="bi bi-eye"></i>
                         </a>
-                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger" title="Xóa">
                             <i class="bi bi-trash"></i>
                         </a>
+
                     </td>
                 </tr>
             }

@@ -28,8 +28,17 @@
                     <h5 class="fw-bold">Câu hỏi:</h5>
                     <p class="fs-5">@Model.NoiDung</p>
 
-                    <h5 class="fw-bold">Đáp án:</h5>
-                    <p class="fs-5"><span class="badge bg-success">@Model.DapAnDung</span></p>
+                    @{
+                        string dapAnDungDayDu = Model.DapAnDung switch
+                        {
+                            'A' => $"A. {Model.LuaChonA}",
+                            'B' => $"B. {Model.LuaChonB}",
+                            'C' => $"C. {Model.LuaChonC}",
+                            'D' => $"D. {Model.LuaChonD}"
+                        };
+                    }
+                    <h5 class="fw-bold">Đáp án đúng:</h5>
+                    <p class="fs-5"><span class="badge bg-success">@dapAnDungDayDu</span></p>
 
                     <h5 class="fw-bold">Chủ đề:</h5>
                     <p class="fs-5">@Model.ChuDe?.TenChuDe</p>
