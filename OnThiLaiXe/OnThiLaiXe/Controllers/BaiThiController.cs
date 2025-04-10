@@ -406,24 +406,24 @@ namespace OnThiLaiXe.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
-            var cauHoiIds = _context.CauHoiSais
-                .Where(c => c.UserId == userId)
-                .OrderByDescending(c => c.NgaySai)
-                .Select(c => c.CauHoiId)
-                .Distinct()
-                .Take(20)
-                .ToList();
+            var cauHois = _context.CauHoiSais
+                          .Where(c => c.UserId == userId)
+                          .Select(c => c.CauHoi)
+                          .ToList();
 
-            var cauHois = _context.CauHois
-                .Where(c => cauHoiIds.Contains(c.Id))
-                .ToList();
+    // Loại bỏ các câu hỏi bị trùng ID, chỉ giữ lại câu hỏi đầu tiên với mỗi ID
+            var uniqueCauHois = cauHois
+                        .GroupBy(c => c.Id)
+                        .Select(g => g.First())
+                        .ToList();
 
-            return View("LuyenLaiCauSai", cauHois);
+    // Trả về danh sách câu hỏi không bị trùng
+            return View(uniqueCauHois);
 
         }
 
         [HttpPost]
-        public IActionResult LuuKetQuaLuyenLai(List<KetQuaLuyenTapViewModel> ketQua)
+        public IActionResult LuuKetQuaLuyenLai(Dictionary<string, string> cauHoiAnswers)
         {
             if (!User.Identity.IsAuthenticated)
                 return Unauthorized();
@@ -432,29 +432,64 @@ namespace OnThiLaiXe.Controllers
             int userId = int.TryParse(currentUserId, out var uid) ? uid : (Guid.TryParse(currentUserId, out var guid) ? guid.GetHashCode() & int.MaxValue : -1);
             if (userId == -1) return Unauthorized();
 
-            foreach (var item in ketQua)
-            {
-                var cauHoiSai = _context.CauHoiSais
-                    .FirstOrDefault(c => c.UserId == userId && c.CauHoiId == item.CauHoiId);
+            var results = new List<KetQuaLuyenTapViewModel>();  // Danh sách lưu kết quả luyện lại
 
-                // Nếu người dùng làm đúng lại -> xóa khỏi danh sách sai
-                if (item.Dung)
+            foreach (var item in cauHoiAnswers)
+            {
+                var cauHoiId = item.Key.Replace("cauHoi_", "");
+                var dapAn = item.Value;
+
+                // Cập nhật dữ liệu vào database
+                var cauHoiSai = _context.CauHoiSais
+                    .Where(c => c.UserId == userId && c.CauHoiId == int.Parse(cauHoiId))
+                    .ToList();  // Lấy tất cả câu sai có cùng ID
+
+                bool isCorrect = false;
+                var cauHoi = _context.CauHois.FirstOrDefault(c => c.Id == int.Parse(cauHoiId));
+                if (cauHoi != null)
                 {
-                    if (cauHoiSai != null)
-                        _context.CauHoiSais.Remove(cauHoiSai);
+                    if (dapAn == cauHoi.DapAnDung.ToString())
+                        isCorrect = true;
+                }
+
+                // Thêm kết quả vào danh sách
+                results.Add(new KetQuaLuyenTapViewModel
+                {
+                    CauHoiId = int.Parse(cauHoiId),
+                    NoiDung = cauHoi?.NoiDung,
+                    LuaChonA = cauHoi?.LuaChonA,
+                    LuaChonB = cauHoi?.LuaChonB,
+                    LuaChonC = cauHoi?.LuaChonC,
+                    LuaChonD = cauHoi?.LuaChonD,
+                    DapAnDung = cauHoi?.DapAnDung.ToString(),
+                    DapAnNguoiDung = dapAn,
+                    IsCorrect = isCorrect
+                });
+
+                if (isCorrect)
+                {
+                    // Xóa tất cả câu sai có cùng ID
+                    if (cauHoiSai.Any())
+                    {
+                        _context.CauHoiSais.RemoveRange(cauHoiSai);
+                    }
                 }
                 else
                 {
-                    // Nếu vẫn sai thì cập nhật lại NgaySai
-                    if (cauHoiSai != null)
-                        cauHoiSai.NgaySai = DateTime.Now;
+                    // Cập nhật ngày sai hoặc thêm mới
+                    if (cauHoiSai.Any())
+                    {
+                        foreach (var itemSai in cauHoiSai)
+                        {
+                            itemSai.NgaySai = DateTime.Now;
+                        }
+                    }
                     else
                     {
-                        // Nếu chưa có thì thêm mới
                         _context.CauHoiSais.Add(new CauHoiSai
                         {
                             UserId = userId,
-                            CauHoiId = item.CauHoiId,
+                            CauHoiId = int.Parse(cauHoiId),
                             NgaySai = DateTime.Now
                         });
                     }
@@ -462,8 +497,23 @@ namespace OnThiLaiXe.Controllers
             }
 
             _context.SaveChanges();
-            return Json(new { success = true });
+
+            // Trả về kết quả luyện lại
+            return View("KetQuaLuyenLai", results);
         }
+
+
+        //public IActionResult KetQuaLuyenLai(int correctCount, int wrongCount)
+        //{
+        //    ViewBag.CorrectCount = correctCount;
+        //    ViewBag.WrongCount = wrongCount;
+
+        //    // Bạn có thể tạo logic để hiển thị các câu trả lời đúng, sai và giải thích ở đây nếu cần
+
+        //    return View();
+        //}
+
+
 
         private void SaveCauHoiSai(bool isLoggedIn, string currentUserId, int cauHoiId)
         {

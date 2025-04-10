@@ -9474,23 +9474,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pdtua\\.nuget\\packages\\": {},
+    "C:\\Users\\lengo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pdtua\\Desktop\\last3\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+      "projectUniqueName": "D:\\BMTT\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
       "projectName": "OnThiLaiXe",
-      "projectPath": "C:\\Users\\pdtua\\Desktop\\last3\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
-      "packagesPath": "C:\\Users\\pdtua\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pdtua\\Desktop\\last3\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
+      "projectPath": "D:\\BMTT\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+      "packagesPath": "C:\\Users\\lengo\\.nuget\\packages\\",
+      "outputPath": "D:\\BMTT\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\pdtua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lengo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9499,6 +9499,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

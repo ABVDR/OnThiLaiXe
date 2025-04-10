@@ -1,0 +1,77 @@
+﻿@model List<KetQuaLuyenTapViewModel>
+
+@{
+    ViewData["Title"] = "Kết quả luyện tập";
+    int correctCount = Model.Count(x => x.IsCorrect);
+    int wrongCount = Model.Count(x => !x.IsCorrect);
+    int totalQuestions = Model.Count;
+}
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header bg-success text-white">
+            <h4 class="mb-0">Kết quả luyện tập</h4>
+        </div>
+        <div class="card-body">
+            <h3 class="text-center">Bạn đã hoàn thành phần luyện tập!</h3>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card bg-success text-white mb-3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Đúng</h5>
+                            <h2>@correctCount</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-danger text-white mb-3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Sai</h5>
+                            <h2>@wrongCount</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-primary text-white mb-3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Tổng số câu</h5>
+                            <h2>@totalQuestions</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                @foreach (var item in Model)
+                {
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <strong>Câu hỏi:</strong> @item.NoiDung
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Đáp án người dùng:</strong> @item.DapAnNguoiDung</p>
+                            <p><strong>Đáp án đúng:</strong> @item.DapAnDung</p>
+                            @if (item.IsCorrect)
+                            {
+                                <span class="badge bg-success">Đúng</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-danger">Sai</span>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="@Url.Action("LuyenLaiCauSai")" class="btn btn-success">
+                    <i class="fas fa-redo"></i> Luyện tập lại
+                </a>
+                <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">
+                    <i class="fas fa-home"></i> Trang chủ
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

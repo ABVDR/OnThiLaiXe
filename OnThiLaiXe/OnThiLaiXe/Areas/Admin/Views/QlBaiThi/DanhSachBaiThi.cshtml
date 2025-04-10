@@ -29,10 +29,10 @@
                     <td>@baiThi.NgayThi.ToString("dd/MM/yyyy HH:mm")</td>
                     <td>@baiThi.ChiTietBaiThis.Count</td>
                     <td>
-                        <a asp-controller="BaiThi" asp-action="ChiTietBaiThi" asp-route-id="@baiThi.Id" class="btn btn-sm btn-info">
+                        <a  asp-action="ChiTietBaiThi" asp-route-id="@baiThi.Id" class="btn btn-sm btn-info">
                             <i class="bi bi-eye"></i> Xem
                         </a>
-                        <a asp-controller="BaiThi" asp-action="XoaBaiThi" asp-route-id="@baiThi.Id" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc muốn xóa?')">
+                        <a  asp-action="Delete" asp-route-id="@baiThi.Id" class="btn btn-sm btn-danger">
                             <i class="bi bi-trash"></i> Xóa
                         </a>
                     </td>
