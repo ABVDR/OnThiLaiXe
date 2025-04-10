@@ -452,6 +452,35 @@ namespace OnThiLaiXe.Migrations
                     b.ToTable("ChiTietBaiThis");
                 });
 
+            modelBuilder.Entity("OnThiLaiXe.Models.ChiTietLichSuThi", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CauHoiId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CauTraLoi")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("DungSai")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("LichSuThiId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CauHoiId");
+
+                    b.HasIndex("LichSuThiId");
+
+                    b.ToTable("ChiTietLichSuThis");
+                });
+
             modelBuilder.Entity("OnThiLaiXe.Models.ChuDe", b =>
                 {
                     b.Property<int>("Id")
@@ -781,6 +810,25 @@ namespace OnThiLaiXe.Migrations
                     b.Navigation("CauHoi");
                 });
 
+            modelBuilder.Entity("OnThiLaiXe.Models.ChiTietLichSuThi", b =>
+                {
+                    b.HasOne("OnThiLaiXe.Models.CauHoi", "CauHoi")
+                        .WithMany("ChiTietLichSuThis")
+                        .HasForeignKey("CauHoiId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OnThiLaiXe.Models.LichSuThi", "LichSuThi")
+                        .WithMany("ChiTietLichSuThis")
+                        .HasForeignKey("LichSuThiId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CauHoi");
+
+                    b.Navigation("LichSuThi");
+                });
+
             modelBuilder.Entity("OnThiLaiXe.Models.GiaoDich", b =>
                 {
                     b.HasOne("OnThiLaiXe.Models.ApplicationUser", "User")
@@ -811,11 +859,18 @@ namespace OnThiLaiXe.Migrations
             modelBuilder.Entity("OnThiLaiXe.Models.CauHoi", b =>
                 {
                     b.Navigation("ChiTietBaiThis");
+
+                    b.Navigation("ChiTietLichSuThis");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.ChuDe", b =>
                 {
                     b.Navigation("CauHois");
+                });
+
+            modelBuilder.Entity("OnThiLaiXe.Models.LichSuThi", b =>
+                {
+                    b.Navigation("ChiTietLichSuThis");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.LoaiBangLai", b =>

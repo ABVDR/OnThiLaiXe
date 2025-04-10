@@ -54,7 +54,7 @@
                                 }
                             </td>
                             <td>
-                                <a asp-action="ChiTietBaiThi" asp-route-id="@item.BaiThiId" class="btn btn-sm btn-primary">
+                                <a asp-action="ChiTiet" asp-route-id="@item.Id" class="btn btn-sm btn-primary">
                                     <i class="fas fa-eye"></i> Xem
                                 </a>
                             </td>
@@ -103,8 +103,9 @@
     }
 
     <div class="mt-4">
-        <a asp-action="DanhSachLoaiBangLai" class="btn btn-primary">
-            <i class="fas fa-book"></i> Quay lại danh sách bài thi
+        <a asp-controller="Home" asp-action="Index" class="btn btn-primary">
+            <i class="fas fa-book"></i> Quay lại Trang chủ
         </a>
+
     </div>
 </div>

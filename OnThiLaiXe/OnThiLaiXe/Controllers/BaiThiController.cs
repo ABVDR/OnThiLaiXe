@@ -56,7 +56,84 @@ namespace OnThiLaiXe.Controllers
             var loaiBang = baiThi.ChiTietBaiThis.FirstOrDefault()?.CauHoi?.LoaiBangLai;
             ViewBag.DiemToiThieu = loaiBang?.DiemToiThieu ?? 21;
 
+            // Xử lý userId từ currentUserId
+            int userId;
+            if (int.TryParse(currentUserId, out userId))
+            {
+                // Tiếp tục với userId đã parse thành int
+            }
+            else if (Guid.TryParse(currentUserId, out var userGuid))
+            {
+                // Chuyển Guid thành int bằng GetHashCode()
+                userId = userGuid.GetHashCode() & int.MaxValue;  // Đảm bảo tránh overflow khi chuyển thành int
+            }
+            else
+            {
+                // Nếu không thể chuyển currentUserId thành int hoặc Guid, xử lý lỗi (không cần lưu lịch sử thi)
+                return BadRequest("User ID không hợp lệ.");
+            }
+
+            // Tính toán kết quả thi
+            var correctCount = baiThi.SoCauDung;  // Giả sử đã có số câu đúng
+            var tongDiem = baiThi.Diem;  // Giả sử đã có điểm tổng
+            var saiDiemLiet = baiThi.MacLoiNghiemTrong;  // Giả sử là flag khi sai điểm liệt
+
+            // Lưu vào bảng LichSuThi
+            var lichSuThi = new LichSuThi
+            {
+                BaiThiId = baiThi.Id,
+                TenBaiThi = baiThi.TenBaiThi,
+                NgayThi = DateTime.Now,
+                LoaiBaiThi = baiThi.LoaiBaiThi,
+                TongSoCau = baiThi.ChiTietBaiThis.Count,
+                SoCauDung = correctCount,
+                PhanTramDung = baiThi.PhanTramDung,
+                Diem = tongDiem ?? 0,
+                KetQua = baiThi.KetQua,
+                MacLoiNghiemTrong = saiDiemLiet,
+                // Lưu UserId dưới dạng int
+                UserId = userId  // Lưu trực tiếp giá trị đã parse thành int
+            };
+
+            // Lưu lịch sử thi vào cơ sở dữ liệu
+            _context.LichSuThis.Add(lichSuThi);
+            _context.SaveChanges();
+
+
+
+            // Tạo danh sách chi tiết lịch sử thi
+            var chiTietLichSuList = baiThi.ChiTietBaiThis.Select(ct => new ChiTietLichSuThi
+            {
+                LichSuThiId = lichSuThi.Id,
+                CauHoiId = ct.CauHoiId,
+                CauTraLoi = ct.CauTraLoi?.ToString(), // Convert char? to string
+                DungSai = ct.DungSai
+            }).ToList();
+
+            // Lưu chi tiết lịch sử
+            _context.ChiTietLichSuThis.AddRange(chiTietLichSuList);
+            _context.SaveChanges();
+
             return View("KetQuaBaiThi", ketQuaList);
+        }
+
+        public IActionResult ChiTiet(int id)
+        {
+            // Lấy chi tiết lịch sử thi với các câu hỏi và chi tiết câu trả lời
+            var lichSuThi = _context.LichSuThis
+
+                                    .Include(ls => ls.ChiTietLichSuThis)  // Bao gồm Chi tiết lịch sử thi
+                                    .ThenInclude(ct => ct.CauHoi)  // Bao gồm Câu hỏi trong chi tiết
+                                    .FirstOrDefault(ls => ls.Id == id);  // Sử dụng Id của lịch sử thi, không phải BaiThiId
+
+            // Nếu không tìm thấy lịch sử thi theo Id
+            if (lichSuThi == null)
+            {
+                return NotFound();  // Trả về lỗi nếu không tìm thấy
+            }
+
+            // Trả về View với model là lichSuThi
+            return View(lichSuThi);
         }
 
 
@@ -97,7 +174,8 @@ namespace OnThiLaiXe.Controllers
 
             return View(lichSuThi);
         }
-       
+
+
 
         //[HttpPost]
         //public IActionResult TaoDeThi(int loaiBangLaiId, Dictionary<int, int> soLuongMoiChuDe)
