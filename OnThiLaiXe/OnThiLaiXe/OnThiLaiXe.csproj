@@ -38,6 +38,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
     <PackageReference Include="PagedList.Mvc" Version="4.5.0" />
+    <PackageReference Include="PayPal" Version="1.9.1" />
     <PackageReference Include="SendGrid" Version="9.29.3" />
   </ItemGroup>
 

@@ -406,21 +406,29 @@ namespace OnThiLaiXe.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
+            // ✅ THÊM ĐOẠN KIỂM TRA ĐÃ THANH TOÁN HAY CHƯA
+            var daThanhToan = _context.GiaoDichs
+                                .Any(g => g.UserId == currentUserId && g.DaThanhToan == true);
+
+            if (!daThanhToan)
+            {
+                return RedirectToAction("ThanhToanTruoc", "GiaoDich");
+            }
+
+            // ✅ LẤY CÂU HỎI SAI SAU KHI ĐÃ XÁC NHẬN THANH TOÁN
             var cauHois = _context.CauHoiSais
                           .Where(c => c.UserId == userId)
                           .Select(c => c.CauHoi)
                           .ToList();
 
-    // Loại bỏ các câu hỏi bị trùng ID, chỉ giữ lại câu hỏi đầu tiên với mỗi ID
             var uniqueCauHois = cauHois
                         .GroupBy(c => c.Id)
                         .Select(g => g.First())
                         .ToList();
 
-    // Trả về danh sách câu hỏi không bị trùng
             return View(uniqueCauHois);
-
         }
+
 
         [HttpPost]
         public IActionResult LuuKetQuaLuyenLai(Dictionary<string, string> cauHoiAnswers)

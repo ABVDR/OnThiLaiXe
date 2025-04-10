@@ -258,7 +258,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasIndex("LoaiBangLaiId");
 
-                    b.ToTable("BaiSaHinhs", (string)null);
+                    b.ToTable("BaiSaHinhs");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.BaiThi", b =>
@@ -310,7 +310,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BaiThis", (string)null);
+                    b.ToTable("BaiThis");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.CauHoi", b =>
@@ -370,7 +370,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasIndex("LoaiBangLaiId");
 
-                    b.ToTable("CauHois", (string)null);
+                    b.ToTable("CauHois");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.CauHoiSai", b =>
@@ -394,7 +394,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasIndex("CauHoiId");
 
-                    b.ToTable("CauHoiSais", (string)null);
+                    b.ToTable("CauHoiSais");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.CauTrucDeThi", b =>
@@ -420,7 +420,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasIndex("LoaiBangLaiId");
 
-                    b.ToTable("CauTrucDeThis", (string)null);
+                    b.ToTable("CauTrucDeThis");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.ChiTietBaiThi", b =>
@@ -449,7 +449,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasIndex("CauHoiId");
 
-                    b.ToTable("ChiTietBaiThis", (string)null);
+                    b.ToTable("ChiTietBaiThis");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.ChuDe", b =>
@@ -470,7 +470,39 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ChuDes", (string)null);
+                    b.ToTable("ChuDes");
+                });
+
+            modelBuilder.Entity("OnThiLaiXe.Models.GiaoDich", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("DaThanhToan")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("MaGiaoDich")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("NgayThanhToan")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("SoTien")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("GiaoDichs");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.LichSuThi", b =>
@@ -519,7 +551,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("LichSuThis", (string)null);
+                    b.ToTable("LichSuThis");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.LoaiBangLai", b =>
@@ -550,7 +582,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("LoaiBangLais", (string)null);
+                    b.ToTable("LoaiBangLais");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.Share", b =>
@@ -581,7 +613,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Shares", (string)null);
+                    b.ToTable("Shares");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.ShareReply", b =>
@@ -616,7 +648,7 @@ namespace OnThiLaiXe.Migrations
 
                     b.HasIndex("ShareId");
 
-                    b.ToTable("ShareReplies", (string)null);
+                    b.ToTable("ShareReplies");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -747,6 +779,17 @@ namespace OnThiLaiXe.Migrations
                     b.Navigation("BaiThi");
 
                     b.Navigation("CauHoi");
+                });
+
+            modelBuilder.Entity("OnThiLaiXe.Models.GiaoDich", b =>
+                {
+                    b.HasOne("OnThiLaiXe.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.ShareReply", b =>

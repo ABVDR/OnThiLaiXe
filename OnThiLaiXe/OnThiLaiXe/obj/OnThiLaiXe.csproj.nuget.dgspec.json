@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BMTT\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj": {}
+    "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (7)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj": {}
   },
   "projects": {
-    "D:\\BMTT\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj": {
+    "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (7)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BMTT\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (7)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
         "projectName": "OnThiLaiXe",
-        "projectPath": "D:\\BMTT\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
-        "packagesPath": "C:\\Users\\lengo\\.nuget\\packages\\",
-        "outputPath": "D:\\BMTT\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (7)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (7)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lengo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -43,7 +43,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -103,6 +103,10 @@
               "target": "Package",
               "version": "[4.5.0, )"
             },
+            "PayPal": {
+              "target": "Package",
+              "version": "[1.9.1, )"
+            },
             "SendGrid": {
               "target": "Package",
               "version": "[9.29.3, )"
@@ -131,7 +135,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
