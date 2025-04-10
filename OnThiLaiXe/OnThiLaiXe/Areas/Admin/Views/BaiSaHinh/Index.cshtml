@@ -1,54 +1,91 @@
 ﻿@model IEnumerable<OnThiLaiXe.Models.BaiSaHinh>
 @{
-    ViewData["Title"] = "Danh sach";
+    ViewData["Title"] = "Danh sách bài sa hình";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
 <style>
     .container {
         margin-top: 30px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .table th, .table td {
+        vertical-align: middle;
+    }
+
+    .btn-action {
+        margin-right: 5px;
     }
 </style>
 
 <div class="container">
-    <form asp-action="Index" method="get" class="mb-3">
-        <div class="form-group">
-            <label>Lọc theo loại bằng lái:</label>
-            <select name="loaiBangLaiId" class="form-control d-inline w-auto" onchange="this.form.submit()">
-                <option value="">Tất cả</option>
-                @foreach (var loai in ViewBag.LoaiBangLais)
-                {
-                    <option value="@loai.Id" selected="@(loai.Id == ViewBag.SelectedLoaiBangLaiId)">@loai.TenLoai</option>
-                }
-            </select>
+    <h2 class="mb-4 text-primary">Danh sách bài sa hình</h2>
+
+    <!-- Form lọc -->
+    <form asp-action="Index" method="get" class="mb-4">
+        <div class="row align-items-center">
+            <div class="col-md-3">
+                <label class="form-label fw-bold">Lọc theo loại bằng lái:</label>
+            </div>
+            <div class="col-md-4">
+                <select name="loaiBangLaiId" class="form-select" onchange="this.form.submit()">
+                    <option value="">Tất cả</option>
+                    @foreach (var loai in ViewBag.LoaiBangLais)
+                    {
+                        <option value="@loai.Id" selected="@(loai.Id == ViewBag.SelectedLoaiBangLaiId)">@loai.TenLoai</option>
+                    }
+                </select>
+            </div>
         </div>
     </form>
 
-    <a asp-action="Create" class="btn btn-primary mb-3">Thêm bài sa hình</a>
+    <!-- Nút thêm mới -->
+    <div class="mb-4">
+        <a asp-action="Create" class="btn btn-primary btn-action"><i class="fas fa-plus"></i> Thêm bài sa hình</a>
+    </div>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Tên bài</th>
-                <th>Loại bằng lái</th>
-                <th>Thao tác</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var bai in Model)
-            {
+    <!-- Bảng danh sách -->
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead class="table-dark">
                 <tr>
-                    <td>Bài @bai.Order: @bai.TenBai</td>
-                    <td>@bai.LoaiBangLai?.TenLoai</td>
-                    <td>
-                        <a asp-action="Details" asp-route-id="@bai.Id" class="btn btn-sm btn-info">Chi tiết</a>
-                        <a asp-action="Edit" asp-route-id="@bai.Id" class="btn btn-sm btn-warning">Sửa</a>
-                        <form asp-action="Delete" asp-route-id="@bai.Id" method="post" class="d-inline">
-                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc muốn xóa?')">Xóa</button>
-                        </form>
-                    </td>
+                    <th>Tên bài</th>
+                    <th>Loại bằng lái</th>
+                    <th class="text-center">Thao tác</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @if (!Model.Any())
+                {
+                    <tr>
+                        <td colspan="3" class="text-center text-muted">Không có dữ liệu</td>
+                    </tr>
+                }
+                else
+                {
+                    @foreach (var bai in Model)
+                    {
+                        <tr>
+                            <td>Bài @bai.Order: @bai.TenBai</td>
+                            <td>@bai.LoaiBangLai?.TenLoai</td>
+                            <td class="text-center">
+                                <a asp-action="Details" asp-route-id="@bai.Id" class="btn btn-sm btn-info btn-action"><i class="fas fa-eye"></i> Chi tiết</a>
+                                <a asp-action="Edit" asp-route-id="@bai.Id" class="btn btn-sm btn-warning btn-action"><i class="fas fa-edit"></i> Sửa</a>
+                                <a asp-action="Delete" asp-route-id="@bai.Id" class="btn btn-sm btn-danger btn-action"><i class="fas fa-trash"></i> Xóa</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
 </div>
+
+<!-- Thêm Font Awesome để dùng icon (nếu chưa có trong _Layout.cshtml) -->
+@section Scripts {
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+}

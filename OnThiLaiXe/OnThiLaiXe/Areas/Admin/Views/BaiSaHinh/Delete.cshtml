@@ -1,0 +1,35 @@
+﻿@model OnThiLaiXe.Models.BaiSaHinh
+@{
+    ViewData["Title"] = "Xóa bài sa hình";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .container {
+        margin-top: 30px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<div class="container">
+    <h2 class="mb-4 text-danger">Xóa bài sa hình</h2>
+    <div class="alert alert-warning" role="alert">
+        Bạn có chắc chắn muốn xóa bài sa hình "<strong>Bài @Model.Order: @Model.TenBai</strong>" không? Hành động này không thể hoàn tác.
+    </div>
+
+    <dl class="row">
+        <dt class="col-sm-3">Tên bài:</dt>
+        <dd class="col-sm-9">Bài @Model.Order: @Model.TenBai</dd>
+        <dt class="col-sm-3">Loại bằng lái:</dt>
+        <dd class="col-sm-9">@Model.LoaiBangLai?.TenLoai</dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger me-2"><i class="fas fa-trash"></i> Xác nhận xóa</button>
+        <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Hủy</a>
+    </form>
+</div>

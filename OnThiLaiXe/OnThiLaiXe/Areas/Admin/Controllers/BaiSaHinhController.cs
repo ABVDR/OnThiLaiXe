@@ -86,9 +86,15 @@ namespace OnThiLaiXe.Areas.Admin.Controllers
             ViewBag.LoaiBangLais = await _loaiBangLaiRepository.GetAllAsync();
             return View(baiSaHinh);
         }
-
-        [HttpPost]
         public async Task<IActionResult> Delete(int id)
+        {
+            var baiSaHinh = await _baiSaHinhRepository.GetBaiSaHinhByIdAsync(id);
+            if (baiSaHinh == null) return NotFound();
+
+            return View(baiSaHinh);
+        }
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var baiSaHinh = await _baiSaHinhRepository.GetBaiSaHinhByIdAsync(id);
             if (baiSaHinh == null) return NotFound();
