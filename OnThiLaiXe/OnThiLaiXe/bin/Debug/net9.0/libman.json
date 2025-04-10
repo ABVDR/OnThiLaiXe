@@ -1,0 +1,10 @@
+{
+  "version": "3.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "elfinder@2.1.61",
+      "destination": "wwwroot/lib/elfinder/"
+    }
+  ]
+}
