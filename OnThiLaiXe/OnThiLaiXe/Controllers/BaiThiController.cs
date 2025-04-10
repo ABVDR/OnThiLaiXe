@@ -177,73 +177,6 @@ namespace OnThiLaiXe.Controllers
 
 
 
-        //[HttpPost]
-        //public IActionResult TaoDeThi(int loaiBangLaiId, Dictionary<int, int> soLuongMoiChuDe)
-        //{
-        //    if (soLuongMoiChuDe == null || !soLuongMoiChuDe.Any())
-        //    {
-        //        TempData["Error"] = "Số lượng câu hỏi theo chủ đề không hợp lệ.";
-        //        return RedirectToAction("ChonDeThi");
-        //    }
-
-        //    if (!_context.LoaiBangLais.Any(lb => lb.Id == loaiBangLaiId))
-        //    {
-        //        TempData["Error"] = "Loại bằng lái không hợp lệ.";
-        //        return RedirectToAction("ChonDeThi");
-        //    }
-
-        //    var danhSachCauHoi = new List<CauHoi>();
-
-        //    foreach (var chuDe in soLuongMoiChuDe)
-        //    {
-        //        int chuDeId = chuDe.Key;
-        //        int soLuong = chuDe.Value;
-
-        //        // Lấy câu hỏi theo chủ đề và loại bằng lái
-        //        var cauHoiTheoChuDe = _context.CauHois
-        //            .Where(c => c.LoaiBangLaiId == loaiBangLaiId && c.ChuDeId == chuDeId)
-        //            .OrderBy(r => Guid.NewGuid()) // Lấy ngẫu nhiên
-        //            .Take(soLuong)
-        //            .ToList();
-
-        //        danhSachCauHoi.AddRange(cauHoiTheoChuDe);
-        //    }
-
-        //    if (danhSachCauHoi.Count == 0)
-        //    {
-        //        TempData["Error"] = "Không đủ câu hỏi để tạo đề thi.";
-        //        return RedirectToAction("ChonDeThi");
-        //    }
-
-        //    try
-        //    {
-        //        var deThi = new BaiThi
-        //        {
-        //            NgayThi = DateTime.Now,
-        //            TenBaiThi = $"Đề thi chính thức - {DateTime.Now:dd/MM/yyyy HH:mm}",
-        //            LoaiBaiThi = "Đề thi chính thức",
-        //            ChiTietBaiThis = danhSachCauHoi.Select(c => new ChiTietBaiThi { CauHoiId = c.Id }).ToList()
-        //        };
-
-        //        // Nếu người dùng đăng nhập, lưu thông tin người dùng
-        //        if (User.Identity.IsAuthenticated)
-        //        {
-        //            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        //            deThi.UserId = int.Parse(currentUserId);
-        //        }
-
-        //        _context.BaiThis.Add(deThi);
-        //        _context.SaveChanges();
-
-        //        return RedirectToAction("ChiTietBaiThi", new { id = deThi.Id });
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        TempData["Error"] = "Đã xảy ra lỗi khi tạo đề thi: " + ex.Message;
-        //        return RedirectToAction("ChonDeThi");
-        //    }
-        //}
-
 
         public IActionResult ChonDeThi()
         {
@@ -352,7 +285,7 @@ namespace OnThiLaiXe.Controllers
 
             if (!cauHoiList.Any())
             {
-                TempData["Error"] = "Không có câu hỏi nào cho loại bằng lái này.";
+              
                 return RedirectToAction("DanhSachLoaiBangLai");
             }
 
@@ -589,15 +522,7 @@ namespace OnThiLaiXe.Controllers
         }
 
 
-        //public IActionResult KetQuaLuyenLai(int correctCount, int wrongCount)
-        //{
-        //    ViewBag.CorrectCount = correctCount;
-        //    ViewBag.WrongCount = wrongCount;
-
-        //    // Bạn có thể tạo logic để hiển thị các câu trả lời đúng, sai và giải thích ở đây nếu cần
-
-        //    return View();
-        //}
+      
 
 
 
@@ -640,172 +565,5 @@ namespace OnThiLaiXe.Controllers
 
 
 
-
-        [HttpGet]
-        public async Task<IActionResult> Share(string? sortOrder, string? searchString)
-        {
-            var sharesQuery = _context.Shares.AsQueryable();
-
-
-            if (!string.IsNullOrEmpty(searchString))
-            {
-
-                var matchingShares = _context.Shares.Where(s =>
-                    s.Content.Contains(searchString) ||
-                    (s.Topic != null && s.Topic.Contains(searchString)));
-
-
-                var matchingReplyShareIds = _context.ShareReplies
-                    .Where(r => r.Content.Contains(searchString))
-                    .Select(r => r.ShareId)
-                    .Distinct();
-                sharesQuery = matchingShares
-                          .Union(_context.Shares.Where(s => matchingReplyShareIds.Contains(s.Id)));
-            }
-
-
-            ViewBag.CurrentSort = sortOrder;
-            sharesQuery = sortOrder == "oldest"
-                ? sharesQuery.OrderBy(s => s.CreatedAt)
-                : sharesQuery.OrderByDescending(s => s.CreatedAt);
-
-            var shares = await sharesQuery.ToListAsync();
-
-
-            var replies = await _context.ShareReplies.ToListAsync();
-            ViewBag.AllReplies = replies;
-            ViewBag.ChuDeList = new List<string> { "GPLX", "Lý Thuyết", "Mô Phỏng", "Khác" };
-            ViewBag.SearchString = searchString;
-
-            return View(shares);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateShare(string Content, string? Topic)
-        {
-
-            if (!User.Identity.IsAuthenticated)
-            {
-                TempData["RequireLogin"] = "Bạn cần đăng nhập để chia sẻ.";
-                return RedirectToAction(nameof(Share));
-            }
-            if (string.IsNullOrEmpty(Content))
-            {
-                TempData["Error"] = "Nội dung không được để trống.";
-                return RedirectToAction(nameof(Share));
-            }
-
-            if (string.IsNullOrEmpty(Topic))
-            {
-                TempData["Error"] = "Vui lòng chọn chủ đề trước khi chia sẻ.";
-                return RedirectToAction(nameof(Share));
-            }
-
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var email = User.Identity.Name;
-            var userName = email.Split('@')[0];
-
-            var share = new Share
-            {
-                Content = Content,
-                Topic = Topic,
-                UserId = userId,
-                UserName = userName,
-                CreatedAt = DateTime.Now
-            };
-
-            _context.Add(share);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Share));
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteShare(int id)
-        {
-            var share = await _context.Shares.FindAsync(id);
-            if (share == null)
-            {
-                return NotFound();
-            }
-
-            _context.Shares.Remove(share);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Share));
-        }
-        [HttpPost]
-        public async Task<IActionResult> UploadImage(IFormFile upload)
-        {
-            if (upload != null && upload.Length > 0)
-            {
-                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
-                if (!Directory.Exists(uploadsFolder))
-                {
-                    Directory.CreateDirectory(uploadsFolder);
-                }
-
-                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(upload.FileName);
-                var filePath = Path.Combine(uploadsFolder, fileName);
-
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await upload.CopyToAsync(stream);
-                }
-                var imageUrl = Url.Content("~/uploads/" + fileName);
-                return Json(new { uploaded = true, url = imageUrl });
-            }
-
-            return BadRequest("No file uploaded.");
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateReply(int shareId, string content, int? parentReplyId)
-        {
-            if (!User.Identity.IsAuthenticated)
-            {
-                TempData["RequireLogin"] = "Bạn cần đăng nhập để trả lời.";
-                return RedirectToAction(nameof(Share));
-            }
-
-            if (string.IsNullOrWhiteSpace(content))
-            {
-                TempData["Error"] = "Nội dung trả lời không được để trống.";
-                return RedirectToAction(nameof(Share));
-            }
-
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var email = User.Identity.Name;
-            var userName = email.Split('@')[0];
-
-            var reply = new ShareReply
-            {
-                ShareId = shareId,
-                Content = content,
-                ParentReplyId = parentReplyId,
-                CreatedAt = DateTime.Now,
-                UserId = userId,
-                UserName = userName
-            };
-
-            _context.ShareReplies.Add(reply);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction(nameof(Share));
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteReply(int id)
-        {
-            var reply = await _context.ShareReplies.FindAsync(id);
-            if (reply == null)
-            {
-                return NotFound();
-            }
-            _context.ShareReplies.Remove(reply);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Share));
-
-        }
     }
 }

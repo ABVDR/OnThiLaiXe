@@ -50,11 +50,107 @@ figure, header, nav, section, article, aside, footer, figcaption {
   clear: both;
 }
 
-/* ---- .grid-item ---- */
 
+
+header {
+    background: linear-gradient(90deg, #0056d2, #007bff);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.navbar-brand h4 {
+    color: #ffd700; /* vàng ánh kim */
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand img {
+    height: 36px;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 12px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+    .navbar-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 2px;
+        width: 0;
+        height: 2px;
+        background-color: #ffd700;
+        transition: width 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link.active::after {
+        width: 60%;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #ffd700 !important;
+    }
+
+.dropdown-menu {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+    .dropdown-menu .dropdown-item {
+        font-size: 15px;
+        color: #333;
+        font-weight: 500;
+    }
+
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #f8f9fa;
+            color: #007bff;
+        }
+
+.nav-link.text-danger.fw-bold {
+    color: #ff6b6b !important;
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.7%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---- .grid-item ---- */
 .grid-sizer,
 .grid-item {
-  width: 50%;
+    width: 50%;
 }
 
 .grid-item {
@@ -303,7 +399,7 @@ header
     right: 0px;
     width: 100%;
     z-index: 1000; /* Đảm bảo header luôn trên cùng */
-    height: 100px; /* Giảm chiều cao cho thanh header gọn hơn */
+    height: 90px; /* Giảm chiều cao cho thanh header gọn hơn */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
     border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Viền nhẹ */
     backdrop-filter: blur(8px); /* Làm mờ nền khi header dính */

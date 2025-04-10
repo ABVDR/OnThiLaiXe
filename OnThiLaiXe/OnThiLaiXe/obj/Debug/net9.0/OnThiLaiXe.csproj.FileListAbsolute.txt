@@ -3986,7 +3986,6 @@ C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\thpuf5a4o0-gd4ghea75n.gz
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\9yea6swa53-yk3skm0y6f.gz
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\8bde91p6ju-c10bbavtrn.gz
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\dsjvulaee8-ve2kc9i280.gz
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\dihgoxptcm-icceci71zl.gz
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\14yrz7kfz8-e9jzipfa13.gz
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\7c99q86fac-rm929x5ywu.gz
@@ -4097,7 +4096,6 @@ C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\pi3vkv94xe-6obnlcia86.gz
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\ei0q2z1ncq-b9sayid5wm.gz
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\3ptm7pdurk-61n19gt1b8.gz
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\o59j2ecvpk-tt73ufw2sg.gz
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\cw6bm1jumv-xtxxf3hu2r.gz
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\q3i09gdpae-t1cqhe9u97.gz
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\etvjcmogp3-c2jlpeoesf.gz
@@ -9387,3 +9385,7 @@ D:\baitap\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\refint\OnThiLaiXe.dl
 D:\baitap\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\OnThiLaiXe.pdb
 D:\baitap\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\OnThiLaiXe.genruntimeconfig.cache
 D:\baitap\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\ref\OnThiLaiXe.dll
+C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\bin\Debug\net9.0\PayPal.dll
+C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\uh4aar5tnn-v4btqbylf4.gz
+C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\o59j2ecvpk-sy3oepckcp.gz
+C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (10)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\compressed\dsjvulaee8-f6ehi8tsfb.gz
