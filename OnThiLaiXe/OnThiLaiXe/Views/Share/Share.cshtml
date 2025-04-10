@@ -17,7 +17,7 @@
         </div>
         <script>
             setTimeout(() => {
-                window.location.href = '/Identity/Account/Login?ReturnUrl=/BaiThi/Share';
+                window.location.href = '/Identity/Account/Login?ReturnUrl=/Share/Share';
             }, 2000);
         </script>
     }
@@ -192,15 +192,21 @@
         </div>
     }
 </div>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script>
     // Khởi tạo CKEditor cho textarea #editor
     if (document.getElementById('editor')) {
         ClassicEditor
             .create(document.getElementById('editor'), {
-                ckfinder: { uploadUrl: '/BaiThi/UploadImage' },
+                ckfinder: { uploadUrl: '/Share/UploadImage' },
                 mediaEmbed: { previewsInData: true }
+            })
+            .then(editor => {
+                document.getElementById('editor').editorInstance = editor;
             })
             .catch(console.error);
     }
@@ -211,10 +217,13 @@
             if (!textarea.classList.contains('ck-editor-initialized')) {
                 ClassicEditor
                     .create(textarea, {
-                        ckfinder: { uploadUrl: '/BaiThi/UploadImage' },
+                        ckfinder: { uploadUrl: '/Share/UploadImage' },
                         mediaEmbed: { previewsInData: true }
                     })
-                    .then(() => textarea.classList.add('ck-editor-initialized'))
+                    .then(editor => {
+                        textarea.classList.add('ck-editor-initialized');
+                        textarea.editorInstance = editor; // Lưu lại để xóa sau
+                    })
                     .catch(console.error);
             }
         });
@@ -248,7 +257,85 @@
         clearTimeout(debounceTimer);
         debounceTimer = setTimeout(() => this.form.submit(), 500);
     });
+
+    // AJAX gửi form trả lời (cả cấp 1 và 2)
+    $(document).on('submit', 'form[action="/Share/CreateReply"]', function (e) {
+        e.preventDefault();
+        const form = $(this);
+        const formData = form.serialize();
+        const textarea = form.find('textarea.ckeditor')[0];
+        const editor = textarea?.editorInstance;
+
+        $.post('/Share/CreateReply', formData, function (response) {
+            if (!response.success) {
+                alert(response.message);
+                return;
+            }
+
+            const html = `
+                <div class="ms-4 border-start ps-3 mt-2 bg-light rounded p-2">
+                    <div class="d-flex align-items-center">
+                        <strong>${response.userName}</strong>
+                        <small class="text-muted ms-2">${response.createdAt}</small>
+                    </div>
+                    <div>${response.content}</div>
+                </div>`;
+
+            if (response.parentReplyId) {
+                $(`#reply-form-${response.parentReplyId}`).before(html);
+            } else {
+                $(`#share-reply-form-${form.find('[name="shareId"]').val()}`).before(html);
+            }
+
+            // Xóa nội dung sau khi gửi
+            if (editor) editor.setData('');
+            else form.find('textarea').val('');
+        }).fail(() => alert("Lỗi khi gửi trả lời"));
+    });
+
+    // AJAX gửi chia sẻ mới
+    $('form[action="/Share/CreateShare"]').on('submit', function (e) {
+        e.preventDefault();
+        const form = $(this)[0];
+        const formData = new FormData(form);
+        const editor = document.getElementById('editor')?.editorInstance;
+
+        $.ajax({
+            url: '/Share/CreateShare',
+            type: 'POST',
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function (response) {
+                if (response.success) {
+                    if (editor) editor.setData('');
+                    $('select[name="Topic"]').val('');
+                    location.reload(); // hoặc thêm mới vào DOM
+                } else {
+                    alert(response.message);
+                }
+            },
+            error: function () {
+                alert('Lỗi chia sẻ');
+            }
+        });
+    });
+
+    // AJAX xóa chia sẻ hoặc reply
+    $(document).on('submit', 'form[action="/Share/DeleteShare"], form[action="/Share/DeleteReply"]', function (e) {
+        e.preventDefault();
+        if (!confirm('Bạn chắc chắn muốn xóa?')) return;
+
+        const form = $(this);
+        const actionUrl = form.attr('action');
+        const formData = form.serialize();
+
+        $.post(actionUrl, formData, function () {
+            location.reload(); // hoặc xóa DOM phần tử tương ứng
+        }).fail(() => alert("Lỗi xóa"));
+    });
 </script>
+
 
 <style>
     .ck-editor__editable_inline {

@@ -51,27 +51,23 @@ namespace OnThiLaiXe.Controllers
 
             return View(shares);
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateShare(string Content, string? Topic)
         {
-
             if (!User.Identity.IsAuthenticated)
             {
-                TempData["RequireLogin"] = "Bạn cần đăng nhập để chia sẻ.";
-                return RedirectToAction(nameof(Share));
+                return Json(new { success = false, message = "Bạn cần đăng nhập để chia sẻ." });
             }
+
             if (string.IsNullOrEmpty(Content))
             {
-                TempData["Error"] = "Nội dung không được để trống.";
-                return RedirectToAction(nameof(Share));
+                return Json(new { success = false, message = "Nội dung không được để trống." });
             }
 
             if (string.IsNullOrEmpty(Topic))
             {
-                TempData["Error"] = "Vui lòng chọn chủ đề trước khi chia sẻ.";
-                return RedirectToAction(nameof(Share));
+                return Json(new { success = false, message = "Vui lòng chọn chủ đề trước khi chia sẻ." });
             }
 
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -89,23 +85,54 @@ namespace OnThiLaiXe.Controllers
 
             _context.Add(share);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Share));
+
+            return Json(new { success = true });
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteShare(int id)
+        public async Task<IActionResult> CreateReply(int shareId, string content, int? parentReplyId)
         {
-            var share = await _context.Shares.FindAsync(id);
-            if (share == null)
+            if (!User.Identity.IsAuthenticated)
             {
-                return NotFound();
+                return Json(new { success = false, message = "Bạn cần đăng nhập để trả lời." });
             }
 
-            _context.Shares.Remove(share);
+            if (string.IsNullOrWhiteSpace(content))
+            {
+                return Json(new { success = false, message = "Nội dung trả lời không được để trống." });
+            }
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var email = User.Identity.Name;
+            var userName = email.Split('@')[0];
+
+            var reply = new ShareReply
+            {
+                ShareId = shareId,
+                Content = content,
+                ParentReplyId = parentReplyId,
+                CreatedAt = DateTime.Now,
+                UserId = userId,
+                UserName = userName
+            };
+
+            _context.ShareReplies.Add(reply);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Share));
+
+            // Thay vì PartialView, trả về JSON để JS tự render
+            return Json(new
+            {
+                success = true,
+                userName,
+                content,
+                createdAt = reply.CreatedAt.ToString("dd/MM/yyyy HH:mm"),
+                parentReplyId = parentReplyId
+            });
         }
+
+
         [HttpPost]
         public async Task<IActionResult> UploadImage(IFormFile upload)
         {
@@ -130,54 +157,45 @@ namespace OnThiLaiXe.Controllers
 
             return BadRequest("No file uploaded.");
         }
+       
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateReply(int shareId, string content, int? parentReplyId)
+        public async Task<IActionResult> DeleteShare(int id)
         {
-            if (!User.Identity.IsAuthenticated)
-            {
-                TempData["RequireLogin"] = "Bạn cần đăng nhập để trả lời.";
-                return RedirectToAction(nameof(Share));
-            }
+            var share = await _context.Shares.FindAsync(id);
+            if (share == null) return Json(new { success = false, message = "Không tìm thấy chia sẻ." });
 
-            if (string.IsNullOrWhiteSpace(content))
-            {
-                TempData["Error"] = "Nội dung trả lời không được để trống.";
-                return RedirectToAction(nameof(Share));
-            }
-
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var email = User.Identity.Name;
-            var userName = email.Split('@')[0];
-
-            var reply = new ShareReply
-            {
-                ShareId = shareId,
-                Content = content,
-                ParentReplyId = parentReplyId,
-                CreatedAt = DateTime.Now,
-                UserId = userId,
-                UserName = userName
-            };
-
-            _context.ShareReplies.Add(reply);
+            _context.Shares.Remove(share);
             await _context.SaveChangesAsync();
-
-            return RedirectToAction(nameof(Share));
+            return Json(new { success = true });
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteReply(int id)
         {
             var reply = await _context.ShareReplies.FindAsync(id);
-            if (reply == null)
-            {
-                return NotFound();
-            }
+            if (reply == null) return Json(new { success = false, message = "Không tìm thấy trả lời." });
+
             _context.ShareReplies.Remove(reply);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Share));
-
+            return Json(new { success = true });
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetShareRepliesPartial(int shareId)
+        {
+            var replies = await _context.ShareReplies
+                .Where(r => r.ShareId == shareId)
+                .OrderBy(r => r.CreatedAt)
+                .ToListAsync();
+
+            ViewBag.AllReplies = replies;
+
+            var share = await _context.Shares.FirstOrDefaultAsync(s => s.Id == shareId);
+            return PartialView("Share", share);
+        }
+
     }
 }
