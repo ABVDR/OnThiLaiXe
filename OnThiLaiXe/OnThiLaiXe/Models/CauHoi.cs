@@ -41,6 +41,6 @@ namespace OnThiLaiXe.Models
         public int LoaiBangLaiId { get; set; }
         public LoaiBangLai? LoaiBangLai { get; set; }
         public ICollection<ChiTietBaiThi>? ChiTietBaiThis { get; set; }
-        public ICollection<ChiTietLichSuThi> ChiTietLichSuThis { get; set; }
+        public ICollection<ChiTietLichSuThi>? ChiTietLichSuThis { get; set; }
     }
 }
