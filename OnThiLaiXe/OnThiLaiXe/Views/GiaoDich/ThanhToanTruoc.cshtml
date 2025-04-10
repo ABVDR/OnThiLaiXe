@@ -1,0 +1,86 @@
+﻿@using System.Security.Claims
+@{
+    ViewData["Title"] = "Thanh toán để truy cập luyện câu sai";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+    .payment-card {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        text-align: center;
+    }
+
+        .payment-card h2 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .payment-card p {
+            font-size: 18px;
+            color: #555;
+        }
+
+    .paypal-logo {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+
+    #paypal-button-container {
+        margin-top: 30px;
+    }
+</style>
+
+<div class="payment-card">
+    <img class="paypal-logo" src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo" />
+    <h2>Truy cập tính năng cao cấp</h2>
+    <p>
+        Với chỉ <strong>5.000 VNĐ</strong>, bạn sẽ mở khóa chức năng <strong>"Luyện câu sai"</strong> – giúp bạn luyện tập các câu đã làm sai một cách hiệu quả nhất.
+    </p>
+    <div id="paypal-button-container"></div>
+</div>
+
+@section Scripts {
+    <script src="https://www.paypal.com/sdk/js?client-id=AdeMzwtFIyD_diukUc1rbBONgLKDekGBxyS4mYkHYeOSYmAmvzp8--kw3N3m4Zmgkj07rjgs0ligQp0y&currency=USD"></script>
+
+    <script>
+        paypal.Buttons({
+            style: {
+                layout: 'vertical',
+                color: 'blue',
+                shape: 'pill',
+                label: 'paypal'
+            },
+            createOrder: function (data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '5.00'
+                        }
+                    }]
+                });
+            },
+            onApprove: function (data, actions) {
+                return actions.order.capture().then(function (details) {
+                    // Gửi dữ liệu về server
+                    fetch('/GiaoDich/HoanTatGiaoDich', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            orderId: data.orderID,
+                            userId: '@User.FindFirstValue(System.Security.Claims.ClaimTypes.NameIdentifier)'
+                        })
+                    }).then(() => {
+                        window.location.href = '/BaiThi/LuyenLaiCauSai';
+                    });
+                });
+            }
+        }).render('#paypal-button-container');
+    </script>
+}
