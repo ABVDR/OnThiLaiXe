@@ -17,7 +17,7 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+	<link href="~/assets/css/templatemo-seo-dream.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/OnThiLaiXe.styles.css" asp-append-version="true" />
@@ -29,13 +29,14 @@
 <body>
 
     <!-- ***** Header Start ***** -->
-    <header class="header-area sticky-top bg-white shadow-sm">
+    <header class="header-area sticky-top shadow-sm text-white" style="background: linear-gradient(90deg, #0056d2, #007bff);">
+
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-lg navbar-light py-3">
                 <!-- Logo -->
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <a class="navbar-brand d-flex align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/assets/images/logo-icon.png" alt="Logo" class="me-2" style="height: 35px;">
                     <h4 class="mb-0">Lái Xe Chuẩn</h4>
-                    <img src="~/assets/images/logo-icon.png" alt="Logo" class="ms-2" style="height: 30px;">
                 </a>
 
                 <!-- Toggle button for mobile -->
@@ -46,7 +47,7 @@
 
                 <!-- Navbar links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto align-items-center gap-2">
                         <li class="nav-item">
                             <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Trang Chủ</a>
                         </li>
@@ -63,16 +64,13 @@
                             <a class="nav-link" asp-area="" asp-controller="BaiSaHinh" asp-action="Index">Ôn sa hình</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="BaiThi" asp-action="Share">Chia sẻ</a>
+                            <a class="nav-link" asp-area="" asp-controller="Share" asp-action="Share">Chia sẻ</a>
                         <li class="nav-item">
-                        <li class="nav-item">
-                            <partial name="_LoginPartial" />
-                        </li>
-                        @if (User.Identity.IsAuthenticated)
-                        {
+                                @if (User.Identity.IsAuthenticated)
+                                {
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Cá Nhân
+                                    Lịch Sử Thi
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <li>
@@ -91,21 +89,26 @@
                                         </a>
                                     </li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li>
-                                        <a class="dropdown-item" asp-controller="Account" asp-action="Profile">
-                                            <i class="fas fa-user"></i> Thông Tin Cá Nhân
-                                        </a>
-                                    </li>
+
                                 </ul>
                             </li>
-                        }
+                                }
 
+                        <li class="nav-item">
+                            <partial name="_LoginPartial" />
+                        </li>
+                       
 
                         
 
-                        <li class="nav-item">
-                            <a class="nav-link text-danger fw-bold" asp-area="Admin" asp-controller="QuanLyCauHoi" asp-action="Index">Trang Chủ Admin</a>
-                        </li>
+                                @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                                {
+                            <li class="nav-item">
+                                <a class="nav-link text-danger fw-bold" asp-area="Admin" asp-controller="QuanLyCauHoi" asp-action="Index">
+                                    <i class="fas fa-tools me-1"></i> Trang Quản Trị
+                                </a>
+                            </li>
+                                }
                     </ul>
                 </div>
             </nav>

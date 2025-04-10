@@ -256,10 +256,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFpVGhpXE9uVGFwQ2h1RGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/OneDrive/Máy tính/Thư mục mới (10)/OnThiLaiXe/OnThiLaiXe/OnThiLaiXe/Views/BaiThi/Share.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFpVGhpXFNoYXJlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Admin/OneDrive/Máy tính/Thư mục mới (10)/OnThiLaiXe/OnThiLaiXe/OnThiLaiXe/Views/BaiThi/ThiDe.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFpVGhpXFRoaURlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -286,6 +282,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Admin/OneDrive/Máy tính/Thư mục mới (10)/OnThiLaiXe/OnThiLaiXe/OnThiLaiXe/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/OneDrive/Máy tính/Thư mục mới (10)/OnThiLaiXe/OnThiLaiXe/OnThiLaiXe/Views/Share/Share.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVcU2hhcmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Admin/OneDrive/Máy tính/Thư mục mới (10)/OnThiLaiXe/OnThiLaiXe/OnThiLaiXe/Views/Thi/Index.cshtml]
