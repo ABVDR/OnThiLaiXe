@@ -158,7 +158,7 @@ namespace OnThiLaiXe.Controllers
             return View(baiThis);
         }
 
-      
+
         public IActionResult DanhSachDeThi()
         {
             var danhSachDeThi = _context.BaiThis
@@ -170,7 +170,7 @@ namespace OnThiLaiXe.Controllers
             return View(danhSachDeThi);
         }
 
-       
+
         public IActionResult DanhSachLoaiBangLai()
         {
             var danhSachLoaiBangLai = _context.LoaiBangLais.ToList();
@@ -178,12 +178,29 @@ namespace OnThiLaiXe.Controllers
         }
 
 
-        [HttpPost]
-        public IActionResult XoaBaiThi(int id)
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
         {
-            var baiThi = _context.BaiThis
+            var baiThi = await _context.BaiThis
                 .Include(bt => bt.ChiTietBaiThis)
-                .FirstOrDefault(bt => bt.Id == id);
+                .FirstOrDefaultAsync(bt => bt.Id == id);
+
+            if (baiThi == null)
+            {
+                return NotFound();
+            }
+
+            return View(baiThi);
+        }
+
+        // Xử lý xác nhận xóa bài thi
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var baiThi = await _context.BaiThis
+                .Include(bt => bt.ChiTietBaiThis)
+                .FirstOrDefaultAsync(bt => bt.Id == id);
 
             if (baiThi == null)
             {
@@ -191,7 +208,7 @@ namespace OnThiLaiXe.Controllers
             }
 
             _context.BaiThis.Remove(baiThi);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
             return RedirectToAction("DanhSachBaiThi");
         }
@@ -205,6 +222,27 @@ namespace OnThiLaiXe.Controllers
         }
 
 
+
+
+
+        public IActionResult Search(string keywords, string topic)
+        {
+            // Fetch the list of ChuDe (topics) from the database to pass to the View for dropdown selection
+            var chuDes = _context.ChuDes.ToList();
+            ViewBag.ChuDes = chuDes;
+
+            // Initialize the query to filter BaiThi based on keywords and topic
+            var questions = _context.BaiThis
+                .Include(b => b.ChiTietBaiThis)
+                .ThenInclude(ct => ct.CauHoi)
+                .ThenInclude(c => c.ChuDe)  // Ensure that we include ChuDe for filtering by topic
+                .Where(b => (string.IsNullOrEmpty(keywords) || b.ChiTietBaiThis.Any(c => c.CauHoi.NoiDung.Contains(keywords))) &&
+                            (string.IsNullOrEmpty(topic) || b.ChiTietBaiThis.Any(c => c.CauHoi.ChuDe.TenChuDe == topic)))
+                .ToList();
+
+            // Return the filtered list in the same view (or a different view if you prefer)
+            return View("DanhSachDeThi", questions);
+        }
 
     }
 }

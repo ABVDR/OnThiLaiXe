@@ -1,0 +1,19 @@
+﻿@model OnThiLaiXe.Models.BaiThi
+
+@{
+    ViewData["Title"] = "Xóa Bài Thi";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xác nhận xóa bài thi</h2>
+
+<div>
+    <p>Bạn có chắc chắn muốn xóa bài thi có mã <strong>@Model.Id</strong> không?</p>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Xóa</button>
+        <a asp-action="DanhSachBaiThi" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>
+
