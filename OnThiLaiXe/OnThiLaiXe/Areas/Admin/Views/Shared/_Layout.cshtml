@@ -177,48 +177,39 @@
                         </li> *@
                         <li class="nav-item">
                             <a asp-controller="Home" asp-action="Index" asp-area="">
-                                <i class="fas fa-home"></i>
+                                <i class="bi bi-house-fill"></i>
                                 <p>Trang Chủ</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a asp-area="Admin" asp-controller="QlbaiThi" asp-action="ChonDeThi">
-                                <i class="fas fa-book"></i>
+                                <i class="bi bi-book-fill"></i>
                                 <p>Chọn Đề Thi</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a asp-area="Admin" asp-controller="QlbaiThi" asp-action="DanhSachBaiThi">
-                                <i class="fas fa-list"></i>
+                                <i class="bi bi-list-ul"></i>
                                 <p>Danh Sách Bài Thi</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a asp-area="Admin" asp-controller="UserManager" asp-action="Index">
-                                <i class="fas fa-question"></i>
+                                <i class="bi bi-person-gear"></i>
                                 <p>Update Role User</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a data-bs-toggle="collapse" href="#tables">
-                                <i class="fas fa-table"></i>
-                                <p>Quản Lý</p>
-                                <span class="caret"></span>
+                            <a asp-area="Admin" asp-controller="QuanLyCauHoi" asp-action="Index">
+                                <i class="bi bi-question-circle-fill"></i>
+                                <p>Câu Hỏi</p>
                             </a>
-                            <div class="collapse" id="tables">
-                                <ul class="nav nav-collapse">
-                                    <li>
-                                        <a asp-area="Admin" asp-controller="QuanLyCauHoi" asp-action="Index">
-                                            <span class="sub-item">Quản Lý Câu Hỏi</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a asp-area="Admin" asp-controller="BaiSaHinh" asp-action="Index">
-                                            <span class="sub-item">Quản Lý Bài Học Sa Hình</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-area="Admin" asp-controller="BaiSaHinh" asp-action="Index">
+                                <i class="bi bi-book-fill"></i>
+                                <p>Bài Sa Hình</p>
+                            </a>
                         </li>
                         @* <li class="nav-item">
                             <a data-bs-toggle="collapse" href="#maps">
