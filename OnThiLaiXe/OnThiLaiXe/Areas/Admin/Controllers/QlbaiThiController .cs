@@ -83,19 +83,10 @@ namespace OnThiLaiXe.Controllers
 
             try
             {
+
                 var deThi = new BaiThi
                 {
-                    NgayThi = DateTime.Now,
-                    TenBaiThi = "Đề thi ngẫu nhiên",
-                    LoaiBaiThi = "Thử nghiệm",
-                    DaHoanThanh = false,
-                    Diem = 0,
-                    KetQua = "",
-                    MacLoiNghiemTrong = false,
-                    SoCauDung = 0,
-                    SoCauSai = 0,
-                    SoCauChuaTraLoi = danhSachCauHoi.Count,
-                    PhanTramDung = 0.0,
+                    TenBaiThi = "Đề thi mới",
                     ChiTietBaiThis = new List<ChiTietBaiThi>() // Đảm bảo không null
                 };
 
@@ -152,7 +143,7 @@ namespace OnThiLaiXe.Controllers
         {
             var baiThis = _context.BaiThis
                 .Include(bt => bt.ChiTietBaiThis) // Load số câu hỏi trong bài thi
-                .OrderByDescending(bt => bt.NgayThi)
+
                 .ToList();
 
             return View(baiThis);
