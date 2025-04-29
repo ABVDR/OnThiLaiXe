@@ -269,44 +269,9 @@ namespace OnThiLaiXe.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<bool>("DaHoanThanh")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("Diem")
-                        .HasColumnType("int");
-
-                    b.Property<string>("KetQua")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LoaiBaiThi")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("MacLoiNghiemTrong")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("NgayThi")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("PhanTramDung")
-                        .HasColumnType("float");
-
-                    b.Property<int>("SoCauChuaTraLoi")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SoCauDung")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SoCauSai")
-                        .HasColumnType("int");
-
                     b.Property<string>("TenBaiThi")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -387,8 +352,9 @@ namespace OnThiLaiXe.Migrations
                     b.Property<DateTime>("NgaySai")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -464,7 +430,7 @@ namespace OnThiLaiXe.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CauTraLoi")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(1)");
 
                     b.Property<bool?>("DungSai")
                         .HasColumnType("bit");
@@ -552,10 +518,6 @@ namespace OnThiLaiXe.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("LoaiBaiThi")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("MacLoiNghiemTrong")
                         .HasColumnType("bit");
 
@@ -575,8 +537,8 @@ namespace OnThiLaiXe.Migrations
                     b.Property<int>("TongSoCau")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

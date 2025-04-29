@@ -108,14 +108,7 @@ namespace OnThiLaiXe.Repositories
             // Mỗi câu đúng = 1 điểm, không tính điểm nếu sai câu điểm liệt
             int tongDiem = correctCount;
 
-            baiThi.Diem = tongDiem;
-            baiThi.MacLoiNghiemTrong = saiDiemLiet;
-            baiThi.SoCauDung = correctCount;
-            baiThi.SoCauSai = wrongCount;
-            baiThi.SoCauChuaTraLoi = unansweredCount;
-            baiThi.PhanTramDung = chiTietList.Count > 0 ? (double)correctCount / chiTietList.Count * 100 : 0;
-            baiThi.KetQua = (tongDiem >= diemToiThieu && !saiDiemLiet) ? "Đạt" : "Không đạt";
-            baiThi.DaHoanThanh = true;
+          
 
             _context.SaveChanges();
 
@@ -143,7 +136,7 @@ namespace OnThiLaiXe.Repositories
                 {
                     _context.CauHoiSais.Add(new CauHoiSai
                     {
-                        UserId = userId,
+                      
                         CauHoiId = cauHoiId,
                         NgaySai = DateTime.Now
                     });
@@ -155,7 +148,7 @@ namespace OnThiLaiXe.Repositories
                     int hashUserId = userGuid.GetHashCode() & int.MaxValue;
                     _context.CauHoiSais.Add(new CauHoiSai
                     {
-                        UserId = hashUserId,
+                   
                         CauHoiId = cauHoiId,
                         NgaySai = DateTime.Now
                     });
@@ -171,7 +164,7 @@ namespace OnThiLaiXe.Repositories
         public List<CauHoiSaiViewModel> GetDanhSachCauHoiSai(int userId)
         {
             return _context.CauHoiSais
-                .Where(c => c.UserId == userId)
+             
                 .Include(c => c.CauHoi)
                 .ThenInclude(ch => ch.ChuDe)
                 .GroupBy(c => c.CauHoiId)
@@ -195,7 +188,7 @@ namespace OnThiLaiXe.Repositories
         public List<CauHoi> GetCauHoiLuyenLaiCauSai(int userId, int maxQuestions = 20)
         {
             var cauHoiIds = _context.CauHoiSais
-                .Where(c => c.UserId == userId)
+              
                 .OrderByDescending(c => c.NgaySai)
                 .Select(c => c.CauHoiId)
                 .Distinct()
@@ -229,7 +222,7 @@ namespace OnThiLaiXe.Repositories
         {
             return _context.BaiThis
                 .Include(bt => bt.ChiTietBaiThis)
-                .OrderByDescending(bt => bt.NgayThi)
+             
                 .ToList();
         }
 

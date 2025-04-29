@@ -6,7 +6,7 @@ namespace OnThiLaiXe.Models
     {
         public int Id { get; set; }
 
-       
+
 
         [Required]
         public string NoiDung { get; set; }

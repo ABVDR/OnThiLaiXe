@@ -10,7 +10,7 @@
 
         <p><strong>Tên bài thi:</strong> @Model.TenBaiThi</p>
         <p><strong>Ngày thi:</strong> @Model.NgayThi.ToString("dd/MM/yyyy HH:mm")</p>
-        <p><strong>Loại bài thi:</strong> @Model.LoaiBaiThi</p>
+        
         <p><strong>Điểm:</strong> @Model.Diem</p>
         <p><strong>Kết quả:</strong> <span class="fw-bold @(Model.KetQua == "Đậu" ? "text-success" : "text-danger")">@Model.KetQua</span></p>
         <p><strong>Phần trăm đúng:</strong> @Model.PhanTramDung%</p>
@@ -22,7 +22,7 @@
             @foreach (var ct in Model.ChiTietLichSuThis)
             {
                 var dapAnDung = ct.CauHoi.DapAnDung;
-                var cauTraLoi = ct.CauTraLoi ?? "(Chưa trả lời)";
+               
                 var isCorrect = ct.DungSai == true ? "Đúng" : (ct.DungSai == false ? "Sai" : "Chưa trả lời");
 
                 <div class="accordion-item mb-2">
@@ -35,7 +35,7 @@
                         <div class="accordion-body">
                             <p><strong>Nội dung:</strong> @ct.CauHoi.NoiDung</p>
                             <p><strong>Đáp án đúng:</strong> <span class="text-success">@dapAnDung</span></p>
-                            <p><strong>Bạn chọn:</strong> @cauTraLoi</p>
+                           
                             <p>
                                 <strong>Kết quả:</strong>
                                 <span class="fw-bold @(ct.DungSai == true ? "text-success" : "text-danger")">@isCorrect</span>

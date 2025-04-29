@@ -2,20 +2,21 @@
 
 namespace OnThiLaiXe.Models
 {
-    public class LoaiBangLai
+
+    public class LichSuThi
     {
+        [Key] // Chỉ định khóa chính
         public int Id { get; set; }
-
-        [Required]
-        public string TenLoai { get; set; }
-
-        public string MoTa { get; set; }
-        //them 3 cai nay 
-        public string LoaiXe { get; set; }
-        public int ThoiGianThi { get; set; }
-        public int DiemToiThieu { get; set; }
-        //
-        public ICollection<CauHoi> CauHois { get; set; }
-        public ICollection<BaiSaHinh> BaiSaHinhs { get; set; }
+        public int BaiThiId { get; set; }
+        public string TenBaiThi { get; set; }
+        public DateTime NgayThi { get; set; }
+        public int TongSoCau { get; set; }
+        public int SoCauDung { get; set; }
+        public double PhanTramDung { get; set; }
+        public int Diem { get; set; }
+        public string KetQua { get; set; }
+        public bool MacLoiNghiemTrong { get; set; }
+        public string? UserId { get; set; }
+        public ICollection<ChiTietLichSuThi> ChiTietLichSuThis { get; set; }
     }
 }
