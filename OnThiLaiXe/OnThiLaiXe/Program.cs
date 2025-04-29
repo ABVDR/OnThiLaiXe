@@ -36,6 +36,13 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.SignInScheme = IdentityConstants.ExternalScheme; //de gg hd chung voi identity
     });
 builder.Services.AddMemoryCache();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IBaiThiRepository, BaiThiRepository>();
 builder.Services.AddScoped<ICauHoiRepository, EFCauHoiRepository>();
@@ -44,6 +51,8 @@ builder.Services.AddScoped<ILoaiBangLaiRepository, EFLoaiBangLaiRepository>();
 builder.Services.AddTransient<IGmailSender, SendGridEmailSender>();
 builder.Services.AddScoped<IUserRepository, EFUserRepository>();
 builder.Services.AddScoped<IBaiSaHinhRepository, EFBaiSaHinhRepository>();
+builder.Services.AddScoped<IGiaoDichRepository, EFGiaoDichRepository>();
+builder.Services.AddScoped<IVisitLogRepository, EFVisitLogRepository>();
 builder.Services.AddHangfire(configuration => configuration
         .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
         .UseSimpleAssemblyNameTypeSerializer()
@@ -58,7 +67,7 @@ builder.Services.AddHangfire(configuration => configuration
             DisableGlobalLocks = true
         }));
 builder.Services.AddHangfireServer();
-
+builder.Services.AddSignalR();
 
 
 
@@ -67,6 +76,56 @@ builder.Services.AddHangfireServer();
 
 
 var app = builder.Build();
+app.MapHub<OnlineUsersHub>("/onlineUsersHub");
+app.UseSession();
+
+// Middleware kiểm tra IP và session
+//////////////////////////////////////////////////////////////////////////////////////////////////
+app.Use(async (context, next) =>
+{
+    var sessionKey = "VisitRecorded";
+    //var visitorIp = context.Connection.RemoteIpAddress.ToString();
+    var currentTime = DateTime.UtcNow.AddHours(7); ;
+
+    var _context = context.RequestServices.GetRequiredService<ApplicationDbContext>();
+
+    //if (!context.Session.TryGetValue(sessionKey, out _))
+    //{
+    //    var lastVisit = await _context.VisitLogs
+    //        .Where(v => v.VisitorId == visitorIp)
+    //        .OrderByDescending(v => v.VisitTime)
+    //        .FirstOrDefaultAsync();
+
+    //    if (lastVisit == null || (currentTime - lastVisit.VisitTime).TotalMinutes >= 5)
+    //    {
+    //        var visitLog = new VisitLog
+    //        {
+    //            VisitTime = currentTime,
+    //            VisitorId = visitorIp
+    //        };
+
+    //        _context.VisitLogs.Add(visitLog);
+    //        await _context.SaveChangesAsync();
+    //        context.Session.SetString(sessionKey, "true");
+    //    }
+    //}
+    if (!context.Session.TryGetValue(sessionKey, out _))
+    {
+        var visitorIp = context.Connection.RemoteIpAddress?.ToString() ?? "Unknown";
+
+        var visitLog = new VisitLog
+        {
+            VisitTime = currentTime,
+            VisitorId = visitorIp
+        };
+
+        _context.VisitLogs.Add(visitLog);
+        await _context.SaveChangesAsync();
+        // Đặt session, lần sau trong cùng trình duyệt sẽ không ghi nữa
+        context.Session.SetString(sessionKey, "true");
+    }
+    await next.Invoke();
+});
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
