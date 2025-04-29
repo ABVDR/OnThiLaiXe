@@ -1,0 +1,296 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Dashboard Content -->
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Dashboard</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Tổng quan</li>
+    </ol>
+
+    <!-- Cards Row -->
+    <div class="row">
+        <!-- User Registration Card -->
+        <div class="col-xl-2 col-md-6">
+            <div class="card bg-primary text-white mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="card-title">Tài khoản mới</h5>
+                            <h2 class="mb-0">@ViewBag.NewUserCount</h2>
+                            <div class="small">Trong tháng hiện tại</div>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="fas fa-users fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <!-- Online Users Card -->
+        <div class="col-xl-2 col-md-6">
+            <div class="card bg-warning text-white mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="card-title">Đang truy cập</h5>
+                            <h2 class="mb-0">@ViewBag.CurrentVisitors</h2>
+                            <div class="small">Người dùng trực tuyến</div>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="fas fa-user-clock fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-md-6">
+            <div class="card bg-warning text-white mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="card-title">Đang truy cập</h5>
+                            <h2 class="mb-0" id="onlineUserCount">0</h2>
+                            <div class="small">Người dùng trực tuyến HUB</div>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="fas fa-user-clock fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Monthly Transaction Amount Card -->
+        <div class="col-xl-2 col-md-6">
+            <div class="card bg-success text-white mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="card-title">Doanh thu</h5>
+                            <h2 class="mb-0">@ViewBag.MonthlyRevenue.ToString("N0")₫</h2>
+                            <div class="small">Trong tháng hiện tại</div>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="fas fa-money-bill-wave fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Monthly Visitors Card -->
+        <div class="col-xl-2 col-md-6">
+            <div class="card bg-info text-white mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="card-title">Lượt truy cập</h5>
+                            <h2 class="mb-0">@ViewBag.MonthlyVisitors</h2>
+                            <div class="small">Trong tháng hiện tại</div>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="fas fa-chart-line fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Visitors Card -->
+        <div class="col-xl-2 col-md-6">
+            <div class="card bg-secondary text-white mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h5 class="card-title">Tổng lượt truy cập</h5>
+                            <h2 class="mb-0">@ViewBag.TotalVisitors</h2>
+                            <div class="small">Trong năm @DateTime.Now.Year</div>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="fas fa-globe fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Row -->
+    <div class="row">
+        <!-- Monthly Transaction Chart -->
+        <div class="col-xl-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-chart-bar me-1"></i>
+                    Biểu đồ doanh thu theo tháng
+                </div>
+                <div class="card-body">
+                    <canvas id="monthlyRevenueChart" width="100%" height="40"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Monthly Visitors Chart -->
+        <div class="col-xl-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-chart-bar me-1"></i>
+                    Biểu đồ lượt truy cập theo tháng
+                </div>
+                <div class="card-body">
+                    <canvas id="monthlyVisitorsChart" width="100%" height="40"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transaction History Card -->
+        <div class="col-xl-12">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-history me-1"></i>
+                    Lịch sử giao dịch gần đây
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="transactionTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>ID User</th>
+                                    <th>Mã giao dịch</th>
+                                    <th>Số tiền</th>
+                                    <th>Ngày thanh toán</th>
+                                    <th>Trạng thái</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var transaction in ViewBag.RecentTransactions)
+                                {
+                                    <tr>
+                                        <td>@transaction.User.Id</td>
+                                        <td>@transaction.MaGiaoDich</td>
+                                        <td>@transaction.SoTien.ToString("N0")₫</td>
+                                        <td>@transaction.NgayThanhToan.ToString("dd/MM/yyyy HH:mm")</td>
+                                        <td>
+                                            @if (transaction.DaThanhToan)
+                                            {
+                                                <span class="badge bg-success">Đã thanh toán</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge bg-warning">Chờ thanh toán</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Initialize charts
+            initializeMonthlyRevenueChart();
+            initializeMonthlyVisitorsChart();
+        });
+
+        function initializeMonthlyRevenueChart() {
+            var revenueData = @Html.Raw(Json.Serialize(ViewBag.RevenueByMonth));
+
+            var months = Object.keys(revenueData);
+            var amounts = months.map(function(month) {
+                return revenueData[month];
+            });
+
+            var ctx = document.getElementById('monthlyRevenueChart');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: months,
+                    datasets: [{
+                        label: 'Doanh thu (VNĐ)',
+                        data: amounts,
+                        backgroundColor: 'rgba(40, 167, 69, 0.5)',
+                        borderColor: 'rgba(40, 167, 69, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        function initializeMonthlyVisitorsChart() {
+            var visitData = @Html.Raw(Json.Serialize(ViewBag.VisitsByMonth));
+
+            var months = Object.keys(visitData);
+            var counts = months.map(function(month) {
+                return visitData[month];
+            });
+
+            var ctx = document.getElementById('monthlyVisitorsChart');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: months,
+                    datasets: [{
+                        label: 'Lượt truy cập',
+                        data: counts,
+                        backgroundColor: 'rgba(23, 162, 184, 0.5)',
+                        borderColor: 'rgba(23, 162, 184, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+
+    <script>
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/onlineUsersHub")
+            .build();
+
+        connection.on("UpdateUserCount", function (count) {
+            document.getElementById("onlineUserCount").innerText = count;
+        });
+
+        connection.start().catch(function (err) {
+            return console.error(err.toString());
+        });
+    </script>
+}

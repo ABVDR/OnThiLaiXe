@@ -337,7 +337,7 @@ namespace OnThiLaiXe.Areas.Identity.Pages.Account
 
                         try
                         {
-                            string role = string.IsNullOrEmpty(Input.Role) ? SD.Role_Customer : Input.Role;
+                            string role = string.IsNullOrEmpty(Input.Role) ? SD.Role_Admin : Input.Role;
                             await _userManager.AddToRoleAsync(user, role);
                         }
                         catch (Exception ex)
