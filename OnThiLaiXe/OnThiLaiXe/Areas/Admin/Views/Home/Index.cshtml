@@ -11,130 +11,84 @@
     </ol>
 
     <!-- Cards Row -->
-    <div class="row">
-        <!-- User Registration Card -->
+    <div class="row g-4">
+        <!-- Tài khoản mới -->
         <div class="col-xl-2 col-md-6">
-            <div class="card bg-primary text-white mb-4">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            <h5 class="card-title">Tài khoản mới</h5>
-                            <h2 class="mb-0">@ViewBag.NewUserCount</h2>
-                            <div class="small">Trong tháng hiện tại</div>
-                        </div>
-                        <div class="align-self-center">
-                            <i class="fas fa-users fa-2x"></i>
-                        </div>
+            <div class="card bg-primary text-white shadow rounded">
+                <div class="card-body d-flex align-items-center gap-3">
+                    <i class="fas fa-users fa-2x"></i>
+                    <div>
+                        <h6 class="text-uppercase fw-bold mb-1">Tài khoản mới</h6>
+                        <h3 class="fw-bold mb-0">@ViewBag.NewUserCount</h3>
+                        <small>Trong tháng hiện tại</small>
                     </div>
-                </div>
-                <div class="card-footer d-flex align-items-center justify-content-between">
-                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                </div>
-            </div>
-        </div>
-        <!-- Online Users Card -->
-        <div class="col-xl-2 col-md-6">
-            <div class="card bg-warning text-white mb-4">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            <h5 class="card-title">Đang truy cập</h5>
-                            <h2 class="mb-0">@ViewBag.CurrentVisitors</h2>
-                            <div class="small">Người dùng trực tuyến</div>
-                        </div>
-                        <div class="align-self-center">
-                            <i class="fas fa-user-clock fa-2x"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-2 col-md-6">
-            <div class="card bg-warning text-white mb-4">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            <h5 class="card-title">Đang truy cập</h5>
-                            <h2 class="mb-0" id="onlineUserCount">0</h2>
-                            <div class="small">Người dùng trực tuyến HUB</div>
-                        </div>
-                        <div class="align-self-center">
-                            <i class="fas fa-user-clock fa-2x"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Monthly Transaction Amount Card -->
-        <div class="col-xl-2 col-md-6">
-            <div class="card bg-success text-white mb-4">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            <h5 class="card-title">Doanh thu</h5>
-                            <h2 class="mb-0">@ViewBag.MonthlyRevenue.ToString("N0")₫</h2>
-                            <div class="small">Trong tháng hiện tại</div>
-                        </div>
-                        <div class="align-self-center">
-                            <i class="fas fa-money-bill-wave fa-2x"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer d-flex align-items-center justify-content-between">
-                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
             </div>
         </div>
 
-        <!-- Monthly Visitors Card -->
+        <!-- Truy cập gần nhất -->
         <div class="col-xl-2 col-md-6">
-            <div class="card bg-info text-white mb-4">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            <h5 class="card-title">Lượt truy cập</h5>
-                            <h2 class="mb-0">@ViewBag.MonthlyVisitors</h2>
-                            <div class="small">Trong tháng hiện tại</div>
-                        </div>
-                        <div class="align-self-center">
-                            <i class="fas fa-chart-line fa-2x"></i>
-                        </div>
+            <div class="card bg-warning text-white shadow rounded">
+                <div class="card-body d-flex align-items-center gap-3">
+                    <i class="fas fa-user-clock fa-2x"></i>
+                    <div>
+                        <h6 class="text-uppercase fw-bold mb-1">Truy cập 5 phút trước</h6>
+                        <h3 class="fw-bold mb-0">@ViewBag.CurrentVisitors</h3>
+                        <small>Người dùng trực tuyến</small>
                     </div>
-                </div>
-                <div class="card-footer d-flex align-items-center justify-content-between">
-                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
             </div>
         </div>
 
-        <!-- Total Visitors Card -->
+        <!-- Doanh thu -->
         <div class="col-xl-2 col-md-6">
-            <div class="card bg-secondary text-white mb-4">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            <h5 class="card-title">Tổng lượt truy cập</h5>
-                            <h2 class="mb-0">@ViewBag.TotalVisitors</h2>
-                            <div class="small">Trong năm @DateTime.Now.Year</div>
-                        </div>
-                        <div class="align-self-center">
-                            <i class="fas fa-globe fa-2x"></i>
-                        </div>
+            <div class="card bg-success text-white shadow rounded">
+                <div class="card-body d-flex align-items-center gap-3">
+                    <i class="fas fa-money-bill-wave fa-2x"></i>
+                    <div>
+                        <h6 class="text-uppercase fw-bold mb-1">Doanh thu</h6>
+                        <h3 class="fw-bold mb-0">@ViewBag.MonthlyRevenue.ToString("N0")₫</h3>
+                        <small>Trong tháng hiện tại</small>
                     </div>
                 </div>
-                <div class="card-footer d-flex align-items-center justify-content-between">
-                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            </div>
+        </div>
+
+        <!-- Lượt truy cập tháng -->
+        <div class="col-xl-2 col-md-6">
+            <div class="card bg-info text-white shadow rounded">
+                <div class="card-body d-flex align-items-center gap-3">
+                    <i class="fas fa-chart-line fa-2x"></i>
+                    <div>
+                        <h6 class="text-uppercase fw-bold mb-1">Lượt truy cập</h6>
+                        <h3 class="fw-bold mb-0">@ViewBag.MonthlyVisitors</h3>
+                        <small>Trong tháng hiện tại</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tổng lượt truy cập -->
+        <div class="col-xl-2 col-md-6">
+            <div class="card bg-secondary text-white shadow rounded">
+                <div class="card-body d-flex align-items-center gap-3">
+                    <i class="fas fa-globe fa-2x"></i>
+                    <div>
+                        <h6 class="text-uppercase fw-bold mb-1">Tổng lượt truy cập</h6>
+                        <h3 class="fw-bold mb-0">@ViewBag.TotalVisitors</h3>
+                        <small>Trong năm @DateTime.Now.Year</small>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Charts Row -->
-    <div class="row">
-        <!-- Monthly Transaction Chart -->
+    <div class="row mt-4">
+        <!-- Biểu đồ doanh thu -->
         <div class="col-xl-6">
-            <div class="card mb-4">
-                <div class="card-header">
+            <div class="card shadow rounded mb-4">
+                <div class="card-header bg-light fw-bold">
                     <i class="fas fa-chart-bar me-1"></i>
                     Biểu đồ doanh thu theo tháng
                 </div>
@@ -144,10 +98,10 @@
             </div>
         </div>
 
-        <!-- Monthly Visitors Chart -->
+        <!-- Biểu đồ truy cập -->
         <div class="col-xl-6">
-            <div class="card mb-4">
-                <div class="card-header">
+            <div class="card shadow rounded mb-4">
+                <div class="card-header bg-light fw-bold">
                     <i class="fas fa-chart-bar me-1"></i>
                     Biểu đồ lượt truy cập theo tháng
                 </div>
@@ -157,17 +111,17 @@
             </div>
         </div>
 
-        <!-- Transaction History Card -->
+        <!-- Bảng lịch sử giao dịch -->
         <div class="col-xl-12">
-            <div class="card mb-4">
-                <div class="card-header">
+            <div class="card shadow rounded mb-4">
+                <div class="card-header bg-light fw-bold">
                     <i class="fas fa-history me-1"></i>
                     Lịch sử giao dịch gần đây
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered" id="transactionTable" width="100%" cellspacing="0">
-                            <thead>
+                        <table class="table table-bordered table-hover align-middle text-center" id="transactionTable" width="100%" cellspacing="0">
+                            <thead class="table-light">
                                 <tr>
                                     <th>ID User</th>
                                     <th>Mã giao dịch</th>
@@ -182,7 +136,7 @@
                                     <tr>
                                         <td>@transaction.User.Id</td>
                                         <td>@transaction.MaGiaoDich</td>
-                                        <td>@transaction.SoTien.ToString("N0")₫</td>
+                                        <td class="text-end">@transaction.SoTien.ToString("N0")₫</td>
                                         <td>@transaction.NgayThanhToan.ToString("dd/MM/yyyy HH:mm")</td>
                                         <td>
                                             @if (transaction.DaThanhToan)
@@ -191,7 +145,7 @@
                                             }
                                             else
                                             {
-                                                <span class="badge bg-warning">Chờ thanh toán</span>
+                                                <span class="badge bg-warning text-dark">Chờ thanh toán</span>
                                             }
                                         </td>
                                     </tr>
@@ -204,6 +158,7 @@
         </div>
     </div>
 </div>
+
 
 @section Scripts {
     <!-- Chart.js -->
@@ -278,7 +233,7 @@
             });
         }
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+    @* <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
 
     <script>
         const connection = new signalR.HubConnectionBuilder()
@@ -292,5 +247,5 @@
         connection.start().catch(function (err) {
             return console.error(err.toString());
         });
-    </script>
+    </script> *@
 }

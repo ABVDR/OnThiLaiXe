@@ -9,6 +9,7 @@ using OnThiLaiXe.Repositories;
 using OnThiLaiXe.Services;
 using Microsoft.AspNetCore.StaticFiles;
 using OfficeOpenXml;
+using OnThiLaiXe.Middleware;
 var builder = WebApplication.CreateBuilder(args);
 ExcelPackage.License.SetNonCommercialPersonal("Webonlaixe");
 // Add services to the container.
@@ -76,57 +77,57 @@ builder.Services.AddSignalR();
 
 
 var app = builder.Build();
-app.MapHub<OnlineUsersHub>("/onlineUsersHub");
+//app.MapHub<OnlineUsersHub>("/onlineUsersHub");
 app.UseSession();
 
 // Middleware kiểm tra IP và session
 //////////////////////////////////////////////////////////////////////////////////////////////////
-app.Use(async (context, next) =>
-{
-    var sessionKey = "VisitRecorded";
-    //var visitorIp = context.Connection.RemoteIpAddress.ToString();
-    var currentTime = DateTime.UtcNow.AddHours(7); ;
+//app.Use(async (context, next) =>
+//{
+//    var sessionKey = "VisitRecorded";
+//    //var visitorIp = context.Connection.RemoteIpAddress.ToString();
+//    var currentTime = DateTime.UtcNow.AddHours(7); ;
 
-    var _context = context.RequestServices.GetRequiredService<ApplicationDbContext>();
+//    var _context = context.RequestServices.GetRequiredService<ApplicationDbContext>();
 
-    //if (!context.Session.TryGetValue(sessionKey, out _))
-    //{
-    //    var lastVisit = await _context.VisitLogs
-    //        .Where(v => v.VisitorId == visitorIp)
-    //        .OrderByDescending(v => v.VisitTime)
-    //        .FirstOrDefaultAsync();
+//    //if (!context.Session.TryGetValue(sessionKey, out _))
+//    //{
+//    //    var lastVisit = await _context.VisitLogs
+//    //        .Where(v => v.VisitorId == visitorIp)
+//    //        .OrderByDescending(v => v.VisitTime)
+//    //        .FirstOrDefaultAsync();
 
-    //    if (lastVisit == null || (currentTime - lastVisit.VisitTime).TotalMinutes >= 5)
-    //    {
-    //        var visitLog = new VisitLog
-    //        {
-    //            VisitTime = currentTime,
-    //            VisitorId = visitorIp
-    //        };
+//    //    if (lastVisit == null || (currentTime - lastVisit.VisitTime).TotalMinutes >= 5)
+//    //    {
+//    //        var visitLog = new VisitLog
+//    //        {
+//    //            VisitTime = currentTime,
+//    //            VisitorId = visitorIp
+//    //        };
 
-    //        _context.VisitLogs.Add(visitLog);
-    //        await _context.SaveChangesAsync();
-    //        context.Session.SetString(sessionKey, "true");
-    //    }
-    //}
-    if (!context.Session.TryGetValue(sessionKey, out _))
-    {
-        var visitorIp = context.Connection.RemoteIpAddress?.ToString() ?? "Unknown";
+//    //        _context.VisitLogs.Add(visitLog);
+//    //        await _context.SaveChangesAsync();
+//    //        context.Session.SetString(sessionKey, "true");
+//    //    }
+//    //}
+//    if (!context.Session.TryGetValue(sessionKey, out _))
+//    {
+//        var visitorIp = context.Connection.RemoteIpAddress?.ToString() ?? "Unknown";
 
-        var visitLog = new VisitLog
-        {
-            VisitTime = currentTime,
-            VisitorId = visitorIp
-        };
+//        var visitLog = new VisitLog
+//        {
+//            VisitTime = currentTime,
+//            VisitorId = visitorIp
+//        };
 
-        _context.VisitLogs.Add(visitLog);
-        await _context.SaveChangesAsync();
-        // Đặt session, lần sau trong cùng trình duyệt sẽ không ghi nữa
-        context.Session.SetString(sessionKey, "true");
-    }
-    await next.Invoke();
-});
-
+//        _context.VisitLogs.Add(visitLog);
+//        await _context.SaveChangesAsync();
+//        // Đặt session, lần sau trong cùng trình duyệt sẽ không ghi nữa
+//        context.Session.SetString(sessionKey, "true");
+//    }
+//    await next.Invoke();
+//});
+app.UseMiddleware<VisitLogMiddleware>();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
