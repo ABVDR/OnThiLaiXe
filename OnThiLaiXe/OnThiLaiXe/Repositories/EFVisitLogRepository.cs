@@ -11,46 +11,50 @@ namespace OnThiLaiXe.Repositories
         {
             _context = context;
         }
-
+        private DateTime GetVietnamTime()
+        {
+            var vnTimeZone = TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time");
+            return TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, vnTimeZone); // Chuyển đổi UTC về giờ Việt Nam
+        }
         public async Task<int> GetTodayVisitorsCountAsync()
         {
-            var now = DateTime.UtcNow;
+            var now = GetVietnamTime();
             return await _context.VisitLogs.CountAsync(v => v.VisitTime.Date == now.Date);
         }
 
         public async Task<int> GetMonthVisitorsCountAsync()
         {
-            var now = DateTime.UtcNow;
+            var now = GetVietnamTime();
             return await _context.VisitLogs.CountAsync(v => v.VisitTime.Month == now.Month && v.VisitTime.Year == now.Year);
         }
 
         public async Task<int> GetYearVisitorsCountAsync()
         {
-            var now = DateTime.UtcNow;
+            var now = GetVietnamTime();
             return await _context.VisitLogs.CountAsync(v => v.VisitTime.Year == now.Year);
         }
 
         public async Task<int> GetYesterdayVisitorsCountAsync()
         {
-            var now = DateTime.UtcNow;
+            var now = GetVietnamTime();
             return await _context.VisitLogs.CountAsync(v => v.VisitTime.Date == now.Date.AddDays(-1));
         }
 
         public async Task<int> GetLastWeekVisitorsCountAsync()
         {
-            var now = DateTime.UtcNow;
+            var now = GetVietnamTime();
             return await _context.VisitLogs.CountAsync(v => v.VisitTime >= now.AddDays(-7) && v.VisitTime < now);
         }
 
         public async Task<int> GetLastMonthVisitorsCountAsync()
         {
-            var now = DateTime.UtcNow;
+            var now = GetVietnamTime();
             return await _context.VisitLogs.CountAsync(v => v.VisitTime.Month == now.Month - 1 && v.VisitTime.Year == now.Year);
         }
 
         public async Task<int> GetCurrentVisitorsCountAsync()
         {
-            var now = DateTime.UtcNow.AddHours(7);
+            var now = GetVietnamTime();
             // Sử dụng thời gian tuyệt đối thay vì phép trừ để EF có thể dịch
             var fiveMinutesAgo = now.AddMinutes(-5);
             return await _context.VisitLogs.CountAsync(v => v.VisitTime >= fiveMinutesAgo);

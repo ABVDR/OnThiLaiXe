@@ -27,7 +27,9 @@ namespace OnThiLaiXe.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var currentDate = DateTime.Now;
+            // Lấy giờ Việt Nam (UTC+7)
+            var vnTimeZone = TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time");
+            var currentDate = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, vnTimeZone);  // Sử dụng giờ UTC và chuyển về giờ VN
             var currentMonth = currentDate.Month;
             var currentYear = currentDate.Year;
 
@@ -43,10 +45,18 @@ namespace OnThiLaiXe.Areas.Admin.Controllers
             // Lấy 10 giao dịch gần nhất
             var recentTransactions = await _giaoDichRepository.GetRecentTransactionsAsync(10);
 
+            // Lấy số người dùng truy cập trong 5 phút gần đây
             var currentVisitors = await _visitLogRepository.GetCurrentVisitorsCountAsync();
+
+            // Lấy số lượt truy cập trong tháng
             var monthlyVisitors = await _visitLogRepository.GetMonthVisitorsCountAsync();
+
+            // Lấy tổng số lượt truy cập trong năm
             var totalVisitors = await _visitLogRepository.GetYearVisitorsCountAsync();
+
+            // Lấy số lượt truy cập theo tháng trong năm hiện tại
             var visitsByMonth = await _visitLogRepository.GetVisitsByMonthAsync(currentYear);
+
             ViewBag.NewUserCount = newUserCount;
             ViewBag.MonthlyRevenue = monthlyRevenue;
             ViewBag.RevenueByMonth = revenueByMonth;
