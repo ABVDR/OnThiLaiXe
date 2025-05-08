@@ -1,0 +1,353 @@
+﻿@model OnThiLaiXe.Models.MoPhong
+
+@{
+    ViewData["Title"] = "Chi tiết mô phỏng";
+    var allMoPhongs = ViewBag.AllMoPhongs as IEnumerable<OnThiLaiXe.Models.MoPhong>;
+}
+
+<style>
+    .video-container {
+        position: relative;
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    video {
+        width: 100%;
+        display: block;
+    }
+
+    canvas#timeline {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 5px;
+        pointer-events: none;
+        background: transparent;
+        z-index: 10;
+    }
+
+    /* Flag marker style */
+    .flag-marker {
+        position: absolute;
+        bottom: 5px; /* Position just above the timeline */
+        transform: translateX(-50%); /* Center the flag */
+        pointer-events: none;
+        z-index: 11;
+    }
+
+    /* Custom video controls style */
+    video::-webkit-media-controls-panel {
+        padding-bottom: 5px;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Left sidebar with list of questions -->
+        <div class="col-md-3">
+            <div class="list-group">
+                @foreach (var item in allMoPhongs)
+                {
+                    <a href="@Url.Action("Details", new { id = item.Id })"
+                       class="list-group-item list-group-item-action @(item.Id == Model.Id ? "active" : "")">
+                        <strong>Câu @item.Order:</strong> @item.NoiDung
+                    </a>
+                }
+            </div>
+        </div>
+
+        <!-- Right side with current question content and video -->
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Câu @Model.Order: @Model.NoiDung</h4>
+                </div>
+                <div class="card-body">
+                    @if (!string.IsNullOrEmpty(Model.VideoUrl))
+                    {
+                        <div class="video-container position-relative mb-3" id="videoContainer">
+                            <video id="video" class="w-100" controls autoplay>
+                                <source src="@Model.VideoUrl" type="video/mp4">
+                                Trình duyệt của bạn không hỗ trợ video.
+                            </video>
+                            <canvas id="timeline" class="position-absolute start-0"></canvas>
+                            <div id="flagMarker" class="flag-marker" style="display: none;">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0H2V16H0V0Z" fill="white" />
+                                    <path d="M2 0V8H13L9 4L13 0H2Z" fill="white" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="controls text-center mb-3">
+                            <button id="resetBtn" class="btn btn-secondary">🔁 Làm lại</button>
+                        </div>
+
+                        <div id="scoreInfo" class="alert alert-info text-center">
+                            Nhấn Space để đánh dấu thời gian.
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-info">
+                            Không có video cho câu hỏi này.
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById("video");
+            const videoContainer = document.getElementById("videoContainer");
+            const canvas = document.getElementById("timeline");
+            const ctx = canvas.getContext("2d");
+            const resetBtn = document.getElementById("resetBtn");
+            const scoreInfo = document.getElementById("scoreInfo");
+            const flagMarker = document.getElementById("flagMarker");
+
+            let userMarked = false;
+            let userScore = 0;
+            let userTime = 0;
+
+            // Adjust canvas position to align with video progress bar
+            function adjustCanvasPosition() {
+                // Different browsers have different control heights
+                const controlsHeight = 28; // This is an estimate
+                canvas.style.bottom = controlsHeight + 'px';
+            }
+
+            // Call this on load
+            adjustCanvasPosition();
+
+            // Parse the DapAn string to create markers
+            const dapAnString = '@Model.DapAn';
+            const timePoints = dapAnString.split(',').map(parseFloat);
+
+            // Define fixed colors for the 5 scores
+            const scoreColors = [
+                { score: 5, color: '#28a745' }, // Green - 5 points
+                { score: 4, color: '#17a2b8' }, // Teal - 4 points
+                { score: 3, color: '#007bff' }, // Blue - 3 points
+                { score: 2, color: '#ffc107' }, // Yellow - 2 points
+                { score: 1, color: '#dc3545' }  // Red - 1 point
+            ];
+
+            // Create markers array - limited to maximum 5 segments
+            const markers = [];
+
+            // Only process the first 6 time points to create 5 segments
+            const maxSegments = Math.min(5, timePoints.length - 1);
+
+            for (let i = 0; i < maxSegments; i++) {
+                markers.push({
+                    start: timePoints[i],
+                    end: timePoints[i + 1],
+                    color: scoreColors[i].color,
+                    score: 5 - i // Scores from 5 down to 1
+                });
+            }
+
+            // Add a final marker for any time after the last processed point
+            if (timePoints.length > 0 && maxSegments > 0) {
+                const lastProcessedPoint = timePoints[maxSegments];
+                markers.push({
+                    start: lastProcessedPoint,
+                    end: lastProcessedPoint + 10, // Assuming video won't be much longer than the defined points
+                    color: '#6c757d', // Gray for score 0
+                    score: 0
+                });
+            }
+
+            // Initialize after video metadata is loaded
+            video.addEventListener("loadedmetadata", () => {
+                canvas.width = canvas.offsetWidth;
+
+                // Update the end time of the last marker to match video duration
+                if (markers.length > 0) {
+                    markers[markers.length - 1].end = video.duration;
+                }
+
+                // Clear the canvas initially
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            });
+
+            // After seeking to beginning, allow marking again
+            video.addEventListener("seeked", () => {
+                if (video.currentTime < 0.1) {
+                    userMarked = false;
+                    scoreInfo.className = "alert alert-info text-center";
+                    scoreInfo.innerHTML = "Nhấn Space để đánh dấu thời gian.";
+
+                    // Clear the canvas
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                    // Hide the flag marker
+                    flagMarker.style.display = "none";
+                }
+            });
+
+            // Space key handler
+            document.addEventListener("keydown", (e) => {
+                if (e.code === "Space" && !document.activeElement.tagName.match(/input|textarea|select/i)) {
+                    e.preventDefault();
+
+                    if (!video.paused && !userMarked) {
+                        userTime = video.currentTime;
+                        userScore = calculateScore(userTime);
+
+                        // Draw the markers
+                        drawMarkers();
+
+                        // Show and position the flag marker
+                        displayFlagMarker();
+
+                        // Display only the score
+                        displayScore(userScore);
+
+                        // Set flag
+                        userMarked = true;
+
+                        // Continue playing the video
+                        video.play();
+                    }
+                }
+            });
+
+            // Reset button handler
+            resetBtn.addEventListener("click", () => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                userMarked = false;
+                video.currentTime = 0;
+                video.play();
+                scoreInfo.className = "alert alert-info text-center";
+                scoreInfo.innerHTML = "Nhấn Space để đánh dấu thời gian.";
+
+                // Hide the flag marker
+                flagMarker.style.display = "none";
+            });
+
+            // Calculate score based on current time
+            function calculateScore(currentTime) {
+                for (const marker of markers) {
+                    if (currentTime >= marker.start && currentTime < marker.end) {
+                        return marker.score;
+                    }
+                }
+                return 0; // Default score if no marker matches
+            }
+
+            // Draw all time markers on the canvas
+            function drawMarkers() {
+                const width = canvas.width = canvas.offsetWidth;
+
+                ctx.clearRect(0, 0, width, canvas.height);
+
+                if (!video.duration) return; // Exit if video duration not available yet
+
+                markers.forEach(marker => {
+                    const xStart = (marker.start / video.duration) * width;
+                    const xEnd = (marker.end / video.duration) * width;
+                    ctx.fillStyle = marker.color;
+                    ctx.fillRect(xStart, 0, xEnd - xStart, canvas.height);
+                });
+            }
+
+            // Display the flag marker at the user's time position
+            function displayFlagMarker() {
+                if (!video.duration) return;
+
+                const videoWidth = video.offsetWidth;
+                const position = (userTime / video.duration) * videoWidth;
+
+                // Position the flag at the correct time point
+                flagMarker.style.left = position + 'px';
+
+                // Adjust flag bottom position to match the controls
+                flagMarker.style.bottom = (parseInt(canvas.style.bottom) + 5) + 'px';
+
+                // Color the flag based on the score
+                let flagColor;
+                switch (userScore) {
+                    case 5:
+                        flagColor = '#28a745';
+                        break;
+                    case 4:
+                        flagColor = '#17a2b8';
+                        break;
+                    case 3:
+                        flagColor = '#007bff';
+                        break;
+                    case 2:
+                        flagColor = '#ffc107';
+                        break;
+                    case 1:
+                        flagColor = '#dc3545';
+                        break;
+                    default:
+                        flagColor = '#6c757d';
+                }
+
+                // Update the flag's SVG fill color
+                const svgPath = flagMarker.querySelector('svg path:nth-child(2)');
+                if (svgPath) {
+                    svgPath.setAttribute('fill', flagColor);
+                }
+
+                // Show the flag
+                flagMarker.style.display = "block";
+            }
+
+            // Display score only
+            function displayScore(score) {
+                let alertClass = '';
+
+                switch (score) {
+                    case 5:
+                        alertClass = 'alert-success';
+                        break;
+                    case 4:
+                        alertClass = 'alert-info';
+                        break;
+                    case 3:
+                        alertClass = 'alert-primary';
+                        break;
+                    case 2:
+                        alertClass = 'alert-warning';
+                        break;
+                    case 1:
+                        alertClass = 'alert-danger';
+                        break;
+                    default:
+                        alertClass = 'alert-dark';
+                }
+
+                scoreInfo.className = `alert ${alertClass} text-center`;
+                scoreInfo.innerHTML = `<strong>Điểm: ${score}/5</strong>`;
+            }
+
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                if (userMarked && video.duration) {
+                    canvas.width = canvas.offsetWidth;
+                    drawMarkers();
+                    displayFlagMarker(); // Reposition the flag on resize
+                }
+            });
+
+            // Monitor video player size changes
+            const resizeObserver = new ResizeObserver(entries => {
+                if (userMarked) {
+                    displayFlagMarker(); // Reposition flag when video size changes
+                }
+            });
+            resizeObserver.observe(video);
+        });
+    </script>
+}

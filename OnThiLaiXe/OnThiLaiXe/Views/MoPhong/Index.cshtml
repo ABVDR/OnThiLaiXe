@@ -1,0 +1,14 @@
+﻿@model IEnumerable<OnThiLaiXe.Models.MoPhong>
+
+@{
+    ViewData["Title"] = "Mô phỏng";
+}
+
+<h1>Mô phỏng</h1>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-warning">
+        Không có câu hỏi mô phỏng nào.
+    </div>
+}

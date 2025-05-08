@@ -1,0 +1,542 @@
+﻿@model OnThiLaiXe.Models.MoPhong
+
+@{
+    ViewData["Title"] = "Thêm câu hỏi mô phỏng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Thêm câu hỏi mô phỏng mới</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h4>Thông tin câu hỏi</h4>
+            </div>
+            <div class="card-body">
+                <form asp-action="Create" method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="Order" class="control-label">Thứ tự bài</label>
+                        <input asp-for="Order" class="form-control" />
+                        <span asp-validation-for="Order" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="NoiDung" class="control-label">Nội dung câu hỏi</label>
+                        <textarea asp-for="NoiDung" class="form-control" rows="5"></textarea>
+                        <span asp-validation-for="NoiDung" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="VideoUrl">Video</label>
+                        <input type="file" id="videoInput" asp-for="VideoUrl" class="form-control" accept="video/*" />
+                        <span asp-validation-for="VideoUrl" class="text-danger"></span>
+                    </div>
+                    <div class="mb-4">
+                        <video id="previewVideo" width="100%" height="auto" controls></video>
+                    </div>
+
+                    <!-- Thời gian cho điểm -->
+                    <div class="form-group mt-3" id="timeScoreSection" style="display: none;">
+                        <div class="card">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="mb-0">Cài đặt thang điểm theo thời gian</h5>
+                            </div>
+                            <div class="card-body">
+                                <!-- Hiển thị thanh thời gian tương tác -->
+                                <div class="timeline-container mb-3 border rounded p-3">
+                                    <div class="mb-2">
+                                        <div id="selectionStatus" class="alert alert-primary">
+                                            <div id="selectionMessage">Nhấp vào thanh thời gian để đặt mốc thời gian đầu tiên</div>
+                                        </div>
+                                    </div>
+                                    <div class="progress" style="height: 50px; cursor: pointer;" id="videoTimeline">
+                                        <!-- Marker points will be added here dynamically -->
+                                    </div>
+                                    <div class="d-flex justify-content-between mt-1">
+                                        <span id="timelineStart">00:00</span>
+                                        <span id="timelineDuration">00:00</span>
+                                    </div>
+                                </div>
+
+                                <!-- Thông tin thời gian hiện tại và điều khiển -->
+                                <div class="mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <button type="button" class="btn btn-primary me-2" id="playPauseBtn">
+                                            <i class="bi bi-play-fill"></i> Play
+                                        </button>
+                                        <div class="flex-grow-1">
+                                            <span id="currentTimeLabel" class="badge bg-dark">Thời gian hiện tại: 0.0s</span>
+                                        </div>
+                                        <button type="button" class="btn btn-warning" id="resetAllBtn" title="Xóa tất cả mốc thời gian và bắt đầu lại">
+                                            <i class="bi bi-arrow-repeat"></i> Đặt lại tất cả
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Bảng các khoảng thời gian -->
+                                <div class="table-responsive">
+                                    <h5 class="mb-2">Các khoảng thời gian đã chọn:</h5>
+                                    <table class="table table-bordered table-sm" id="scoreTable">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th width="10%">Điểm</th>
+                                                <th width="20%">Thời gian bắt đầu</th>
+                                                <th width="20%">Thời gian kết thúc</th>
+                                                <th width="50%">Thao tác</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Các mốc thời gian sẽ được thêm vào đây -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trường DapAn để lưu kết quả -->
+                    <div class="form-group mt-3">
+                        <label asp-for="DapAn" class="control-label">Đáp án (chuỗi thời gian)</label>
+                        <input asp-for="DapAn" id="dapAnInput" class="form-control" readonly />
+                        <small class="form-text text-muted">Chuỗi thời gian sẽ được tự động cập nhật khi bạn thiết lập mốc thời gian.</small>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <input type="submit" value="Thêm mới" class="btn btn-primary" />
+                        <a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <style>
+        .time-marker {
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            top: 0;
+            background-color: #000;
+            z-index: 10;
+        }
+
+        .time-marker-label {
+            position: absolute;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 12px;
+            transform: translateX(-50%);
+            bottom: 50px;
+            z-index: 15;
+        }
+
+        .score-region {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .score-5-color {
+            background-color: rgba(25, 135, 84, 0.7);
+        }
+
+        .score-4-color {
+            background-color: rgba(13, 110, 253, 0.7);
+        }
+
+        .score-3-color {
+            background-color: rgba(23, 162, 184, 0.7);
+        }
+
+        .score-2-color {
+            background-color: rgba(255, 193, 7, 0.7);
+        }
+
+        .score-1-color {
+            background-color: rgba(220, 53, 69, 0.7);
+        }
+
+        #videoTimeline {
+            position: relative;
+            overflow: visible;
+        }
+
+            #videoTimeline.disabled {
+                cursor: not-allowed;
+                opacity: 0.8;
+            }
+
+        .time-pointer {
+            position: absolute;
+            width: 2px;
+            background-color: red;
+            height: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .time-label {
+            position: absolute;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 12px;
+            transform: translateX(-50%);
+            bottom: 55px;
+            z-index: 101;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            // Khai báo biến
+            let video = document.getElementById('previewVideo');
+            let timeMarkers = []; // Mảng lưu các mốc thời gian
+            let scoreRegions = []; // Mảng lưu các khoảng điểm
+            let isSelectionComplete = false; // Biến kiểm tra đã hoàn thành chọn điểm chưa
+
+            // Cấu hình điểm theo số mốc
+            const scoreConfig = {
+                1: { score: 5, color: 'score-5-color' },
+                2: { score: 4, color: 'score-4-color' },
+                3: { score: 3, color: 'score-3-color' },
+                4: { score: 2, color: 'score-2-color' },
+                5: { score: 1, color: 'score-1-color' }
+            };
+            // Số mốc thời gian tối đa cho phép
+            const MAX_TIME_MARKERS = 6; // 6 mốc cho 5 khoảng điểm
+
+            // Xử lý khi chọn video
+            $('#videoInput').on('change', function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const url = URL.createObjectURL(file);
+                    video.src = url;
+
+                    // Hiển thị phần cài đặt điểm
+                    $('#timeScoreSection').show();
+
+                    // Đặt lại thời gian video
+                    video.onloadedmetadata = function() {
+                        updateTimelineDisplay();
+                        resetAllMarkers();
+                    };
+
+                    // Cập nhật hiển thị thời gian hiện tại
+                    video.ontimeupdate = function() {
+                        $('#currentTimeLabel').text(`Thời gian hiện tại: ${video.currentTime.toFixed(1)}s`);
+                    };
+                }
+            });
+
+            // Nút play/pause
+            $('#playPauseBtn').on('click', function() {
+                if (video.paused) {
+                    video.play();
+                    $(this).html('<i class="bi bi-pause-fill"></i> Pause');
+                } else {
+                    video.pause();
+                    $(this).html('<i class="bi bi-play-fill"></i> Play');
+                }
+            });
+
+            // Xử lý nhấp vào timeline
+            $('#videoTimeline').on('click', function(e) {
+                // Kiểm tra nếu đã chọn đủ mốc thời gian hoặc timeline bị vô hiệu hóa
+                if (isSelectionComplete || $(this).hasClass('disabled') || !video.duration) {
+                    return;
+                }
+
+                const timelineWidth = $(this).width();
+                const clickPosition = e.pageX - $(this).offset().left;
+                const clickPercent = clickPosition / timelineWidth;
+                const clickTime = parseFloat(video.duration * clickPercent).toFixed(1);
+
+                // Tua video đến vị trí đó
+                video.currentTime = parseFloat(clickTime);
+
+                // Thêm mốc thời gian
+                addTimeMarker(parseFloat(clickTime));
+
+                // Cập nhật hiển thị
+                updateTimelineDisplay();
+                updateSelectionStatus();
+            });
+
+            // Thêm mốc thời gian mới
+            function addTimeMarker(time) {
+                // Kiểm tra nếu đã đủ số mốc tối đa
+                if (timeMarkers.length >= MAX_TIME_MARKERS) {
+                    alert(`Đã đạt số mốc thời gian tối đa (${MAX_TIME_MARKERS}). Không thể thêm mốc mới.`);
+                    return;
+                }
+
+                // Kiểm tra trùng lặp (không cho phép 2 mốc trùng thời gian)
+                for (let i = 0; i < timeMarkers.length; i++) {
+                    if (Math.abs(timeMarkers[i] - time) < 0.1) {
+                        alert('Mốc thời gian này đã tồn tại hoặc quá gần với mốc khác.');
+                        return;
+                    }
+                }
+
+                // Thêm vào mảng
+                timeMarkers.push(time);
+
+                // Sắp xếp lại mảng theo thứ tự thời gian
+                timeMarkers.sort((a, b) => a - b);
+
+                // Cập nhật các khoảng điểm
+                updateScoreRegions();
+
+                // Cập nhật chuỗi DapAn
+                updateDapAnInput();
+
+                // Kiểm tra nếu đã đủ số mốc tối đa
+                if (timeMarkers.length >= MAX_TIME_MARKERS) {
+                    isSelectionComplete = true;
+                    $('#videoTimeline').addClass('disabled');
+                    $('#selectionStatus').removeClass('alert-primary').addClass('alert-success');
+                }
+            }
+
+            // Cập nhật các khoảng điểm
+            function updateScoreRegions() {
+                scoreRegions = [];
+
+                // Xóa bảng hiện tại
+                $('#scoreTable tbody').empty();
+
+                // Nếu có ít nhất 2 mốc thời gian, tạo các khoảng
+                if (timeMarkers.length >= 2) {
+                    for (let i = 0; i < timeMarkers.length - 1; i++) {
+                        // Chỉ tạo tối đa 5 khoảng (cho 5 mức điểm)
+                        if (i >= 5) break;
+
+                        const start = timeMarkers[i];
+                        const end = timeMarkers[i + 1];
+                        const scoreInfo = scoreConfig[i + 1];
+
+                        // Thêm vào mảng scoreRegions
+                        scoreRegions.push({
+                            start,
+                            end,
+                            score: scoreInfo.score,
+                            color: scoreInfo.color
+                        });
+
+                        // Thêm vào bảng
+                        addScoreRegionToTable(start, end, scoreInfo.score, i);
+                    }
+                }
+            }
+
+            // Thêm khoảng điểm vào bảng
+            function addScoreRegionToTable(start, end, score, index) {
+                const row = $(`
+                    <tr data-index="${index}">
+                        <td class="text-center"><span class="badge bg-${getBootstrapColorClass(score)}">${score}</span></td>
+                        <td>${start}s</td>
+                        <td>${end}s</td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-primary preview-range me-1" title="Xem khoảng thời gian này">
+                                <i class="bi bi-play-fill"></i> Xem
+                            </button>
+                            <button type="button" class="btn btn-sm btn-warning remove-marker me-1" data-index="${index}" title="Xóa mốc bắt đầu của khoảng này">
+                                <i class="bi bi-trash"></i> Xóa mốc đầu
+                            </button>
+                            <button type="button" class="btn btn-sm btn-warning remove-marker" data-index="${index+1}" title="Xóa mốc kết thúc của khoảng này">
+                                <i class="bi bi-trash"></i> Xóa mốc cuối
+                            </button>
+                        </td>
+                    </tr>
+                `);
+
+                $('#scoreTable tbody').append(row);
+
+                // Sự kiện xem trước
+                row.find('.preview-range').on('click', function() {
+                    video.currentTime = start;
+                    video.play();
+                    $('#playPauseBtn').html('<i class="bi bi-pause-fill"></i> Pause');
+                });
+
+                // Sự kiện xóa mốc
+                row.find('.remove-marker').on('click', function() {
+                    const markerIndex = parseInt($(this).data('index'));
+                    removeTimeMarker(markerIndex);
+                });
+            }
+
+            // Xóa một mốc thời gian
+            function removeTimeMarker(index) {
+                if (index < 0 || index >= timeMarkers.length) return;
+
+                // Xóa mốc
+                timeMarkers.splice(index, 1);
+
+                // Đặt lại trạng thái nếu đã bị vô hiệu hóa
+                if (isSelectionComplete) {
+                    isSelectionComplete = false;
+                    $('#videoTimeline').removeClass('disabled');
+                    $('#selectionStatus').removeClass('alert-success').addClass('alert-primary');
+                }
+
+                // Nếu không còn mốc nào, đặt lại tất cả
+                if (timeMarkers.length === 0) {
+                    resetAllMarkers();
+                } else {
+                    // Cập nhật lại các khoảng
+                    updateScoreRegions();
+                    updateTimelineDisplay();
+                    updateSelectionStatus();
+                }
+
+                // Cập nhật chuỗi DapAn
+                updateDapAnInput();
+            }
+
+            // Nút reset tất cả
+            $('#resetAllBtn').on('click', function() {
+                if (confirm('Bạn có chắc chắn muốn xóa tất cả mốc thời gian đã chọn?')) {
+                    resetAllMarkers();
+                }
+            });
+
+            // Đặt lại tất cả các mốc thời gian
+            function resetAllMarkers() {
+                timeMarkers = [];
+                scoreRegions = [];
+                isSelectionComplete = false;
+                $('#videoTimeline').removeClass('disabled');
+                $('#selectionStatus').removeClass('alert-success').addClass('alert-primary');
+                $('#scoreTable tbody').empty();
+                updateTimelineDisplay();
+                updateSelectionStatus();
+                updateDapAnInput();
+            }
+
+            // Hiển thị vị trí con trỏ khi di chuột trên thanh thời gian
+            $('#videoTimeline').on('mousemove', function(e) {
+                if (!video.duration || isSelectionComplete) return;
+
+                // Xóa pointer cũ
+                $('.time-pointer, .time-label').remove();
+
+                const timelineWidth = $(this).width();
+                const pointerPosition = e.pageX - $(this).offset().left;
+                const pointerPercent = pointerPosition / timelineWidth;
+                const pointerTime = (video.duration * pointerPercent).toFixed(1);
+
+                // Tạo pointer mới
+                const pointer = $(`<div class="time-pointer" style="left: ${pointerPosition}px;"></div>`);
+                const label = $(`<div class="time-label" style="left: ${pointerPosition}px;">${pointerTime}s</div>`);
+
+                $(this).append(pointer);
+                $(this).append(label);
+            });
+
+            $('#videoTimeline').on('mouseleave', function() {
+                $('.time-pointer, .time-label').remove();
+            });
+
+            // Cập nhật hiển thị thanh thời gian
+            function updateTimelineDisplay() {
+                if (!video.duration) return;
+
+                $('#timelineStart').text('00:00');
+                const duration = Math.round(video.duration);
+                const minutes = Math.floor(duration / 60);
+                const seconds = duration % 60;
+                $('#timelineDuration').text(`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`);
+
+                // Xóa tất cả marker hiện tại
+                $('#videoTimeline').empty();
+
+                // Thêm các vùng điểm
+                scoreRegions.forEach(region => {
+                    const startPercent = (region.start / video.duration) * 100;
+                    const endPercent = (region.end / video.duration) * 100;
+                    const width = endPercent - startPercent;
+
+                    const regionElement = $(`<div class="score-region ${region.color}"
+                                        style="left: ${startPercent}%; width: ${width}%;">
+                                        ${region.score}
+                                     </div>`);
+
+                    $('#videoTimeline').append(regionElement);
+                });
+
+                // Thêm các mốc thời gian
+                timeMarkers.forEach((time, index) => {
+                    const percent = (time / video.duration) * 100;
+
+                    const markerElement = $(`<div class="time-marker"
+                                          style="left: ${percent}%;"></div>`);
+
+                    const markerLabel = $(`<div class="time-marker-label"
+                                         style="left: ${percent}%;">
+                                         ${index + 1}: ${time}s
+                                      </div>`);
+
+                    $('#videoTimeline').append(markerElement);
+                    $('#videoTimeline').append(markerLabel);
+                });
+            }
+
+            // Cập nhật trạng thái lựa chọn
+            function updateSelectionStatus() {
+                let message;
+
+                if (isSelectionComplete) {
+                    message = '<strong>Đã hoàn thành!</strong> Đã thiết lập đủ các mốc thời gian cho 5 mức điểm. Bạn có thể xóa mốc và đặt lại nếu cần.';
+                } else if (timeMarkers.length === 0) {
+                    message = 'Nhấp vào thanh thời gian để đặt mốc thời gian đầu tiên';
+                } else if (timeMarkers.length === 1) {
+                    message = `Đã đặt mốc 1: <strong>${timeMarkers[0]}s</strong>. Nhấp vào thanh thời gian để đặt mốc thứ hai (5 điểm).`;
+                } else if (timeMarkers.length === MAX_TIME_MARKERS - 1) {
+                    message = `Đã đặt ${timeMarkers.length} mốc. Nhấp vào thanh thời gian để đặt mốc cuối cùng (1 điểm).`;
+                } else {
+                    const nextScore = scoreConfig[timeMarkers.length].score;
+                    message = `Đã đặt ${timeMarkers.length} mốc. Nhấp vào thanh thời gian để đặt mốc tiếp theo (${nextScore} điểm).`;
+                }
+
+                $('#selectionMessage').html(message);
+            }
+
+            // Cập nhật đầu vào DapAn
+            function updateDapAnInput() {
+                $('#dapAnInput').val(timeMarkers.join(','));
+            }
+
+            // Lấy tên lớp màu Bootstrap tương ứng với điểm
+            function getBootstrapColorClass(score) {
+                switch(score) {
+                    case 5: return 'success';
+                    case 4: return 'primary';
+                    case 3: return 'info';
+                    case 2: return 'warning';
+                    case 1: return 'danger';
+                    default: return 'secondary';
+                }
+            }
+        });
+    </script>
+}

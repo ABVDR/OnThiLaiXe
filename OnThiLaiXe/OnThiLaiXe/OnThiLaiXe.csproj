@@ -50,6 +50,7 @@
     <Folder Include="Areas\Customer\Views\" />
     <Folder Include="Migrations\" />
     <Folder Include="wwwroot\files\" />
+    <Folder Include="wwwroot\videos\" />
   </ItemGroup>
 
   <ItemGroup>
