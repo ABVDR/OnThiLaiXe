@@ -54,6 +54,7 @@ builder.Services.AddScoped<IUserRepository, EFUserRepository>();
 builder.Services.AddScoped<IBaiSaHinhRepository, EFBaiSaHinhRepository>();
 builder.Services.AddScoped<IGiaoDichRepository, EFGiaoDichRepository>();
 builder.Services.AddScoped<IVisitLogRepository, EFVisitLogRepository>();
+builder.Services.AddScoped<IMoPhongRepository, MoPhongRepository>();
 builder.Services.AddHangfire(configuration => configuration
         .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
         .UseSimpleAssemblyNameTypeSerializer()
@@ -79,7 +80,7 @@ builder.Services.AddSignalR();
 var app = builder.Build();
 //app.MapHub<OnlineUsersHub>("/onlineUsersHub");
 app.UseSession();
-
+app.UseStaticFiles();
 // Middleware kiểm tra IP và session
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //app.Use(async (context, next) =>
@@ -138,18 +139,6 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
-app.UseStaticFiles();
-//var provider = new FileExtensionContentTypeProvider();
-//provider.Mappings[".mp4"] = "video/mp4";
-//app.UseStaticFiles(new StaticFileOptions
-//{
-//    ContentTypeProvider = provider,
-//    ServeUnknownFileTypes = false,
-//    OnPrepareResponse = ctx =>
-//    {
-//        ctx.Context.Response.Headers.Append("Accept-Ranges", "bytes"); // Cho phép video streaming
-//    }
-//});
 app.UseAuthorization();
 app.UseHangfireDashboard();
 app.UseEndpoints(endpoints =>

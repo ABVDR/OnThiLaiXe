@@ -1,0 +1,406 @@
+﻿@model OnThiLaiXe.Models.MoPhong
+
+@{
+    ViewData["Title"] = "Chi tiết câu hỏi mô phỏng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Chi tiết câu hỏi mô phỏng</h1>
+
+<div class="card mb-4">
+    <div class="card-header bg-primary text-white">
+        <h4>Thông tin câu hỏi</h4>
+    </div>
+    <div class="card-body">
+        <div class="row mb-3">
+            <div class="col-md-2">
+                <strong>ID:</strong>
+            </div>
+            <div class="col-md-10">
+                @Model.Id
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-2">
+                <strong>Thứ tự bài:</strong>
+            </div>
+            <div class="col-md-10">
+                @Model.Order
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-2">
+                <strong>Nội dung câu hỏi:</strong>
+            </div>
+            <div class="col-md-10">
+                @Html.Raw(Model.NoiDung)
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <h5>Video mô phỏng:</h5>
+                @if (string.IsNullOrEmpty(Model.VideoUrl))
+                {
+                    <div class="alert alert-warning">
+                        Không có video
+                    </div>
+                }
+                else
+                {
+                    <div class="video-container">
+                        <video id="previewVideo" width="100%" height="auto" controls>
+                            <source src="@Model.VideoUrl" type="video/mp4">
+                            Trình duyệt của bạn không hỗ trợ xem video.
+                        </video>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <h5>Thang điểm thời gian:</h5>
+                @if (string.IsNullOrEmpty(Model.DapAn))
+                {
+                    <div class="alert alert-warning">
+                        Không có dữ liệu thang điểm thời gian
+                    </div>
+                }
+                else
+                {
+                    <div class="timeline-container mb-3 border rounded p-3">
+                        <div class="progress" style="height: 50px;" id="videoTimeline">
+                            <!-- Marker points will be added here dynamically -->
+                        </div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <span id="timelineStart">00:00</span>
+                            <span id="timelineDuration">00:00</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-3">
+                        <button type="button" class="btn btn-primary me-2" id="playPauseBtn">
+                            <i class="bi bi-play-fill"></i> Play
+                        </button>
+                        <div class="flex-grow-1">
+                            <span id="currentTimeLabel" class="badge bg-dark">Thời gian hiện tại: 0.0s</span>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="scoreTable">
+                            <thead class="table-light">
+                                <tr>
+                                    <th width="15%">Điểm</th>
+                                    <th width="20%">Thời gian bắt đầu</th>
+                                    <th width="20%">Thời gian kết thúc</th>
+                                    <th width="45%">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Data will be filled by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="mt-2">
+                        <strong>Giá trị chuỗi thời gian:</strong>
+                        <code>@Model.DapAn</code>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="mt-2">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">
+                <i class="bi bi-pencil"></i> Chỉnh sửa
+            </a>
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Quay lại danh sách
+            </a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <style>
+        .time-marker {
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            top: 0;
+            background-color: #000;
+            z-index: 10;
+        }
+
+        .time-marker-label {
+            position: absolute;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 12px;
+            transform: translateX(-50%);
+            bottom: 50px;
+            z-index: 15;
+        }
+
+        .score-region {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .score-5-color {
+            background-color: rgba(25, 135, 84, 0.7);
+        }
+
+        .score-4-color {
+            background-color: rgba(13, 110, 253, 0.7);
+        }
+
+        .score-3-color {
+            background-color: rgba(23, 162, 184, 0.7);
+        }
+
+        .score-2-color {
+            background-color: rgba(255, 193, 7, 0.7);
+        }
+
+        .score-1-color {
+            background-color: rgba(220, 53, 69, 0.7);
+        }
+
+        #videoTimeline {
+            position: relative;
+            overflow: visible;
+        }
+
+        .time-pointer {
+            position: absolute;
+            width: 2px;
+            background-color: red;
+            height: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            // Khai báo biến
+            let video = document.getElementById('previewVideo');
+            let timeMarkers = []; // Mảng lưu các mốc thời gian
+            let scoreRegions = []; // Mảng lưu các khoảng điểm
+
+            // Cấu hình điểm theo số mốc
+            const scoreConfig = {
+                1: { score: 5, color: 'score-5-color' },
+                2: { score: 4, color: 'score-4-color' },
+                3: { score: 3, color: 'score-3-color' },
+                4: { score: 2, color: 'score-2-color' },
+                5: { score: 1, color: 'score-1-color' }
+            };
+
+            // Khởi tạo từ dữ liệu có sẵn
+            initializeFromExistingData();
+
+            // Nút play/pause
+            $('#playPauseBtn').on('click', function() {
+                if (video.paused) {
+                    video.play();
+                    $(this).html('<i class="bi bi-pause-fill"></i> Pause');
+                } else {
+                    video.pause();
+                    $(this).html('<i class="bi bi-play-fill"></i> Play');
+                }
+            });
+
+            // Khởi tạo từ dữ liệu có sẵn
+            function initializeFromExistingData() {
+                // Kiểm tra xem có dữ liệu đáp án không
+                const existingDapAn = '@Model.DapAn';
+                if (existingDapAn) {
+                    // Phân tích chuỗi đáp án thành mảng các mốc thời gian
+                    timeMarkers = existingDapAn.split(',').map(val => parseFloat(val));
+
+                    // Thiết lập sự kiện cho video
+                    video.onloadedmetadata = function() {
+                        updateTimelineDisplay();
+                        updateScoreTable();
+                    };
+
+                    // Cập nhật hiển thị thời gian hiện tại
+                    video.ontimeupdate = function() {
+                        $('#currentTimeLabel').text(`Thời gian hiện tại: ${video.currentTime.toFixed(1)}s`);
+                        updateCurrentTimePointer();
+                    };
+
+                    // Đảm bảo timeline được cập nhật sau khi video đã tải
+                    if (video.readyState >= 1) {
+                        updateTimelineDisplay();
+                        updateScoreTable();
+                    }
+                }
+            }
+
+            // Cập nhật vị trí con trỏ thời gian hiện tại
+            function updateCurrentTimePointer() {
+                // Xóa con trỏ cũ
+                $('.current-time-pointer').remove();
+
+                if (!video.duration) return;
+
+                const percent = (video.currentTime / video.duration) * 100;
+                const timePointer = $(`<div class="time-pointer current-time-pointer" style="left: ${percent}%;"></div>`);
+                $('#videoTimeline').append(timePointer);
+            }
+
+            // Cập nhật hiển thị thanh thời gian
+            function updateTimelineDisplay() {
+                if (!video.duration) return;
+
+                $('#timelineStart').text('00:00');
+                const duration = Math.round(video.duration);
+                const minutes = Math.floor(duration / 60);
+                const seconds = duration % 60;
+                $('#timelineDuration').text(`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`);
+
+                // Xóa tất cả marker hiện tại
+                $('#videoTimeline').empty();
+
+                // Tạo các khoảng điểm
+                updateScoreRegions();
+
+                // Thêm các vùng điểm
+                scoreRegions.forEach(region => {
+                    const startPercent = (region.start / video.duration) * 100;
+                    const endPercent = (region.end / video.duration) * 100;
+                    const width = endPercent - startPercent;
+
+                    const regionElement = $(`<div class="score-region ${region.color}"
+                                        style="left: ${startPercent}%; width: ${width}%;">
+                                        ${region.score}
+                                     </div>`);
+
+                    $('#videoTimeline').append(regionElement);
+                });
+
+                // Thêm các mốc thời gian
+                timeMarkers.forEach((time, index) => {
+                    const percent = (time / video.duration) * 100;
+
+                    const markerElement = $(`<div class="time-marker"
+                                          style="left: ${percent}%;"></div>`);
+
+                    const markerLabel = $(`<div class="time-marker-label"
+                                         style="left: ${percent}%;">
+                                         ${index + 1}: ${time}s
+                                      </div>`);
+
+                    $('#videoTimeline').append(markerElement);
+                    $('#videoTimeline').append(markerLabel);
+                });
+            }
+
+            // Cập nhật các khoảng điểm
+            function updateScoreRegions() {
+                scoreRegions = [];
+
+                // Nếu có ít nhất 2 mốc thời gian, tạo các khoảng
+                if (timeMarkers.length >= 2) {
+                    for (let i = 0; i < timeMarkers.length - 1; i++) {
+                        // Chỉ tạo tối đa 5 khoảng (cho 5 mức điểm)
+                        if (i >= 5) break;
+
+                        const start = timeMarkers[i];
+                        const end = timeMarkers[i + 1];
+                        const scoreInfo = scoreConfig[i + 1];
+
+                        // Thêm vào mảng scoreRegions
+                        scoreRegions.push({
+                            start,
+                            end,
+                            score: scoreInfo.score,
+                            color: scoreInfo.color
+                        });
+                    }
+                }
+            }
+
+            // Cập nhật bảng điểm
+            function updateScoreTable() {
+                // Xóa dữ liệu hiện tại trong bảng
+                $('#scoreTable tbody').empty();
+
+                // Thêm các khoảng điểm vào bảng
+                scoreRegions.forEach((region, index) => {
+                    addScoreRegionToTable(region.start, region.end, region.score, index);
+                });
+            }
+
+            // Thêm khoảng điểm vào bảng
+            function addScoreRegionToTable(start, end, score, index) {
+                const row = $(`
+                    <tr data-index="${index}">
+                        <td class="text-center"><span class="badge bg-${getBootstrapColorClass(score)}">${score} điểm</span></td>
+                        <td>${start}s</td>
+                        <td>${end}s</td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-primary preview-range" title="Xem khoảng thời gian này">
+                                <i class="bi bi-play-fill"></i> Xem thử
+                            </button>
+                            <span class="ms-2">Thời lượng: ${(end - start).toFixed(1)}s</span>
+                        </td>
+                    </tr>
+                `);
+
+                $('#scoreTable tbody').append(row);
+
+                // Sự kiện xem trước
+                row.find('.preview-range').on('click', function() {
+                    video.currentTime = start;
+                    video.play();
+                    $('#playPauseBtn').html('<i class="bi bi-pause-fill"></i> Pause');
+
+                    // Tự động dừng khi đến cuối khoảng thời gian
+                    const stopListener = function() {
+                        if (video.currentTime >= end) {
+                            video.pause();
+                            $('#playPauseBtn').html('<i class="bi bi-play-fill"></i> Play');
+                            video.removeEventListener('timeupdate', stopListener);
+                        }
+                    };
+
+                    video.addEventListener('timeupdate', stopListener);
+                });
+            }
+
+            // Lấy tên lớp màu Bootstrap tương ứng với điểm
+            function getBootstrapColorClass(score) {
+                switch(score) {
+                    case 5: return 'success';
+                    case 4: return 'primary';
+                    case 3: return 'info';
+                    case 2: return 'warning';
+                    case 1: return 'danger';
+                    default: return 'secondary';
+                }
+            }
+        });
+    </script>
+}

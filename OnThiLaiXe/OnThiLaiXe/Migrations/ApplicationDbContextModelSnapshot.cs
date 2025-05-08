@@ -576,6 +576,33 @@ namespace OnThiLaiXe.Migrations
                     b.ToTable("LoaiBangLais");
                 });
 
+            modelBuilder.Entity("OnThiLaiXe.Models.MoPhong", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("DapAn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NoiDung")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<string>("VideoUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MoPhongs");
+                });
+
             modelBuilder.Entity("OnThiLaiXe.Models.Share", b =>
                 {
                     b.Property<int>("Id")

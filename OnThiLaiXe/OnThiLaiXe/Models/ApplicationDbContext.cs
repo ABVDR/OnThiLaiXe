@@ -24,6 +24,7 @@ options) : base(options)
         public DbSet<ShareReply> ShareReplies { get; set; }
         public DbSet<GiaoDich> GiaoDichs { get; set; } // Thêm DbSet cho GiaoDich
         public DbSet<VisitLog> VisitLogs { get; set; }
+        public DbSet<MoPhong> MoPhongs { get; set; }
     }
 
 
