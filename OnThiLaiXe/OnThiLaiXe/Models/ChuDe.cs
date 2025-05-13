@@ -10,6 +10,7 @@ namespace OnThiLaiXe.Models
         public string TenChuDe { get; set; }
 
         public string MoTa { get; set; }
+        public string? ImageUrl { get; set; }
 
         public ICollection<CauHoi> CauHois { get; set; }
     }

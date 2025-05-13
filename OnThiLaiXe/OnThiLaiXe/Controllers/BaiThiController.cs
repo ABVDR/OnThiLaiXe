@@ -563,6 +563,17 @@ namespace OnThiLaiXe.Controllers
             ViewBag.LoaiBangLai = loaiBangLai;
             return View(danhSachDeThi);
         }
+        public IActionResult LamDeNgauNhien(int loaiBangLaiId)
+        {
+            var deThiNgauNhien = _baiThiRepo.GetDeThiByLoaiBangLai(loaiBangLaiId)
+                                             .OrderBy(x => Guid.NewGuid())
+                                             .FirstOrDefault();
+
+            if (deThiNgauNhien == null)
+                return NotFound("Không có đề thi nào phù hợp.");
+
+            return RedirectToAction("LamBaiThi", new { id = deThiNgauNhien.Id });
+        }
 
         public IActionResult OnTap(int loaiBangLaiId)
         {

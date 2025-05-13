@@ -7,40 +7,61 @@
 }
 
 <style>
+    .container2 {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 0 20px;
+    }
+
+    .section-title {
+        font-size: 32px;
+        font-weight: 800;
+        color: #1d3557;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+        .section-title span {
+            color: #007bff;
+        }
+
+    .alert-warning {
+        background-color: #fff3cd;
+        color: #856404;
+        border: 1px solid #ffeeba;
+        padding: 15px 20px;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: 600;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .grid-topic {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        justify-content: center;
+    }
+
+
     .card-topic {
         position: relative;
-        border-radius: 20px;
+        border-radius: 24px;
         background: #ffffff;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-        padding: 30px 20px;
-        transition: all 0.25s ease;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        padding: 30px 24px;
         text-align: center;
+        transition: all 0.3s ease;
         height: 100%;
+        text-decoration: none;
     }
 
         .card-topic:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
         }
-
-    .title-topic {
-        font-size: 1.5rem; /* Bự hơn rõ ràng */
-        font-weight: 800; /* Cực đậm */
-        color: #1d3557; /* Xanh đậm dễ đọc */
-        text-align: center;
-        margin-top: 12px;
-        line-height: 1.4;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .card-topic:hover .title-topic {
-        color: #f39c12; /* Đỏ giao thông khi hover */
-        transform: scale(1.05);
-        transition: all 0.2s ease;
-    }
-
-
 
     .badge-circle {
         position: absolute;
@@ -48,60 +69,65 @@
         left: 16px;
         background: #3498db;
         color: #fff;
-        border-radius: 50px;
-        padding: 6px 16px;
-        font-size: 14px;
+        border-radius: 30px;
+        padding: 8px 18px;
+        font-size: 16px;
         font-weight: 600;
     }
 
-    .icon-topic {
-        font-size: 40px;
-        color: #3498db;
-        margin-bottom: 15px;
+    .icon-topic img {
+        max-height: 110px;
+        object-fit: contain;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        transition: transform 0.3s ease;
+    }
+
+    .card-topic:hover .icon-topic img {
+        transform: scale(1.05);
     }
 
     .title-topic {
+        font-size: 22px;
         font-weight: 700;
-        font-size: 18px;
         color: #2c3e50;
+        text-transform: uppercase;
+        line-height: 1.5;
+        letter-spacing: 0.5px;
     }
 
-    .section-title {
-        font-size: 26px;
-        font-weight: 700;
-        color: #2c3e50;
+    .card-topic:hover .title-topic {
+        color: #e67e22;
     }
 </style>
 
-<div class="container mt-5">
-    <h2 class="text-center mb-4 section-title">
-       
-        Chọn chủ đề ôn tập - <span class="text-primary">@tenLoai</span>
+
+<div class="container2">
+    <h2 class="section-title">
+        Chọn chủ đề ôn tập - <span>@tenLoai</span>
     </h2>
 
     @if (!Model.Any())
     {
-        <div class="alert alert-warning text-center">
-            <i class="fas fa-exclamation-triangle me-2"></i>Không có chủ đề nào cho loại bằng lái này.
+        <div class="alert-warning">
+            <span>⚠️ Không có chủ đề nào cho loại bằng lái này.</span>
         </div>
     }
     else
     {
-        <div class="row g-4 justify-content-center">
+        <div class="grid-topic">
             @foreach (var chuDe in Model)
             {
                 var soCau = chuDe.CauHois?.Count() ?? 0;
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="@Url.Action("OnTapChuDe", "BaiThi", new { loaiBangLaiId = loaiBangLaiId, chuDeId = chuDe.Id })" class="text-decoration-none">
-                        <div class="card-topic">
-                            <div class="badge-circle">@soCau</div>
-                            <div class="icon-topic">
-                                <img src="data:image/png;base64,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" alt="list">
-                            </div>
-                            <div class="title-topic">@chuDe.TenChuDe</div>
+                <a href="@Url.Action("OnTapChuDe", "BaiThi", new { loaiBangLaiId = loaiBangLaiId, chuDeId = chuDe.Id })">
+                    <div class="card-topic">
+                        <div class="badge-circle">@soCau câu</div>
+                        <div class="icon-topic">
+                            <img src="@chuDe.ImageUrl" alt="@chuDe.TenChuDe" />
                         </div>
-                    </a>
-                </div>
+                        <div class="title-topic">@chuDe.TenChuDe</div>
+                    </div>
+                </a>
             }
         </div>
     }
