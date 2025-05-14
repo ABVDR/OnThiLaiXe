@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\do_an\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\qlbaithicontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\controllers\\qlbaithicontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\do_an\\onthilaixe\\onthilaixe\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -222,10 +226,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\do_an\\onthilaixe\\onthilaixe\\views\\baithi\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baithi\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\do_an\\onthilaixe\\onthilaixe\\areas\\admin\\controllers\\qlbaithicontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\areas\\admin\\controllers\\qlbaithicontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\pdtua\\desktop\\do_an\\onthilaixe\\onthilaixe\\areas\\admin\\views\\qlbaithi\\danhsachbaithi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -600,7 +600,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "BaiThiController.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\BaiThiController.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Controllers\\BaiThiController.cs",
@@ -641,19 +641,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CauHoi.cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Models\\CauHoi.cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\CauHoi.cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Models\\CauHoi.cs",
-              "RelativeToolTip": "OnThiLaiXe\\Models\\CauHoi.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T10:30:26.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
@@ -665,7 +653,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "VisitLogMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Middleware\\VisitLogMiddleware.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Middleware\\VisitLogMiddleware.cs",
@@ -677,7 +665,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LoaiBangLaiXeMay.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\LoaiBangLaiXeMay.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\LoaiBangLaiXeMay.cshtml",
@@ -689,7 +677,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ChuDe.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Models\\ChuDe.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\ChuDe.cs",
@@ -701,7 +689,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\appsettings.json",
               "RelativeDocumentMoniker": "OnThiLaiXe\\appsettings.json",
@@ -714,7 +702,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QlbaiThiController .cs",
+              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
+              "ToolTip": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
+              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAuwO8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T08:10:48.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "CauHoi.cs",
+              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Models\\CauHoi.cs",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\CauHoi.cs",
+              "ToolTip": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Models\\CauHoi.cs",
+              "RelativeToolTip": "OnThiLaiXe\\Models\\CauHoi.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T10:30:26.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "LoaiBangLaiOTo.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\LoaiBangLaiOTo.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\LoaiBangLaiOTo.cshtml",
@@ -726,7 +739,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ChonChuDe.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\ChonChuDe.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\ChonChuDe.cshtml",
@@ -750,7 +763,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "20250514040142_a.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an_14_5_2025\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250514040142_a.cs",
               "RelativeDocumentMoniker": "..\\..\\do_an_14_5_2025\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250514040142_a.cs",
@@ -762,7 +775,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\MoPhong\\Delete.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\MoPhong\\Delete.cshtml",
@@ -774,7 +787,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\MoPhong\\Details.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\MoPhong\\Details.cshtml",
@@ -786,7 +799,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\MoPhong\\Edit.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\MoPhong\\Edit.cshtml",
@@ -798,7 +811,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Delete.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Delete.cshtml",
@@ -810,7 +823,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Create.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Create.cshtml",
@@ -822,7 +835,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\MoPhong\\Create.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\MoPhong\\Create.cshtml",
@@ -834,7 +847,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "MoPhongController.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\MoPhongController.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\MoPhongController.cs",
@@ -846,7 +859,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\MoPhong\\Index.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\MoPhong\\Index.cshtml",
@@ -858,7 +871,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Edit.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Edit.cshtml",
@@ -870,7 +883,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Details.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\BaiSaHinh\\Details.cshtml",
@@ -882,7 +895,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "BaiSaHinhController.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\BaiSaHinhController.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\BaiSaHinhController.cs",
@@ -894,7 +907,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\MoPhong\\Details.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\MoPhong\\Details.cshtml",
@@ -906,7 +919,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\MoPhong\\Index.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\MoPhong\\Index.cshtml",
@@ -918,7 +931,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "MoPhongController.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\MoPhongController.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Controllers\\MoPhongController.cs",
@@ -930,7 +943,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "MoPhong.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Models\\MoPhong.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\MoPhong.cs",
@@ -942,7 +955,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "Share.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\Share\\Share.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\Share\\Share.cshtml",
@@ -954,7 +967,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Program.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Program.cs",
@@ -966,7 +979,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "MoPhongRepository.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\MoPhongRepository.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\MoPhongRepository.cs",
@@ -978,7 +991,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
@@ -990,7 +1003,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "IMoPhongRepository.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\IMoPhongRepository.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\IMoPhongRepository.cs",
@@ -1002,7 +1015,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "EFVisitLogRepository.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFVisitLogRepository.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\EFVisitLogRepository.cs",
@@ -1014,7 +1027,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "BaiSaHinh.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Models\\BaiSaHinh.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\BaiSaHinh.cs",
@@ -1026,7 +1039,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Models\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\ApplicationDbContext.cs",
@@ -1038,7 +1051,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "EFGiaoDichRepository.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Repositories\\EFGiaoDichRepository.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Repositories\\EFGiaoDichRepository.cs",
@@ -1050,7 +1063,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Views\\Home\\Index.cshtml",
@@ -1062,7 +1075,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\HomeController.cs",
@@ -1074,7 +1087,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "VisitMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Middleware\\VisitMiddleware.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Middleware\\VisitMiddleware.cs",
@@ -1086,7 +1099,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "LamBaiThi.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\LamBaiThi.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\LamBaiThi.cshtml",
@@ -1098,7 +1111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "OnTapChuDe.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\OnTapChuDe.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\OnTapChuDe.cshtml",
@@ -1110,7 +1123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "ThiDe.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\ThiDe.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\ThiDe.cshtml",
@@ -1122,7 +1135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "OnTap.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\OnTap.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\OnTap.cshtml",
@@ -1134,7 +1147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "LuyenLaiCauSai.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\LuyenLaiCauSai.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\LuyenLaiCauSai.cshtml",
@@ -1146,7 +1159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "LichSuThi.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\LichSuThi.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\LichSuThi.cshtml",
@@ -1158,7 +1171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "KetQuaLuyenLai.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\KetQuaLuyenLai.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\KetQuaLuyenLai.cshtml",
@@ -1170,7 +1183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "DanhSachLoaiBangLai.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\DanhSachLoaiBangLai.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\DanhSachLoaiBangLai.cshtml",
@@ -1182,7 +1195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "DanhSachDeThi.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\DanhSachDeThi.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\DanhSachDeThi.cshtml",
@@ -1194,7 +1207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "DanhSachCauHoiSai.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\DanhSachCauHoiSai.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\DanhSachCauHoiSai.cshtml",
@@ -1206,7 +1219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "DanhSachBaiThi.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\DanhSachBaiThi.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\DanhSachBaiThi.cshtml",
@@ -1218,7 +1231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "ChonDeThi.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\ChonDeThi.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\ChonDeThi.cshtml",
@@ -1230,7 +1243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "ChiTietBaiThi.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\ChiTietBaiThi.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\ChiTietBaiThi.cshtml",
@@ -1242,7 +1255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "20250429081627_suabaithi.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250429081627_suabaithi.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250429081627_suabaithi.cs",
@@ -1254,7 +1267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\ApplicationUser.cs",
@@ -1266,7 +1279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "LichSuThi.cs",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Models\\LichSuThi.cs",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Models\\LichSuThi.cs",
@@ -1278,7 +1291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "20250429081346_suabaithi.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250429081346_suabaithi.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Migrations\\20250429081346_suabaithi.cs",
@@ -1290,7 +1303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "KetQua.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\Thi\\KetQua.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\Thi\\KetQua.cshtml",
@@ -1302,7 +1315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "ChiTiet.cshtml",
               "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\ChiTiet.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\ChiTiet.cshtml",
@@ -1311,18 +1324,6 @@
               "ViewState": "AgIAAB8AAAAAAAAAAIAwwCUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-29T08:12:37.063Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "QlbaiThiController .cs",
-              "DocumentMoniker": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
-              "RelativeDocumentMoniker": "OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
-              "ToolTip": "C:\\Users\\pdtua\\Desktop\\do_an\\OnThiLaiXe\\OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
-              "RelativeToolTip": "OnThiLaiXe\\Areas\\Admin\\Controllers\\QlbaiThiController .cs",
-              "ViewState": "AgIAANsAAAAAAAAAAAAwwO8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T08:10:48.677Z"
             },
             {
               "$type": "Document",
