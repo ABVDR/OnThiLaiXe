@@ -13140,77 +13140,59 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\vendor\jquery\jquery.slim.min.map'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\videos\cinema_login.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\videos\cau1.mp4'))">
       <SourceType>Package</SourceType>
       <SourceId>OnThiLaiXe</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/OnThiLaiXe</BasePath>
-      <RelativePath>videos/cinema_login.jpg</RelativePath>
+      <RelativePath>videos/cau1.mp4</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>c7t58x6iw3</Fingerprint>
-      <Integrity>GC9nCDqMQyNDhEwYevBKrGti2Rdt4+9xfS2enqicNHw=</Integrity>
+      <Fingerprint>rrugqvbsfb</Fingerprint>
+      <Integrity>x+WvfEXk/vdZqHdIxdMwja1GAOsEWXjBHY6meyF0258=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\videos\cinema_login.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\videos\cau1.mp4'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\videos\Screen Recording 2025-04-10 233529.mp4'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\videos\cau2.mp4'))">
       <SourceType>Package</SourceType>
       <SourceId>OnThiLaiXe</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/OnThiLaiXe</BasePath>
-      <RelativePath>videos/Screen Recording 2025-04-10 233529.mp4</RelativePath>
+      <RelativePath>videos/cau2.mp4</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>d9vxdeh07s</Fingerprint>
-      <Integrity>f66eO3aFJbGUpMpmlxivMIaZzl5mMAghCPkHULr5CRs=</Integrity>
+      <Fingerprint>11j30ivb1o</Fingerprint>
+      <Integrity>60TNuVExUubpHFhXtSUllwHK83rNjDlsho9UJCgjapo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\videos\Screen Recording 2025-04-10 233529.mp4'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\videos\cau2.mp4'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\videos\Screen Recording 2025-04-11 023107.mp4'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\videos\cau3.mp4'))">
       <SourceType>Package</SourceType>
       <SourceId>OnThiLaiXe</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/OnThiLaiXe</BasePath>
-      <RelativePath>videos/Screen Recording 2025-04-11 023107.mp4</RelativePath>
+      <RelativePath>videos/cau3.mp4</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>iqsg9jrkgo</Fingerprint>
-      <Integrity>enoQof1QfzZMEMAvRpPIV8IihZpgBnsVJA6Iqf7BL3E=</Integrity>
+      <Fingerprint>63xn84uyrv</Fingerprint>
+      <Integrity>Qv8XTTpkaUQohN7Mhj6vLBX5ouSxYobUndB1XZClm6Q=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\videos\Screen Recording 2025-04-11 023107.mp4'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\videos\zzz.mp4'))">
-      <SourceType>Package</SourceType>
-      <SourceId>OnThiLaiXe</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/OnThiLaiXe</BasePath>
-      <RelativePath>videos/zzz.mp4</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dwqiglwdme</Fingerprint>
-      <Integrity>rRzwg15KvKtmSuLWmTAwSmzyyI7SR0AfCK2tLNguO5U=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\videos\zzz.mp4'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\videos\cau3.mp4'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>
