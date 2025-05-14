@@ -41,10 +41,7 @@
     <script>
         tinymce.init({
             selector: 'textarea.tinymce-enabled',
-            plugins: [
-                'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount',
-                'checklist', 'mediaembed', 'casechange', 'formatpainter', 'pageembed', 'a11ychecker', 'tinymcespellchecker', 'permanentpen', 'powerpaste', 'advtable', 'advcode', 'editimage', 'advtemplate', 'ai', 'mentions', 'tinycomments', 'tableofcontents', 'footnotes', 'mergetags', 'autocorrect', 'typography', 'inlinecss', 'markdown', 'importword', 'exportword', 'exportpdf'
-            ],
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
             toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
             tinycomments_mode: 'embedded',
             tinycomments_author: 'Author name',
@@ -60,7 +57,7 @@
             file_picker_callback: function (callback, value, meta) {
                 tinymce.activeEditor.windowManager.openUrl({
                     title: 'elFinder File Manager',
-                    url: '/admin/elfinder/file-manager', // Thay bằng action mới
+                    url: '/admin/elfinder/file-manager',
                     width: 900,
                     height: 450,
                     onMessage: function (api, data) {
