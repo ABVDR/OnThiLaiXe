@@ -9,7 +9,7 @@
             <a class="back-link" href="javascript:history.back()">
                 <i class="fas fa-arrow-left"></i>
             </a>
-         
+
 
             <h1 class="header-text">
                 Bài Thi: @Model.Id
@@ -28,6 +28,14 @@
                     <p class="question-text">
                         <strong>Câu @(i + 1):</strong> @chiTiet.CauHoi.NoiDung
                     </p>
+
+                    @if (!string.IsNullOrEmpty(chiTiet.CauHoi.MediaUrl))
+                    {
+                        <div class="question-media mb-3">
+                            <img src="@chiTiet.CauHoi.MediaUrl" alt="Hình minh họa" class="img-fluid" style="max-width: 100%; height: auto;" />
+                        </div>
+                    }
+
                     <form class="question-options">
                         <label class="option-item" for="q@chiTiet.CauHoi.Id_a_@i">
                             <input id="q@chiTiet.CauHoi.Id_a_@i" name="answer_@chiTiet.CauHoi.Id" type="radio" value="A" />
@@ -118,6 +126,22 @@
         gap: 8px;
         margin-bottom: 24px;
     }
+
+    .question-media img {
+        border: 1px solid #ccc;
+        padding: 5px;
+        margin-top: 10px;
+        border-radius: 6px;
+        width: 300px;
+    }
+
+    .question-media {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+    }
+
 
     .back-link {
         color: #00875A;
@@ -453,7 +477,7 @@
     const diemLietElement = document.getElementById("soCauLoiNghiemTrong");
     diemLietElement.innerText = data.soCauLoiNghiemTrong;
     diemLietElement.style.color = data.soCauLoiNghiemTrong > 0 ? "red" : "green";
-    
+
 
         data.ketQuaList.forEach((kq, index) => {
             const slide = document.getElementById(`question-${index}`);
