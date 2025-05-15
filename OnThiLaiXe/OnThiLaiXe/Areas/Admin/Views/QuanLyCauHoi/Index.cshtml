@@ -67,6 +67,11 @@
         width: 200px;
     }
 
+    .status-column {
+        width: 120px; /* Đặt độ rộng cột trạng thái */
+        min-width: 120px; /* Đảm bảo kích thước tối thiểu */
+    }
+
     .filter-container {
         margin-bottom: 20px;
         padding: 20px;
@@ -119,6 +124,10 @@
             .autocomplete-items div:hover {
                 background-color: #f1f1f1;
             }
+
+    .status-btn {
+        white-space: nowrap; /* Ngăn chặn nút xuống dòng */
+    }
 </style>
 
 <div class="container">
@@ -159,9 +168,9 @@
                 <th>Chủ đề</th>
                 <th>Loại bằng</th>
                 <th id="sortNoiDung">Nội dung</th>
-                <th>Đáp án đúng</th>
                 <th>Điểm liệt</th>
                 <th class="action-column">Hành động</th>
+                <th class="status-column">Trạng thái</th>
             </tr>
         </thead>
         <tbody id="tableBody">
@@ -171,8 +180,17 @@
                     <td class="chuDe">@item.ChuDe.TenChuDe</td>
                     <td class="loaiBang">@item.LoaiBangLai.TenLoai</td>
                     <td class="noiDung">@item.NoiDung</td>
-                    <td><span class="badge bg-success">@item.DapAnDung</span></td>
-                    <td>@(item.DiemLiet ? "Có" : "Không")</td>
+                    <td>
+                        @if (item.DiemLiet)
+                        {
+                            <i class="bi bi-exclamation-circle-fill text-danger" title="Câu điểm liệt"></i>
+                        }
+                        else
+                        {
+                            <i class="bi bi-check-circle-fill text-success" title="Không điểm liệt"></i>
+                        }
+                    </td>
+
                     <td class="action-column">
                         <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-sm btn-warning" title="Sửa">
                             <i class="bi bi-pencil-square"></i>
@@ -180,10 +198,15 @@
                         <a asp-action="Display" asp-route-id="@item.Id" class="btn btn-sm btn-info" title="Xem">
                             <i class="bi bi-eye"></i>
                         </a>
-                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger" title="Xóa">
-                            <i class="bi bi-trash"></i>
+                    </td>
+                    <td class="status-column">
+                        <!-- Thêm nút toggle vào cột Trạng thái -->
+                        <a asp-action="ToggleActive" asp-route-id="@item.Id"
+                           class="btn btn-sm status-btn @(item.isDeleted ? "btn-success" : "btn-danger")"
+                           title="@(item.isDeleted ? "Kích hoạt" : "Vô hiệu hóa")">
+                            <i class="bi @(item.isDeleted ? "bi-check-circle" : "bi-x-circle")"></i>
+                            @(item.isDeleted ? "Kích hoạt" : "Vô hiệu")
                         </a>
-
                     </td>
                 </tr>
             }
@@ -240,6 +263,23 @@
             rows.forEach(row => tableBody.appendChild(row));
             sortDirection = !sortDirection;
             this.innerHTML = `Nội dung ${sortDirection ? '⬆️' : '⬇️'}`;
+        });
+
+        // Thêm xác nhận cho các nút toggle trạng thái
+        document.querySelectorAll('.status-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const url = this.getAttribute('href');
+                const isDeleted = this.classList.contains('btn-success');
+                const noiDung = this.closest('tr').querySelector('.noiDung').textContent.trim();
+                const action = isDeleted ? "kích hoạt" : "vô hiệu hóa";
+
+                const confirmMessage = `Bạn có chắc chắn muốn ${action} câu hỏi "${noiDung.substring(0, 50)}${noiDung.length > 50 ? '...' : ''}"?`;
+
+                if (confirm(confirmMessage)) {
+                    window.location.href = url;
+                }
+            });
         });
     </script>
 }

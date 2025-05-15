@@ -188,5 +188,18 @@ namespace OnThiLaiXe.Areas.Admin.Controllers
             });
             return Json(result);
         }
+        public async Task<IActionResult> ToggleActive(int id)
+        {
+            var cauHoi = await _cauHoiRepository.GetByIdAsync(id);
+            if (cauHoi == null)
+            {
+                return NotFound();
+            }
+
+            // Đảo ngược trạng thái isDeleted
+            cauHoi.isDeleted = !cauHoi.isDeleted;
+            await _cauHoiRepository.UpdateAsync(cauHoi);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
