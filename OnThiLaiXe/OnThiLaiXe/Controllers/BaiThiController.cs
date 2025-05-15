@@ -126,13 +126,21 @@ namespace OnThiLaiXe.Controllers
             }
 
             var tongSoCau = baiThi.ChiTietBaiThis.Count;
+
             var phanTramDung = (double)totalCorrectAnswers / tongSoCau * 100;
-            int diem = (int)Math.Round(phanTramDung / 10);
-            var diemToiThieu = baiThi.ChiTietBaiThis.FirstOrDefault()?.CauHoi?.LoaiBangLai?.DiemToiThieu ?? 0;
-            var ketQua = diem >= diemToiThieu ? "Đậu" : "Rớt";
+            int diem = totalCorrectAnswers; // Mỗi câu đúng = 1 điểm
+
+            var diemToiThieu = baiThi.ChiTietBaiThis
+                .FirstOrDefault()?.CauHoi?.LoaiBangLai?.DiemToiThieu ?? 0;
+
+            var ketQua = diem >= diemToiThieu ? "Đậu" : "Không Đạt";
+
             bool macLoiNghiemTrong = ketQuaList
-    .Any(kq => kq.DungSai && baiThi.ChiTietBaiThis
-        .First(ct => ct.CauHoiId == kq.CauHoiId).CauHoi.DiemLiet);
+                .Any(kq => kq.DungSai &&
+                    baiThi.ChiTietBaiThis
+                        .First(ct => ct.CauHoiId == kq.CauHoiId)
+                        .CauHoi.DiemLiet);
+
 
             // Đếm số câu mắc lỗi nghiêm trọng
             int soCauLoiNghiemTrong = ketQuaList
@@ -220,6 +228,7 @@ namespace OnThiLaiXe.Controllers
                     kq.DapAnDung,
                     kq.DungSai,
                 }),
+                soCauDung = diem,
                 tongSoCau = tongSoCau,
                 tongDiem = diem,
                 ketQua = ketQua,
