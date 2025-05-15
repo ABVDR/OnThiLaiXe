@@ -1913,6 +1913,10 @@
       "PackagePath": "staticwebassets\\files\\ghoghe.jpg"
     },
     {
+      "Id": "C:\\Users\\pdtua\\Desktop\\do_an_test1\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\files\\ghoghe.png",
+      "PackagePath": "staticwebassets\\files\\ghoghe.png"
+    },
+    {
       "Id": "C:\\Users\\pdtua\\Desktop\\do_an_test1\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\files\\sahinh1.jpg",
       "PackagePath": "staticwebassets\\files\\sahinh1.jpg"
     },
@@ -1927,6 +1931,10 @@
     {
       "Id": "C:\\Users\\pdtua\\Desktop\\do_an_test1\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\files\\ziczac.jpg",
       "PackagePath": "staticwebassets\\files\\ziczac.jpg"
+    },
+    {
+      "Id": "C:\\Users\\pdtua\\Desktop\\do_an_test1\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\files\\zizzac.png",
+      "PackagePath": "staticwebassets\\files\\zizzac.png"
     },
     {
       "Id": "C:\\Users\\pdtua\\Desktop\\do_an_test1\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\images\\bienbao.png",
@@ -2967,6 +2975,10 @@
     {
       "Id": "C:\\Users\\pdtua\\Desktop\\do_an_test1\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\videos\\cau1.mp4",
       "PackagePath": "staticwebassets\\videos\\cau1.mp4"
+    },
+    {
+      "Id": "C:\\Users\\pdtua\\Desktop\\do_an_test1\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\videos\\cau12.mp4",
+      "PackagePath": "staticwebassets\\videos\\cau12.mp4"
     },
     {
       "Id": "C:\\Users\\pdtua\\Desktop\\do_an_test1\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\videos\\cau2.mp4",

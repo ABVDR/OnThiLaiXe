@@ -783,10 +783,12 @@ wwwroot\files\download.jpg
 wwwroot\files\duongthang.jpg
 wwwroot\files\duongthang1.png
 wwwroot\files\ghoghe.jpg
+wwwroot\files\ghoghe.png
 wwwroot\files\sahinh1.jpg
 wwwroot\files\tongquan.jpg
 wwwroot\files\vong8.jpg
 wwwroot\files\ziczac.jpg
+wwwroot\files\zizzac.png
 wwwroot\images\bienbao.png
 wwwroot\images\car-driving.png
 wwwroot\images\cautao.png
@@ -1047,6 +1049,7 @@ wwwroot\vendor\jquery\jquery.slim.js
 wwwroot\vendor\jquery\jquery.slim.min.js
 wwwroot\vendor\jquery\jquery.slim.min.map
 wwwroot\videos\cau1.mp4
+wwwroot\videos\cau12.mp4
 wwwroot\videos\cau2.mp4
 wwwroot\videos\cau3.mp4
 wwwroot\videos\cau4.mp4

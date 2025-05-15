@@ -33,6 +33,8 @@ namespace OnThiLaiXe.Models
         public string? LoaiMedia { get; set; }
 
         public string? MeoGhiNho { get; set; }
+
+        public bool isDeleted { get; set; } = false;
         ////them vao  
         //public string LoaiCauHoi { get; set; }
         public int ChuDeId { get; set; }
