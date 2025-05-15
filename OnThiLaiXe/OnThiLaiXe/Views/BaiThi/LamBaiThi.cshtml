@@ -77,9 +77,10 @@
         </div>
 
         <div class="side-panel">
-            <p id="timerDisplay" class="timer-display">15 : 36</p>
+            <p id="timerDisplay" class="timer-display">20 : 00</p>
             <div class="scoreDisplay" id="scoreDisplay" style="display: none;">
                 <p><strong>Điểm:</strong> <span id="tongDiem"></span></p>
+                <p><strong>Số câu đúng:</strong> <span id="soCauDung"></span></p>
                 <p><strong>Kết quả:</strong> <span id="ketQua"></span></p>
                 <p><strong>Số câu điểm liệt sai:</strong> <span id="soCauLoiNghiemTrong"></span></p>
             </div>
@@ -366,31 +367,30 @@
 <script>
     const timeLimit = @(Model.ChiTietBaiThis?.FirstOrDefault()?.CauHoi?.LoaiBangLai?.ThoiGianThi ?? 0) * 60;
 
-    let timeRemaining = timeLimit;
+    const navType = performance.getEntriesByType("navigation")[0]?.type || performance.navigation.type;
+    const isReload = navType === "reload";
+
+    let savedTime = isReload ? sessionStorage.getItem('savedTimeRemaining') : null;
+    let timeRemaining = savedTime ? parseInt(savedTime) : timeLimit;
     let timer;
     let currentQuestionIndex = 0;
     const totalQuestions = document.querySelectorAll('.question-slide').length;
 
     function showQuestion(index) {
         currentQuestionIndex = index;
-
-        // Hiển thị đúng slide
         document.querySelectorAll('.question-slide').forEach((slide, i) => {
             slide.style.display = i === index ? 'block' : 'none';
         });
 
-        // Cập nhật chỉ số hiển thị câu hỏi
         const currentDisplay = document.getElementById('currentQuestionDisplay');
         if (currentDisplay) {
             currentDisplay.textContent = `Câu ${index + 1} / ${totalQuestions}`;
         }
 
-        // Bỏ màu cam khỏi các nút
         document.querySelectorAll('button[data-question-id]').forEach(btn => {
             btn.classList.remove('current-question');
         });
 
-        // Thêm màu cam cho nút đang chọn
         const currentBtn = document.querySelector(`button[data-question-id="${index}"]`);
         if (currentBtn) {
             currentBtn.classList.add('current-question');
@@ -402,8 +402,13 @@
             if (timeRemaining > 0) {
                 timeRemaining--;
                 updateTimerDisplay();
+                // Lưu thời gian mỗi giây
+                sessionStorage.setItem('savedTimeRemaining', timeRemaining.toString());
+                // Lưu đáp án mỗi giây
+                autoSaveAnswers();
             } else {
                 clearInterval(timer);
+                sessionStorage.removeItem('savedTimeRemaining');
                 alert("Hết thời gian!");
                 submitExam();
             }
@@ -413,7 +418,8 @@
     function updateTimerDisplay() {
         const minutes = Math.floor(timeRemaining / 60);
         const seconds = timeRemaining % 60;
-        document.getElementById('timerDisplay').textContent = `${String(minutes).padStart(2, '0')} : ${String(seconds).padStart(2, '0')}`;
+        document.getElementById('timerDisplay').textContent =
+            `${String(minutes).padStart(2, '0')} : ${String(seconds).padStart(2, '0')}`;
     }
 
     function nextQuestion() {
@@ -430,6 +436,52 @@
         }
     }
 
+    function getAnswersFromInputs() {
+        const answers = {};
+        document.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+            const questionId = input.name.split('_')[1];
+            answers[questionId] = input.value;
+        });
+        return answers;
+    }
+
+    function autoSaveAnswers() {
+        const answers = getAnswersFromInputs();
+        sessionStorage.setItem('autoSaveAnswers', JSON.stringify(answers));
+    }
+
+    function restoreAnswers() {
+        if (!isReload) {
+            sessionStorage.removeItem('autoSaveAnswers');
+            sessionStorage.removeItem('savedTimeRemaining');
+            return;
+        }
+
+        const saved = sessionStorage.getItem('autoSaveAnswers');
+        if (!saved) return;
+
+        try {
+            const answers = JSON.parse(saved);
+            for (const [qid, val] of Object.entries(answers)) {
+                const input = document.querySelector(`input[name="answer_${qid}"][value="${val}"]`);
+                if (input) {
+                    input.checked = true;
+
+                    const slide = input.closest('.question-slide');
+                    if (slide) {
+                        const questionIndex = parseInt(slide.id.split('-')[1]);
+                        const button = document.querySelector(`button[data-question-id="${questionIndex}"]`);
+                        if (button) {
+                            button.classList.add("btn-answered");
+                        }
+                    }
+                }
+            }
+        } catch (e) {
+            console.error("Lỗi khi khôi phục đáp án:", e);
+        }
+    }
+
     function submitExam() {
         const baiThiId = document.getElementById('baiThiId').value;
         if (!baiThiId) {
@@ -438,46 +490,43 @@
         }
 
         clearInterval(timer);
+        sessionStorage.removeItem('autoSaveAnswers');
+        sessionStorage.removeItem('savedTimeRemaining');
 
-        const answers = {};
-        document.querySelectorAll('input[type="radio"]:checked').forEach(input => {
-            const questionId = input.name.split('_')[1];
-            answers[questionId] = input.value;
-        });
+        const answers = getAnswersFromInputs();
 
         fetch('/BaiThi/NopBaiThiAjax', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ baiThiId, answers })
         })
-        .then(res => res.json())
-        .then(data => {
-            if (data.success) {
-                displayResult(data);
-            } else {
-                alert(data.message || "Có lỗi xảy ra.");
-            }
-        })
-        .catch(err => {
-            console.error("Lỗi:", err);
-            alert("Không thể nộp bài.");
-        });
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    displayResult(data);
+                } else {
+                    alert(data.message || "Có lỗi xảy ra.");
+                }
+            })
+            .catch(err => {
+                console.error("Lỗi:", err);
+                alert("Không thể nộp bài.");
+            });
     }
 
-      function displayResult(data) {
-         const scoreDisplay = document.getElementById("scoreDisplay");
-    scoreDisplay.style.display = "block"; // 👈 hiện kết quả lên
+    function displayResult(data) {
+        const scoreDisplay = document.getElementById("scoreDisplay");
+        scoreDisplay.style.display = "block";
+        document.getElementById("tongDiem").innerText = data.tongDiem.toFixed(2);
+        document.getElementById("soCauDung").innerText = `${data.soCauDung} / ${data.tongSoCau}`;
 
-    document.getElementById("tongDiem").innerText = data.tongDiem.toFixed(2);
+        const ketQuaElement = document.getElementById("ketQua");
+        ketQuaElement.innerText = data.ketQua;
+        ketQuaElement.style.color = data.ketQua === "Đậu" ? "green" : "red";
 
-    const ketQuaElement = document.getElementById("ketQua");
-    ketQuaElement.innerText = data.ketQua;
-    ketQuaElement.style.color = data.ketQua === "Đậu" ? "green" : "red";
-
-    const diemLietElement = document.getElementById("soCauLoiNghiemTrong");
-    diemLietElement.innerText = data.soCauLoiNghiemTrong;
-    diemLietElement.style.color = data.soCauLoiNghiemTrong > 0 ? "red" : "green";
-
+        const diemLietElement = document.getElementById("soCauLoiNghiemTrong");
+        diemLietElement.innerText = data.soCauLoiNghiemTrong;
+        diemLietElement.style.color = data.soCauLoiNghiemTrong > 0 ? "red" : "green";
 
         data.ketQuaList.forEach((kq, index) => {
             const slide = document.getElementById(`question-${index}`);
@@ -487,28 +536,17 @@
                     const input = label.querySelector("input");
                     label.classList.remove("bg-green-100", "bg-red-100", "font-bold");
 
-                    if (input.value === kq.dapAnDung) {
-                        label.classList.add("bg-green-100", "font-bold"); // Đúng
-                    }
-                    if (input.checked && input.value !== kq.dapAnDung) {
-                        label.classList.add("bg-red-100", "font-bold"); // Sai
-                    }
+                    if (input.value === kq.dapAnDung) label.classList.add("bg-green-100", "font-bold");
+                    if (input.checked && input.value !== kq.dapAnDung) label.classList.add("bg-red-100", "font-bold");
                 });
             }
 
             const questionButton = document.querySelector(`button[data-question-id="${index}"]`);
             if (questionButton) {
                 questionButton.classList.remove("btn-answered", "btn-correct", "btn-wrong", "current-question");
-
-                // Cập nhật nút câu hỏi
-                if (kq.dungSai) {
-                    questionButton.classList.add("btn-wrong"); // Câu trả lời sai
-                } else {
-                    questionButton.classList.add("btn-correct"); // Câu trả lời đúng
-                }
+                questionButton.classList.add(kq.dungSai ? "btn-wrong" : "btn-correct");
             }
 
-            // Kiểm tra trường hợp không có câu trả lời
             if (!kq.cauTraLoi) {
                 const slide = document.getElementById(`question-${index}`);
                 if (slide) {
@@ -516,28 +554,23 @@
                     options.forEach(label => {
                         const input = label.querySelector("input");
                         label.classList.remove("bg-green-100", "bg-red-100", "font-bold");
-
-                        if (input.value === kq.dapAnDung) {
-                            label.classList.add("bg-green-100", "font-bold"); // Đúng
-                        }
+                        if (input.value === kq.dapAnDung) label.classList.add("bg-green-100", "font-bold");
                     });
                 }
 
                 const questionButton = document.querySelector(`button[data-question-id="${index}"]`);
                 if (questionButton) {
                     questionButton.classList.remove("btn-answered", "btn-correct", "btn-wrong", "current-question");
-                    questionButton.classList.add("btn-wrong"); // Câu không trả lời => Sai
+                    questionButton.classList.add("btn-wrong");
                 }
             }
         });
     }
 
-
-
-
-    // Sự kiện khi chọn đáp án => đánh dấu câu đã trả lời
     document.addEventListener("DOMContentLoaded", () => {
+        restoreAnswers();
         showQuestion(currentQuestionIndex);
+        updateTimerDisplay();
         startTimer();
 
         document.querySelectorAll('input[type="radio"]').forEach(input => {
@@ -548,6 +581,13 @@
                     button.classList.add("btn-answered");
                 }
             });
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                nextQuestion();
+            } else if (e.key === 'ArrowLeft') {
+                previousQuestion();
+            }
         });
     });
 </script>
