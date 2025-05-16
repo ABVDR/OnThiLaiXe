@@ -8,6 +8,8 @@
         public DateTime NgaySai { get; set; }
 
         // Navigation properties
+        public ApplicationUser User { get; set; }
+
         public virtual CauHoi CauHoi { get; set; }
     }
 
