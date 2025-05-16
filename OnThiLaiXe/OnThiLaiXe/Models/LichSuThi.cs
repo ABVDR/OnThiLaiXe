@@ -17,6 +17,8 @@ namespace OnThiLaiXe.Models
         public string KetQua { get; set; }
         public bool MacLoiNghiemTrong { get; set; }
         public string? UserId { get; set; }
+        public ApplicationUser User { get; set; }
+
         public ICollection<ChiTietLichSuThi> ChiTietLichSuThis { get; set; }
     }
 }

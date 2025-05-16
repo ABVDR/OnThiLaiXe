@@ -357,11 +357,13 @@ namespace OnThiLaiXe.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CauHoiId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("CauHoiSais");
                 });
@@ -544,9 +546,11 @@ namespace OnThiLaiXe.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("LichSuThis");
                 });
@@ -784,7 +788,15 @@ namespace OnThiLaiXe.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("OnThiLaiXe.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("CauHoi");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.CauTrucDeThi", b =>
@@ -851,6 +863,15 @@ namespace OnThiLaiXe.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("OnThiLaiXe.Models.LichSuThi", b =>
+                {
+                    b.HasOne("OnThiLaiXe.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
 
                     b.Navigation("User");
                 });

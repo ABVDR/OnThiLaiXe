@@ -7,6 +7,8 @@
         public int CauHoiId { get; set; }
         public DateTime NgaySai { get; set; }
 
+        public ApplicationUser User { get; set; }
+
         // Navigation properties
         public virtual CauHoi CauHoi { get; set; }
     }

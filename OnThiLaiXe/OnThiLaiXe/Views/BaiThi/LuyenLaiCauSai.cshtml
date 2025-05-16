@@ -1,126 +1,423 @@
 ﻿@model List<OnThiLaiXe.Models.CauHoi>
-
 @{
-    ViewData["Title"] = "Luyện tập câu sai";
+    ViewData["Title"] = "Ôn tập câu sai";
     int currentIndex = 0;
 }
+<style>
+    body {
+        font-family: "Inter", sans-serif;
+    }
 
-<div class="container mt-4">
-    <div class="card mb-4">
-        <div class="card-header bg-primary text-white">
-            <h3 class="mb-0">Ôn tập các câu sai</h3>
-        </div>
-        <div class="card-body">
-            <p class="lead">Đây là danh sách các câu hỏi bạn đã trả lời sai trong các bài kiểm tra trước đây. Hãy luyện tập để nâng cao kết quả!</p>
-            <div class="d-flex justify-content-between align-items-center">
-                <div>
-                    <span class="badge bg-info">Tổng số câu hỏi: @Model.Count</span>
-                </div>
-                <div>
-                    <div class="btn-group">
-                        <button id="prev-question" class="btn btn-outline-primary" disabled>
-                            <i class="fas fa-arrow-left"></i> Câu trước
-                        </button>
-                        <button id="next-question" class="btn btn-outline-primary">
-                            Câu tiếp theo <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    body {
+        background-color: white;
+    }
 
-    <form method="post" action="@Url.Action("LuuKetQuaLuyenLai")">
-        @foreach (var cauHoi in Model)
-        {
-            <div class="question-card card mb-4 @(currentIndex == 0 ? "active" : "d-none")" data-index="@currentIndex" data-id="@cauHoi.Id">
-                <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
-                    <span>Câu hỏi @(currentIndex + 1)/@Model.Count</span>
-                    @if (cauHoi.DiemLiet)
-                    {
-                        <span class="badge bg-danger">Điểm liệt</span>
-                    }
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">@cauHoi.NoiDung</h5>
+    .side-panel {
+        background-color: #f7f9fb;
+        padding: 24px;
+        border-radius: 4px;
+        min-width: 260px;
+    }
 
-                    @if (!string.IsNullOrEmpty(cauHoi.MediaUrl))
-                    {
-                        <div class="my-3 text-center">
-                            <img src="@cauHoi.MediaUrl" alt="Hình minh họa" class="img-fluid question-image" style="max-height: 300px;">
+    .question-buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+    }
+
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 24px;
+    }
+
+    .question-media img {
+        border: 1px solid #ccc;
+        padding: 5px;
+        margin-top: 10px;
+        border-radius: 6px;
+        width: 300px;
+    }
+
+    .question-media {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    .back-link {
+        color: #00875A;
+        text-decoration: none;
+    }
+
+        .back-link:hover {
+            color: #00663f;
+        }
+
+    .header-text {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .empty-space {
+        flex: 1;
+    }
+
+    .main-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px 16px;
+        display: flex;
+        gap: 32px;
+    }
+
+    .question-container {
+        background-color: #FFFCF6;
+        padding: 24px;
+        width: 900px;
+        border-radius: 4px;
+    }
+
+    .question-text {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    .question-options {
+        font-size: 14px;
+        line-height: 20px;
+        color: #1A1A1A;
+        space-y-4: 16px;
+    }
+
+    .option-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+        .option-item input {
+            margin-top: 6px;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #999;
+        }
+
+    .navigation-buttons {
+        margin-top: 32px;
+        display: flex;
+        gap: 16px;
+    }
+
+    .previous-button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid #00875A;
+        border-radius: 4px;
+        padding: 8px 20px;
+        color: #00875A;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+        .previous-button:hover {
+            background-color: #E6F4EA;
+        }
+
+    .next-button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #00875A;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 12px 24px;
+        color: white;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+        .next-button:hover {
+            background-color: #00663f;
+        }
+
+    .side-panel {
+        background-color: #F7F9FB;
+        padding: 24px;
+        border-radius: 4px;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .timer-display {
+        font-size: 25px;
+        font-weight: 800;
+        color: #E03E2F;
+        padding-top: 20px;
+    }
+
+    .scoreDisplay {
+        font-size: 25px;
+        font-weight: 400;
+        color: #00875A;
+    }
+
+    .question-buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .question-button {
+        border: 1px solid #1A1A1A;
+        border-radius: 4px;
+        padding: 8px 12px;
+        font-size: 14px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+    }
+
+    .submit-button {
+        background-color: #00875A;
+        border-radius: 8px;
+        padding: 12px 32px;
+        color: white;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+        .submit-button:hover {
+            background-color: #00663f;
+        }
+
+    .result-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 24px;
+    }
+
+    button.bg-red-100 {
+        background-color: #FEE2E2; /* Màu đỏ nhạt */
+        color: #DC2626; /* Màu chữ đỏ */
+        border-color: #DC2626;
+    }
+
+    button.font-bold {
+        font-weight: bold;
+    }
+
+
+    .btn-answered {
+        background-color: #D1FAE5; /* xanh lá nhạt */
+        border-color: #10B981;
+        color: #065F46;
+    }
+
+    .btn-correct {
+        background-color: #BBF7D0; /* xanh lá đậm hơn */
+        border-color: #059669;
+        color: #065F46;
+        font-weight: bold;
+    }
+
+    .btn-wrong {
+        background-color: #FEE2E2; /* đỏ nhạt */
+        border-color: #DC2626;
+        color: #991B1B;
+        font-weight: bold;
+    }
+
+    .current-question {
+        background-color: #fbbf24 !important; /* Cam nhạt */
+        border-color: #f59e0b !important;
+        color: black !important;
+        font-weight: bold;
+    }
+
+    .bg-green-100 {
+        background-color: #D1FAE5; /* Màu xanh lá nhạt */
+        color: #065F46;
+    }
+
+    .bg-red-100 {
+        background-color: #FEE2E2; /* Màu đỏ nhạt */
+        color: #991B1B;
+    }
+
+    .font-bold {
+        font-weight: bold;
+    }
+
+</style>
+
+
+<form method="post" action="@Url.Action("LuuKetQuaLuyenLai")">
+    <div class="d-flex gap-4 align-items-start">
+
+        <div class="flex-grow-1">
+            <div class="question-container">
+                @foreach (var cauHoi in Model)
+                {
+                    <div class="question-card @(currentIndex == 0 ? "" : "d-none")"
+                         data-index="@currentIndex" data-id="@cauHoi.Id">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+
+                            @if (cauHoi.DiemLiet)
+                            {
+                                <span class="badge bg-danger">Điểm liệt</span>
+                            }
                         </div>
-                    }
 
-                    <div class="mt-4">
-                        <div class="list-group">
-                            <label>
-                                <input type="radio" name="cauHoi_@cauHoi.Id" value="A" /> A: @cauHoi.LuaChonA
-                            </label>
-                            <label>
-                                <input type="radio" name="cauHoi_@cauHoi.Id" value="B" /> B: @cauHoi.LuaChonB
+                        <div class="question-slide" id="question-@currentIndex">
+                            <h5 class="mb-3 fw-semibold">@cauHoi.NoiDung</h5>
+                        </div>
+
+                        @if (!string.IsNullOrEmpty(cauHoi.MediaUrl))
+                        {
+                            <div class="text-center mb-3">
+                                <img src="@cauHoi.MediaUrl" class="img-fluid rounded"
+                                     style="max-height: 240px;" />
+                            </div>
+                        }
+
+                        <div class="d-grid gap-3 mt-3">
+                            <label class="option-item">
+                                <input type="radio" name="cauHoi_@cauHoi.Id" value="A" />
+                                <span>A. @cauHoi.LuaChonA</span>
                             </label>
 
+                            <label class="option-item">
+                                <input type="radio" name="cauHoi_@cauHoi.Id" value="B"
+                                       onchange="markAnswered(@currentIndex)" />
+                                <span>B. @cauHoi.LuaChonB</span>
+                            </label>
                             @if (!string.IsNullOrEmpty(cauHoi.LuaChonC))
                             {
-                                <label>
-                                    <input type="radio" name="cauHoi_@cauHoi.Id" value="C" /> C: @cauHoi.LuaChonC
+                                <label class="option-item">
+                                    <input type="radio" name="cauHoi_@cauHoi.Id" value="C"
+                                           onchange="markAnswered(@currentIndex)" />
+                                    <span>C. @cauHoi.LuaChonC</span>
                                 </label>
                             }
-
                             @if (!string.IsNullOrEmpty(cauHoi.LuaChonD))
                             {
-                                <label>
-                                    <input type="radio" name="cauHoi_@cauHoi.Id" value="D" /> D: @cauHoi.LuaChonD
+                                <label class="option-item">
+                                    <input type="radio" name="cauHoi_@cauHoi.Id" value="D"
+                                           onchange="markAnswered(@currentIndex)" />
+                                    <span>D. @cauHoi.LuaChonD</span>
                                 </label>
                             }
                         </div>
+
+                        <input type="hidden" name="cauHoi_@cauHoi.Id" />
                     </div>
+                    currentIndex++;
+                }
+
+                <div class="navigation-buttons mt-4">
+                    <button id="prev-question" onclick="previousQuestion()" type="button"
+                            class="previous-button">
+                        <i class="fas fa-step-backward"></i> Câu Trước
+                    </button>
+                    <button id="next-question" onclick="nextQuestion()" type="button"
+                            class="next-button">
+                        Câu Tiếp <i class="fas fa-step-forward"></i>
+                    </button>
                 </div>
             </div>
-            currentIndex++;
-        }
-
-        <div class="d-flex justify-content-between">
-            <button type="submit" class="btn btn-primary">Lưu kết quả</button>
         </div>
-    </form>
-</div>
 
-@* JavaScript for navigation *@
-@section Scripts {
-    <script>
-        var currentIndex = 0;
-        var totalQuestions = @Model.Count;
+        <!-- Cột bên phải: side panel -->
+        <div class="side-panel">
 
-        function showQuestion(index) {
-            var questions = document.querySelectorAll('.question-card');
-            questions.forEach(function (question, i) {
-                question.classList.add('d-none'); // Hide all questions
-                if (i === index) {
-                    question.classList.remove('d-none'); // Show the current question
+
+            <div class="question-buttons mt-2">
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <button id="btn-question-@i" class="question-button" type="button"
+                            onclick="showQuestion(@i)">
+                        @(i + 1)
+                    </button>
                 }
-            });
+            </div>
 
-            // Disable or enable buttons based on the current index
-            document.getElementById('prev-question').disabled = index === 0;
-            document.getElementById('next-question').disabled = index === totalQuestions - 1;
+            <button type="submit" class="submit-button mt-3">
+                Nộp Bài
+            </button>
+
+        </div>
+    </div>
+</form>
+
+<!-- JS -->
+<script>
+    let currentIndex = 0;
+    const total = @Model.Count;
+
+       function showQuestion(index) {
+        // Ẩn/hiện thẻ câu hỏi
+        document.querySelectorAll('.question-card').forEach((card, i) => {
+            card.classList.toggle('d-none', i !== index);
+        });
+
+        // Cập nhật chỉ số hiện tại
+        currentIndex = index;
+
+        // Cập nhật trạng thái disabled
+        document.getElementById('prev-question').disabled = currentIndex === 0;
+        document.getElementById('next-question').disabled = currentIndex === total - 1;
+
+        // Tô màu cam nút đang chọn
+        document.querySelectorAll('.question-button').forEach(btn => {
+            btn.classList.remove('current-question');
+        });
+        const currentBtn = document.getElementById('btn-question-' + index);
+        if (currentBtn) {
+            currentBtn.classList.add('current-question');
         }
+    }
 
-        document.getElementById('prev-question').addEventListener('click', function () {
-            if (currentIndex > 0) {
-                currentIndex--;
-                showQuestion(currentIndex);
-            }
-        });
 
-        document.getElementById('next-question').addEventListener('click', function () {
-            if (currentIndex < totalQuestions - 1) {
-                currentIndex++;
-                showQuestion(currentIndex);
-            }
-        });
+    function previousQuestion() {
+        if (currentIndex > 0) showQuestion(currentIndex - 1);
+    }
 
-        // Initialize the first question
-        showQuestion(currentIndex);
-    </script>
-}
+    function nextQuestion() {
+        if (currentIndex < total - 1) showQuestion(currentIndex + 1);
+    }
+
+    function markAnswered(index) {
+        const btn = document.getElementById('btn-question-' + index);
+        if (btn && !btn.classList.contains('btn-answered')) {
+            btn.classList.add('btn-answered');
+        }
+    }
+
+    showQuestion(0);
+</script>
