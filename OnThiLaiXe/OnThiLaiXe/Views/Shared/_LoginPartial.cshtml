@@ -8,8 +8,8 @@
         <a id="manage" class="nav-link " asp-area="Identity" asp-page="/Account/Manage/Index">Tài Khoản</a>
     </li>
     <li class="nav-item">
-        <form id="logoutForm" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home")">
-            <button id="logout" type="submit" class="btn btn-link nav-link  p-0">Đăng Xuất</button>
+        <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button id="logout" type="submit" class="nav-link btn btn-link text-dark border-0">Logout</button>
         </form>
     </li>
 }

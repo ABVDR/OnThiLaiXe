@@ -23,13 +23,14 @@ namespace OnThiLaiXe.Areas.Admin.Controllers
         }
         private async Task<string> SaveVideo(IFormFile video)
         {
-            //Thay đổi đường dẫn theo cấu hình của bạn 
-            var savePath = Path.Combine("wwwroot/videos", video.FileName);
+            string uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(video.FileName);
+
+            var savePath = Path.Combine("wwwroot/videos", uniqueFileName);
             using (var fileStream = new FileStream(savePath, FileMode.Create))
             {
                 await video.CopyToAsync(fileStream);
             }
-            return "/videos/" + video.FileName; // Trả về đường dẫn tương đối 
+            return "/videos/" + uniqueFileName; // Trả về đường dẫn tương đối
         }
         // GET: Admin/MoPhong/Create
         public IActionResult Create()
