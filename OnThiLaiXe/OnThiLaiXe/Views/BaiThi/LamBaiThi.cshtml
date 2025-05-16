@@ -482,13 +482,14 @@
         }
     }
 
-    function submitExam() {
-        const baiThiId = document.getElementById('baiThiId').value;
+       function submitExam() {
+        const baiThiId = document.getElementById('baiThiId')?.value;
         if (!baiThiId) {
             alert("ID bài thi không hợp lệ!");
             return;
         }
 
+        // Ngừng đồng hồ và xóa auto-save
         clearInterval(timer);
         sessionStorage.removeItem('autoSaveAnswers');
         sessionStorage.removeItem('savedTimeRemaining');
@@ -500,19 +501,33 @@
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ baiThiId, answers })
         })
-            .then(res => res.json())
-            .then(data => {
-                if (data.success) {
-                    displayResult(data);
-                } else {
-                    alert(data.message || "Có lỗi xảy ra.");
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                // Gọi hàm xử lý hiển thị kết quả
+                displayResult(data);
+
+                // Khóa tất cả input radio
+                document.querySelectorAll('input[type="radio"]').forEach(input => {
+                    input.disabled = true;
+                });
+
+                // Khóa nút submit
+                const submitBtn = document.getElementById('submit-btn');
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = "Đã nộp bài";
                 }
-            })
-            .catch(err => {
-                console.error("Lỗi:", err);
-                alert("Không thể nộp bài.");
-            });
+            } else {
+                alert(data.message || "Có lỗi xảy ra khi nộp bài.");
+            }
+        })
+        .catch(err => {
+            console.error("Lỗi:", err);
+            alert("Không thể nộp bài.");
+        });
     }
+
 
     function displayResult(data) {
         const scoreDisplay = document.getElementById("scoreDisplay");
