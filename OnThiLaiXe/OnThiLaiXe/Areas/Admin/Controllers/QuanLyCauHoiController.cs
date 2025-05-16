@@ -68,12 +68,14 @@ namespace OnThiLaiXe.Areas.Admin.Controllers
 
         private async Task<string> SaveImage(IFormFile image)
         {
-            var savePath = Path.Combine("wwwroot/images", image.FileName);
+            string uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(image.FileName);
+
+            var savePath = Path.Combine("wwwroot/images", uniqueFileName);
             using (var fileStream = new FileStream(savePath, FileMode.Create))
             {
                 await image.CopyToAsync(fileStream);
             }
-            return "/images/" + image.FileName;
+            return "/images/" + uniqueFileName;
         }
 
         public async Task<IActionResult> Display(int id)
