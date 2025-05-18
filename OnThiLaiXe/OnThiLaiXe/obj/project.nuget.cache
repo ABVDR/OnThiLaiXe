@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v19TMc0cSeQ=",
+  "dgSpecHash": "iriwW2ilP0k=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (10)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới (11)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
