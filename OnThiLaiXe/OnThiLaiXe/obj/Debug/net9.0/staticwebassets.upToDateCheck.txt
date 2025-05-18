@@ -1039,6 +1039,8 @@ wwwroot\uploads\57e1c61f-afb7-40ee-957e-afd2dd100d6d.jpg
 wwwroot\uploads\929321c3-2fc9-440a-9cdb-387b8520e197.jpg
 wwwroot\uploads\a4e1c965-4a54-4949-a529-a5358842bf31.jpg
 wwwroot\uploads\ba2fc6d2-0f53-4bb4-b62b-b93a4df40861.jpg
+wwwroot\uploads\c3a1a60a-8480-4c2c-95a4-5b9715a3d022.png
+wwwroot\uploads\e87641f3-2afb-4455-a8d4-3cfb8ca4eb6d.png
 wwwroot\vendor\bootstrap\css\bootstrap.min.css
 wwwroot\vendor\bootstrap\css\bootstrap.min.css.map
 wwwroot\vendor\bootstrap\js\bootstrap.bundle.min.js
