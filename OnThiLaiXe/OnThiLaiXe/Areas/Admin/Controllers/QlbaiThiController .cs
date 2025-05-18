@@ -83,10 +83,24 @@ namespace OnThiLaiXe.Controllers
 
             try
             {
+                // Lấy số thứ tự đề thi cao nhất đã có
+                var soThuTu = _context.BaiThis
+                    .Where(b => b.TenBaiThi.StartsWith("Đề thi"))
+                    .Select(b => b.TenBaiThi)
+                    .ToList()
+                    .Select(t =>
+                    {
+                        var parts = t.Split(' ');
+                        return int.TryParse(parts.Last(), out int num) ? num : 0;
+                    })
+                    .DefaultIfEmpty(0)
+                    .Max();
+
+                var tenDeThiMoi = $"Đề thi {soThuTu + 1}";
 
                 var deThi = new BaiThi
                 {
-                    TenBaiThi = "Đề thi mới",
+                    TenBaiThi = tenDeThiMoi,
                     ChiTietBaiThis = new List<ChiTietBaiThi>() // Đảm bảo không null
                 };
 

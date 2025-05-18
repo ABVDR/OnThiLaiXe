@@ -93,9 +93,10 @@
                     </button>
                 }
             </div>
-            <button onclick="submitExam()" type="button" class="submit-button">
+            <button id="submit-button" onclick="submitExam()" type="button" class="submit-button">
                 Nộp Bài
             </button>
+
         </div>
     </div>
 
@@ -513,7 +514,7 @@
                 });
 
                 // Khóa nút submit
-                const submitBtn = document.getElementById('submit-btn');
+                const submitBtn = document.getElementById('submit-button');
                 if (submitBtn) {
                     submitBtn.disabled = true;
                     submitBtn.textContent = "Đã nộp bài";
