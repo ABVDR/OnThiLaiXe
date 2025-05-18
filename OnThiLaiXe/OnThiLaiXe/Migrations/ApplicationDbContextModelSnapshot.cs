@@ -368,32 +368,6 @@ namespace OnThiLaiXe.Migrations
                     b.ToTable("CauHoiSais");
                 });
 
-            modelBuilder.Entity("OnThiLaiXe.Models.CauTrucDeThi", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ChuDeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("LoaiBangLaiId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SoLuongCauHoi")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ChuDeId");
-
-                    b.HasIndex("LoaiBangLaiId");
-
-                    b.ToTable("CauTrucDeThis");
-                });
-
             modelBuilder.Entity("OnThiLaiXe.Models.ChiTietBaiThi", b =>
                 {
                     b.Property<int>("Id")
@@ -797,25 +771,6 @@ namespace OnThiLaiXe.Migrations
                     b.Navigation("CauHoi");
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("OnThiLaiXe.Models.CauTrucDeThi", b =>
-                {
-                    b.HasOne("OnThiLaiXe.Models.ChuDe", "ChuDe")
-                        .WithMany()
-                        .HasForeignKey("ChuDeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("OnThiLaiXe.Models.LoaiBangLai", "LoaiBangLai")
-                        .WithMany()
-                        .HasForeignKey("LoaiBangLaiId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ChuDe");
-
-                    b.Navigation("LoaiBangLai");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.ChiTietBaiThi", b =>
