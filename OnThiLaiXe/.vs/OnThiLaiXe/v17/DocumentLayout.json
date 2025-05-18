@@ -3,20 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\OnThiLaiXe\\OnThiLaiXe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baithi\\danhsachcauhoisai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baithi\\danhsachcauhoisai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\onthilaixe\\onthilaixe\\onthilaixe\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\onthilaixe\\onthilaixe\\onthilaixe\\views\\mophong\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\mophong\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\onthilaixe\\onthilaixe\\onthilaixe\\views\\mophong\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\mophong\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\onthilaixe\\onthilaixe\\onthilaixe\\controllers\\baithicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\controllers\\baithicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\onthilaixe\\onthilaixe\\onthilaixe\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baithi\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baithi\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baithi\\thide.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baithi\\thide.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\onthilaixe\\onthilaixe\\onthilaixe\\controllers\\baithicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\controllers\\baithicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baithi\\loaibanglaioto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baithi\\loaibanglaioto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baithi\\danhsachcauhoisai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baithi\\danhsachcauhoisai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|c:\\users\\admin\\onedrive\\m\u00E1y t\u00EDnh\\th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\onthilaixe\\onthilaixe\\onthilaixe\\views\\baithi\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69D5114D-D04C-4A80-B781-9C0911979468}|OnThiLaiXe\\OnThiLaiXe.csproj|solutionrelative:onthilaixe\\views\\baithi\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 318,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,7 +62,72 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\MoPhong\\Index.cshtml",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\MoPhong\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\MoPhong\\Index.cshtml",
+              "RelativeToolTip": "OnThiLaiXe\\Views\\MoPhong\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-18T15:27:35.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\MoPhong\\Details.cshtml",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\MoPhong\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\MoPhong\\Details.cshtml",
+              "RelativeToolTip": "OnThiLaiXe\\Views\\MoPhong\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-18T15:27:34.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "OnThiLaiXe\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBkAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-18T15:05:32.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoaiBangLaiOTo.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\LoaiBangLaiOTo.cshtml",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\LoaiBangLaiOTo.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\LoaiBangLaiOTo.cshtml",
+              "RelativeToolTip": "OnThiLaiXe\\Views\\BaiThi\\LoaiBangLaiOTo.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwAcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-18T15:00:16.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ThiDe.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\ThiDe.cshtml",
+              "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\ThiDe.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\ThiDe.cshtml",
+              "RelativeToolTip": "OnThiLaiXe\\Views\\BaiThi\\ThiDe.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAADCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-18T15:00:14.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "DanhSachCauHoiSai.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\DanhSachCauHoiSai.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\DanhSachCauHoiSai.cshtml",
@@ -55,20 +140,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "OnThiLaiXe\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAcwJ4AAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAADoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-18T14:38:55.629Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "ChiTiet.cshtml",
               "DocumentMoniker": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Views\\BaiThi\\ChiTiet.cshtml",
               "RelativeDocumentMoniker": "OnThiLaiXe\\Views\\BaiThi\\ChiTiet.cshtml",
@@ -76,8 +161,7 @@
               "RelativeToolTip": "OnThiLaiXe\\Views\\BaiThi\\ChiTiet.cshtml",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACgAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-18T14:36:09.64Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T14:36:09.64Z"
             },
             {
               "$type": "Document",
@@ -87,7 +171,7 @@
               "RelativeDocumentMoniker": "OnThiLaiXe\\Controllers\\BaiThiController.cs",
               "ToolTip": "C:\\Users\\Admin\\OneDrive\\M\u00E1y t\u00EDnh\\Th\u01B0 mu\u0323c m\u01A1\u0301i (11)\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\Controllers\\BaiThiController.cs",
               "RelativeToolTip": "OnThiLaiXe\\Controllers\\BaiThiController.cs",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAG8CAAAAAAAAAAAIwH8CAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-18T14:36:03.236Z",
               "EditorCaption": ""

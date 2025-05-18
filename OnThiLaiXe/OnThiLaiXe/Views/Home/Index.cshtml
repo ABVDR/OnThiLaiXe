@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="main-green-button scroll-to-section">
-                                        <a href="#contact">Ôn Thi Ngay </a>
+                                        <a href='@Url.Action("DanhSachLoaiBangLai", "BaiThi")'>Ôn Thi Ngay </a>
                                     </div>
                                 </div>
                             </div>
@@ -83,7 +83,7 @@
 
                         </div>
                         <div class="col-lg-3">
-                            <div class="features-item first-feature wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.4s">
+                            <div class="features-item first-feature wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.4s" onclick="window.location.href='@Url.Action("Index", "MoPhong")'">
                                 <div class="third-number number">
                                     <h6>03</h6>
                                 </div>
@@ -96,17 +96,18 @@
                             </div>
                         </div>
 
+
                         <div class="col-lg-3">
-                            <div class="features-item second-feature last-features-item wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
+                            <div class="features-item second-feature  wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s" onclick="window.location.href='@Url.Action("DanhSachLoaiBangLai", "BaiThi")'">
                                 <div class="fourth-number number">
                                     <h6>04</h6>
                                 </div>
-                                <div class="icon">
-                                    <i class="fa-solid fa-traffic-light icon-big"></i>
+                                <div >
+                                    <i class="fa-solid fa-cube icon-big"></i>
                                 </div>
-                                <h4>Ôn Thi Các Biển Báo Giao Thông</h4>
+                                <h4>Ôn Tập Toàn Bộ</h4>
                                 <div class="line-dec"></div>
-                                <p>Bộ đề 241 biển báo giao thông.</p>
+                                <p>Ôn toàn bộ các bằng lái xe hiện có.</p>
                             </div>
                         </div>
                     </div>
