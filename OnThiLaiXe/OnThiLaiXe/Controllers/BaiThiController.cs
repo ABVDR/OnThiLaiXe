@@ -637,12 +637,7 @@ namespace OnThiLaiXe.Controllers
 
 
 
-        public IActionResult DanhSachLoaiBangLai()
-        {
-            var danhSachLoaiBangLai = _baiThiRepo.GetDanhSachLoaiBangLai();
-            return View(danhSachLoaiBangLai);
-        }
-
+        
 
 
 

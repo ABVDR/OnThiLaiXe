@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>f6ehi8tsfb</Fingerprint>
-      <Integrity>+VsSB/zSkJPvyX1P7Xy/i8F1P6H0Od1qbXK3BoI+WgQ=</Integrity>
+      <Fingerprint>rqa7nc181p</Fingerprint>
+      <Integrity>3ZZnesEHDM+oJb7aLj5AYPhoU5Z7yf+xo7/kt7g+gVc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\templatemo-seo-dream.css'))</OriginalItemSpec>

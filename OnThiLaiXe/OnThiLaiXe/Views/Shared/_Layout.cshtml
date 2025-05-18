@@ -49,30 +49,26 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto align-items-center gap-2">
                         <li class="nav-item">
-                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Trang Chủ</a>
+                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Index">Trang Chủ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="BaiThi" asp-action="LoaiBangLaiXeMay">Xe máy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="BaiThi" asp-action="LoaiBangLaiOTo">Oto</a>
+                            <a class="nav-link" asp-area="" asp-controller="BaiThi" asp-action="LoaiBangLaiOTo">Ôtô</a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="BaiSaHinh" asp-action="Index">Sa hình</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="BaiThi" asp-action="OnTap">Ôn Tập</a>
+                            <a class="nav-link" asp-area="" asp-controller="MoPhong" asp-action="Index">Mô Phỏng</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="BaiSaHinh" asp-action="Index">Ôn sa hình</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="MoPhong" asp-action="Index">MoPhong</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Share" asp-action="Share">Chia sẻ</a>
-                        <li class="nav-item">
+                        
                                 @if (User.Identity.IsAuthenticated)
                                 {
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Lịch Sử Thi
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -92,7 +88,9 @@
                                         </a>
                                     </li>
                                     <li><hr class="dropdown-divider"></li>
-
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Share" asp-action="Share">Chia sẻ</a>
+                                    <li class="nav-item">
                                 </ul>
                             </li>
                                 }
@@ -101,10 +99,7 @@
                             <partial name="_LoginPartial" />
                         </li>
                        
-
-                        
-
-                                @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                              @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                                 {
                             <li class="nav-item">
                                 <a class="nav-link text-danger fw-bold" asp-area="Admin" asp-controller="QuanLyCauHoi" asp-action="Index">

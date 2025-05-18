@@ -394,12 +394,10 @@ header
 .header-area {
     background: #36aee6; /* Gradient xanh biển */
     position: fixed; /* Giữ cố định khi cuộn */
-    top: 0px;
-    left: 0px;
-    right: 0px;
+    
     width: 100%;
     z-index: 1000; /* Đảm bảo header luôn trên cùng */
-    height: 90px; /* Giảm chiều cao cho thanh header gọn hơn */
+    height: 80px; /* Giảm chiều cao cho thanh header gọn hơn */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
     border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Viền nhẹ */
     backdrop-filter: blur(8px); /* Làm mờ nền khi header dính */
@@ -957,7 +955,7 @@ Banner Style
   background-repeat: no-repeat;
   background-position: calc(100% - 50px) center; /* Đẩy ảnh vào 50px từ mép phải */
   background-size: 40%; /* Giảm kích thước ảnh */
-  padding: 150px 0;
+  padding: 50px 0;
   position: relative;
 
   

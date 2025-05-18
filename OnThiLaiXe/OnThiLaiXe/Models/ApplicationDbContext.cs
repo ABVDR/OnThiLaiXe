@@ -16,7 +16,7 @@ options) : base(options)
         public DbSet<BaiThi> BaiThis { get; set; }
         public DbSet<ChiTietBaiThi> ChiTietBaiThis { get; set; }
         public DbSet<CauHoiSai> CauHoiSais { get; set; }
-        public DbSet<CauTrucDeThi> CauTrucDeThis { get; set; } // Thêm DbSet cho CauTrucDeThi
+   
         public DbSet<BaiSaHinh> BaiSaHinhs { get; set; }
         public DbSet<LichSuThi> LichSuThis { get; set; }
         public DbSet<ChiTietLichSuThi> ChiTietLichSuThis { get; set; }
