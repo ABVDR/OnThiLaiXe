@@ -4,7 +4,16 @@
 @{
     ViewData["Title"] = "Câu Hỏi & Chia Sẻ";
     var allReplies = ViewBag.AllReplies as List<OnThiLaiXe.Models.ShareReply>;
+    var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+    var antiForgeryToken = "";
+    using (var sw = new System.IO.StringWriter())
+    {
+        Html.AntiForgeryToken().WriteTo(sw, System.Text.Encodings.Web.HtmlEncoder.Default);
+        antiForgeryToken = sw.ToString();
+    }
 }
+
+
 
 <div class="container mt-4">
     <h2 class="mb-3">@ViewData["Title"]</h2>
@@ -80,9 +89,9 @@
                 </div>
 
                 @* Nút Xóa Share *@
-                @if (share.UserId == User.FindFirstValue(ClaimTypes.NameIdentifier))
+                @if (share.UserId == currentUserId)
                 {
-                    <form asp-action="DeleteShare" method="post" class="d-inline">
+                    <form asp-action="DeleteShare" method="post" class="d-inline delete-share-form">
                         @Html.AntiForgeryToken()
                         <input type="hidden" name="id" value="@share.Id" />
                         <button type="submit" class="btn btn-danger btn-sm">
@@ -101,15 +110,15 @@
 
                     foreach (var reply in replies)
                     {
-                        <div class="ms-4 border-start ps-3 mb-2">
+                        <div class="ms-4 border-start ps-3 mb-2 reply-block" data-reply-id="@reply.Id">
                             <div class="d-flex align-items-center">
                                 <strong>@reply.UserName</strong>
                                 <small class="text-muted ms-2">@reply.CreatedAt.ToString("dd/MM/yyyy HH:mm")</small>
 
                                 @* Nút Xóa Reply cấp 1 *@
-                                @if (reply.UserId == User.FindFirstValue(ClaimTypes.NameIdentifier))
+                                @if (reply.UserId == currentUserId)
                                 {
-                                    <form asp-action="DeleteReply" method="post" class="ms-auto">
+                                    <form asp-action="DeleteReply" method="post" class="ms-auto delete-reply-form">
                                         @Html.AntiForgeryToken()
                                         <input type="hidden" name="id" value="@reply.Id" />
                                         <button type="submit" class="btn btn-sm btn-danger">
@@ -119,7 +128,7 @@
                                 }
                             </div>
 
-                            <div>@Html.Raw(reply.Content)</div>
+                            <div class="share-content">@Html.Raw(reply.Content)</div>
 
                             <button type="button" class="btn btn-sm btn-link toggle-reply-form" data-reply-id="@reply.Id">
                                 <i class="bi bi-reply"></i> Trả lời
@@ -138,23 +147,17 @@
                             </div>
 
                             @* Replies lồng sâu hơn *@
-                            @{
-                                var childReplies = allReplies
-                                .Where(r => r.ParentReplyId == reply.Id)
-                                .OrderBy(r => r.CreatedAt)
-                                .ToList();
-                            }
-                            @foreach (var child in childReplies)
+                            @foreach (var child in allReplies.Where(r => r.ParentReplyId == reply.Id).OrderBy(r => r.CreatedAt))
                             {
-                                <div class="ms-4 border-start ps-3 mt-2 bg-light rounded p-2">
+                                <div class="ms-4 border-start ps-3 mt-2 bg-light rounded p-2 reply-block" data-reply-id="@child.Id">
                                     <div class="d-flex align-items-center">
                                         <strong>@child.UserName</strong>
                                         <small class="text-muted ms-2">@child.CreatedAt.ToString("dd/MM/yyyy HH:mm")</small>
 
                                         @* Nút Xóa Reply con *@
-                                        @if (child.UserId == User.FindFirstValue(ClaimTypes.NameIdentifier))
+                                        @if (child.UserId == currentUserId)
                                         {
-                                            <form asp-action="DeleteReply" method="post" class="ms-auto">
+                                            <form asp-action="DeleteReply" method="post" class="ms-auto delete-reply-form">
                                                 @Html.AntiForgeryToken()
                                                 <input type="hidden" name="id" value="@child.Id" />
                                                 <button type="submit" class="btn btn-sm btn-danger">
@@ -163,7 +166,7 @@
                                             </form>
                                         }
                                     </div>
-                                    <div>@Html.Raw(child.Content)</div>
+                                    <div class="share-content">@Html.Raw(child.Content)</div>
                                 </div>
                             }
                         </div>
@@ -194,21 +197,53 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
-<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 <script>
     // Khởi tạo CKEditor cho textarea #editor
     if (document.getElementById('editor')) {
         ClassicEditor
-            .create(document.getElementById('editor'), {
-                ckfinder: { uploadUrl: '/Share/UploadImage' },
-                mediaEmbed: { previewsInData: true }
-            })
-            .then(editor => {
-                document.getElementById('editor').editorInstance = editor;
-            })
-            .catch(console.error);
+    .create(document.getElementById('editor'), {
+        ckfinder: { uploadUrl: '/Share/UploadImage' },
+        mediaEmbed: { previewsInData: true },
+        image: {
+            resizeUnit: 'px',
+            resizeOptions: [
+                {
+                    name: 'resizeImage:600',
+                    value: 400,
+                    label: '400px'
+                },
+                {
+                    name: 'resizeImage:original',
+                    value: null,
+                    label: 'Gốc'
+                }
+            ],
+            toolbar: [
+                'imageStyle:alignLeft', 'imageStyle:alignCenter', 'imageStyle:alignRight',
+                '|', 'imageTextAlternative', '|', 'resizeImage'
+            ]
+        }
+    })
+    .then(editor => {
+        document.getElementById('editor').editorInstance = editor;
+        editor.model.document.on('change:data', () => {
+            const model = editor.model;
+            model.change(writer => {
+                for (const img of model.document.getRoot().getChildren()) {
+                    if (img.is('element', 'imageBlock')) {
+
+                        if (img.getAttribute('width') !== 400) {
+                            writer.setAttribute('width', 400, img);
+                        }
+                        if (img.getAttribute('height') !== 400) {
+                            writer.setAttribute('height', 400, img);
+                        }
+                    }
+                }
+            });
+        });
+    })
+    .catch(console.error);
     }
 
     // Hàm khởi tạo CKEditor cho tất cả textarea.ckeditor
@@ -222,7 +257,7 @@
                     })
                     .then(editor => {
                         textarea.classList.add('ck-editor-initialized');
-                        textarea.editorInstance = editor; // Lưu lại để xóa sau
+                        textarea.editorInstance = editor;
                     })
                     .catch(console.error);
             }
@@ -231,24 +266,30 @@
     initCKEditors();
 
     // Toggle form trả lời con
-    document.querySelectorAll('.toggle-reply-form').forEach(btn =>
-        btn.addEventListener('click', () => {
-            const id = btn.getAttribute('data-reply-id');
-            const form = document.getElementById(`reply-form-${id}`);
-            form.classList.toggle('d-none');
-            initCKEditors();
-        })
-    );
+    function bindReplyToggle() {
+        document.querySelectorAll('.toggle-reply-form').forEach(btn =>
+            btn.onclick = function () {
+                const id = btn.getAttribute('data-reply-id');
+                const form = document.getElementById(`reply-form-${id}`);
+                form.classList.toggle('d-none');
+                initCKEditors();
+            }
+        );
+    }
+    bindReplyToggle();
 
     // Toggle form trả lời Share chính
-    document.querySelectorAll('.toggle-share-reply-form').forEach(btn =>
-        btn.addEventListener('click', () => {
-            const id = btn.getAttribute('data-share-id');
-            const form = document.getElementById(`share-reply-form-${id}`);
-            form.classList.toggle('d-none');
-            initCKEditors();
-        })
-    );
+    function bindShareReplyToggle() {
+        document.querySelectorAll('.toggle-share-reply-form').forEach(btn =>
+            btn.onclick = function () {
+                const id = btn.getAttribute('data-share-id');
+                const form = document.getElementById(`share-reply-form-${id}`);
+                form.classList.toggle('d-none');
+                initCKEditors();
+            }
+        );
+    }
+    bindShareReplyToggle();
 
     // Debounce cho ô tìm kiếm
     const searchBox = document.getElementById('searchBox');
@@ -271,23 +312,50 @@
                 alert(response.message);
                 return;
             }
-
+            // Lấy token cho form động
+            const tokenInput = getAntiForgeryTokenInput();
+            const canDelete = response.userId === currentUserId;
             const html = `
-                <div class="ms-4 border-start ps-3 mt-2 bg-light rounded p-2">
-                    <div class="d-flex align-items-center">
-                        <strong>${response.userName}</strong>
-                        <small class="text-muted ms-2">${response.createdAt}</small>
-                    </div>
-                    <div>${response.content}</div>
-                </div>`;
+            <div class="ms-4 border-start ps-3 mt-2 bg-light rounded p-2 reply-block" data-reply-id="${response.id}">
+                <div class="d-flex align-items-center">
+                    <strong>${response.userName}</strong>
+                    <small class="text-muted ms-2">${response.createdAt}</small>
+                    ${canDelete ? `
+                    <form action="/Share/DeleteReply" method="post" class="ms-auto d-inline delete-reply-form">
+                        ${tokenInput}
+                        <input type="hidden" name="id" value="${response.id}" />
+                        <button type="submit" class="btn btn-sm btn-danger">
+                            <i class="bi bi-trash3"></i> Xóa
+                        </button>
+                    </form>
+                    ` : ''}
+                </div>
+                <div class="share-content">${response.content}</div>
+                <button type="button" class="btn btn-sm btn-link toggle-reply-form" data-reply-id="${response.id}">
+                    <i class="bi bi-reply"></i> Trả lời
+                </button>
+                <div class="reply-form d-none mt-2" id="reply-form-${response.id}">
+                    <form action="/Share/CreateReply" method="post">
+                        ${tokenInput}
+                        <input type="hidden" name="shareId" value="${response.shareId}" />
+                        <input type="hidden" name="parentReplyId" value="${response.id}" />
+                        <textarea name="content" class="form-control ckeditor mb-2"></textarea>
+                        <button type="submit" class="btn btn-sm btn-primary">
+                            <i class="bi bi-send"></i> Gửi
+                        </button>
+                    </form>
+                </div>
+            </div>`;
 
             if (response.parentReplyId) {
                 $(`#reply-form-${response.parentReplyId}`).before(html);
             } else {
                 $(`#share-reply-form-${form.find('[name="shareId"]').val()}`).before(html);
             }
+            // Khởi tạo lại sự kiện cho nút mới
+            bindReplyToggle();
+            initCKEditors();
 
-            // Xóa nội dung sau khi gửi
             if (editor) editor.setData('');
             else form.find('textarea').val('');
         }).fail(() => alert("Lỗi khi gửi trả lời"));
@@ -310,7 +378,7 @@
                 if (response.success) {
                     if (editor) editor.setData('');
                     $('select[name="Topic"]').val('');
-                    location.reload(); // hoặc thêm mới vào DOM
+                    location.reload();
                 } else {
                     alert(response.message);
                 }
@@ -320,8 +388,7 @@
             }
         });
     });
-
-    // AJAX xóa chia sẻ hoặc reply
+    // AJAX xóa chia sẻ hoặc reply (KHÔNG reload trang)
     $(document).on('submit', 'form[action="/Share/DeleteShare"], form[action="/Share/DeleteReply"]', function (e) {
         e.preventDefault();
         if (!confirm('Bạn chắc chắn muốn xóa?')) return;
@@ -330,13 +397,31 @@
         const actionUrl = form.attr('action');
         const formData = form.serialize();
 
-        $.post(actionUrl, formData, function () {
-            location.reload(); // hoặc xóa DOM phần tử tương ứng
+        $.post(actionUrl, formData, function (response) {
+            if (response.success) {
+                if (actionUrl.includes('DeleteShare')) {
+                    form.closest('.card').remove();
+                } else {
+                    form.closest('.reply-block').remove();
+                }
+            } else {
+                alert(response.message || "Lỗi xóa");
+            }
         }).fail(() => alert("Lỗi xóa"));
     });
 </script>
+<script>
+    // Biến userId hiện tại cho JS
+    var currentUserId = '@currentUserId';
+    // Lấy giá trị token để dùng cho form động
+    var antiForgeryToken = '@Html.Raw(antiForgeryToken.Replace("'", "\\'"))';
+    function getAntiForgeryTokenInput() {
 
-
+        var div = document.createElement('div');
+        div.innerHTML = antiForgeryToken;
+        return div.querySelector('input[name="__RequestVerificationToken"]').outerHTML;
+    }
+</script>
 <style>
     .ck-editor__editable_inline {
         min-height: 200px;
@@ -360,6 +445,18 @@
     .share-content iframe {
         max-width: 100%;
         height: auto;
+    }
+
+    .share-content img {
+        width: 400px !important;
+        height: 400px !important;
+        object-fit: contain;
+    }
+
+    .ck-editor__editable img {
+        width: 400px !important;
+        height: 400px !important;
+        object-fit: contain;
     }
 
     .btn-link.active {
