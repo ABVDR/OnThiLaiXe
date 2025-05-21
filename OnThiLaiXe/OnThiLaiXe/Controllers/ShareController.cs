@@ -125,9 +125,12 @@ namespace OnThiLaiXe.Controllers
             return Json(new
             {
                 success = true,
+                id = reply.Id,
+                userId = reply.UserId,
                 userName,
                 content,
                 createdAt = reply.CreatedAt.ToString("dd/MM/yyyy HH:mm"),
+                shareId = reply.ShareId,
                 parentReplyId = parentReplyId
             });
         }
@@ -161,6 +164,7 @@ namespace OnThiLaiXe.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         public async Task<IActionResult> DeleteShare(int id)
         {
             var share = await _context.Shares.FindAsync(id);
