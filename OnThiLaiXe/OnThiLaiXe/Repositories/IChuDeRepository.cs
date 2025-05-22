@@ -9,5 +9,6 @@ namespace OnThiLaiXe.Repositories
         Task AddAsync(ChuDe chude);
         Task UpdateAsync(ChuDe chude);
         Task DeleteAsync(int id);
+        Task<IEnumerable<ChuDe>> GetAllNotDelete();
     }
 }

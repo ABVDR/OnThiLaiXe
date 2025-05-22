@@ -17,7 +17,10 @@ namespace OnThiLaiXe.Repositories
             // return await _context.Products.ToListAsync(); 
             return await _context.ChuDes.ToListAsync();
         }
-
+        public async Task<IEnumerable<ChuDe>> GetAllNotDelete()
+        {
+            return await _context.ChuDes.Where(c => !c.isDeleted).ToListAsync();
+        }
         public async Task<ChuDe> GetByIdAsync(int id)
         {
             // return await _context.Products.FindAsync(id); 

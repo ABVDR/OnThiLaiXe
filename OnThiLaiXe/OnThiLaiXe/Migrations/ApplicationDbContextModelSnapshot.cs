@@ -445,6 +445,9 @@ namespace OnThiLaiXe.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.ToTable("ChuDes");
@@ -554,6 +557,9 @@ namespace OnThiLaiXe.Migrations
 
                     b.Property<int>("ThoiGianThi")
                         .HasColumnType("int");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 

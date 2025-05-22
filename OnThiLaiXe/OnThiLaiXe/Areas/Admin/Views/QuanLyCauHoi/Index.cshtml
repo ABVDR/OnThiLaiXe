@@ -28,6 +28,22 @@
         background-color: #f1e5d8;
     }
 
+    /* Định dạng đặc biệt cho các dòng đã bị xóa mềm */
+    .row-deleted {
+        background-color: #ffebee !important; /* Màu nền đỏ nhạt */
+        color: #d32f2f;
+        position: relative;
+    }
+
+        .row-deleted:hover {
+            background-color: #ffcdd2 !important; /* Màu nền đỏ nhạt khi hover */
+        }
+
+        /* Phủ một lớp mờ lên các dòng đã xóa */
+        .row-deleted td {
+            opacity: 0.9;
+        }
+
     .btn-add {
         background-color: #8e7d6a;
         color: white;
@@ -42,10 +58,11 @@
             background-color: #6d5b42;
         }
 
-    .btn-warning, .btn-info, .btn-danger {
-        padding: 8px 15px;
+    .btn-warning, .btn-info, .btn-danger, .btn-success {
+        padding: 6px 12px;
         border-radius: 5px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 0 2px;
     }
 
     .btn-warning {
@@ -63,8 +80,14 @@
         color: white;
     }
 
+    .btn-success {
+        background-color: #66bb6a;
+        color: white;
+    }
+
     .action-column {
-        width: 200px;
+        width: 240px;
+        white-space: nowrap;
     }
 
     .status-column {
@@ -125,8 +148,24 @@
                 background-color: #f1f1f1;
             }
 
-    .status-btn {
-        white-space: nowrap; /* Ngăn chặn nút xuống dòng */
+    .status-badge {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.85em;
+        font-weight: bold;
+    }
+
+    .status-badge-deleted {
+        background-color: #ffcdd2;
+        color: #d32f2f;
+        border: 1px solid #ef9a9a;
+    }
+
+    .status-badge-active {
+        background-color: #c8e6c9;
+        color: #388e3c;
+        border: 1px solid #a5d6a7;
     }
 </style>
 
@@ -138,26 +177,33 @@
 
     <!-- Bộ lọc -->
     <div class="filter-container row g-3 position-relative">
-        <div class="col-md-4 col-sm-12 position-relative">
+        <div class="col-md-3 col-sm-12 position-relative">
             <input type="text" id="SearchCauHoi" placeholder="Tìm kiếm câu hỏi..." class="form-control" autocomplete="on" />
             <div id="autocomplete-list" class="autocomplete-items"></div>
         </div>
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-3 col-sm-12">
             <select id="filterChuDe" class="form-select">
                 <option value="">-- Lọc theo Chủ đề --</option>
-                @foreach (var chuDe in Model.Select(c => c.ChuDe.TenChuDe).Distinct())
+                @foreach (var chuDe in ViewBag.ChuDesList)
                 {
-                    <option value="@chuDe">@chuDe</option>
+                    <option value="@chuDe.TenChuDe">@chuDe.TenChuDe</option>
                 }
             </select>
         </div>
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-3 col-sm-12">
             <select id="filterLoaiBang" class="form-select">
                 <option value="">-- Lọc theo Loại bằng --</option>
-                @foreach (var loai in Model.Select(c => c.LoaiBangLai.TenLoai).Distinct())
+                @foreach (var loaiBang in ViewBag.LoaiBangLaisList)
                 {
-                    <option value="@loai">@loai</option>
+                    <option value="@loaiBang.TenLoai">@loaiBang.TenLoai</option>
                 }
+            </select>
+        </div>
+        <div class="col-md-3 col-sm-12">
+            <select id="filterStatus" class="form-select">
+                <option value="">-- Lọc theo Trạng thái --</option>
+                <option value="active">Đang hoạt động</option>
+                <option value="deleted">Đã xóa</option>
             </select>
         </div>
     </div>
@@ -176,7 +222,7 @@
         <tbody id="tableBody">
             @foreach (var item in Model)
             {
-                <tr>
+                <tr class="@(item.isDeleted ? "row-deleted" : "")" data-id="@item.Id">
                     <td class="chuDe">@item.ChuDe.TenChuDe</td>
                     <td class="loaiBang">@item.LoaiBangLai.TenLoai</td>
                     <td class="noiDung">@item.NoiDung</td>
@@ -198,15 +244,20 @@
                         <a asp-action="Display" asp-route-id="@item.Id" class="btn btn-sm btn-info" title="Xem">
                             <i class="bi bi-eye"></i>
                         </a>
-                    </td>
-                    <td class="status-column">
-                        <!-- Thêm nút toggle vào cột Trạng thái -->
+                        <!-- Nút xóa/khôi phục chuyển vào cột hành động -->
                         <a asp-action="ToggleActive" asp-route-id="@item.Id"
                            class="btn btn-sm status-btn @(item.isDeleted ? "btn-success" : "btn-danger")"
-                           title="@(item.isDeleted ? "Kích hoạt" : "Vô hiệu hóa")">
-                            <i class="bi @(item.isDeleted ? "bi-check-circle" : "bi-x-circle")"></i>
-                            @(item.isDeleted ? "Kích hoạt" : "Vô hiệu")
+                           title="@(item.isDeleted ? "Khôi phục câu hỏi đã xóa" : "Xóa câu hỏi này")">
+                            <i class="bi @(item.isDeleted ? "bi-arrow-counterclockwise" : "bi-trash")"></i>
+                            @(item.isDeleted ? "Khôi phục" : "Xóa")
                         </a>
+                    </td>
+                    <td class="status-column">
+                        <!-- Chỉ hiển thị trạng thái -->
+                        <span class="status-badge @(item.isDeleted ? "status-badge-deleted" : "status-badge-active")">
+                            <i class="bi @(item.isDeleted ? "bi-trash" : "bi-check-circle")"></i>
+                            @(item.isDeleted ? "Đã xóa" : "Hoạt động")
+                        </span>
                     </td>
                 </tr>
             }
@@ -223,6 +274,7 @@
         const searchBox = document.getElementById("SearchCauHoi");
         const filterChuDe = document.getElementById("filterChuDe");
         const filterLoaiBang = document.getElementById("filterLoaiBang");
+        const filterStatus = document.getElementById("filterStatus");
         const tableBody = document.getElementById("tableBody");
         const autoCompleteBox = document.getElementById("autocomplete-list");
 
@@ -230,6 +282,7 @@
             const keyword = searchBox.value.toLowerCase();
             const selectedChuDe = filterChuDe.value;
             const selectedLoaiBang = filterLoaiBang.value;
+            const selectedStatus = filterStatus.value;
 
             const rows = tableBody.querySelectorAll("tr");
 
@@ -237,17 +290,23 @@
                 const chuDe = row.querySelector(".chuDe").textContent.trim();
                 const loaiBang = row.querySelector(".loaiBang").textContent.trim();
                 const noiDung = row.querySelector(".noiDung").textContent.toLowerCase();
+                const isDeleted = row.classList.contains("row-deleted");
 
                 const matchKeyword = noiDung.includes(keyword);
                 const matchChuDe = !selectedChuDe || chuDe === selectedChuDe;
                 const matchLoai = !selectedLoaiBang || loaiBang === selectedLoaiBang;
+                const matchStatus = !selectedStatus ||
+                                   (selectedStatus === "deleted" && isDeleted) ||
+                                   (selectedStatus === "active" && !isDeleted);
 
-                row.style.display = (matchKeyword && matchChuDe && matchLoai) ? "" : "none";
+                row.style.display = (matchKeyword && matchChuDe && matchLoai && matchStatus) ? "" : "none";
             });
         }
+
         searchBox.addEventListener("keyup", filterRows);
         filterChuDe.addEventListener("change", filterRows);
         filterLoaiBang.addEventListener("change", filterRows);
+        filterStatus.addEventListener("change", filterRows);
 
         // Sort nội dung
         let sortDirection = false;
@@ -272,14 +331,38 @@
                 const url = this.getAttribute('href');
                 const isDeleted = this.classList.contains('btn-success');
                 const noiDung = this.closest('tr').querySelector('.noiDung').textContent.trim();
-                const action = isDeleted ? "kích hoạt" : "vô hiệu hóa";
+                const action = isDeleted ? "khôi phục" : "xóa";
 
-                const confirmMessage = `Bạn có chắc chắn muốn ${action} câu hỏi "${noiDung.substring(0, 50)}${noiDung.length > 50 ? '...' : ''}"?`;
+                const confirmMessage = `Bạn có chắc chắn muốn ${action} câu hỏi:\n"${noiDung.substring(0, 50)}${noiDung.length > 50 ? '...' : ''}"?`;
 
                 if (confirm(confirmMessage)) {
                     window.location.href = url;
                 }
             });
+        });
+
+        // Highlight dòng đang được xem
+        document.addEventListener("DOMContentLoaded", function() {
+            // Lấy id từ URL nếu có
+            const urlParams = new URLSearchParams(window.location.search);
+            const highlightId = urlParams.get('highlight');
+
+            if (highlightId) {
+                // Tự động scroll đến dòng được highlight
+                const row = document.querySelector(`tr[data-id="${highlightId}"]`);
+                if (row) {
+                    row.classList.add("bg-light");
+                    row.style.transition = "background-color 2s";
+
+                    // Scroll đến dòng đó
+                    row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                    // Sau 3 giây, bỏ highlight
+                    setTimeout(() => {
+                        row.classList.remove("bg-light");
+                    }, 3000);
+                }
+            }
         });
     </script>
 }
