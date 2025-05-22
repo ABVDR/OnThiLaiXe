@@ -1,0 +1,146 @@
+﻿@model OnThiLaiXe.Models.LoaiBangLai
+
+@{
+    ViewData["Title"] = "Xác nhận xóa loại bằng lái";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid px-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a asp-action="Index">Danh sách loại bằng lái</a></li>
+            <li class="breadcrumb-item active">Xóa loại bằng lái</li>
+        </ol>
+    </nav>
+
+    <div class="row">
+        <div class="col-lg-8 col-xl-7 mx-auto">
+            <div class="card shadow-lg border-danger">
+                <div class="card-header bg-danger text-white d-flex align-items-center p-3">
+                    <i class="fas fa-exclamation-triangle fa-2x me-3"></i>
+                    <div>
+                        <h5 class="mb-0 fw-bold">Xác nhận xóa</h5>
+                        <p class="mb-0 small">Bạn có chắc chắn muốn xóa loại bằng lái này?</p>
+                    </div>
+                </div>
+                <div class="card-body p-4">
+                    <div class="card bg-light mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary mb-3">
+                                <i class="fas fa-id-card me-2"></i>Thông tin loại bằng lái
+                            </h5>
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered mb-0">
+                                    <tbody>
+                                        <tr>
+                                            <th class="bg-light text-dark" style="width: 35%;">Mã loại bằng</th>
+                                            <td class="fw-medium">@Model.Id</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="bg-light text-dark">Tên loại bằng lái</th>
+                                            <td class="fw-medium">@Model.TenLoai</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="bg-light text-dark">Loại xe</th>
+                                            <td>
+                                                @if (string.IsNullOrEmpty(Model.LoaiXe))
+                                                {
+                                                    <span class="text-muted"><em>Chưa cập nhật</em></span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-info text-dark">@Model.LoaiXe</span>
+                                                }
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="bg-light text-dark">Thời gian thi</th>
+                                            <td>
+                                                <i class="fas fa-clock text-secondary me-1"></i>
+                                                @Model.ThoiGianThi phút
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="bg-light text-dark">Điểm tối thiểu</th>
+                                            <td>
+                                                <i class="fas fa-star text-warning me-1"></i>
+                                                @Model.DiemToiThieu điểm
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="bg-light text-dark">Trạng thái</th>
+                                            <td>
+                                                @if (Model.isDeleted)
+                                                {
+                                                    <span class="badge bg-danger"><i class="fas fa-ban me-1"></i>Đã xóa</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-success"><i class="fas fa-check-circle me-1"></i>Hoạt động</span>
+                                                }
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="bg-light text-dark">Mô tả</th>
+                                            <td>
+                                                @if (string.IsNullOrEmpty(Model.MoTa))
+                                                {
+                                                    <span class="text-muted"><em>Không có mô tả</em></span>
+                                                }
+                                                else
+                                                {
+                                                    @Model.MoTa
+                                                }
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    @if ((Model.CauHois != null && Model.CauHois.Any()) || (Model.BaiSaHinhs != null && Model.BaiSaHinhs.Any()))
+                    {
+                        <div class="alert alert-danger p-3 mb-4">
+                            <div class="d-flex">
+                                <i class="fas fa-exclamation-circle fa-2x me-3"></i>
+                                <div>
+                                    <h5 class="mb-1 fw-bold">Cảnh báo dữ liệu liên kết</h5>
+                                    <p class="mb-0">
+                                        Loại bằng lái này đang có liên kết với:
+                                        @if (Model.CauHois != null && Model.CauHois.Any())
+                                        {
+                                            <span class="badge bg-secondary ms-1">@Model.CauHois.Count() câu hỏi</span>
+                                        }
+                                        @if (Model.BaiSaHinhs != null && Model.BaiSaHinhs.Any())
+                                        {
+                                            <span class="badge bg-secondary ms-1">@Model.BaiSaHinhs.Count() bài sa hình</span>
+                                        }
+                                    </p>
+                                    <p class="mb-0 mt-1">
+                                        Việc xóa sẽ ảnh hưởng đến các dữ liệu liên kết này!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    <form asp-action="Delete" class="mt-4">
+                        <input type="hidden" asp-for="Id" />
+                        @Html.AntiForgeryToken()
+
+                        <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
+                            <a asp-action="Index" class="btn btn-secondary btn-lg">
+                                <i class="fas fa-arrow-left me-2"></i>Hủy & Quay lại
+                            </a>
+                            <button type="submit" class="btn btn-danger btn-lg">
+                                <i class="fas fa-trash-alt me-2"></i>Xác nhận xóa
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

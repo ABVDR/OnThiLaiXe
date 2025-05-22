@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OnThiLaiXe.Models;
 using OnThiLaiXe.Repositories;
@@ -6,6 +7,7 @@ using OnThiLaiXe.Repositories;
 namespace OnThiLaiXe.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class MoPhongController : Controller
     {
         private readonly IMoPhongRepository _moPhongRepository;

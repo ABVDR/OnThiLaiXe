@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using OnThiLaiXe.Models;
 using OnThiLaiXe.Repositories;
 using System;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 namespace OnThiLaiXe.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class HomeController : Controller
     {
         private readonly IUserRepository _userRepository;

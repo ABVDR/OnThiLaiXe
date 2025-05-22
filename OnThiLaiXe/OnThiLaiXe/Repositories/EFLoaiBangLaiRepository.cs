@@ -27,7 +27,10 @@ namespace OnThiLaiXe.Repositories
         {
             return await _context.LoaiBangLais.ToListAsync();
         }
-
+        public async Task<IEnumerable<LoaiBangLai>> GetAllNotDelete()
+        {
+            return await _context.LoaiBangLais.Where(c => !c.isDeleted).ToListAsync();
+        }
         public async Task<LoaiBangLai> GetByIdAsync(int id)
         {
             return await _context.LoaiBangLais.FirstOrDefaultAsync(l => l.Id == id);

@@ -23,19 +23,22 @@ namespace OnThiLaiXe.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-
-            var loaiBangLais = await _loaiBangLaiRepository.GetAllAsync();
+            var loaiBangLais = await _loaiBangLaiRepository.GetAllNotDelete();
+            ViewBag.LoaiBangLaisList = loaiBangLais;
             ViewBag.LoaiBangLais = new SelectList(loaiBangLais, "Id", "TenLoai");
+
+            var chuDes = await _chuDeRepository.GetAllNotDelete();
+            ViewBag.ChuDesList = chuDes;
             var cauHois = await _cauHoiRepository.GetAllAsync();
             return View(cauHois);
         }
 
         public async Task<IActionResult> Add()
         {
-            var chudes = await _chuDeRepository.GetAllAsync();
+            var chudes = await _chuDeRepository.GetAllNotDelete();
             ViewBag.ChuDes = new SelectList(chudes, "Id", "TenChuDe");
 
-            var loaiBangLais = await _loaiBangLaiRepository.GetAllAsync();
+            var loaiBangLais = await _loaiBangLaiRepository.GetAllNotDelete();
             ViewBag.LoaiBangLais = new SelectList(loaiBangLais, "Id", "TenLoai");
 
             return View();
@@ -47,10 +50,10 @@ namespace OnThiLaiXe.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
             {
-                var chudes = await _chuDeRepository.GetAllAsync();
+                var chudes = await _chuDeRepository.GetAllNotDelete();
                 ViewBag.ChuDes = new SelectList(chudes, "Id", "TenChuDe");
 
-                var loaiBangLais = await _loaiBangLaiRepository.GetAllAsync();
+                var loaiBangLais = await _loaiBangLaiRepository.GetAllNotDelete();
                 ViewBag.LoaiBangLais = new SelectList(loaiBangLais, "Id", "TenLoai");
 
                 return View(cauhoi);

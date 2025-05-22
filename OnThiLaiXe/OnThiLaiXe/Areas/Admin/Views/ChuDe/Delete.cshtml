@@ -1,0 +1,129 @@
+﻿@model OnThiLaiXe.Models.ChuDe
+
+@{
+    ViewData["Title"] = "Xác nhận xóa chủ đề";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid px-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a asp-action="Index">Danh sách chủ đề</a></li>
+            <li class="breadcrumb-item active">Xóa chủ đề</li>
+        </ol>
+    </nav>
+
+    <div class="row">
+        <div class="col-lg-8 col-xl-7 mx-auto">
+            <div class="card shadow-lg border-danger">
+                <div class="card-header bg-danger text-white d-flex align-items-center p-3">
+                    <i class="fas fa-exclamation-triangle fa-2x me-3"></i>
+                    <div>
+                        <h5 class="mb-0 fw-bold">Xác nhận xóa</h5>
+                        <p class="mb-0 small">Thao tác này không thể hoàn tác</p>
+                    </div>
+                </div>
+                <div class="card-body p-4">
+                    <div class="card bg-light mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary mb-3">
+                                <i class="fas fa-info-circle me-2"></i>Thông tin chủ đề
+                            </h5>
+
+                            <div class="row mb-4">
+                                <div class="col-md-4 text-center mb-3 mb-md-0">
+                                    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                                    {
+                                        <img src="@Model.ImageUrl" alt="@Model.TenChuDe" class="img-fluid rounded" style="max-height: 150px;">
+                                    }
+                                    else
+                                    {
+                                        <div class="bg-white d-flex align-items-center justify-content-center border rounded" style="height: 150px;">
+                                            <i class="fas fa-image fa-3x text-muted"></i>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <th class="bg-light text-dark" style="width: 35%;">Mã chủ đề</th>
+                                                    <td class="fw-medium">@Model.Id</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="bg-light text-dark">Tên chủ đề</th>
+                                                    <td class="fw-medium">@Model.TenChuDe</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="bg-light text-dark">Trạng thái</th>
+                                                    <td>
+                                                        @if (Model.isDeleted)
+                                                        {
+                                                            <span class="badge bg-danger"><i class="fas fa-ban me-1"></i>Đã khóa</span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <span class="badge bg-success"><i class="fas fa-check-circle me-1"></i>Hoạt động</span>
+                                                        }
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-0">
+                                <h6 class="fw-bold mb-2">Mô tả</h6>
+                                <div class="p-3 bg-white rounded border">
+                                    @if (string.IsNullOrEmpty(Model.MoTa))
+                                    {
+                                        <em class="text-muted">Không có mô tả</em>
+                                    }
+                                    else
+                                    {
+                                        @Model.MoTa
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @if (Model.CauHois != null && Model.CauHois.Any())
+                    {
+                        <div class="alert alert-danger p-3 mb-4">
+                            <div class="d-flex">
+                                <i class="fas fa-exclamation-circle fa-2x me-3"></i>
+                                <div>
+                                    <h5 class="mb-1 fw-bold">Cảnh báo dữ liệu liên kết</h5>
+                                    <p class="mb-0">
+                                        Chủ đề này đang có liên kết với:
+                                        <span class="badge bg-secondary ms-1">@Model.CauHois.Count() câu hỏi</span>
+                                    </p>
+                                    <p class="mb-0 mt-1">
+                                        Thay vì xóa, bạn nên <a asp-action="ToggleActive" asp-route-id="@Model.Id" class="fw-bold text-danger">khóa chủ đề này</a> để tránh mất dữ liệu!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    <form asp-action="Delete" class="mt-4">
+                        <input type="hidden" asp-for="Id" />
+                        @Html.AntiForgeryToken()
+
+                        <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
+                            <a asp-action="Index" class="btn btn-secondary btn-lg">
+                                <i class="fas fa-arrow-left me-2"></i>Hủy & Quay lại
+                            </a>
+                            <button type="submit" class="btn btn-danger btn-lg">
+                                <i class="fas fa-trash-alt me-2"></i>Xác nhận xóa
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

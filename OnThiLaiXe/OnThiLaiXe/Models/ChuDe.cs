@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace OnThiLaiXe.Models
 {
@@ -11,7 +12,8 @@ namespace OnThiLaiXe.Models
 
         public string MoTa { get; set; }
         public string? ImageUrl { get; set; }
-
+        public bool isDeleted { get; set; } = false;
+        [ValidateNever]
         public ICollection<CauHoi> CauHois { get; set; }
     }
 }
