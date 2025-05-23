@@ -13572,6 +13572,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\c3a1a60a-8480-4c2c-95a4-5b9715a3d022.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\cb9f1fa1-406c-4996-b9ca-bfa693bc8e1f.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>OnThiLaiXe</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/OnThiLaiXe</BasePath>
+      <RelativePath>uploads/cb9f1fa1-406c-4996-b9ca-bfa693bc8e1f.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>mclksuiwsx</Fingerprint>
+      <Integrity>Fp1ytWTi0oRQw6aUdn97Wvz+b8LInhzFEg0WGhdwDBw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\cb9f1fa1-406c-4996-b9ca-bfa693bc8e1f.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\e87641f3-2afb-4455-a8d4-3cfb8ca4eb6d.png'))">
       <SourceType>Package</SourceType>
       <SourceId>OnThiLaiXe</SourceId>
