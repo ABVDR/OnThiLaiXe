@@ -1,0 +1,71 @@
+﻿@model IEnumerable<OnThiLaiXe.Models.Sharereport>
+@{
+    ViewData["Title"] = "Quản lý Báo cáo Nội dung";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewData["Title"] = "Quản lý Báo cáo Nội dung";
+}
+<h2>Quản lý Báo cáo Nội dung </h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nội dung bị báo cáo</th>
+            <th>Lý do</th>
+            <th>Ngày báo cáo</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var report in Model)
+        {
+            <tr>
+                <td>@report.Id</td>
+                <td>
+                    <style>
+                        .report-content img {
+                            max-width: 200px;
+                            height: auto;
+                        }
+                    </style>
+                    @if (report.Share != null)
+                    {
+                        <div class="report-content">@Html.Raw(report.Share.Content)</div>
+                    }
+                    else if (report.ShareReply != null)
+                    {
+                        <div class="report-content">@Html.Raw(report.ShareReply.Content)</div>
+                    }
+                    else
+                    {
+                        <div><i>Nội dung đã bị xóa</i></div>
+                    }
+                </td>
+
+
+                <td>@report.Reason</td>
+                <td>@report.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>
+                    <form asp-action="DeleteContent" method="post" onsubmit="return confirm('Bạn có chắc muốn xóa nội dung này?');">
+                        @Html.AntiForgeryToken()
+                        @if (report.Share != null)
+                        {
+                            <input type="hidden" name="type" value="share" />
+                            <input type="hidden" name="id" value="@report.Share.Id" />
+                        }
+                        else if (report.ShareReply != null)
+                        {
+                            <input type="hidden" name="type" value="reply" />
+                            <input type="hidden" name="id" value="@report.ShareReply.Id" />
+                        }
+                        <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                    </form>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

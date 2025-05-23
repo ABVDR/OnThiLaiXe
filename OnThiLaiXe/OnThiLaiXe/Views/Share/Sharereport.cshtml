@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Báo cáo nội dung";
+}
+
+<h3>@ViewData["Title"]</h3>
+<p class="text-muted">Vui lòng nêu lý do báo cáo nội dung này.</p>
+
+<form asp-action="Sharereport" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="shareId" value="@ViewBag.ShareId" />
+    <input type="hidden" name="replyId" value="@ViewBag.ReplyId" />
+
+    <div class="form-group">
+        <label for="reason">Lý do báo cáo</label>
+        <textarea name="reason" class="form-control" required rows="4" placeholder="Nhập lý do cụ thể..."></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-danger mt-2">Gửi báo cáo</button>
+</form>
