@@ -13,8 +13,6 @@
     }
 }
 
-
-
 <div class="container mt-4">
     <h2 class="mb-3">@ViewData["Title"]</h2>
     <p class="text-muted">Câu hỏi về ôn thi gplx, lý thuyết, mô phỏng và các chủ đề khác được chia sẻ tại đây.</p>
@@ -79,9 +77,16 @@
     {
         <div class="card mb-4">
             <div class="card-body">
-                <div class="mb-2">
+                <div class="mb-2 d-flex align-items-center">
                     <div class="fw-bold">Người dùng: @share.UserName</div>
-                    <small class="text-muted">@share.Topic - @share.CreatedAt.ToString("dd/MM/yyyy HH:mm")</small>
+                    <small class="text-muted ms-2">@share.Topic - @share.CreatedAt.ToString("dd/MM/yyyy HH:mm")</small>
+                    @* Nút Báo cáo Share (chỉ hiện với người khác) *@
+                    @if (share.UserId != currentUserId)
+                    {
+                        <a asp-action="Sharereport" asp-route-shareId="@share.Id" class="btn btn-sm btn-warning ms-2">
+                            <i class="bi bi-exclamation-triangle-fill"></i> Báo cáo
+                        </a>
+                    }
                 </div>
 
                 <div class="share-content mb-2">
@@ -114,7 +119,6 @@
                             <div class="d-flex align-items-center">
                                 <strong>@reply.UserName</strong>
                                 <small class="text-muted ms-2">@reply.CreatedAt.ToString("dd/MM/yyyy HH:mm")</small>
-
                                 @* Nút Xóa Reply cấp 1 *@
                                 @if (reply.UserId == currentUserId)
                                 {
@@ -125,6 +129,13 @@
                                             <i class="bi bi-trash3"></i> Xóa
                                         </button>
                                     </form>
+                                }
+                                @* Nút Báo cáo Reply (chỉ hiện với người khác) *@
+                                @if (reply.UserId != currentUserId)
+                                {
+                                    <a asp-action="Sharereport" asp-route-replyId="@reply.Id" class="btn btn-sm btn-warning ms-2">
+                                        <i class="bi bi-exclamation-triangle-fill"></i> Báo cáo
+                                    </a>
                                 }
                             </div>
 
@@ -153,7 +164,6 @@
                                     <div class="d-flex align-items-center">
                                         <strong>@child.UserName</strong>
                                         <small class="text-muted ms-2">@child.CreatedAt.ToString("dd/MM/yyyy HH:mm")</small>
-
                                         @* Nút Xóa Reply con *@
                                         @if (child.UserId == currentUserId)
                                         {
@@ -164,6 +174,13 @@
                                                     <i class="bi bi-trash3"></i> Xóa
                                                 </button>
                                             </form>
+                                        }
+                                        @* Nút Báo cáo Reply con (chỉ hiện với người khác) *@
+                                        @if (child.UserId != currentUserId)
+                                        {
+                                            <a asp-action="Sharereport" asp-route-replyId="@child.Id" class="btn btn-sm btn-warning ms-2">
+                                                <i class="bi bi-exclamation-triangle-fill"></i> Báo cáo
+                                            </a>
                                         }
                                     </div>
                                     <div class="share-content">@Html.Raw(child.Content)</div>
@@ -194,292 +211,291 @@
             </div>
         </div>
     }
-</div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
-<script>
-    // Khởi tạo CKEditor cho textarea #editor
-    if (document.getElementById('editor')) {
-        ClassicEditor
-    .create(document.getElementById('editor'), {
-        ckfinder: { uploadUrl: '/Share/UploadImage' },
-        mediaEmbed: { previewsInData: true },
-        image: {
-            resizeUnit: 'px',
-            resizeOptions: [
-                {
-                    name: 'resizeImage:600',
-                    value: 400,
-                    label: '400px'
-                },
-                {
-                    name: 'resizeImage:original',
-                    value: null,
-                    label: 'Gốc'
-                }
-            ],
-            toolbar: [
-                'imageStyle:alignLeft', 'imageStyle:alignCenter', 'imageStyle:alignRight',
-                '|', 'imageTextAlternative', '|', 'resizeImage'
-            ]
-        }
-    })
-    .then(editor => {
-        document.getElementById('editor').editorInstance = editor;
-        editor.model.document.on('change:data', () => {
-            const model = editor.model;
-            model.change(writer => {
-                for (const img of model.document.getRoot().getChildren()) {
-                    if (img.is('element', 'imageBlock')) {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+    <script>
+        // Khởi tạo CKEditor cho textarea #editor
+        if (document.getElementById('editor')) {
+            ClassicEditor
+        .create(document.getElementById('editor'), {
+            ckfinder: { uploadUrl: '/Share/UploadImage' },
+            mediaEmbed: { previewsInData: true },
+            image: {
+                resizeUnit: 'px',
+                resizeOptions: [
+                    {
+                        name: 'resizeImage:600',
+                        value: 400,
+                        label: '400px'
+                    },
+                    {
+                        name: 'resizeImage:original',
+                        value: null,
+                        label: 'Gốc'
+                    }
+                ],
+                toolbar: [
+                    'imageStyle:alignLeft', 'imageStyle:alignCenter', 'imageStyle:alignRight',
+                    '|', 'imageTextAlternative', '|', 'resizeImage'
+                ]
+            }
+        })
+        .then(editor => {
+            document.getElementById('editor').editorInstance = editor;
+            editor.model.document.on('change:data', () => {
+                const model = editor.model;
+                model.change(writer => {
+                    for (const img of model.document.getRoot().getChildren()) {
+                        if (img.is('element', 'imageBlock')) {
 
-                        if (img.getAttribute('width') !== 400) {
-                            writer.setAttribute('width', 400, img);
-                        }
-                        if (img.getAttribute('height') !== 400) {
-                            writer.setAttribute('height', 400, img);
+                            if (img.getAttribute('width') !== 400) {
+                                writer.setAttribute('width', 400, img);
+                            }
+                            if (img.getAttribute('height') !== 400) {
+                                writer.setAttribute('height', 400, img);
+                            }
                         }
                     }
+                });
+            });
+        })
+        .catch(console.error);
+        }
+
+        // Hàm khởi tạo CKEditor cho tất cả textarea.ckeditor
+        function initCKEditors() {
+            document.querySelectorAll('.ckeditor').forEach(textarea => {
+                if (!textarea.classList.contains('ck-editor-initialized')) {
+                    ClassicEditor
+                        .create(textarea, {
+                            ckfinder: { uploadUrl: '/Share/UploadImage' },
+                            mediaEmbed: { previewsInData: true }
+                        })
+                        .then(editor => {
+                            textarea.classList.add('ck-editor-initialized');
+                            textarea.editorInstance = editor;
+                        })
+                        .catch(console.error);
+                }
+            });
+        }
+        initCKEditors();
+
+        // Toggle form trả lời con
+        function bindReplyToggle() {
+            document.querySelectorAll('.toggle-reply-form').forEach(btn =>
+                btn.onclick = function () {
+                    const id = btn.getAttribute('data-reply-id');
+                    const form = document.getElementById(`reply-form-${id}`);
+                    form.classList.toggle('d-none');
+                    initCKEditors();
+                }
+            );
+        }
+        bindReplyToggle();
+
+        // Toggle form trả lời Share chính
+        function bindShareReplyToggle() {
+            document.querySelectorAll('.toggle-share-reply-form').forEach(btn =>
+                btn.onclick = function () {
+                    const id = btn.getAttribute('data-share-id');
+                    const form = document.getElementById(`share-reply-form-${id}`);
+                    form.classList.toggle('d-none');
+                    initCKEditors();
+                }
+            );
+        }
+        bindShareReplyToggle();
+
+        // Debounce cho ô tìm kiếm
+        const searchBox = document.getElementById('searchBox');
+        let debounceTimer;
+        searchBox?.addEventListener('input', function () {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => this.form.submit(), 500);
+        });
+
+        // AJAX gửi form trả lời (cả cấp 1 và 2)
+        $(document).on('submit', 'form[action="/Share/CreateReply"]', function (e) {
+            e.preventDefault();
+            const form = $(this);
+            const formData = form.serialize();
+            const textarea = form.find('textarea.ckeditor')[0];
+            const editor = textarea?.editorInstance;
+
+            $.post('/Share/CreateReply', formData, function (response) {
+                if (!response.success) {
+                    alert(response.message);
+                    return;
+                }
+                // Lấy token cho form động
+                const tokenInput = getAntiForgeryTokenInput();
+                const canDelete = response.userId === currentUserId;
+                const html = `
+                <div class="ms-4 border-start ps-3 mt-2 bg-light rounded p-2 reply-block" data-reply-id="${response.id}">
+                    <div class="d-flex align-items-center">
+                        <strong>${response.userName}</strong>
+                        <small class="text-muted ms-2">${response.createdAt}</small>
+                        ${canDelete ? `
+                        <form action="/Share/DeleteReply" method="post" class="ms-auto d-inline delete-reply-form">
+                            ${tokenInput}
+                            <input type="hidden" name="id" value="${response.id}" />
+                            <button type="submit" class="btn btn-sm btn-danger">
+                                <i class="bi bi-trash3"></i> Xóa
+                            </button>
+                        </form>
+                        ` : ''}
+                    </div>
+                    <div class="share-content">${response.content}</div>
+                    <button type="button" class="btn btn-sm btn-link toggle-reply-form" data-reply-id="${response.id}">
+                        <i class="bi bi-reply"></i> Trả lời
+                    </button>
+                    <div class="reply-form d-none mt-2" id="reply-form-${response.id}">
+                        <form action="/Share/CreateReply" method="post">
+                            ${tokenInput}
+                            <input type="hidden" name="shareId" value="${response.shareId}" />
+                            <input type="hidden" name="parentReplyId" value="${response.id}" />
+                            <textarea name="content" class="form-control ckeditor mb-2"></textarea>
+                            <button type="submit" class="btn btn-sm btn-primary">
+                                <i class="bi bi-send"></i> Gửi
+                            </button>
+                        </form>
+                    </div>
+                </div>`;
+
+                if (response.parentReplyId) {
+                    $(`#reply-form-${response.parentReplyId}`).before(html);
+                } else {
+                    $(`#share-reply-form-${form.find('[name="shareId"]').val()}`).before(html);
+                }
+                // Khởi tạo lại sự kiện cho nút mới
+                bindReplyToggle();
+                initCKEditors();
+
+                if (editor) editor.setData('');
+                else form.find('textarea').val('');
+            }).fail(() => alert("Lỗi khi gửi trả lời"));
+        });
+
+        // AJAX gửi chia sẻ mới
+        $('form[action="/Share/CreateShare"]').on('submit', function (e) {
+            e.preventDefault();
+            const form = $(this)[0];
+            const formData = new FormData(form);
+            const editor = document.getElementById('editor')?.editorInstance;
+
+            $.ajax({
+                url: '/Share/CreateShare',
+                type: 'POST',
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    if (response.success) {
+                        if (editor) editor.setData('');
+                        $('select[name="Topic"]').val('');
+                        location.reload();
+                    } else {
+                        alert(response.message);
+                    }
+                },
+                error: function () {
+                    alert('Lỗi chia sẻ');
                 }
             });
         });
-    })
-    .catch(console.error);
-    }
+        // AJAX xóa chia sẻ hoặc reply (KHÔNG reload trang)
+        $(document).on('submit', 'form[action="/Share/DeleteShare"], form[action="/Share/DeleteReply"]', function (e) {
+            e.preventDefault();
+            if (!confirm('Bạn chắc chắn muốn xóa?')) return;
 
-    // Hàm khởi tạo CKEditor cho tất cả textarea.ckeditor
-    function initCKEditors() {
-        document.querySelectorAll('.ckeditor').forEach(textarea => {
-            if (!textarea.classList.contains('ck-editor-initialized')) {
-                ClassicEditor
-                    .create(textarea, {
-                        ckfinder: { uploadUrl: '/Share/UploadImage' },
-                        mediaEmbed: { previewsInData: true }
-                    })
-                    .then(editor => {
-                        textarea.classList.add('ck-editor-initialized');
-                        textarea.editorInstance = editor;
-                    })
-                    .catch(console.error);
-            }
-        });
-    }
-    initCKEditors();
+            const form = $(this);
+            const actionUrl = form.attr('action');
+            const formData = form.serialize();
 
-    // Toggle form trả lời con
-    function bindReplyToggle() {
-        document.querySelectorAll('.toggle-reply-form').forEach(btn =>
-            btn.onclick = function () {
-                const id = btn.getAttribute('data-reply-id');
-                const form = document.getElementById(`reply-form-${id}`);
-                form.classList.toggle('d-none');
-                initCKEditors();
-            }
-        );
-    }
-    bindReplyToggle();
-
-    // Toggle form trả lời Share chính
-    function bindShareReplyToggle() {
-        document.querySelectorAll('.toggle-share-reply-form').forEach(btn =>
-            btn.onclick = function () {
-                const id = btn.getAttribute('data-share-id');
-                const form = document.getElementById(`share-reply-form-${id}`);
-                form.classList.toggle('d-none');
-                initCKEditors();
-            }
-        );
-    }
-    bindShareReplyToggle();
-
-    // Debounce cho ô tìm kiếm
-    const searchBox = document.getElementById('searchBox');
-    let debounceTimer;
-    searchBox?.addEventListener('input', function () {
-        clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(() => this.form.submit(), 500);
-    });
-
-    // AJAX gửi form trả lời (cả cấp 1 và 2)
-    $(document).on('submit', 'form[action="/Share/CreateReply"]', function (e) {
-        e.preventDefault();
-        const form = $(this);
-        const formData = form.serialize();
-        const textarea = form.find('textarea.ckeditor')[0];
-        const editor = textarea?.editorInstance;
-
-        $.post('/Share/CreateReply', formData, function (response) {
-            if (!response.success) {
-                alert(response.message);
-                return;
-            }
-            // Lấy token cho form động
-            const tokenInput = getAntiForgeryTokenInput();
-            const canDelete = response.userId === currentUserId;
-            const html = `
-            <div class="ms-4 border-start ps-3 mt-2 bg-light rounded p-2 reply-block" data-reply-id="${response.id}">
-                <div class="d-flex align-items-center">
-                    <strong>${response.userName}</strong>
-                    <small class="text-muted ms-2">${response.createdAt}</small>
-                    ${canDelete ? `
-                    <form action="/Share/DeleteReply" method="post" class="ms-auto d-inline delete-reply-form">
-                        ${tokenInput}
-                        <input type="hidden" name="id" value="${response.id}" />
-                        <button type="submit" class="btn btn-sm btn-danger">
-                            <i class="bi bi-trash3"></i> Xóa
-                        </button>
-                    </form>
-                    ` : ''}
-                </div>
-                <div class="share-content">${response.content}</div>
-                <button type="button" class="btn btn-sm btn-link toggle-reply-form" data-reply-id="${response.id}">
-                    <i class="bi bi-reply"></i> Trả lời
-                </button>
-                <div class="reply-form d-none mt-2" id="reply-form-${response.id}">
-                    <form action="/Share/CreateReply" method="post">
-                        ${tokenInput}
-                        <input type="hidden" name="shareId" value="${response.shareId}" />
-                        <input type="hidden" name="parentReplyId" value="${response.id}" />
-                        <textarea name="content" class="form-control ckeditor mb-2"></textarea>
-                        <button type="submit" class="btn btn-sm btn-primary">
-                            <i class="bi bi-send"></i> Gửi
-                        </button>
-                    </form>
-                </div>
-            </div>`;
-
-            if (response.parentReplyId) {
-                $(`#reply-form-${response.parentReplyId}`).before(html);
-            } else {
-                $(`#share-reply-form-${form.find('[name="shareId"]').val()}`).before(html);
-            }
-            // Khởi tạo lại sự kiện cho nút mới
-            bindReplyToggle();
-            initCKEditors();
-
-            if (editor) editor.setData('');
-            else form.find('textarea').val('');
-        }).fail(() => alert("Lỗi khi gửi trả lời"));
-    });
-
-    // AJAX gửi chia sẻ mới
-    $('form[action="/Share/CreateShare"]').on('submit', function (e) {
-        e.preventDefault();
-        const form = $(this)[0];
-        const formData = new FormData(form);
-        const editor = document.getElementById('editor')?.editorInstance;
-
-        $.ajax({
-            url: '/Share/CreateShare',
-            type: 'POST',
-            data: formData,
-            contentType: false,
-            processData: false,
-            success: function (response) {
+            $.post(actionUrl, formData, function (response) {
                 if (response.success) {
-                    if (editor) editor.setData('');
-                    $('select[name="Topic"]').val('');
-                    location.reload();
+                    if (actionUrl.includes('DeleteShare')) {
+                        form.closest('.card').remove();
+                    } else {
+                        form.closest('.reply-block').remove();
+                    }
                 } else {
-                    alert(response.message);
+                    alert(response.message || "Lỗi xóa");
                 }
-            },
-            error: function () {
-                alert('Lỗi chia sẻ');
-            }
+            }).fail(() => alert("Lỗi xóa"));
         });
-    });
-    // AJAX xóa chia sẻ hoặc reply (KHÔNG reload trang)
-    $(document).on('submit', 'form[action="/Share/DeleteShare"], form[action="/Share/DeleteReply"]', function (e) {
-        e.preventDefault();
-        if (!confirm('Bạn chắc chắn muốn xóa?')) return;
+    </script>
+    <script>
+        // Biến userId hiện tại cho JS
+        var currentUserId = '@currentUserId';
+        // Lấy giá trị token để dùng cho form động
+        var antiForgeryToken = '@Html.Raw(antiForgeryToken.Replace("'", "\\'"))';
+        function getAntiForgeryTokenInput() {
 
-        const form = $(this);
-        const actionUrl = form.attr('action');
-        const formData = form.serialize();
-
-        $.post(actionUrl, formData, function (response) {
-            if (response.success) {
-                if (actionUrl.includes('DeleteShare')) {
-                    form.closest('.card').remove();
-                } else {
-                    form.closest('.reply-block').remove();
-                }
-            } else {
-                alert(response.message || "Lỗi xóa");
-            }
-        }).fail(() => alert("Lỗi xóa"));
-    });
-</script>
-<script>
-    // Biến userId hiện tại cho JS
-    var currentUserId = '@currentUserId';
-    // Lấy giá trị token để dùng cho form động
-    var antiForgeryToken = '@Html.Raw(antiForgeryToken.Replace("'", "\\'"))';
-    function getAntiForgeryTokenInput() {
-
-        var div = document.createElement('div');
-        div.innerHTML = antiForgeryToken;
-        return div.querySelector('input[name="__RequestVerificationToken"]').outerHTML;
-    }
-</script>
-<style>
-    .ck-editor__editable_inline {
-        min-height: 200px;
-    }
-
-    .card {
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .btn-danger {
-        background-color: #f44336;
-        border-color: #f44336;
-    }
-
-        .btn-danger:hover {
-            background-color: #d32f2f;
-            border-color: #d32f2f;
+            var div = document.createElement('div');
+            div.innerHTML = antiForgeryToken;
+            return div.querySelector('input[name="__RequestVerificationToken"]').outerHTML;
+        }
+    </script>
+    <style>
+        .ck-editor__editable_inline {
+            min-height: 200px;
         }
 
-    .share-content iframe {
-        max-width: 100%;
-        height: auto;
-    }
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
 
-    .share-content img {
-        width: 400px !important;
-        height: 400px !important;
-        object-fit: contain;
-    }
+        .btn-danger {
+            background-color: #f44336;
+            border-color: #f44336;
+        }
 
-    .ck-editor__editable img {
-        width: 400px !important;
-        height: 400px !important;
-        object-fit: contain;
-    }
+            .btn-danger:hover {
+                background-color: #d32f2f;
+                border-color: #d32f2f;
+            }
 
-    .btn-link.active {
-        font-weight: bold;
-        text-decoration: underline;
-    }
+        .share-content iframe {
+            max-width: 100%;
+            height: auto;
+        }
 
-    #requireLoginAlert {
-        animation: slideDown 0.4s ease;
-    }
+        .share-content img {
+            width: 400px !important;
+            height: 400px !important;
+            object-fit: contain;
+        }
 
-    keyframes slideDown {
-        from
+        .ck-editor__editable img {
+            width: 400px !important;
+            height: 400px !important;
+            object-fit: contain;
+        }
 
-    {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
+        .btn-link.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
 
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+        #requireLoginAlert {
+            animation: slideDown 0.4s ease;
+        }
 
-    }
-</style>
+        keyframes slideDown {
+            from
+
+        {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        }
+    </style>
