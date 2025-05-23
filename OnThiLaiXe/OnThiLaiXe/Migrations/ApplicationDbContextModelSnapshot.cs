@@ -659,6 +659,40 @@ namespace OnThiLaiXe.Migrations
                     b.ToTable("ShareReplies");
                 });
 
+            modelBuilder.Entity("OnThiLaiXe.Models.Sharereport", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Reason")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ShareId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ShareReplyId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ShareId");
+
+                    b.HasIndex("ShareReplyId");
+
+                    b.ToTable("ShareReports");
+                });
+
             modelBuilder.Entity("OnThiLaiXe.Models.VisitLog", b =>
                 {
                     b.Property<int>("Id")
@@ -846,6 +880,21 @@ namespace OnThiLaiXe.Migrations
                         .IsRequired();
 
                     b.Navigation("Share");
+                });
+
+            modelBuilder.Entity("OnThiLaiXe.Models.Sharereport", b =>
+                {
+                    b.HasOne("OnThiLaiXe.Models.Share", "Share")
+                        .WithMany()
+                        .HasForeignKey("ShareId");
+
+                    b.HasOne("OnThiLaiXe.Models.ShareReply", "ShareReply")
+                        .WithMany()
+                        .HasForeignKey("ShareReplyId");
+
+                    b.Navigation("Share");
+
+                    b.Navigation("ShareReply");
                 });
 
             modelBuilder.Entity("OnThiLaiXe.Models.BaiThi", b =>
