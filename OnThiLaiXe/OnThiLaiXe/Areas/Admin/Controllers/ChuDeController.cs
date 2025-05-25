@@ -96,12 +96,23 @@ namespace OnThiLaiXe.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Lấy đối tượng hiện tại từ database để biết đường dẫn hình ảnh cũ
+                // Get the tracked entity
                 var existingChuDe = await _chuDeRepository.GetByIdAsync(chuDe.Id);
 
+                if (existingChuDe == null)
+                {
+                    return NotFound();
+                }
+
+                // Update properties manually
+                existingChuDe.TenChuDe = chuDe.TenChuDe;
+                existingChuDe.MoTa = chuDe.MoTa;
+                // Update other properties as needed
+
+                // Handle image upload
                 if (imageUrl != null && imageUrl.Length > 0)
                 {
-                    // Xóa hình cũ nếu có
+                    // Delete old image if exists
                     if (!string.IsNullOrEmpty(existingChuDe.ImageUrl))
                     {
                         var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot",
@@ -112,16 +123,11 @@ namespace OnThiLaiXe.Areas.Admin.Controllers
                         }
                     }
 
-                    // Lưu hình mới
-                    chuDe.ImageUrl = await SaveImage(imageUrl);
-                }
-                else
-                {
-                    // Giữ nguyên đường dẫn hình cũ nếu không upload hình mới
-                    chuDe.ImageUrl = existingChuDe.ImageUrl;
+                    // Save new image
+                    existingChuDe.ImageUrl = await SaveImage(imageUrl);
                 }
 
-                await _chuDeRepository.UpdateAsync(chuDe);
+                await _chuDeRepository.UpdateAsync(existingChuDe);
                 return RedirectToAction(nameof(Index));
             }
 
