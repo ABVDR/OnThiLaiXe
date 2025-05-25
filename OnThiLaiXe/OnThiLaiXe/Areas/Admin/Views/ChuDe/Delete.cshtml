@@ -60,7 +60,7 @@
                                                     <td>
                                                         @if (Model.isDeleted)
                                                         {
-                                                            <span class="badge bg-danger"><i class="fas fa-ban me-1"></i>Đã khóa</span>
+                                                            <span class="badge bg-danger"><i class="fas fa-ban me-1"></i>Đã xóa</span>
                                                         }
                                                         else
                                                         {
@@ -102,7 +102,7 @@
                                         <span class="badge bg-secondary ms-1">@Model.CauHois.Count() câu hỏi</span>
                                     </p>
                                     <p class="mb-0 mt-1">
-                                        Thay vì xóa, bạn nên <a asp-action="ToggleActive" asp-route-id="@Model.Id" class="fw-bold text-danger">khóa chủ đề này</a> để tránh mất dữ liệu!
+                                        Thay vì xóa, bạn nên <a asp-action="ToggleActive" asp-route-id="@Model.Id" class="fw-bold text-danger">xóa mềm chủ đề này</a> để tránh mất dữ liệu!
                                     </p>
                                 </div>
                             </div>
