@@ -1,0 +1,137 @@
+﻿@model List<KetQuaLuyenTapViewModel>
+
+@{
+    ViewData["Title"] = "Kết quả luyện tập";
+    int correctCount = Model.Count(x => x.IsCorrect);
+    int wrongCount = Model.Count(x => !x.IsCorrect);
+    int totalQuestions = Model.Count;
+}
+
+<div class="container mt-4">
+    <div class="card shadow">
+        <div class="card-header bg-success text-white">
+            <h4 class="mb-0">Kết quả luyện tập</h4>
+        </div>
+        <div class="card-body">
+            <h3 class="text-center">Bạn đã hoàn thành phần luyện tập!</h3>
+
+            <!-- Tổng kết -->
+            <div class="row mt-4 text-center">
+                <div class="col-md-4">
+                    <div class="card bg-success text-white mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Đúng</h5>
+                            <h2>@correctCount</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-danger text-white mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Sai</h5>
+                            <h2>@wrongCount</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-primary text-white mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Tổng câu</h5>
+                            <h2>@totalQuestions</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chi tiết từng câu hỏi -->
+            <div class="mt-4">
+                @foreach (var item in Model)
+                {
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header bg-light">
+                            <strong>Câu hỏi:</strong> @item.NoiDung
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <strong>Đáp án:</strong>
+                                <ul class="list-group">
+                                    <li class="list-group-item @(item.DapAnDung == "A" ? "list-group-item-success" : "") @(item.DapAnNguoiDung == "A" && item.DapAnDung != "A" ? "list-group-item-danger" : "")">
+                                        <strong>A.</strong> @item.LuaChonA
+                                        @if (item.DapAnNguoiDung == "A")
+                                        {
+                                            <span class="badge bg-info ms-2">Bạn chọn</span>
+                                        }
+                                        @if (item.DapAnDung == "A")
+                                        {
+                                            <span class="badge bg-success ms-2">Đáp án đúng</span>
+                                        }
+                                    </li>
+                                    <li class="list-group-item @(item.DapAnDung == "B" ? "list-group-item-success" : "") @(item.DapAnNguoiDung == "B" && item.DapAnDung != "B" ? "list-group-item-danger" : "")">
+                                        <strong>B.</strong> @item.LuaChonB
+                                        @if (item.DapAnNguoiDung == "B")
+                                        {
+                                            <span class="badge bg-info ms-2">Bạn chọn</span>
+                                        }
+                                        @if (item.DapAnDung == "B")
+                                        {
+                                            <span class="badge bg-success ms-2">Đáp án đúng</span>
+                                        }
+                                    </li>
+                                    @if (!string.IsNullOrEmpty(item.LuaChonC))
+                                    {
+                                        <li class="list-group-item @(item.DapAnDung == "C" ? "list-group-item-success" : "") @(item.DapAnNguoiDung == "C" && item.DapAnDung != "C" ? "list-group-item-danger" : "")">
+                                            <strong>C.</strong> @item.LuaChonC
+                                            @if (item.DapAnNguoiDung == "C")
+                                            {
+                                                <span class="badge bg-info ms-2">Bạn chọn</span>
+                                            }
+                                            @if (item.DapAnDung == "C")
+                                            {
+                                                <span class="badge bg-success ms-2">Đáp án đúng</span>
+                                            }
+                                        </li>
+                                    }
+                                    @if (!string.IsNullOrEmpty(item.LuaChonD))
+                                    {
+                                        <li class="list-group-item @(item.DapAnDung == "D" ? "list-group-item-success" : "") @(item.DapAnNguoiDung == "D" && item.DapAnDung != "D" ? "list-group-item-danger" : "")">
+                                            <strong>D.</strong> @item.LuaChonD
+                                            @if (item.DapAnNguoiDung == "D")
+                                            {
+                                                <span class="badge bg-info ms-2">Bạn chọn</span>
+                                            }
+                                            @if (item.DapAnDung == "D")
+                                            {
+                                                <span class="badge bg-success ms-2">Đáp án đúng</span>
+                                            }
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+
+                            <div>
+                                @if (item.IsCorrect)
+                                {
+                                    <span class="badge bg-success">✅ Bạn đã trả lời đúng</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">❌ Bạn trả lời sai</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <!-- Nút hành động -->
+            <div class="text-center mt-4">
+                <a href="@Url.Action("LuyenLaiCauSai")" class="btn btn-success me-2">
+                    <i class="fas fa-redo"></i> Luyện lại câu sai
+                </a>
+                <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">
+                    <i class="fas fa-home"></i> Trang chủ
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
