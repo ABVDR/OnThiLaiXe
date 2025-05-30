@@ -39,7 +39,7 @@
     <img class="paypal-logo" src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo" />
     <h2>Truy cập tính năng cao cấp</h2>
     <p>
-        Với chỉ <strong>5.000 VNĐ</strong>, bạn sẽ mở khóa chức năng <strong>"Luyện câu sai"</strong> – giúp bạn luyện tập các câu đã làm sai một cách hiệu quả nhất.
+        Với chỉ <strong>20.000 VNĐ</strong>, bạn sẽ mở khóa chức năng <strong>"Luyện câu sai"</strong> – giúp bạn luyện tập các câu đã làm sai một cách hiệu quả nhất.
     </p>
     <div id="paypal-button-container"></div>
 </div>
@@ -59,7 +59,7 @@
                 return actions.order.create({
                     purchase_units: [{
                         amount: {
-                            value: '5.00'
+                            value: '1.00'
                         }
                     }]
                 });
@@ -77,7 +77,7 @@
                             userId: '@User.FindFirstValue(System.Security.Claims.ClaimTypes.NameIdentifier)'
                         })
                     }).then(() => {
-                        window.location.href = '/BaiThi/LuyenLaiCauSai';
+                        window.location.href = '/LichSuThi/LuyenLaiCauSai';
                     });
                 });
             }

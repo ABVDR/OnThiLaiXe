@@ -1,0 +1,53 @@
+﻿@model OnThiLaiXe.Models.LichSuThi
+
+@{
+    ViewData["Title"] = "Chi tiết lịch sử thi";
+}
+
+<div class="container mt-5">
+    <div class="card p-4 shadow-lg">
+        <h2 class="text-center text-primary mb-4">Chi tiết lịch sử thi</h2>
+
+        <p><strong>Tên bài thi:</strong> @Model.TenBaiThi</p>
+        <p><strong>Ngày thi:</strong> @Model.NgayThi.ToString("dd/MM/yyyy HH:mm")</p>
+
+        <p><strong>Điểm:</strong> @Model.Diem</p>
+        <p><strong>Kết quả:</strong> <span class="fw-bold @(Model.KetQua == "Đậu" ? "text-success" : "text-danger")">@Model.KetQua</span></p>
+        <p><strong>Phần trăm đúng:</strong> @Model.PhanTramDung%</p>
+
+        <hr />
+
+        <h4 class="mb-3">Chi tiết câu trả lời</h4>
+        <div class="accordion" id="accordionChiTiet">
+            @foreach (var ct in Model.ChiTietLichSuThis)
+            {
+                var dapAnDung = ct.CauHoi.DapAnDung;
+
+                var isCorrect = ct.DungSai == false ? "Đúng" : (ct.DungSai == true ? "Sai" : "Chưa trả lời");
+
+                <div class="accordion-item mb-2">
+                    <h2 class="accordion-header" id="heading_@ct.CauHoiId">
+                        <button class="accordion-button @((ct.DungSai == false) ? "text-success" : "text-danger") collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_@ct.CauHoiId" aria-expanded="true" aria-controls="collapse_@ct.CauHoiId">
+                            Câu: @(ct.CauHoi.NoiDung?.Length > 80 ? ct.CauHoi.NoiDung.Substring(0, 80) + "..." : ct.CauHoi.NoiDung)
+                        </button>
+                    </h2>
+                    <div id="collapse_@ct.CauHoiId" class="accordion-collapse collapse" aria-labelledby="heading_@ct.CauHoiId" data-bs-parent="#accordionChiTiet">
+                        <div class="accordion-body">
+                            <p><strong>Nội dung:</strong> @ct.CauHoi.NoiDung</p>
+                            <p><strong>Đáp án đúng:</strong> <span class="text-success">@dapAnDung</span></p>
+
+                            <p>
+                                <strong>Kết quả:</strong>
+                                <span class="fw-bold @(ct.DungSai == false ? "text-success" : "text-danger")">@isCorrect</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="text-center mt-4">
+            <a asp-action="LichSuThi" asp-controller="LichSuThi" class="btn btn-secondary">Quay lại lịch sử</a>
+        </div>
+    </div>
+</div>

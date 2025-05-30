@@ -49,6 +49,7 @@
     <Folder Include="Areas\Customer\Models\" />
     <Folder Include="Areas\Customer\Views\" />
     <Folder Include="Migrations\" />
+    <Folder Include="ModelView\" />
     <Folder Include="wwwroot\files\" />
     <Folder Include="wwwroot\videos\" />
   </ItemGroup>
