@@ -23,7 +23,7 @@ namespace OnThiLaiXe.Middleware
             var userManager = context.RequestServices.GetRequiredService<UserManager<ApplicationUser>>();
             var user = await userManager.GetUserAsync(context.User);
 
-            if (user != null && !context.User.IsInRole("Admin")) // Nếu người dùng không phải là Admin
+            if (user != null || !context.User.IsInRole(SD.Role_Admin)) // Nếu người dùng không phải là Admin
             {
                 // Kiểm tra session, nếu chưa có thì tạo mới
                 if (!context.Session.TryGetValue(sessionKey, out _))

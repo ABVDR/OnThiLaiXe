@@ -19,7 +19,6 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
         .AddDefaultTokenProviders()
         .AddDefaultUI()
         .AddEntityFrameworkStores<ApplicationDbContext>();
-
 builder.Services.AddRazorPages();
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
@@ -70,65 +69,11 @@ builder.Services.AddHangfire(configuration => configuration
         }));
 builder.Services.AddHangfireServer();
 builder.Services.AddSignalR();
-
-
-
-
-
-
-
 var app = builder.Build();
 //app.MapHub<OnlineUsersHub>("/onlineUsersHub");
 app.UseSession();
 app.UseStaticFiles();
-// Middleware kiểm tra IP và session
-//////////////////////////////////////////////////////////////////////////////////////////////////
-//app.Use(async (context, next) =>
-//{
-//    var sessionKey = "VisitRecorded";
-//    //var visitorIp = context.Connection.RemoteIpAddress.ToString();
-//    var currentTime = DateTime.UtcNow.AddHours(7); ;
-
-//    var _context = context.RequestServices.GetRequiredService<ApplicationDbContext>();
-
-//    //if (!context.Session.TryGetValue(sessionKey, out _))
-//    //{
-//    //    var lastVisit = await _context.VisitLogs
-//    //        .Where(v => v.VisitorId == visitorIp)
-//    //        .OrderByDescending(v => v.VisitTime)
-//    //        .FirstOrDefaultAsync();
-
-//    //    if (lastVisit == null || (currentTime - lastVisit.VisitTime).TotalMinutes >= 5)
-//    //    {
-//    //        var visitLog = new VisitLog
-//    //        {
-//    //            VisitTime = currentTime,
-//    //            VisitorId = visitorIp
-//    //        };
-
-//    //        _context.VisitLogs.Add(visitLog);
-//    //        await _context.SaveChangesAsync();
-//    //        context.Session.SetString(sessionKey, "true");
-//    //    }
-//    //}
-//    if (!context.Session.TryGetValue(sessionKey, out _))
-//    {
-//        var visitorIp = context.Connection.RemoteIpAddress?.ToString() ?? "Unknown";
-
-//        var visitLog = new VisitLog
-//        {
-//            VisitTime = currentTime,
-//            VisitorId = visitorIp
-//        };
-
-//        _context.VisitLogs.Add(visitLog);
-//        await _context.SaveChangesAsync();
-//        // Đặt session, lần sau trong cùng trình duyệt sẽ không ghi nữa
-//        context.Session.SetString(sessionKey, "true");
-//    }
-//    await next.Invoke();
-//});
-app.UseMiddleware<VisitLogMiddleware>();
+app.UseMiddleware<VisitMiddleware>();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -136,7 +81,6 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseAuthorization();
