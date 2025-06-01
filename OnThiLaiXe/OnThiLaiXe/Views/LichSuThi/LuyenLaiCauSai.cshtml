@@ -5,11 +5,9 @@
 }
 <style>
     :root {
-        --primary-color: #00875A;
-        --primary-hover: #00663f;
-        --accent-color: #fbbf24;
-        --danger-color: #DC2626;
-        --danger-bg: #FEE2E2;
+        --primary-color: linear-gradient(90deg, #0056d2, #007bff);
+        --primary-solid: #0056d2;
+        --primary-hover: #0044bb;
     }
 
     body {
@@ -79,9 +77,10 @@
         }
 
     .current-question {
-        background-color: var(--accent-color);
-        color: black;
+        background: var(--primary-color);
+        color: white;
         font-weight: bold;
+        border: none;
     }
 
     .btn-answered {
@@ -97,42 +96,44 @@
 
     .previous-button, .next-button {
         padding: 10px 20px;
-        border: none;
         border-radius: 6px;
         font-weight: 600;
         cursor: pointer;
+        border: none;
     }
 
     .previous-button {
-        background-color: transparent;
-        color: var(--primary-color);
-        border: 1px solid var(--primary-color);
+        background: white;
+        color: var(--primary-solid);
+        border: 1px solid var(--primary-solid);
     }
 
         .previous-button:hover {
-            background-color: #e6f4ea;
+            background-color: #e0eaff;
         }
 
     .next-button {
-        background-color: var(--primary-color);
+        background: var(--primary-color);
         color: white;
+        border: none;
     }
 
         .next-button:hover {
-            background-color: var(--primary-hover);
+            background: var(--primary-hover);
         }
 
     .submit-button {
-        background-color: var(--primary-color);
+        background: var(--primary-color);
         color: white;
         font-weight: 600;
         padding: 12px 24px;
         border-radius: 8px;
         margin-top: 20px;
+        border: none;
     }
 
         .submit-button:hover {
-            background-color: var(--primary-hover);
+            background: var(--primary-hover);
         }
 
     .option-item {
@@ -153,8 +154,8 @@
         border: 1px solid #ccc;
         margin-top: 16px;
     }
-
 </style>
+
 
 <form method="post" action="@Url.Action("LuuKetQuaLuyenLai")">
     <div class="container-flex">

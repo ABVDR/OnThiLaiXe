@@ -5,16 +5,8 @@
       "PackagePath": "staticwebassets\\OnThiLaiXe.7r850fckp9.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\assets\\css\\animated.css",
-      "PackagePath": "staticwebassets\\assets\\css\\animated.css"
-    },
-    {
       "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\assets\\css\\fontawesome.css",
       "PackagePath": "staticwebassets\\assets\\css\\fontawesome.css"
-    },
-    {
-      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\assets\\css\\owl.css",
-      "PackagePath": "staticwebassets\\assets\\css\\owl.css"
     },
     {
       "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\assets\\css\\templatemo-seo-dream.css",
@@ -131,30 +123,6 @@
     {
       "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\assets\\images\\logo-icon.png",
       "PackagePath": "staticwebassets\\assets\\images\\logo-icon.png"
-    },
-    {
-      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\assets\\js\\animation.js",
-      "PackagePath": "staticwebassets\\assets\\js\\animation.js"
-    },
-    {
-      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\assets\\js\\custom.js",
-      "PackagePath": "staticwebassets\\assets\\js\\custom.js"
-    },
-    {
-      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\assets\\js\\imagesloaded.js",
-      "PackagePath": "staticwebassets\\assets\\js\\imagesloaded.js"
-    },
-    {
-      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\assets\\js\\isotope.js",
-      "PackagePath": "staticwebassets\\assets\\js\\isotope.js"
-    },
-    {
-      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\assets\\js\\owl-carousel.js",
-      "PackagePath": "staticwebassets\\assets\\js\\owl-carousel.js"
-    },
-    {
-      "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\assets\\js\\tabs.js",
-      "PackagePath": "staticwebassets\\assets\\js\\tabs.js"
     },
     {
       "Id": "C:\\Users\\Admin\\OneDrive\\Máy tính\\Thư mục mới\\OnThiLaiXe\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\assets_admin\\LICENSE",

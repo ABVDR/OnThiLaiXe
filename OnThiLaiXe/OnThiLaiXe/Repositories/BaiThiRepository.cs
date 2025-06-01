@@ -1,11 +1,10 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Claims;
-using System.Text.Json;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using OnThiLaiXe.Models;
+using OnThiLaiXe.ModelView;
 
 namespace OnThiLaiXe.Repositories
 {
@@ -18,203 +17,250 @@ namespace OnThiLaiXe.Repositories
             _context = context;
         }
 
-        public BaiThi GetBaiThiById(int baiThiId, bool includeChiTiet = true)
+        public BaiThi GetBaiThiWithDetails(int id)
         {
-            if (includeChiTiet)
+            return _context.BaiThis
+                .Include(b => b.ChiTietBaiThis)
+                .ThenInclude(ct => ct.CauHoi)
+                .ThenInclude(b => b.LoaiBangLai)
+                .FirstOrDefault(b => b.Id == id);
+        }
+
+        public (List<KetQuaBaiThi> ketQuaList, float diem, int tongSoCau, int diemToiThieu) ChamDiem(BaiThi baiThi, Dictionary<int, string> answers)
+        {
+            int totalCorrectAnswers = 0;
+            List<KetQuaBaiThi> ketQuaList = new List<KetQuaBaiThi>();
+
+            foreach (var chiTiet in baiThi.ChiTietBaiThis)
             {
-                return _context.BaiThis
-                    .Include(bt => bt.ChiTietBaiThis)
-                    .ThenInclude(ct => ct.CauHoi)
-                    .ThenInclude(c => c.LoaiBangLai)
-                    .FirstOrDefault(bt => bt.Id == baiThiId);
+                var userAnswer = answers.ContainsKey(chiTiet.Id) ? answers[chiTiet.Id] : null;
+                var isCorrect = userAnswer != null && userAnswer.Length > 0 &&
+                               chiTiet.CauHoi.DapAnDung.Equals(userAnswer[0]);
+
+                ketQuaList.Add(new KetQuaBaiThi
+                {
+                    CauHoiId = chiTiet.CauHoiId,
+                    CauTraLoi = userAnswer != null && userAnswer.Length > 0 ? userAnswer[0] : ' ',
+                    DungSai = isCorrect
+                });
+
+                if (isCorrect)
+                {
+                    totalCorrectAnswers++;
+                }
+            }
+
+            var diem = (totalCorrectAnswers / (float)baiThi.ChiTietBaiThis.Count) * 10;
+            var diemToiThieu = baiThi.ChiTietBaiThis
+                             .FirstOrDefault()?.CauHoi?.LoaiBangLai?.DiemToiThieu ?? 0;
+
+            return (ketQuaList, diem, baiThi.ChiTietBaiThis.Count, diemToiThieu);
+        }
+
+        public async Task<NopBaiThiResult> XuLyNopBaiThiAsync(SubmitBaiThiRequest request, string userId)
+        {
+            var baiThi = _context.BaiThis
+                .Include(b => b.ChiTietBaiThis)
+                .ThenInclude(ct => ct.CauHoi)
+                .ThenInclude(ch => ch.LoaiBangLai)
+                .FirstOrDefault(b => b.Id == request.BaiThiId);
+
+            if (baiThi == null)
+            {
+                return new NopBaiThiResult
+                {
+                    Success = false,
+                    Message = "Không tìm thấy bài thi."
+                };
+            }
+
+            int totalCorrectAnswers = 0;
+            List<KetQuaBaiThi> ketQuaList = new List<KetQuaBaiThi>();
+
+            foreach (var chiTiet in baiThi.ChiTietBaiThis)
+            {
+                var userAnswer = request.Answers.ContainsKey(chiTiet.CauHoiId)
+                                   ? request.Answers[chiTiet.CauHoiId]
+                                   : null;
+
+                var isCorrect = false;
+
+                if (!string.IsNullOrEmpty(userAnswer))
+                {
+                    isCorrect = chiTiet.CauHoi.DapAnDung.Equals(userAnswer[0]);
+                }
+
+                ketQuaList.Add(new KetQuaBaiThi
+                {
+                    CauHoiId = chiTiet.CauHoiId,
+                    CauTraLoi = userAnswer != null ? userAnswer[0] : (char?)null,
+                    DapAnDung = chiTiet.CauHoi.DapAnDung,
+                    DungSai = !isCorrect
+                });
+
+                if (isCorrect)
+                {
+                    totalCorrectAnswers++;
+                }
+            }
+
+            var tongSoCau = baiThi.ChiTietBaiThis.Count;
+            var phanTramDung = (double)totalCorrectAnswers / tongSoCau * 100;
+            int diem = totalCorrectAnswers;
+
+            var diemToiThieu = baiThi.ChiTietBaiThis
+                .FirstOrDefault()?.CauHoi?.LoaiBangLai?.DiemToiThieu ?? 0;
+
+            var ketQua = diem >= diemToiThieu ? "Đậu" : "Không Đạt";
+
+            bool macLoiNghiemTrong = ketQuaList
+                .Any(kq => kq.DungSai &&
+                    baiThi.ChiTietBaiThis
+                        .First(ct => ct.CauHoiId == kq.CauHoiId)
+                        .CauHoi.DiemLiet);
+
+            int soCauLoiNghiemTrong = ketQuaList
+                .Count(kq => kq.DungSai && baiThi.ChiTietBaiThis
+                    .First(ct => ct.CauHoiId == kq.CauHoiId).CauHoi.DiemLiet);
+
+            // Lưu lịch sử thi
+            if (!string.IsNullOrEmpty(userId))
+            {
+                await LuuLichSuThiAsync(userId, baiThi, ketQuaList, tongSoCau, totalCorrectAnswers,
+                                      phanTramDung, diem, ketQua, macLoiNghiemTrong);
+            }
+
+            return new NopBaiThiResult
+            {
+                Success = true,
+                BaiThiId = baiThi.Id,
+                KetQuaList = ketQuaList,
+                SoCauDung = diem,
+                TongSoCau = tongSoCau,
+                TongDiem = diem,
+                KetQua = ketQua,
+                MacLoiNghiemTrong = macLoiNghiemTrong,
+                SoCauLoiNghiemTrong = soCauLoiNghiemTrong
+            };
+        }
+
+        private async Task LuuLichSuThiAsync(string userId, BaiThi baiThi, List<KetQuaBaiThi> ketQuaList,
+            int tongSoCau, int totalCorrectAnswers, double phanTramDung, int diem,
+            string ketQua, bool macLoiNghiemTrong)
+        {
+            var lichSuThi = new LichSuThi
+            {
+                UserId = userId,
+                BaiThiId = baiThi.Id,
+                TenBaiThi = baiThi.TenBaiThi.Length > 100 ? baiThi.TenBaiThi.Substring(0, 100) : baiThi.TenBaiThi,
+                NgayThi = DateTime.Now,
+                TongSoCau = tongSoCau,
+                SoCauDung = totalCorrectAnswers,
+                PhanTramDung = phanTramDung,
+                Diem = diem,
+                KetQua = ketQua.Length > 20 ? ketQua.Substring(0, 20) : ketQua,
+                MacLoiNghiemTrong = macLoiNghiemTrong,
+            };
+
+            _context.LichSuThis.Add(lichSuThi);
+            await _context.SaveChangesAsync();
+
+            foreach (var kq in ketQuaList)
+            {
+                _context.ChiTietLichSuThis.Add(new ChiTietLichSuThi
+                {
+                    LichSuThiId = lichSuThi.Id,
+                    CauHoiId = kq.CauHoiId,
+                    CauTraLoi = kq.CauTraLoi,
+                    DungSai = kq.DungSai
+                });
+
+                if (kq.DungSai)
+                {
+                    await XuLyCauHoiSaiAsync(userId, kq.CauHoiId);
+                }
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
+        private async Task XuLyCauHoiSaiAsync(string userId, int cauHoiId)
+        {
+            var existingSai = await _context.CauHoiSais
+                .FirstOrDefaultAsync(c => c.UserId == userId && c.CauHoiId == cauHoiId);
+
+            if (existingSai != null)
+            {
+                existingSai.NgaySai = DateTime.Now;
             }
             else
             {
-                return _context.BaiThis
-                    .FirstOrDefault(bt => bt.Id == baiThiId);
+                _context.CauHoiSais.Add(new CauHoiSai
+                {
+                    UserId = userId,
+                    CauHoiId = cauHoiId,
+                    NgaySai = DateTime.Now
+                });
             }
         }
 
-        public List<KetQuaBaiThi> NopBaiThi(int baiThiId, string dapAnJson, string currentUserId, bool isLoggedIn)
+        public BaiThi GetDeThiNgauNhien(int loaiBangLaiId)
         {
-            var baiThi = _context.BaiThis
-                .Include(bt => bt.ChiTietBaiThis)
-                    .ThenInclude(ct => ct.CauHoi)
-                .FirstOrDefault(bt => bt.Id == baiThiId);
-
-            if (baiThi == null)
-                return null;
-
-            // Parse JSON đáp án
-            Dictionary<string, string> dapAnDict = new();
-            try
-            {
-                if (!string.IsNullOrEmpty(dapAnJson))
-                    dapAnDict = JsonSerializer.Deserialize<Dictionary<string, string>>(dapAnJson);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Lỗi parse JSON: {ex.Message}");
-            }
-
-            var chiTietList = baiThi.ChiTietBaiThis.ToList();
-            int correctCount = 0;
-            int wrongCount = 0;
-            int unansweredCount = 0;
-            bool saiDiemLiet = false;
-
-            // Xử lý từng câu trả lời
-            for (int i = 0; i < chiTietList.Count; i++)
-            {
-                string key = $"dapAn_{i}";
-                var chiTiet = chiTietList[i];
-
-                if (dapAnDict.ContainsKey(key) && !string.IsNullOrEmpty(dapAnDict[key]))
-                {
-                    char dapAn = dapAnDict[key][0];
-                    chiTiet.CauTraLoi = dapAn;
-                    chiTiet.DungSai = dapAn == chiTiet.CauHoi.DapAnDung;
-
-                    if (chiTiet.DungSai == true)
-                        correctCount++;
-                    else
-                    {
-                        wrongCount++;
-                        if (isLoggedIn)
-                            SaveCauHoiSai(true, currentUserId, chiTiet.CauHoi.Id);
-                    }
-
-                    if (chiTiet.CauHoi.DiemLiet && dapAn != chiTiet.CauHoi.DapAnDung)
-                        saiDiemLiet = true;
-                }
-                else
-                {
-                    chiTiet.CauTraLoi = '\0';
-                    chiTiet.DungSai = false;
-                    unansweredCount++;
-
-                    if (chiTiet.CauHoi.DiemLiet)
-                        saiDiemLiet = true;
-
-                    if (isLoggedIn)
-                        SaveCauHoiSai(true, currentUserId, chiTiet.CauHoi.Id);
-                }
-            }
-
-            // Lấy loại bằng để kiểm tra điều kiện đậu
-            var loaiBang = baiThi.ChiTietBaiThis.FirstOrDefault()?.CauHoi?.LoaiBangLai;
-            int diemToiThieu = loaiBang?.DiemToiThieu ?? 21;
-
-            // Mỗi câu đúng = 1 điểm, không tính điểm nếu sai câu điểm liệt
-            int tongDiem = correctCount;
-
-          
-
-            _context.SaveChanges();
-
-            // Chuẩn bị dữ liệu hiển thị kết quả
-            var ketQuaList = chiTietList.Select(ct => new KetQuaBaiThi
-            {
-                BaiThiId = baiThiId,
-                CauHoiId = ct.CauHoi.Id,
-                CauHoi = ct.CauHoi,
-                CauTraLoi = ct.CauTraLoi ?? '\0',
-                DungSai = ct.DungSai ?? false
-            }).ToList();
-
-            return ketQuaList;
+            return _context.BaiThis
+                .Where(bt => bt.ChiTietBaiThis.Any(ct => ct.CauHoi.LoaiBangLaiId == loaiBangLaiId))
+                .OrderBy(x => Guid.NewGuid())
+                .FirstOrDefault();
         }
 
-        private void SaveCauHoiSai(bool isLoggedIn, string currentUserId, int cauHoiId)
+        public (LoaiBangLai LoaiBangLai, List<ChuDe> ChuDeList) GetChuDeByLoaiBangLai(int loaiBangLaiId)
         {
-            if (!isLoggedIn || string.IsNullOrEmpty(currentUserId)) return;
+            var loai = _context.LoaiBangLais
+                .FirstOrDefault(l => l.Id == loaiBangLaiId && !l.isDeleted);
 
-            try
-            {
-                int userId;
-                if (int.TryParse(currentUserId, out userId))
-                {
-                    _context.CauHoiSais.Add(new CauHoiSai
-                    {
-                      
-                        CauHoiId = cauHoiId,
-                        NgaySai = DateTime.Now
-                    });
-                }
-                else if (Guid.TryParse(currentUserId, out var userGuid))
-                {
-                    // Sử dụng int.MaxValue & operation để tránh overflow 
-                    // nếu hashcode là số âm
-                    int hashUserId = userGuid.GetHashCode() & int.MaxValue;
-                    _context.CauHoiSais.Add(new CauHoiSai
-                    {
-                   
-                        CauHoiId = cauHoiId,
-                        NgaySai = DateTime.Now
-                    });
-                }
-            }
-            catch (Exception ex)
-            {
-                // Log lỗi nhưng không throw exception để tiếp tục xử lý
-                Console.WriteLine($"Lỗi khi lưu câu hỏi sai: {ex.Message}");
-            }
-        }
-
-        public List<CauHoiSaiViewModel> GetDanhSachCauHoiSai(int userId)
-        {
-            return _context.CauHoiSais
-             
-                .Include(c => c.CauHoi)
-                .ThenInclude(ch => ch.ChuDe)
-                .GroupBy(c => c.CauHoiId)
-                .Select(g => new CauHoiSaiViewModel
-                {
-                    CauHoi = g.First().CauHoi,
-                    SoLanSai = g.Count(),
-                    LanSaiGanNhat = g.Max(c => c.NgaySai)
-                })
-                .OrderByDescending(c => c.LanSaiGanNhat)
+            var chuDeList = _context.ChuDes
+                .Include(cd => cd.CauHois)
+                .Where(cd => !cd.isDeleted &&
+                             cd.CauHois.Any(ch => ch.LoaiBangLaiId == loaiBangLaiId &&
+                                                  !ch.LoaiBangLai.isDeleted &&
+                                                  !ch.ChuDe.isDeleted))
+                .Distinct()
                 .ToList();
+
+            return (loai, chuDeList);
         }
+
 
         public string GetTenChuDeById(int chuDeId)
         {
             return _context.ChuDes
-                .Where(cd => cd.Id == chuDeId)
+                .Where(cd => cd.Id == chuDeId && !cd.isDeleted)
                 .Select(cd => cd.TenChuDe)
                 .FirstOrDefault() ?? "Không rõ chủ đề";
-        }
-        public List<CauHoi> GetCauHoiLuyenLaiCauSai(int userId, int maxQuestions = 20)
-        {
-            var cauHoiIds = _context.CauHoiSais
-              
-                .OrderByDescending(c => c.NgaySai)
-                .Select(c => c.CauHoiId)
-                .Distinct()
-                .Take(maxQuestions)
-                .ToList();
-
-            return _context.CauHois
-                .Where(c => cauHoiIds.Contains(c.Id))
-                .ToList();
         }
 
         public List<ChuDe> GetDanhSachChuDe()
         {
-            return _context.ChuDes.ToList();
+            return _context.ChuDes
+                .Where(cd => !cd.isDeleted)
+                .ToList();
         }
 
         public List<LoaiBangLai> GetDanhSachLoaiBangLai()
         {
-            return _context.LoaiBangLais.ToList();
+            return _context.LoaiBangLais
+                .Where(l => !l.isDeleted)
+                .ToList();
         }
 
         public BaiThi GetChiTietBaiThi(int id)
         {
             return _context.BaiThis
                 .Include(bt => bt.ChiTietBaiThis)
-                .ThenInclude(ct => ct.CauHoi)
+                    .ThenInclude(ct => ct.CauHoi)
+                        .ThenInclude(c => c.LoaiBangLai)
+                .Include(bt => bt.ChiTietBaiThis)
+                    .ThenInclude(ct => ct.CauHoi)
+                        .ThenInclude(c => c.ChuDe)
                 .FirstOrDefault(bt => bt.Id == id);
         }
 
@@ -222,7 +268,6 @@ namespace OnThiLaiXe.Repositories
         {
             return _context.BaiThis
                 .Include(bt => bt.ChiTietBaiThis)
-             
                 .ToList();
         }
 
@@ -232,71 +277,76 @@ namespace OnThiLaiXe.Repositories
                 .Include(bt => bt.ChiTietBaiThis)
                     .ThenInclude(ct => ct.CauHoi)
                         .ThenInclude(c => c.LoaiBangLai)
-                .AsQueryable(); // Ép kiểu về IQueryable<BaiThi>
+                .Include(bt => bt.ChiTietBaiThis)
+                    .ThenInclude(ct => ct.CauHoi)
+                        .ThenInclude(c => c.ChuDe)
+                .AsQueryable();
 
             if (!string.IsNullOrEmpty(loaiXe))
             {
                 query = query.Where(bt => bt.ChiTietBaiThis
-                       .Any(ct => ct.CauHoi.LoaiBangLai.LoaiXe == loaiXe));
+                    .Any(ct =>
+                        !ct.CauHoi.LoaiBangLai.isDeleted &&
+                        ct.CauHoi.LoaiBangLai.LoaiXe == loaiXe));
             }
 
             return query.ToList();
         }
 
-
         public List<LoaiBangLai> GetLoaiBangLaiXeMay()
         {
-            return _context.LoaiBangLais.Where(l => l.LoaiXe == "Xe máy").ToList();
+            return _context.LoaiBangLais
+                .Where(l => l.LoaiXe == "Xe máy" && !l.isDeleted)
+                .ToList();
         }
 
         public List<LoaiBangLai> GetLoaiBangLaiOTo()
         {
-            return _context.LoaiBangLais.Where(l => l.LoaiXe == "Xe oto").ToList();
+            return _context.LoaiBangLais
+                .Where(l => l.LoaiXe == "Xe oto" && !l.isDeleted)
+                .ToList();
         }
 
         public List<BaiThi> GetDeThiByLoaiBangLai(int loaiBangLaiId)
         {
             return _context.BaiThis
-                .Where(bt => bt.ChiTietBaiThis.Any(ct => ct.CauHoi.LoaiBangLaiId == loaiBangLaiId))
+                .Where(bt => bt.ChiTietBaiThis
+                    .Any(ct => ct.CauHoi.LoaiBangLaiId == loaiBangLaiId && !ct.CauHoi.LoaiBangLai.isDeleted))
                 .Include(bt => bt.ChiTietBaiThis)
-                .ThenInclude(ct => ct.CauHoi)
+                    .ThenInclude(ct => ct.CauHoi)
+                        .ThenInclude(c => c.LoaiBangLai)
+                .Include(bt => bt.ChiTietBaiThis)
+                    .ThenInclude(ct => ct.CauHoi)
+                        .ThenInclude(c => c.ChuDe)
                 .ToList();
         }
 
         public List<CauHoi> GetCauHoiOnTap(int loaiBangLaiId)
         {
             return _context.CauHois
-                .Where(c => c.LoaiBangLaiId == loaiBangLaiId)
+                .Where(c => c.LoaiBangLaiId == loaiBangLaiId &&
+                            !c.LoaiBangLai.isDeleted &&
+                            !c.ChuDe.isDeleted)
                 .OrderBy(c => c.ChuDeId)
                 .ToList();
         }
 
         public LoaiBangLai GetLoaiBangLaiById(int loaiBangLaiId)
         {
-            return _context.LoaiBangLais.FirstOrDefault(l => l.Id == loaiBangLaiId);
+            return _context.LoaiBangLais
+                .FirstOrDefault(l => l.Id == loaiBangLaiId && !l.isDeleted);
         }
+
         public List<CauHoi> GetCauHoiTheoChuDe(int loaiBangLaiId, int chuDeId)
         {
             return _context.CauHois
-                .Where(c => c.LoaiBangLaiId == loaiBangLaiId && c.ChuDeId == chuDeId)
-                .OrderBy(c => c.NoiDung) // hoặc sắp xếp theo gì đó nếu cần
+                .Where(c => c.LoaiBangLaiId == loaiBangLaiId &&
+                            c.ChuDeId == chuDeId &&
+                            !c.LoaiBangLai.isDeleted &&
+                            !c.ChuDe.isDeleted)
+                .OrderBy(c => c.NoiDung)
                 .ToList();
         }
 
-
-
-        public bool LuuDapAnTamThoi(DapAnTamThoi request)
-        {
-            try
-            {
-                // Implement your logic to save temporary answers
-                // This could use a cache, session, or separate database table
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
     }
 }

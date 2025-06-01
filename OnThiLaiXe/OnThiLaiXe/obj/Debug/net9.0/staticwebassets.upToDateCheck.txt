@@ -17,7 +17,6 @@ C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThi
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\tables\tables.html
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sv.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\js\owl-carousel.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\charts\sparkline.html
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\demo.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\moment\moment.min.js
@@ -26,7 +25,6 @@ C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThi
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.pt_br.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\bootstrap\js\bootstrap.bundle.min.js.map
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\starter-template.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\js\custom.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\kaiadmin\favicon.svg
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.pt_br.min.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery\dist\jquery.min.map
@@ -70,9 +68,7 @@ C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThi
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\examples\logoinvoice.svg
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\css\owl.css
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\kaiadmin\logo_light.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\js\animation.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\bootstrap-notify\bootstrap-notify.min.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\chart.js\chart.min.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\extras\editors.default.js
@@ -135,7 +131,6 @@ C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThi
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ug_cn.min.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.da.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\js\isotope.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\icon-menu.html
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\maps\jsvectormap.html
@@ -212,7 +207,6 @@ C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThi
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\js\AutoComplete.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.es.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sv.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\js\imagesloaded.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fa.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\select2\select2.full.min.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\fullcalendar\fullcalendar.min.js
@@ -241,7 +235,6 @@ C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThi
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\plugins.css
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\owl-carousel\owl.carousel.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\js\tabs.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_ftp.svg
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\kaiadmin.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\cs.html.js
@@ -259,7 +252,6 @@ C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThi
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_page_not_found_su7k.svg
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\jquery.validate\jquery.validate.min.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\widgets.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\css\animated.css
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sr.min.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.el.min.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
@@ -306,9 +298,7 @@ C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThi
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ca.js
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
 C:\Users\Admin\OneDrive\Máy tính\Thư mục mới\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_Hello_qnas.svg
-wwwroot\assets\css\animated.css
 wwwroot\assets\css\fontawesome.css
-wwwroot\assets\css\owl.css
 wwwroot\assets\css\templatemo-seo-dream.css
 wwwroot\assets\fonts\Flaticon.woff
 wwwroot\assets\fonts\flexslider-icon.eot
@@ -338,12 +328,6 @@ wwwroot\assets\images\features-number-02.png
 wwwroot\assets\images\features-number-03.png
 wwwroot\assets\images\features-number-04.png
 wwwroot\assets\images\logo-icon.png
-wwwroot\assets\js\animation.js
-wwwroot\assets\js\custom.js
-wwwroot\assets\js\imagesloaded.js
-wwwroot\assets\js\isotope.js
-wwwroot\assets\js\owl-carousel.js
-wwwroot\assets\js\tabs.js
 wwwroot\assets_admin\assets\css\bootstrap.min.css
 wwwroot\assets_admin\assets\css\demo.css
 wwwroot\assets_admin\assets\css\demo.css.map

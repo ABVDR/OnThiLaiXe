@@ -1,7 +1,5 @@
 ﻿using System.Security.Claims;
-using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using OnThiLaiXe.Models;
 using OnThiLaiXe.Repositories;
 
@@ -9,235 +7,80 @@ namespace OnThiLaiXe.Controllers
 {
     public class BaiThiController : Controller
     {
-        private readonly ICauHoiRepository _cauHoiRepo;
         private readonly IBaiThiRepository _baiThiRepo;
-        private readonly ApplicationDbContext _context;
 
-        public BaiThiController(ICauHoiRepository cauHoiRepo, IBaiThiRepository baiThiRepo, ApplicationDbContext context)
+        public BaiThiController(IBaiThiRepository baiThiRepo)
         {
-            _cauHoiRepo = cauHoiRepo;
             _baiThiRepo = baiThiRepo;
-            _context = context;
         }
-        // Action để làm bài thi
+
+       
         public IActionResult LamBaiThi(int id, Dictionary<int, string> answers)
         {
-            var baiThi = _context.BaiThis
-                                 .Include(b => b.ChiTietBaiThis)
-                                 .ThenInclude(ct => ct.CauHoi)
-                                 .ThenInclude(b => b.LoaiBangLai)
-                                 .FirstOrDefault(b => b.Id == id);
+            var baiThi = _baiThiRepo.GetBaiThiWithDetails(id);
 
             if (baiThi == null)
             {
                 return NotFound();
             }
 
-            int totalCorrectAnswers = 0;
-            List<KetQuaBaiThi> ketQuaList = new List<KetQuaBaiThi>();
-
-            // Kiểm tra từng câu hỏi
-            foreach (var chiTiet in baiThi.ChiTietBaiThis)
-            {
-                var userAnswer = answers.ContainsKey(chiTiet.Id) ? answers[chiTiet.Id] : null;
-
-                // Nếu userAnswer không rỗng, so sánh ký tự đầu tiên của userAnswer với DapAnDung
-                var isCorrect = userAnswer != null && userAnswer.Length > 0 && chiTiet.CauHoi.DapAnDung.Equals(userAnswer[0]);
-
-                ketQuaList.Add(new KetQuaBaiThi
-                {
-                    CauHoiId = chiTiet.CauHoiId,
-                    CauTraLoi = userAnswer != null && userAnswer.Length > 0 ? userAnswer[0] : ' ', // Lấy ký tự đầu tiên hoặc gán một giá trị mặc định
-                    DungSai = isCorrect
-                });
-
-                if (isCorrect)
-                {
-                    totalCorrectAnswers++;
-                }
-            }
-
-            var diem = (totalCorrectAnswers / (float)baiThi.ChiTietBaiThis.Count) * 10; // Ví dụ tính điểm theo tỷ lệ
+            var (ketQuaList, diem, tongSoCau, diemToiThieu) = _baiThiRepo.ChamDiem(baiThi, answers);
 
             ViewBag.KetQuaList = ketQuaList;
-            ViewBag.TongSoCau = baiThi.ChiTietBaiThis.Count;
-            ViewBag.DiemToiThieu = baiThi.ChiTietBaiThis
-                                 .FirstOrDefault()?.CauHoi?.LoaiBangLai?.DiemToiThieu ?? 0;
+            ViewBag.TongSoCau = tongSoCau;
+            ViewBag.DiemToiThieu = diemToiThieu;
             ViewBag.Diem = diem;
 
             return View(baiThi);
         }
 
-
-
         [HttpPost]
-        public IActionResult NopBaiThiAjax([FromBody] SubmitBaiThiRequest request)
+        public async Task<IActionResult> NopBaiThiAjax([FromBody] SubmitBaiThiRequest request)
         {
             if (request == null || request.BaiThiId == 0 || request.Answers == null)
             {
                 return Json(new { success = false, message = "Dữ liệu gửi lên không hợp lệ!" });
             }
 
-            var baiThi = _context.BaiThis
-                                 .Include(b => b.ChiTietBaiThis)
-                                 .ThenInclude(ct => ct.CauHoi)
-                                 .ThenInclude(ch => ch.LoaiBangLai)
-                                 .FirstOrDefault(b => b.Id == request.BaiThiId);
-
-            if (baiThi == null)
+            try
             {
-                return Json(new { success = false, message = "Không tìm thấy bài thi." });
-            }
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                var result = await _baiThiRepo.XuLyNopBaiThiAsync(request, userId);
 
-            int totalCorrectAnswers = 0;
-            List<KetQuaBaiThi> ketQuaList = new List<KetQuaBaiThi>();
-
-            foreach (var chiTiet in baiThi.ChiTietBaiThis)
-            {
-                var userAnswer = request.Answers.ContainsKey(chiTiet.CauHoiId)
-                                   ? request.Answers[chiTiet.CauHoiId]
-                                   : null;
-
-                var isCorrect = false;
-
-                // Kiểm tra nếu người dùng có câu trả lời
-                if (!string.IsNullOrEmpty(userAnswer))
+                if (!result.Success)
                 {
-                    isCorrect = chiTiet.CauHoi.DapAnDung.Equals(userAnswer[0]);
-                }
-                else
-                {
-                    // Nếu không có câu trả lời, thì là sai
-                    isCorrect = false;
+                    return Json(new { success = false, message = result.Message });
                 }
 
-                ketQuaList.Add(new KetQuaBaiThi
+                return Json(new
                 {
-                    CauHoiId = chiTiet.CauHoiId,
-                    CauTraLoi = userAnswer != null ? userAnswer[0] : (char?)null,  // Nếu không có câu trả lời, để giá trị null
-                    DapAnDung = chiTiet.CauHoi.DapAnDung,
-                    DungSai = isCorrect == false,  // Đánh dấu sai nếu isCorrect là false
+                    success = true,
+                    baiThiId = result.BaiThiId,
+                    ketQuaList = result.KetQuaList.Select(kq => new
+                    {
+                        kq.CauHoiId,
+                        kq.CauTraLoi,
+                        kq.DapAnDung,
+                        kq.DungSai,
+                    }),
+                    soCauDung = result.SoCauDung,
+                    tongSoCau = result.TongSoCau,
+                    tongDiem = result.TongDiem,
+                    ketQua = result.KetQua,
+                    macLoiNghiemTrong = result.MacLoiNghiemTrong,
+                    soCauLoiNghiemTrong = result.SoCauLoiNghiemTrong
                 });
-
-                if (isCorrect)
-                {
-                    totalCorrectAnswers++;
-                }
             }
-
-            var tongSoCau = baiThi.ChiTietBaiThis.Count;
-
-            var phanTramDung = (double)totalCorrectAnswers / tongSoCau * 100;
-            int diem = totalCorrectAnswers; // Mỗi câu đúng = 1 điểm
-
-            var diemToiThieu = baiThi.ChiTietBaiThis
-                .FirstOrDefault()?.CauHoi?.LoaiBangLai?.DiemToiThieu ?? 0;
-
-            var ketQua = diem >= diemToiThieu ? "Đậu" : "Không Đạt";
-
-            bool macLoiNghiemTrong = ketQuaList
-                .Any(kq => kq.DungSai &&
-                    baiThi.ChiTietBaiThis
-                        .First(ct => ct.CauHoiId == kq.CauHoiId)
-                        .CauHoi.DiemLiet);
-
-
-            // Đếm số câu mắc lỗi nghiêm trọng
-            int soCauLoiNghiemTrong = ketQuaList
-                .Count(kq => kq.DungSai && baiThi.ChiTietBaiThis
-                    .First(ct => ct.CauHoiId == kq.CauHoiId).CauHoi.DiemLiet);
-
-
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-            if (!string.IsNullOrEmpty(userId))
+            catch (Exception ex)
             {
-                var lichSuThi = new LichSuThi
+                return Json(new
                 {
-                    UserId = userId,
-                    BaiThiId = baiThi.Id,
-                    TenBaiThi = baiThi.TenBaiThi.Length > 100 ? baiThi.TenBaiThi.Substring(0, 100) : baiThi.TenBaiThi,
-                    NgayThi = DateTime.Now,
-                    TongSoCau = tongSoCau,
-                    SoCauDung = totalCorrectAnswers,
-                    PhanTramDung = phanTramDung,
-                    Diem = diem,
-                    KetQua = ketQua.Length > 20 ? ketQua.Substring(0, 20) : ketQua,
-                    MacLoiNghiemTrong = macLoiNghiemTrong,
-                };
-
-                try
-                {
-                    _context.LichSuThis.Add(lichSuThi);
-                    _context.SaveChanges();
-
-                    foreach (var kq in ketQuaList)
-                    {
-                        _context.ChiTietLichSuThis.Add(new ChiTietLichSuThi
-                        {
-                            LichSuThiId = lichSuThi.Id,
-                            CauHoiId = kq.CauHoiId,
-                            CauTraLoi = kq.CauTraLoi,
-                            DungSai = kq.DungSai
-                        });
-
-                        if (kq.DungSai)
-                        {
-                            var existingSai = _context.CauHoiSais
-                                .FirstOrDefault(c => c.UserId == userId && c.CauHoiId == kq.CauHoiId);
-
-                            if (existingSai != null)
-                            {
-                                existingSai.NgaySai = DateTime.Now;
-                            }
-                            else
-                            {
-                                _context.CauHoiSais.Add(new CauHoiSai
-                                {
-                                    UserId = userId,
-                                    CauHoiId = kq.CauHoiId,
-                                    NgaySai = DateTime.Now
-                                });
-                            }
-                        }
-                    }
-
-                    _context.SaveChanges();
-                }
-                catch (Exception ex)
-                {
-                    return Json(new
-                    {
-                        success = false,
-                        message = "Lỗi khi lưu lịch sử thi.",
-                        error = ex.Message,
-                        inner = ex.InnerException?.Message,
-                        full = ex.ToString()
-                    });
-                }
+                    success = false,
+                    message = "Lỗi khi xử lý bài thi.",
+                    error = ex.Message
+                });
             }
-
-            return Json(new
-            {
-                success = true,
-                baiThiId = baiThi.Id,
-                ketQuaList = ketQuaList.Select(kq => new
-                {
-                    kq.CauHoiId,
-                    kq.CauTraLoi,
-                    kq.DapAnDung,
-                    kq.DungSai,
-                }),
-                soCauDung = diem,
-                tongSoCau = tongSoCau,
-                tongDiem = diem,
-                ketQua = ketQua,
-                macLoiNghiemTrong = macLoiNghiemTrong,
-                soCauLoiNghiemTrong = soCauLoiNghiemTrong
-            });
-
         }
-
 
         public IActionResult ChonDeThi()
         {
@@ -265,29 +108,6 @@ namespace OnThiLaiXe.Controllers
             return View(baiThis);
         }
 
-
-
-        // API endpoint để nhận đáp án từ client thông qua AJAX
-        [HttpPost]
-        public IActionResult LuuDapAnTamThoi([FromBody] DapAnTamThoi request)
-        {
-            if (request == null || request.BaiThiId == 0)
-            {
-                return BadRequest(new { success = false, message = "Dữ liệu không hợp lệ" });
-            }
-
-            try
-            {
-                bool result = _baiThiRepo.LuuDapAnTamThoi(request);
-                return Json(new { success = result });
-            }
-            catch (Exception ex)
-            {
-                return Json(new { success = false, message = ex.Message });
-            }
-        }
-
-
         public IActionResult DanhSachDeThi(string loaiXe)
         {
             var danhSachDeThi = _baiThiRepo.GetDanhSachDeThi(loaiXe);
@@ -313,7 +133,6 @@ namespace OnThiLaiXe.Controllers
             return View(danhSachLoaiBangLaiOTo);
         }
 
-
         public IActionResult ThiDe(int loaiBangLaiId)
         {
             var loaiBangLai = _baiThiRepo.GetLoaiBangLaiById(loaiBangLaiId);
@@ -327,11 +146,10 @@ namespace OnThiLaiXe.Controllers
             ViewBag.LoaiBangLai = loaiBangLai;
             return View(danhSachDeThi);
         }
+
         public IActionResult LamDeNgauNhien(int loaiBangLaiId)
         {
-            var deThiNgauNhien = _baiThiRepo.GetDeThiByLoaiBangLai(loaiBangLaiId)
-                                             .OrderBy(x => Guid.NewGuid())
-                                             .FirstOrDefault();
+            var deThiNgauNhien = _baiThiRepo.GetDeThiNgauNhien(loaiBangLaiId);
 
             if (deThiNgauNhien == null)
                 return NotFound("Không có đề thi nào phù hợp.");
@@ -345,7 +163,6 @@ namespace OnThiLaiXe.Controllers
 
             if (!cauHoiList.Any())
             {
-
                 return RedirectToAction("DanhSachLoaiBangLai");
             }
 
@@ -366,38 +183,28 @@ namespace OnThiLaiXe.Controllers
             ViewBag.LoaiBangLai = _baiThiRepo.GetLoaiBangLaiById(loaiBangLaiId);
             ViewBag.TenChuDe = _baiThiRepo.GetTenChuDeById(chuDeId);
 
-            return View("OnTapChuDe", cauHoiList); // dùng lại View hiện có
+            return View("OnTapChuDe", cauHoiList);
         }
-
 
         public IActionResult ChonChuDe(int loaiBangLaiId)
         {
-            var loai = _context.LoaiBangLais.FirstOrDefault(l => l.Id == loaiBangLaiId);
-            if (loai == null)
+            var chuDeInfo = _baiThiRepo.GetChuDeByLoaiBangLai(loaiBangLaiId);
+
+            if (chuDeInfo.LoaiBangLai == null)
             {
                 return NotFound();
             }
 
-            var chuDeList = _context.ChuDes
-                .Include(cd => cd.CauHois)
-                .Where(cd => cd.CauHois.Any(ch => ch.LoaiBangLaiId == loaiBangLaiId))
-                .Distinct()
-                .ToList();
-
-            ViewBag.TenLoai = loai.TenLoai;
+            ViewBag.TenLoai = chuDeInfo.LoaiBangLai.TenLoai;
             ViewBag.LoaiBangLaiId = loaiBangLaiId;
 
-            return View("ChonChuDe", chuDeList);
+            return View("ChonChuDe", chuDeInfo.ChuDeList);
         }
-
-
 
         public IActionResult DanhSachLoaiBangLai()
         {
             var danhSachLoaiBangLai = _baiThiRepo.GetDanhSachLoaiBangLai();
             return View(danhSachLoaiBangLai);
         }
-
-
     }
 }

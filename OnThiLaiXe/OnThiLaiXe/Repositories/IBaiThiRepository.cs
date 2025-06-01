@@ -1,25 +1,26 @@
 ﻿using OnThiLaiXe.Models;
+using OnThiLaiXe.ModelView;
 
 namespace OnThiLaiXe.Repositories
 {
     public interface IBaiThiRepository
     {
-        BaiThi GetBaiThiById(int baiThiId, bool includeChiTiet = true);
-        List<KetQuaBaiThi> NopBaiThi(int baiThiId, string dapAnJson, string currentUserId, bool isLoggedIn);
-        List<CauHoiSaiViewModel> GetDanhSachCauHoiSai(int userId);
-        List<CauHoi> GetCauHoiTheoChuDe(int loaiBangLaiId, int chuDeId);
+        BaiThi GetBaiThiWithDetails(int id);
+        (List<KetQuaBaiThi> ketQuaList, float diem, int tongSoCau, int diemToiThieu) ChamDiem(BaiThi baiThi, Dictionary<int, string> answers);
+        Task<NopBaiThiResult> XuLyNopBaiThiAsync(SubmitBaiThiRequest request, string userId);
+        BaiThi GetDeThiNgauNhien(int loaiBangLaiId);       
+        (LoaiBangLai LoaiBangLai, List<ChuDe> ChuDeList) GetChuDeByLoaiBangLai(int loaiBangLaiId);
         string GetTenChuDeById(int chuDeId);
-        List<CauHoi> GetCauHoiLuyenLaiCauSai(int userId, int maxQuestions = 20);
         List<ChuDe> GetDanhSachChuDe();
         List<LoaiBangLai> GetDanhSachLoaiBangLai();
+        List<LoaiBangLai> GetLoaiBangLaiXeMay();
+        List<LoaiBangLai> GetLoaiBangLaiOTo();
+        LoaiBangLai GetLoaiBangLaiById(int loaiBangLaiId);   
         BaiThi GetChiTietBaiThi(int id);
         List<BaiThi> GetDanhSachBaiThi();
         List<BaiThi> GetDanhSachDeThi(string loaiXe = null);
-        List<LoaiBangLai> GetLoaiBangLaiXeMay();
-        List<LoaiBangLai> GetLoaiBangLaiOTo();
-        List<BaiThi> GetDeThiByLoaiBangLai(int loaiBangLaiId);
+        List<BaiThi> GetDeThiByLoaiBangLai(int loaiBangLaiId);     
         List<CauHoi> GetCauHoiOnTap(int loaiBangLaiId);
-        LoaiBangLai GetLoaiBangLaiById(int loaiBangLaiId);
-        bool LuuDapAnTamThoi(DapAnTamThoi request);
+        List<CauHoi> GetCauHoiTheoChuDe(int loaiBangLaiId, int chuDeId);
     }
 }
