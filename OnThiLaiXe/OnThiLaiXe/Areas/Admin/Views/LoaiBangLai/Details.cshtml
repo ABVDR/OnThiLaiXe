@@ -33,7 +33,7 @@
                 <div class="card-body p-4">
                     <div class="row g-4">
                         <!-- Thông tin cơ bản -->
-                        <div class="col-md-4">
+                        <div class="col-md-12">
                             <div class="card h-100 shadow-sm border-0 bg-light">
                                 <div class="card-body position-relative p-4">
                                     @if (Model.isDeleted)
@@ -69,20 +69,24 @@
 
                                     <hr>
 
-                                    <div class="d-flex justify-content-between mb-2 px-2">
-                                        <span class="d-flex align-items-center">
-                                            <i class="fas fa-clock text-primary me-2"></i>
-                                            Thời gian thi:
-                                        </span>
-                                        <span class="fw-bold">@Model.ThoiGianThi phút</span>
-                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6">
+                                            <div class="d-flex justify-content-between mb-2 px-2">
+                                                <span class="d-flex align-items-center">
+                                                    <i class="fas fa-clock text-primary me-2"></i>
+                                                    Thời gian thi:
+                                                </span>
+                                                <span class="fw-bold">@Model.ThoiGianThi phút</span>
+                                            </div>
 
-                                    <div class="d-flex justify-content-between mb-2 px-2">
-                                        <span class="d-flex align-items-center">
-                                            <i class="fas fa-star text-warning me-2"></i>
-                                            Điểm tối thiểu:
-                                        </span>
-                                        <span class="fw-bold">@Model.DiemToiThieu điểm</span>
+                                            <div class="d-flex justify-content-between mb-2 px-2">
+                                                <span class="d-flex align-items-center">
+                                                    <i class="fas fa-star text-warning me-2"></i>
+                                                    Điểm tối thiểu:
+                                                </span>
+                                                <span class="fw-bold">@Model.DiemToiThieu điểm</span>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <hr>
@@ -97,159 +101,6 @@
                                             else
                                             {
                                                 @Model.MoTa
-                                            }
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Phần bên phải -->
-                        <div class="col-md-8">
-                            <!-- Tabs navigation -->
-                            <ul class="nav nav-tabs mb-4" id="detailTabs" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="cauhoi-tab" data-bs-toggle="tab"
-                                            data-bs-target="#cauhoi-tab-pane" type="button" role="tab">
-                                        <i class="fas fa-question-circle me-2"></i>Câu hỏi liên quan
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="sahinh-tab" data-bs-toggle="tab"
-                                            data-bs-target="#sahinh-tab-pane" type="button" role="tab">
-                                        <i class="fas fa-road me-2"></i>Bài sa hình
-                                    </button>
-                                </li>
-                            </ul>
-
-                            <div class="tab-content" id="detailTabsContent">
-                                <!-- Tab câu hỏi -->
-                                <div class="tab-pane fade show active" id="cauhoi-tab-pane" role="tabpanel" aria-labelledby="cauhoi-tab">
-                                    <div class="card shadow-sm border-0 h-100">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                                <h5 class="card-title mb-0">
-                                                    <i class="fas fa-question-circle text-primary me-2"></i>
-                                                    Câu hỏi thuộc loại bằng này
-                                                </h5>
-                                                @if (Model.CauHois != null && Model.CauHois.Any())
-                                                {
-                                                    <span class="badge bg-primary rounded-pill py-2 px-3">
-                                                        @Model.CauHois.Count() câu hỏi
-                                                    </span>
-                                                }
-                                            </div>
-
-                                            @if (Model.CauHois == null || !Model.CauHois.Any())
-                                            {
-                                                <div class="alert alert-info">
-                                                    <i class="fas fa-info-circle me-2"></i>
-                                                    Không có câu hỏi nào thuộc loại bằng này
-                                                </div>
-                                            }
-                                            else
-                                            {
-                                                <div class="table-responsive">
-                                                    <table class="table table-hover border">
-                                                        <thead class="table-light">
-                                                            <tr>
-                                                                <th style="width: 60px;">ID</th>
-                                                                <th>Nội dung câu hỏi</th>
-                                                                <th class="text-end" style="width: 100px;">Thao tác</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            @foreach (var item in Model.CauHois.Take(5))
-                                                            {
-                                                                <tr>
-                                                                    <td>@item.Id</td>
-                                                                    <td>@(item.NoiDung?.Length > 70 ? item.NoiDung.Substring(0, 70) + "..." : item.NoiDung)</td>
-                                                                    <td class="text-end">
-                                                                        <a href="#" class="btn btn-sm btn-primary rounded-circle">
-                                                                            <i class="fas fa-eye"></i>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                            }
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-
-                                                @if (Model.CauHois.Count() > 5)
-                                                {
-                                                    <div class="text-center mt-3">
-                                                        <a href="#" class="btn btn-outline-primary">
-                                                            <i class="fas fa-list me-1"></i>
-                                                            Xem tất cả @Model.CauHois.Count() câu hỏi
-                                                        </a>
-                                                    </div>
-                                                }
-                                            }
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Tab bài sa hình -->
-                                <div class="tab-pane fade" id="sahinh-tab-pane" role="tabpanel" aria-labelledby="sahinh-tab">
-                                    <div class="card shadow-sm border-0 h-100">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                                <h5 class="card-title mb-0">
-                                                    <i class="fas fa-road text-primary me-2"></i>
-                                                    Bài sa hình thuộc loại bằng này
-                                                </h5>
-                                                @if (Model.BaiSaHinhs != null && Model.BaiSaHinhs.Any())
-                                                {
-                                                    <span class="badge bg-primary rounded-pill py-2 px-3">
-                                                        @Model.BaiSaHinhs.Count() bài sa hình
-                                                    </span>
-                                                }
-                                            </div>
-
-                                            @if (Model.BaiSaHinhs == null || !Model.BaiSaHinhs.Any())
-                                            {
-                                                <div class="alert alert-info">
-                                                    <i class="fas fa-info-circle me-2"></i>
-                                                    Không có bài sa hình nào thuộc loại bằng này
-                                                </div>
-                                            }
-                                            else
-                                            {
-                                                <div class="table-responsive">
-                                                    <table class="table table-hover border">
-                                                        <thead class="table-light">
-                                                            <tr>
-                                                                <th style="width: 60px;">ID</th>
-                                                                <th>Tên bài sa hình</th>
-                                                                <th class="text-end" style="width: 100px;">Thao tác</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            @foreach (var item in Model.BaiSaHinhs.Take(5))
-                                                            {
-                                                                <tr>
-                                                                    <td>@item.Id</td>
-                                                                    <td>@(item.TenBai?.Length > 70 ? item.TenBai.Substring(0, 70) + "..." : item.TenBai)</td>
-                                                                    <td class="text-end">
-                                                                        <a href="#" class="btn btn-sm btn-primary rounded-circle">
-                                                                            <i class="fas fa-eye"></i>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                            }
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-
-                                                @if (Model.BaiSaHinhs.Count() > 5)
-                                                {
-                                                    <div class="text-center mt-3">
-                                                        <a href="#" class="btn btn-outline-primary">
-                                                            <i class="fas fa-list me-1"></i>
-                                                            Xem tất cả @Model.BaiSaHinhs.Count() bài sa hình
-                                                        </a>
-                                                    </div>
-                                                }
                                             }
                                         </div>
                                     </div>
@@ -290,31 +141,4 @@
     .bg-gradient-primary-to-secondary {
         background: linear-gradient(135deg, var(--bs-primary) 0%, #4a89dc 100%);
     }
-
-    .nav-tabs .nav-link {
-        color: #495057;
-        border-bottom-width: 3px;
-    }
-
-        .nav-tabs .nav-link.active {
-            color: var(--bs-primary);
-            border-bottom-color: var(--bs-primary);
-            font-weight: bold;
-        }
 </style>
-
-@section Scripts {
-    <script>
-        $(document).ready(function() {
-            // Activate Bootstrap tabs
-            var triggerTabList = [].slice.call(document.querySelectorAll('#detailTabs button'))
-            triggerTabList.forEach(function (triggerEl) {
-                var tabTrigger = new bootstrap.Tab(triggerEl)
-                triggerEl.addEventListener('click', function (event) {
-                    event.preventDefault()
-                    tabTrigger.show()
-                })
-            })
-        });
-    </script>
-}
