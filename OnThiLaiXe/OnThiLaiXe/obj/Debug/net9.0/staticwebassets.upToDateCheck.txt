@@ -1,303 +1,303 @@
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\gridsystem.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\css\Giadienthi.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\fonts\slick.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ja.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\es.html.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\logoproduct3.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\bootstrap\css\bootstrap.min.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation\dist\additional-methods.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.tr.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.es.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_empty_xct9.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\fonts\fontawesome-webfont.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\dropzone\dropzone.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\tables\tables.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sv.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\charts\sparkline.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\demo.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\moment\moment.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\jquery-scrollbar\jquery.scrollbar.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.nl.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.pt_br.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\bootstrap\js\bootstrap.bundle.min.js.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\starter-template.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\kaiadmin\favicon.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.pt_br.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery\dist\jquery.min.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fa.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\favicon.ico
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery\dist\jquery.slim.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\charts\charts.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.he.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sl.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\elfinder.full.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fr.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\elfinder.full.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.pl.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\logoproduct.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ca.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\jquery\jquery.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.de.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\tui-icon-b.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\worker\quicklook.tiff.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.zh_cn.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\examples\logo1.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_creative_team_r90h.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_dropbox.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_blank_canvas_3rbb.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery\dist\jquery.slim.min.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\tui-icon-a.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\fonts\FontAwesome.otf
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\worker\calcfilehash.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\css\theme.min.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_no_data_qbuo.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\chart-circle\circles.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\core\jquery-3.7.1.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\jsvectormap\jsvectormap.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\forms\forms.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery\dist\jquery.slim.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\examples\logoinvoice.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\kaiadmin\logo_light.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\bootstrap-notify\bootstrap-notify.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\chart.js\chart.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\extras\editors.default.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.nl.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\kaiadmin.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\proxy\elfindersupportver1.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fr_ca.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ro.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\README.md
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.hu.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\extras\quicklook.googledocs.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\extras\editors.default.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\css\fontawesome.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.no.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\kaiadmin.min.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\kaiadmin\logo_dark.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.hu.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\sweetalert\sweetalert.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.si.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_zip.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.de.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\jsvectormap\world.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\list.js\list.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\summernote\summernote-lite.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\jquery\jquery.slim.min.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.cs.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\visa.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\jquery\jquery.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\kaiadmin.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.uk.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\avatars.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ru.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\setting-demo2.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ar.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\js\site.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\tables\datatables.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sr.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\en.html.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\tr.html.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\fonts\flexslider-icon.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\extras\quicklook.googledocs.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fo.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fr.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\css\templatemo-seo-dream.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\fonts\fontawesome\fa-regular-400.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_trash.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sk.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.hr.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_googledrive.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\css\site.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_onedrive.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ug_cn.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.da.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\icon-menu.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\maps\jsvectormap.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery\dist\jquery.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ro.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\ko.html.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_Taken_if77.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\core\bootstrap.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\sticky-sidebar\sticky-sidebar.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\sortable\sortable.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\demo.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fo.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ko.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_network.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\flags\readme.txt
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\bootstrap-toggle\bootstrap-toggle.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\jquery\jquery.min.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sk.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.vi.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\notifications.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sl.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.it.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_upgrade_06a0.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\proxy\elfindersupportver1.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\bootstrap-tagsinput\bootstrap-tagsinput.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ja.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ar.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\pl.html.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\jquery.magnific-popup\jquery.magnific-popup.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.tr.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.zh_cn.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\fonts\fontawesome\fa-solid-900.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\ja.html.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\ru.html.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\jquery\jquery.slim.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_sql.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\fonts\fontawesome\fa-brands-400.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\tui-icon-d.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\datepicker\bootstrap-datetimepicker.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\css\theme.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\fonts.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\examples\logo.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ko.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery\LICENSE.txt
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\css\elfinder.min.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fallback.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery\dist\jquery.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation\LICENSE.md
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\sk.html.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_local.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\sidebar-style-2.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\bootstrap\js\bootstrap.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\gmaps\gmaps.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.zh_tw.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\plugins.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.bg.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\css\elfinder.full.min.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.id.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\jquery\jquery.slim.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\kaiadmin.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\typography.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fr_ca.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\icons-big.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\js\AutoComplete.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.es.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sv.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fa.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\select2\select2.full.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\fullcalendar\fullcalendar.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ug_cn.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\css\KetQua.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_update_uxn2.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\worker\quicklook.unzip.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.da.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.cs.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_sign_in_e6hj.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\demo.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\font-awesome-icons.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ru.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\fonts\simple-line-icons\Simple-Line-Icons.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_box.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\tui-icon-c.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.uk.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\kaiadmin\favicon.ico
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_tabs_jf82.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\plugins.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\owl-carousel\owl.carousel.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_ftp.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\kaiadmin.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\cs.html.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\bootstrap.min.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\kaiadmin\icon.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\examples\logo2.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\plugins.min.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\fonts.min.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\worker\quicklook.unzip.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\bootstrap\js\bootstrap.bundle.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\buttons.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_page_not_found_su7k.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\jquery.validate\jquery.validate.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\widgets.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sr.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.el.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.bg.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\css\chitietde.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.no.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\worker\quicklook.tiff.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.it.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\panels.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\datatables\datatables.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.el.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\simple-line-icons.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\jquery.sparkline\jquery.sparkline.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\core\popper.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.pl.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation\dist\jquery.validate.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_not_found_60pq.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\index.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.he.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\maps\googlemaps.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\de.html.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.id.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\webfont\webfont.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\bootstrap\css\bootstrap.min.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.lang.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\elfinder.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\logoproduct2.svg
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.si.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.lang.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fallback.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\css\elfinder.full.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.vi.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\setting-demo.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.zh_tw.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\sweetalert.html
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\worker\calcfilehash.min.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.hr.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ca.js
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
-C:\Users\Admin\OneDrive\Máy tính\Thư mục mới (4)\OnThiLaiXe\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_Hello_qnas.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\gridsystem.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\css\Giadienthi.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\fonts\slick.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ja.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\es.html.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\logoproduct3.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\bootstrap\css\bootstrap.min.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation\dist\additional-methods.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.tr.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.es.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_empty_xct9.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\fonts\fontawesome-webfont.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\dropzone\dropzone.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\tables\tables.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sv.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\charts\sparkline.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\demo.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\moment\moment.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\jquery-scrollbar\jquery.scrollbar.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.nl.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.pt_br.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\bootstrap\js\bootstrap.bundle.min.js.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\starter-template.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\kaiadmin\favicon.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.pt_br.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery\dist\jquery.min.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fa.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\favicon.ico
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery\dist\jquery.slim.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\charts\charts.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.he.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sl.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\elfinder.full.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fr.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\elfinder.full.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.pl.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\logoproduct.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ca.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\jquery\jquery.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.de.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\tui-icon-b.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\worker\quicklook.tiff.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.zh_cn.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\examples\logo1.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_creative_team_r90h.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_dropbox.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_blank_canvas_3rbb.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery\dist\jquery.slim.min.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\tui-icon-a.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\fonts\FontAwesome.otf
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\worker\calcfilehash.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\css\theme.min.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_no_data_qbuo.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\chart-circle\circles.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\core\jquery-3.7.1.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\jsvectormap\jsvectormap.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\forms\forms.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery\dist\jquery.slim.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\examples\logoinvoice.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\kaiadmin\logo_light.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\bootstrap-notify\bootstrap-notify.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\chart.js\chart.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\extras\editors.default.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.nl.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\kaiadmin.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\proxy\elfindersupportver1.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fr_ca.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ro.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\README.md
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.hu.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\extras\quicklook.googledocs.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\extras\editors.default.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\css\fontawesome.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.no.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\kaiadmin.min.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\kaiadmin\logo_dark.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.hu.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\sweetalert\sweetalert.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.si.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_zip.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.de.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\jsvectormap\world.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\list.js\list.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\summernote\summernote-lite.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\jquery\jquery.slim.min.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.cs.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\visa.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\jquery\jquery.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\kaiadmin.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.uk.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\avatars.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ru.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\setting-demo2.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ar.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\js\site.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\tables\datatables.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sr.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\en.html.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\tr.html.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\fonts\flexslider-icon.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\extras\quicklook.googledocs.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fo.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fr.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets\css\templatemo-seo-dream.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\fonts\fontawesome\fa-regular-400.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_trash.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sk.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.hr.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_googledrive.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\css\site.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_onedrive.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ug_cn.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.da.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\icon-menu.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\maps\jsvectormap.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery\dist\jquery.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ro.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\ko.html.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_Taken_if77.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\core\bootstrap.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\sticky-sidebar\sticky-sidebar.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\sortable\sortable.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\demo.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fo.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ko.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_network.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\flags\readme.txt
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\bootstrap-toggle\bootstrap-toggle.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\jquery\jquery.min.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sk.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.vi.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\notifications.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sl.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.it.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_upgrade_06a0.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\proxy\elfindersupportver1.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\bootstrap-tagsinput\bootstrap-tagsinput.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ja.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ar.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\pl.html.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\jquery.magnific-popup\jquery.magnific-popup.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.tr.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.zh_cn.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\fonts\fontawesome\fa-solid-900.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\ja.html.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\ru.html.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\jquery\jquery.slim.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_sql.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\fonts\fontawesome\fa-brands-400.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\tui-icon-d.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\datepicker\bootstrap-datetimepicker.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\css\theme.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\fonts.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\examples\logo.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ko.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\css\elfinder.min.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fallback.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery\dist\jquery.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation\LICENSE.md
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\sk.html.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_local.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\sidebar-style-2.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\bootstrap\js\bootstrap.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\gmaps\gmaps.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.zh_tw.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\plugins.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.bg.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\css\elfinder.full.min.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.id.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\jquery\jquery.slim.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\kaiadmin.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\typography.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fr_ca.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\icons-big.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\js\AutoComplete.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.es.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sv.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fa.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\select2\select2.full.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\fullcalendar\fullcalendar.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ug_cn.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\css\KetQua.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_update_uxn2.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\worker\quicklook.unzip.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.da.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.cs.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_sign_in_e6hj.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\demo.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\font-awesome-icons.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ru.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\fonts\simple-line-icons\Simple-Line-Icons.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_box.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\tui-icon-c.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.uk.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\kaiadmin\favicon.ico
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_tabs_jf82.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\plugins.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\owl-carousel\owl.carousel.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\img\volume_icon_ftp.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\kaiadmin.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\cs.html.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\bootstrap.min.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\kaiadmin\icon.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\examples\logo2.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\plugins.min.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\css\fonts.min.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\worker\quicklook.unzip.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\bootstrap\js\bootstrap.bundle.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\buttons.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.sr.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_page_not_found_su7k.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\jquery.validate\jquery.validate.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\widgets.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.el.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.bg.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\css\chitietde.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.no.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\worker\quicklook.tiff.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.it.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\panels.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\datatables\datatables.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.el.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\simple-line-icons.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\jquery.sparkline\jquery.sparkline.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\core\popper.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.pl.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_not_found_60pq.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\index.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.he.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\maps\googlemaps.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\help\de.html.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.id.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\plugin\webfont\webfont.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\vendor\bootstrap\css\bootstrap.min.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.lang.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\elfinder.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\logoproduct2.svg
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.si.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.lang.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.fallback.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\css\elfinder.full.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.vi.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\js\setting-demo.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.zh_tw.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\components\sweetalert.html
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\worker\calcfilehash.min.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.hr.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\elfinder\js\i18n\elfinder.ca.js
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\wwwroot\assets_admin\assets\img\undraw\undraw_Hello_qnas.svg
 wwwroot\assets\css\fontawesome.css
 wwwroot\assets\css\templatemo-seo-dream.css
 wwwroot\assets\fonts\Flaticon.woff
@@ -447,6 +447,7 @@ wwwroot\assets_admin\assets\img\flags\cc.png
 wwwroot\assets_admin\assets\img\flags\cd.png
 wwwroot\assets_admin\assets\img\flags\cf.png
 wwwroot\assets_admin\assets\img\flags\cg.png
+wwwroot\assets_admin\assets\img\flags\ch.png
 wwwroot\assets_admin\assets\img\flags\ci.png
 wwwroot\assets_admin\assets\img\flags\ck.png
 wwwroot\assets_admin\assets\img\flags\cl.png
@@ -460,7 +461,6 @@ wwwroot\assets_admin\assets\img\flags\cv.png
 wwwroot\assets_admin\assets\img\flags\cx.png
 wwwroot\assets_admin\assets\img\flags\cy.png
 wwwroot\assets_admin\assets\img\flags\cz.png
-wwwroot\assets_admin\assets\img\flags\ch.png
 wwwroot\assets_admin\assets\img\flags\de.png
 wwwroot\assets_admin\assets\img\flags\dj.png
 wwwroot\assets_admin\assets\img\flags\dk.png
@@ -489,6 +489,7 @@ wwwroot\assets_admin\assets\img\flags\gd.png
 wwwroot\assets_admin\assets\img\flags\ge.png
 wwwroot\assets_admin\assets\img\flags\gf.png
 wwwroot\assets_admin\assets\img\flags\gh.png
+wwwroot\assets_admin\assets\img\flags\gi.png
 wwwroot\assets_admin\assets\img\flags\gl.png
 wwwroot\assets_admin\assets\img\flags\gm.png
 wwwroot\assets_admin\assets\img\flags\gn.png
@@ -500,7 +501,6 @@ wwwroot\assets_admin\assets\img\flags\gt.png
 wwwroot\assets_admin\assets\img\flags\gu.png
 wwwroot\assets_admin\assets\img\flags\gw.png
 wwwroot\assets_admin\assets\img\flags\gy.png
-wwwroot\assets_admin\assets\img\flags\gi.png
 wwwroot\assets_admin\assets\img\flags\hk.png
 wwwroot\assets_admin\assets\img\flags\hm.png
 wwwroot\assets_admin\assets\img\flags\hn.png
@@ -521,6 +521,7 @@ wwwroot\assets_admin\assets\img\flags\jo.png
 wwwroot\assets_admin\assets\img\flags\jp.png
 wwwroot\assets_admin\assets\img\flags\ke.png
 wwwroot\assets_admin\assets\img\flags\kg.png
+wwwroot\assets_admin\assets\img\flags\kh.png
 wwwroot\assets_admin\assets\img\flags\ki.png
 wwwroot\assets_admin\assets\img\flags\km.png
 wwwroot\assets_admin\assets\img\flags\kn.png
@@ -529,7 +530,6 @@ wwwroot\assets_admin\assets\img\flags\kr.png
 wwwroot\assets_admin\assets\img\flags\kw.png
 wwwroot\assets_admin\assets\img\flags\ky.png
 wwwroot\assets_admin\assets\img\flags\kz.png
-wwwroot\assets_admin\assets\img\flags\kh.png
 wwwroot\assets_admin\assets\img\flags\la.png
 wwwroot\assets_admin\assets\img\flags\lb.png
 wwwroot\assets_admin\assets\img\flags\lc.png
@@ -567,6 +567,7 @@ wwwroot\assets_admin\assets\img\flags\na.png
 wwwroot\assets_admin\assets\img\flags\nc.png
 wwwroot\assets_admin\assets\img\flags\ne.png
 wwwroot\assets_admin\assets\img\flags\nf.png
+wwwroot\assets_admin\assets\img\flags\ng.png
 wwwroot\assets_admin\assets\img\flags\ni.png
 wwwroot\assets_admin\assets\img\flags\nl.png
 wwwroot\assets_admin\assets\img\flags\no.png
@@ -574,12 +575,12 @@ wwwroot\assets_admin\assets\img\flags\np.png
 wwwroot\assets_admin\assets\img\flags\nr.png
 wwwroot\assets_admin\assets\img\flags\nu.png
 wwwroot\assets_admin\assets\img\flags\nz.png
-wwwroot\assets_admin\assets\img\flags\ng.png
 wwwroot\assets_admin\assets\img\flags\om.png
 wwwroot\assets_admin\assets\img\flags\pa.png
 wwwroot\assets_admin\assets\img\flags\pe.png
 wwwroot\assets_admin\assets\img\flags\pf.png
 wwwroot\assets_admin\assets\img\flags\pg.png
+wwwroot\assets_admin\assets\img\flags\ph.png
 wwwroot\assets_admin\assets\img\flags\pk.png
 wwwroot\assets_admin\assets\img\flags\pl.png
 wwwroot\assets_admin\assets\img\flags\pm.png
@@ -589,7 +590,6 @@ wwwroot\assets_admin\assets\img\flags\ps.png
 wwwroot\assets_admin\assets\img\flags\pt.png
 wwwroot\assets_admin\assets\img\flags\pw.png
 wwwroot\assets_admin\assets\img\flags\py.png
-wwwroot\assets_admin\assets\img\flags\ph.png
 wwwroot\assets_admin\assets\img\flags\qa.png
 wwwroot\assets_admin\assets\img\flags\re.png
 wwwroot\assets_admin\assets\img\flags\readme.txt
@@ -621,18 +621,18 @@ wwwroot\assets_admin\assets\img\flags\tc.png
 wwwroot\assets_admin\assets\img\flags\td.png
 wwwroot\assets_admin\assets\img\flags\tf.png
 wwwroot\assets_admin\assets\img\flags\tg.png
+wwwroot\assets_admin\assets\img\flags\th.png
 wwwroot\assets_admin\assets\img\flags\tj.png
 wwwroot\assets_admin\assets\img\flags\tk.png
 wwwroot\assets_admin\assets\img\flags\tl.png
 wwwroot\assets_admin\assets\img\flags\tm.png
 wwwroot\assets_admin\assets\img\flags\tn.png
 wwwroot\assets_admin\assets\img\flags\to.png
+wwwroot\assets_admin\assets\img\flags\tr.png
 wwwroot\assets_admin\assets\img\flags\tt.png
 wwwroot\assets_admin\assets\img\flags\tv.png
 wwwroot\assets_admin\assets\img\flags\tw.png
 wwwroot\assets_admin\assets\img\flags\tz.png
-wwwroot\assets_admin\assets\img\flags\th.png
-wwwroot\assets_admin\assets\img\flags\tr.png
 wwwroot\assets_admin\assets\img\flags\ua.png
 wwwroot\assets_admin\assets\img\flags\ug.png
 wwwroot\assets_admin\assets\img\flags\um.png
@@ -731,6 +731,8 @@ wwwroot\assets_admin\assets\js\plugin\sweetalert\sweetalert.min.js
 wwwroot\assets_admin\assets\js\plugin\webfont\webfont.min.js
 wwwroot\assets_admin\assets\js\setting-demo.js
 wwwroot\assets_admin\assets\js\setting-demo2.js
+wwwroot\assets_admin\charts\charts.html
+wwwroot\assets_admin\charts\sparkline.html
 wwwroot\assets_admin\components\avatars.html
 wwwroot\assets_admin\components\buttons.html
 wwwroot\assets_admin\components\font-awesome-icons.html
@@ -740,8 +742,6 @@ wwwroot\assets_admin\components\panels.html
 wwwroot\assets_admin\components\simple-line-icons.html
 wwwroot\assets_admin\components\sweetalert.html
 wwwroot\assets_admin\components\typography.html
-wwwroot\assets_admin\charts\charts.html
-wwwroot\assets_admin\charts\sparkline.html
 wwwroot\assets_admin\forms\forms.html
 wwwroot\assets_admin\icon-menu.html
 wwwroot\assets_admin\index.html
@@ -782,6 +782,7 @@ wwwroot\images\7b851794-d830-4d49-88ea-7a6920d0bf18.jpg
 wwwroot\images\9a52d342-097c-4a33-b5bf-c37460e049de.jpg
 wwwroot\images\9d5e5909-cf7d-4828-bbf3-80816ac6d0f9.jpg
 wwwroot\images\a4fac8fc-8ce3-481e-884e-303bda442561.jpg
+wwwroot\images\bc75b49a-85bf-4a11-affd-e45ad81ee390.png
 wwwroot\images\bienbao.png
 wwwroot\images\c54c963f-b617-4c0b-ac2a-dba4dab4e022.jpg
 wwwroot\images\ca6f5a34-993e-4a1b-bcc9-86cfdc47110c.jpg
@@ -789,6 +790,7 @@ wwwroot\images\car-driving.png
 wwwroot\images\cautao.png
 wwwroot\images\d6bdcc5b-be8a-4c69-bd6f-691599531e24.jpg
 wwwroot\images\download (1).jpg
+wwwroot\images\e912a406-d677-4ec8-ade5-470b49654bec.png
 wwwroot\images\edfc118c-7185-4246-bc53-341c25b6b63a.jpg
 wwwroot\images\f0104761-ac9c-4ec5-8872-68351f5bd916.jpg
 wwwroot\images\ghoghe.png
@@ -806,8 +808,8 @@ wwwroot\images\h9.jpg
 wwwroot\images\khainiem.png
 wwwroot\images\laixe.png
 wwwroot\images\sahinh.png
-wwwroot\images\vantai.png
 wwwroot\images\vanhoa.png
+wwwroot\images\vantai.png
 wwwroot\images\warning.png
 wwwroot\js\AutoComplete.js
 wwwroot\js\site.js
@@ -888,11 +890,11 @@ wwwroot\lib\elfinder\img\quicklook-icons.png
 wwwroot\lib\elfinder\img\resize.png
 wwwroot\lib\elfinder\img\spinner-mini.gif
 wwwroot\lib\elfinder\img\toolbar.png
+wwwroot\lib\elfinder\img\trashmesh.png
 wwwroot\lib\elfinder\img\tui-icon-a.svg
 wwwroot\lib\elfinder\img\tui-icon-b.svg
 wwwroot\lib\elfinder\img\tui-icon-c.svg
 wwwroot\lib\elfinder\img\tui-icon-d.svg
-wwwroot\lib\elfinder\img\trashmesh.png
 wwwroot\lib\elfinder\img\ui-icons_ffffff_256x240.png
 wwwroot\lib\elfinder\img\volume_icon_box.png
 wwwroot\lib\elfinder\img\volume_icon_box.svg
