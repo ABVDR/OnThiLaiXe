@@ -70,7 +70,7 @@ namespace OnThiLaiXe.Controllers
                 .Where(c => c.LoaiBangLaiId == loaiBangLaiId &&
                            c.ChuDeId == chuDeId &&
                            c.LoaiBangLai != null && !c.LoaiBangLai.isDeleted &&
-                           c.ChuDe != null && !c.ChuDe.isDeleted)
+                           c.ChuDe != null && !c.ChuDe.isDeleted && !c.isDeleted)
                 .OrderBy(c => Guid.NewGuid())
                 .Take(soLuong)
                 .ToList();
