@@ -14,12 +14,16 @@ namespace OnThiLaiXe.Controllers
         private readonly ApplicationDbContext _context;
         private readonly ICauHoiRepository _cauHoiRepo;
         private readonly ILogger<QlbaiThiController> _logger;
+        private readonly IChuDeRepository _chuDeRepo;
+        private readonly ILoaiBangLaiRepository _loaiBangLaiRepo;
 
-        public QlbaiThiController(ApplicationDbContext context, ICauHoiRepository cauHoiRepo, ILogger<QlbaiThiController> logger)
+        public QlbaiThiController(ApplicationDbContext context, ICauHoiRepository cauHoiRepo, ILogger<QlbaiThiController> logger, IChuDeRepository chuDeRepo, ILoaiBangLaiRepository loaiBangLaiRepo)
         {
             _context = context;
             _cauHoiRepo = cauHoiRepo;
             _logger = logger;
+            _chuDeRepo = chuDeRepo;
+            _loaiBangLaiRepo = loaiBangLaiRepo;
         }
         [HttpPost]
         public async Task<IActionResult> TaoDeThi(int loaiBangLaiId, IFormCollection form)
@@ -61,10 +65,15 @@ namespace OnThiLaiXe.Controllers
                 int soLuong = chuDe.Value;
 
                 var cauHoiTheoChuDe = _context.CauHois
-                    .Where(c => c.LoaiBangLaiId == loaiBangLaiId && c.ChuDeId == chuDeId)
-                    .OrderBy(c => Guid.NewGuid())
-                    .Take(soLuong)
-                    .ToList();
+                .Include(c => c.LoaiBangLai)
+                .Include(c => c.ChuDe)
+                .Where(c => c.LoaiBangLaiId == loaiBangLaiId &&
+                           c.ChuDeId == chuDeId &&
+                           c.LoaiBangLai != null && !c.LoaiBangLai.isDeleted &&
+                           c.ChuDe != null && !c.ChuDe.isDeleted)
+                .OrderBy(c => Guid.NewGuid())
+                .Take(soLuong)
+                .ToList();
 
                 if (cauHoiTheoChuDe.Count < soLuong)
                 {
@@ -130,11 +139,13 @@ namespace OnThiLaiXe.Controllers
         }
 
 
-        public IActionResult ChonDeThi()
+        public async Task<IActionResult> ChonDeThi()
         {
-            ViewBag.DanhSachChuDe = _context.ChuDes.ToList();
-            ViewBag.DanhSachLoaiBangLai = _context.LoaiBangLais.ToList();
-
+            // Nạp danh sách chủ đề và loại bằng lái vào ViewBag để sử dụng trong view\
+            var chuDes = await _chuDeRepo.GetAllNotDelete();
+            var loaiBangLais = await _loaiBangLaiRepo.GetAllNotDelete();
+            ViewBag.DanhSachChuDe = chuDes;
+            ViewBag.DanhSachLoaiBangLai = loaiBangLais;
             return View();
         }
 
