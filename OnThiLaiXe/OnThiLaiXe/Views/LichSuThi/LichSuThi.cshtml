@@ -7,23 +7,23 @@
     <div class="main-row">
         <!-- Lịch sử thi -->
         <div class="main-content">
-            
-             
-                <div class="card-body scrollable-history">
-                    <table class="custom-table">
-                        <thead>
-                            <tr>
-                                <th>Bài thi</th>
-                                <th>Ngày</th>
-                                <th>Số câu</th>
-                                <th>Đúng</th>
-                                <th>Tỷ lệ</th>
-                                <th>Điểm</th>
-                                <th>KQ</th>
-                                <th>Xem</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+
+
+            <div class="card-body scrollable-history">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>Bài thi</th>
+                            <th>Ngày</th>
+                            <th>Số câu</th>
+                            <th>Đúng</th>
+                            <th>Tỷ lệ</th>
+                            <th>Điểm</th>
+                            <th>KQ</th>
+                            <th>Xem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                         @if (Model == null || !Model.Any())
                         {
                             <tr>
@@ -31,7 +31,9 @@
                                     Bạn chưa có bài thi nào.
                                 </td>
                             </tr>
-                        }else{
+                        }
+                        else
+                        {
                             @foreach (var item in Model.OrderByDescending(x => x.NgayThi).Take(20))
                             {
                                 var tyLe = item.TongSoCau > 0 ? (item.SoCauDung / (double)item.TongSoCau) * 100 : 0;
@@ -52,14 +54,14 @@
                                         }
                                     </td>
                                     <td><a href="/LichSuThi/ChiTiet/@item.Id" class="view-button">Xem</a></td>
-                                    
+
                                 </tr>
                             }}
-                        </tbody>
-                        
-                    </table>
-                </div>
-           
+                    </tbody>
+
+                </table>
+            </div>
+
         </div>
 
         <!-- Thống kê -->
@@ -76,7 +78,7 @@
 
 <!-- CSS -->
 <style>
-    
+
 
     .main-row {
         display: flex;
@@ -178,6 +180,7 @@
         background-color: #bf6726e3;
         color: white;
     }
+
     .view-button {
         padding: 4px 8px;
         background-color: #5b8def;

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OnThiLaiXe.Models;
+using OnThiLaiXe.ModelView;
 using OnThiLaiXe.Repositories;
 
 namespace OnThiLaiXe.Controllers
