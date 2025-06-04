@@ -348,7 +348,6 @@ namespace OnThiLaiXe.Areas.Identity.Pages.Account
                         try
                         {
                             _backgroundJobClient.Enqueue(() => _gmailSender.SendEmailAsync(user.Email, "Chào mừng bạn!", emailBody));
-                            _backgroundJobClient.Schedule(() => _gmailSender.SendEmailAsync(user.Email, "Chào mừng bạn!", emailBody), TimeSpan.FromSeconds(60));
                         }
                         catch (Exception ex)
                         {
