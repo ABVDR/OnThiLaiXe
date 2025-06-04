@@ -17402,3 +17402,6 @@ C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\refint\
 C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\OnThiLaiXe.pdb
 C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\OnThiLaiXe.genruntimeconfig.cache
 C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\obj\Debug\net9.0\ref\OnThiLaiXe.dll
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\bin\Debug\net9.0\MailKit.dll
+C:\Users\pdtua\Desktop\Do_an_Last\OnThiLaiXe\OnThiLaiXe\bin\Debug\net9.0\MimeKit.dll

@@ -2957,6 +2957,10 @@
       "PackagePath": "staticwebassets\\uploads\\200c264f-fd19-4c2a-98ef-58812f386892.jpg"
     },
     {
+      "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\uploads\\266d6295-84fa-4be6-a509-fc35c9212f09.png",
+      "PackagePath": "staticwebassets\\uploads\\266d6295-84fa-4be6-a509-fc35c9212f09.png"
+    },
+    {
       "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\uploads\\2d89919c-d427-4cea-8152-a5e4569396d9.jpg",
       "PackagePath": "staticwebassets\\uploads\\2d89919c-d427-4cea-8152-a5e4569396d9.jpg"
     },
@@ -2987,6 +2991,10 @@
     {
       "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\uploads\\6ef13065-9a73-4017-a2ef-258224f37c4c.png",
       "PackagePath": "staticwebassets\\uploads\\6ef13065-9a73-4017-a2ef-258224f37c4c.png"
+    },
+    {
+      "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\uploads\\7e4085d1-0c38-4359-a81b-34cc9dd26c53.png",
+      "PackagePath": "staticwebassets\\uploads\\7e4085d1-0c38-4359-a81b-34cc9dd26c53.png"
     },
     {
       "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\uploads\\929321c3-2fc9-440a-9cdb-387b8520e197.jpg",
@@ -3115,6 +3123,10 @@
     {
       "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\videos\\cau6.mp4",
       "PackagePath": "staticwebassets\\videos\\cau6.mp4"
+    },
+    {
+      "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\videos\\fa0523b5-6185-48df-80cc-e5f0609593dd.mp4",
+      "PackagePath": "staticwebassets\\videos\\fa0523b5-6185-48df-80cc-e5f0609593dd.mp4"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.OnThiLaiXe.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

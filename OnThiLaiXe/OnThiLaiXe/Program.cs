@@ -10,6 +10,7 @@ using OnThiLaiXe.Services;
 using Microsoft.AspNetCore.StaticFiles;
 using OfficeOpenXml;
 using OnThiLaiXe.Middleware;
+using sendMail.Service;
 var builder = WebApplication.CreateBuilder(args);
 ExcelPackage.License.SetNonCommercialPersonal("Webonlaixe");
 // Add services to the container.
@@ -48,7 +49,7 @@ builder.Services.AddScoped<IBaiThiRepository, BaiThiRepository>();
 builder.Services.AddScoped<ICauHoiRepository, EFCauHoiRepository>();
 builder.Services.AddScoped<IChuDeRepository, EFChuDeRepository>();
 builder.Services.AddScoped<ILoaiBangLaiRepository, EFLoaiBangLaiRepository>();
-builder.Services.AddTransient<IGmailSender, SendGridEmailSender>();
+builder.Services.AddTransient<IGmailSender, GmailSender>();
 builder.Services.AddScoped<IUserRepository, EFUserRepository>();
 builder.Services.AddScoped<IBaiSaHinhRepository, EFBaiSaHinhRepository>();
 builder.Services.AddScoped<IGiaoDichRepository, EFGiaoDichRepository>();
