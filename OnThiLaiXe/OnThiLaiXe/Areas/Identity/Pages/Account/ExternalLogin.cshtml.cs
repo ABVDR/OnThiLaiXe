@@ -18,6 +18,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using OnThiLaiXe.Models;
+using Hangfire;
+using OnThiLaiXe.Services;
 
 namespace OnThiLaiXe.Areas.Identity.Pages.Account
 {
@@ -31,6 +33,8 @@ namespace OnThiLaiXe.Areas.Identity.Pages.Account
         private readonly IEmailSender _emailSender;
         private readonly ILogger<ExternalLoginModel> _logger;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IBackgroundJobClient _backgroundJobClient;
+        private readonly IGmailSender _gmailSender;
 
         public ExternalLoginModel(
             SignInManager<ApplicationUser> signInManager,
@@ -38,7 +42,9 @@ namespace OnThiLaiXe.Areas.Identity.Pages.Account
             IUserStore<ApplicationUser> userStore,
             ILogger<ExternalLoginModel> logger,
             RoleManager<IdentityRole> roleManager,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            IBackgroundJobClient backgroundJobClient,
+            IGmailSender gmailSender)
         {
             _signInManager = signInManager;
             _userManager = userManager;
@@ -47,6 +53,8 @@ namespace OnThiLaiXe.Areas.Identity.Pages.Account
             _logger = logger;
             _emailSender = emailSender;
             _roleManager = roleManager;
+            _backgroundJobClient = backgroundJobClient;
+            _gmailSender = gmailSender;
         }
 
         /// <summary>
@@ -161,7 +169,78 @@ namespace OnThiLaiXe.Areas.Identity.Pages.Account
 
                 await _emailSender.SendEmailAsync(email, "Confirm your email",
                     $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                var emailBody = $@"
+            <!DOCTYPE html>
+            <html lang='vi'>
+            <head>
+                <meta charset='UTF-8'>
+                <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                <title>Chào mừng bạn!</title>
+            </head>
+            <body style='font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;'>
+                <table width='100%' cellspacing='0' cellpadding='0' 
+                    style='max-width: 600px; margin: auto; background: white; padding: 20px; 
+                    border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>
 
+                    <!-- Header đẹp hơn -->
+                    <tr>
+                        <td align='center' style='background-color: #25b9fe; padding: 15px; border-radius: 8px 8px 0 0;'>
+                            <h3 style='color: rgb(251, 249, 249); margin: 0px;'> Chào mừng bạn đến với <b>ProTest </b>! </h3>
+                        </td>
+                    </tr>
+
+                    <!-- Logo -->
+                    <tr>
+                        <td align='center' style='padding-top: 20px;'>
+                            <img src='https://media.loveitopcdn.com/3807/logo-hutech-2.png' alt='LOGO' 
+                                style='max-width: 70px; margin-bottom: 20px;'>
+                        </td>
+                    </tr>
+
+                    <!-- Nội dung chính -->
+                    <tr>
+                        <td>
+                            <h2 style='text-align: center; color: #333;'>Xin chào!</h2>
+                            <p style='color: #555; font-size: 16px; text-indent: 40px;'>
+                                Chúng tôi rất vui khi bạn đăng nhập thành công qua Google! Cám ơn bạn đã lựa chọn sử dụng trang web của tôi giữa ngàn vạn trang web ngoài kia.
+                                Tài khoản của bạn là chìa khóa mở ra một thế giới đầy tính năng thú vị và tiện ích. 
+                                Hãy khám phá ngay và tận hưởng những trải nghiệm tốt nhất mà chúng tôi mang lại!
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Nút điều hướng -->
+                    <tr>
+                        <td align='center' style='padding: 20px 0;'>
+                            <a href='https://localhost:7289/' 
+                                style='background-color: #25b9fe; color: white; padding: 12px 24px; 
+                                text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px;'>
+                                Khám phá ngay
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style='text-align: center; '>
+                            <p style='font-size: 14px; color: #444;'>
+                                Nếu có bất kỳ câu hỏi nào, đừng ngần ngại liên hệ với chúng tôi. 
+                                Đội ngũ hỗ trợ luôn sẵn sàng giúp bạn bất cứ lúc nào! 
+                            </p>
+                        </td>
+                    </tr>
+                    <!-- Footer -->
+                    <tr>
+                        <td style='text-align: center; font-size: 12px; color: #999; padding-top: 20px;'>
+                            123 Xa Lộ Hà Nội, TP.HCM, Việt Nam<br>
+                            +84 222 333 123 |  support@ProTest.com<br>
+                            © 2025 Your Company. All Rights Reserved.
+                        </td>
+                    </tr>
+                </table>
+            </body>
+            </html>";
+
+                // Gửi email chào mừng
+                _backgroundJobClient.Enqueue(() => _gmailSender.SendEmailAsync(user.Email, "Chào mừng bạn!", emailBody));
                 await _signInManager.SignInAsync(user, isPersistent: false);
                 return LocalRedirect(returnUrl);
             }
