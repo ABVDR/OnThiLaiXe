@@ -1917,6 +1917,10 @@
       "PackagePath": "staticwebassets\\images\\23c6b006-f4f7-4431-bf0d-5677c9afa6cb.jpg"
     },
     {
+      "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\images\\26d39c32-921f-4252-9f7f-73d8d55b2e28.jpg",
+      "PackagePath": "staticwebassets\\images\\26d39c32-921f-4252-9f7f-73d8d55b2e28.jpg"
+    },
+    {
       "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\images\\4dba506c-f6b9-4449-b9c0-b68a3db2c7b4.jpg",
       "PackagePath": "staticwebassets\\images\\4dba506c-f6b9-4449-b9c0-b68a3db2c7b4.jpg"
     },
@@ -1967,6 +1971,10 @@
     {
       "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\images\\d6bdcc5b-be8a-4c69-bd6f-691599531e24.jpg",
       "PackagePath": "staticwebassets\\images\\d6bdcc5b-be8a-4c69-bd6f-691599531e24.jpg"
+    },
+    {
+      "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\images\\d7e90b6f-c415-44d9-83c1-56b0315ed15a.webp",
+      "PackagePath": "staticwebassets\\images\\d7e90b6f-c415-44d9-83c1-56b0315ed15a.webp"
     },
     {
       "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\images\\download (1).jpg",
@@ -3089,14 +3097,6 @@
       "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.slim.min.map"
     },
     {
-      "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\videos\\0171d7c2-39db-486d-a850-9ea547beb925.mp4",
-      "PackagePath": "staticwebassets\\videos\\0171d7c2-39db-486d-a850-9ea547beb925.mp4"
-    },
-    {
-      "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\videos\\1fbb72f1-d538-4922-b662-cc13447c6b78.mp4",
-      "PackagePath": "staticwebassets\\videos\\1fbb72f1-d538-4922-b662-cc13447c6b78.mp4"
-    },
-    {
       "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\videos\\cau1.mp4",
       "PackagePath": "staticwebassets\\videos\\cau1.mp4"
     },
@@ -3123,10 +3123,6 @@
     {
       "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\videos\\cau6.mp4",
       "PackagePath": "staticwebassets\\videos\\cau6.mp4"
-    },
-    {
-      "Id": "C:\\Users\\pdtua\\Desktop\\Do_an_Last\\OnThiLaiXe\\OnThiLaiXe\\wwwroot\\videos\\fa0523b5-6185-48df-80cc-e5f0609593dd.mp4",
-      "PackagePath": "staticwebassets\\videos\\fa0523b5-6185-48df-80cc-e5f0609593dd.mp4"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.OnThiLaiXe.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

@@ -95,6 +95,8 @@ namespace OnThiLaiXe.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, MoPhong moPhong, IFormFile videoUrl)
         {
+            
+            ModelState.Remove("videoUrl");
             if (id != moPhong.Id)
             {
                 return NotFound();
@@ -102,29 +104,25 @@ namespace OnThiLaiXe.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
-                try
-                {
+                var existingMoPhong = await _moPhongRepository.GetByIdAsync(id);
                     if (videoUrl != null)
                     {
-                        moPhong.VideoUrl = await SaveVideo(videoUrl);
-                    }
-
-                    await _moPhongRepository.UpdateAsync(moPhong);
-
-                    return RedirectToAction(nameof(Index));
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!await _moPhongRepository.ExistsAsync(moPhong.Id))
-                    {
-                        return NotFound();
+                    existingMoPhong.VideoUrl = await SaveVideo(videoUrl);
                     }
                     else
                     {
-                        throw;
+                    Console.WriteLine("dang null");
+                    moPhong.VideoUrl = existingMoPhong.VideoUrl;
                     }
+                    existingMoPhong.NoiDung = moPhong.NoiDung;
+                    existingMoPhong.DapAn = moPhong.DapAn;
+                    existingMoPhong.Order = moPhong.Order;
+                // Cập nhật thông tin mô phỏng 
+
+                await _moPhongRepository.UpdateAsync(existingMoPhong);
+
+                    return RedirectToAction(nameof(Index));
                 }
-            }
             return View(moPhong);
         }
 

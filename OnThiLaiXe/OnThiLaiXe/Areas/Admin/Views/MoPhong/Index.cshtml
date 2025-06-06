@@ -22,9 +22,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.VideoUrl)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DapAn)
-            </th>
             <th>Thao tác</th>
         </tr>
     </thead>
@@ -54,9 +51,6 @@
                     {
                         <span>Không có video</span>
                     }
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DapAn)
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Sửa</a>

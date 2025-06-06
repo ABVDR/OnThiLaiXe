@@ -776,6 +776,7 @@ wwwroot\files\zizzac.png
 wwwroot\images\07d42140-287c-403f-89d1-de89217a2f72.jpg
 wwwroot\images\1a6cae99-96ce-4204-90b9-b2e3c0860fa3.jpg
 wwwroot\images\23c6b006-f4f7-4431-bf0d-5677c9afa6cb.jpg
+wwwroot\images\26d39c32-921f-4252-9f7f-73d8d55b2e28.jpg
 wwwroot\images\4dba506c-f6b9-4449-b9c0-b68a3db2c7b4.jpg
 wwwroot\images\52138fd4-e3a2-49b7-b8f9-c592bc6dd863.jpg
 wwwroot\images\7b851794-d830-4d49-88ea-7a6920d0bf18.jpg
@@ -789,6 +790,7 @@ wwwroot\images\ca6f5a34-993e-4a1b-bcc9-86cfdc47110c.jpg
 wwwroot\images\car-driving.png
 wwwroot\images\cautao.png
 wwwroot\images\d6bdcc5b-be8a-4c69-bd6f-691599531e24.jpg
+wwwroot\images\d7e90b6f-c415-44d9-83c1-56b0315ed15a.webp
 wwwroot\images\download (1).jpg
 wwwroot\images\e912a406-d677-4ec8-ade5-470b49654bec.png
 wwwroot\images\edfc118c-7185-4246-bc53-341c25b6b63a.jpg
@@ -1069,8 +1071,6 @@ wwwroot\vendor\jquery\jquery.min.map
 wwwroot\vendor\jquery\jquery.slim.js
 wwwroot\vendor\jquery\jquery.slim.min.js
 wwwroot\vendor\jquery\jquery.slim.min.map
-wwwroot\videos\0171d7c2-39db-486d-a850-9ea547beb925.mp4
-wwwroot\videos\1fbb72f1-d538-4922-b662-cc13447c6b78.mp4
 wwwroot\videos\cau1.mp4
 wwwroot\videos\cau12.mp4
 wwwroot\videos\cau2.mp4
@@ -1078,4 +1078,3 @@ wwwroot\videos\cau3.mp4
 wwwroot\videos\cau4.mp4
 wwwroot\videos\cau5.mp4
 wwwroot\videos\cau6.mp4
-wwwroot\videos\fa0523b5-6185-48df-80cc-e5f0609593dd.mp4
